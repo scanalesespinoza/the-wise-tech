@@ -38,3 +38,7 @@ At The Wise Tech, we believe that self-awareness is key to making meaningful cha
 - **User-Centric Design:** How does your work impact the end-user experience? Are the platforms you design and maintain making technology more accessible and reliable for others?
 
 Take a moment to reflect on these questions in the context of your role. If you find areas where improvements can be made, consider how you can align your work more closely with the principles of The Wise Tech.
+
+## Further Reading
+
+For a detailed comparison between traditional complex software approaches and The Wise Tech approach, please see [The Wise Tech Approach: A Contrast with Traditional Complex Software Approaches](wise-tech-approach.md).
