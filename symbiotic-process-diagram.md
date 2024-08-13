@@ -2,7 +2,7 @@
 # The Wise Tech Approach: Refined Visual Representation
 
 ## Developer Timeline Supported by Platform
-
+```
 +----------------------------------------------------------------------------+
 |                                Overall Process                             |
 |                                                                            |
@@ -31,3 +31,4 @@
 |   |   - User Experience   <--->  Product Improvement                          |
 |   +---------------------------------------------------------------+        |
 +----------------------------------------------------------------------------+
+```
