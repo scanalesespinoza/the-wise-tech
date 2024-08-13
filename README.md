@@ -41,4 +41,6 @@ Take a moment to reflect on these questions in the context of your role. If you 
 
 ## Further Reading
 
-For a detailed comparison between traditional complex software approaches and The Wise Tech approach, please see [The Wise Tech Approach: A Contrast with Traditional Complex Software Approaches](wise-tech-approach.md).
+- For a detailed comparison between traditional complex software approaches and The Wise Tech approach, please see [The Wise Tech Approach: A Contrast with Traditional Complex Software Approaches](wise-tech-approach.md).
+- For a detailed ASCII diagram of the Wise Tech approach, please see [wise-tech-approach-visual-representation.md](wise-tech-approach-visual-representation.md).
+- For a simplified ASCII diagram representing the symbiotic process, see [symbiotic-process-diagram.md](symbiotic-process-diagram.md).
