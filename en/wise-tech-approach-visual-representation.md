@@ -1,4 +1,3 @@
-
 # The Wise Tech Approach: Visual Representation
 
 ## Traditional Complex Approach: Disconnected Chains
@@ -17,7 +16,7 @@
 +--------------------------------------+
 ```
 
-- **Disconnected Processes:** Each stage operates in isolation, leading to potential inefficiencies and a lack of holistic alignment with user needs.
+- **Disconnected processes:** Each stage operates independently, which creates inefficiencies and weakens alignment with user outcomes.
 
 ## The Wise Tech Approach: Integrated End-to-End Process
 
@@ -54,14 +53,14 @@
            ↑
            |
 +--------------------------------------+
-|           Integrated Feedback Process |
-|   - Developers & Platform Engineers   |
-|   - Continuous Improvement            |
+|         Integrated Feedback Process  |
+|   - Developers & Platform Engineers  |
+|   - Continuous Improvement           |
 +--------------------------------------+
 ```
 
-- **Integrated Process:** All stages are interconnected, with a continuous feedback loop that ensures alignment with user needs and promotes ongoing improvement.
+- **Integrated process:** All stages stay connected through continuous feedback that keeps technology purposeful and humane.
 
 ## Summary
-- The **traditional approach** is characterized by isolated processes, which can lead to disjointed workflows and missed opportunities for holistic improvements.
-- The **Wise Tech approach** emphasizes an integrated, end-to-end process where developers, platform engineers, and technology consumers are all connected through a continuous feedback loop, ensuring that the technology serves its intended purpose effectively.
+- The **traditional approach** produces isolated workflows and misses opportunities for holistic improvement.
+- The **Wise Tech approach** unites developers, platform engineers, and technology consumers through an integrated feedback system that ensures technology serves people effectively.
