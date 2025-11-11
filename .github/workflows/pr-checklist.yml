@@ -1,0 +1,39 @@
+name: PR Checklist Enforcer
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+jobs:
+  enforce:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ensure checklist template exists
+        run: |
+          if [ ! -f ".github/PULL_REQUEST_TEMPLATE.md" ]; then
+            echo "::error ::Missing PR template with Essential checklist." >&2
+            exit 1
+          fi
+          echo "PR template detected."
+      - name: Validate checklist items are present
+        run: |
+          body="${{ github.event.pull_request.body }}"
+          required=(
+            "Essential principles referenced and respected"
+            "Tests added or updated with evidence attached"
+            "Observability signals (logs/metrics/traces) reviewed or created"
+            "Security implications evaluated (secrets, dependencies, access)"
+            "Documentation touched (recipes, onboarding, glossary, changelog)"
+          )
+          missing=0
+          for item in "${required[@]}"; do
+            if ! grep -Fq "$item" <<< "$body"; then
+              printf '::warning ::Checklist item "%s" not found in PR body.\n' "$item"
+              missing=$((missing + 1))
+            fi
+          done
+          if [ "$missing" -gt 0 ]; then
+            printf '::notice ::%s checklist items missing. Encourage author to update the PR.\n' "$missing"
+          else
+            echo "All required checklist items found."
+          fi

@@ -1,0 +1,62 @@
+name: PR Summarizer
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  summarize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Collect PR context
+        id: context
+        run: |
+          git fetch origin "${{ github.base_ref }}" --depth=1
+          git diff "origin/${{ github.base_ref }}"...HEAD > pr.diff || true
+          {
+            echo "title=${{ github.event.pull_request.title }}"
+            echo "body<<'EOF'"
+            printf '%s\n' "${{ github.event.pull_request.body }}"
+            echo "EOF"
+            echo "diff<<'EOF'"
+            sed 's/`/`/g' pr.diff
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+      - name: Generate AI summary
+        id: ai
+        env:
+          SUMMARY_WEBHOOK: ${{ secrets.PR_SUMMARY_WEBHOOK }}
+          PR_TITLE: ${{ steps.context.outputs.title }}
+          PR_BODY: ${{ steps.context.outputs.body }}
+          PR_DIFF: ${{ steps.context.outputs.diff }}
+        run: |
+          if [ -z "$SUMMARY_WEBHOOK" ]; then
+            echo "status=skipped" >> "$GITHUB_OUTPUT"
+            printf '::notice ::No PR summary generated because PR_SUMMARY_WEBHOOK secret is not configured.\n'
+            exit 0
+          fi
+          payload=$(python - <<'PY'
+import json
+import os
+
+summary = {
+    "title": os.environ.get("PR_TITLE", ""),
+    "body": os.environ.get("PR_BODY", ""),
+    "diff": os.environ.get("PR_DIFF", ""),
+}
+print(json.dumps(summary))
+PY
+)
+          curl -sSf -X POST "$SUMMARY_WEBHOOK" -H 'Content-Type: application/json' -d "$payload" > summary.md
+          echo "status=posted" >> "$GITHUB_OUTPUT"
+      - name: Publish summary comment
+        if: steps.ai.outputs.status == 'posted'
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: pr-summary
+          message: Summary posted via webhook payload.

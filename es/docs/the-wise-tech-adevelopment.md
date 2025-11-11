@@ -73,6 +73,8 @@ La IA ayuda a minar patrones y generar conocimiento reusable (resúmenes, guías
 
 ### 4.2 *Checklists* vivos en PR (Esencial + Operativo)
 
+Ancla las revisiones con la [Checklist de Pull Request](checklist-pr.md) para mantener visibles las preocupaciones esenciales, operativas y de impacto en cada cambio.
+
 - Principios esenciales (idempotencia, límites de dominio, errores manejados).
 - Seguridad (secretos, dependencias, escaneo SCA).
 - Observabilidad (logs, métricas, trazas con *correlation id*).
@@ -89,6 +91,8 @@ La IA ayuda a minar patrones y generar conocimiento reusable (resúmenes, guías
 - [ ] Sin secretos en código (ver escaneo SCA).
 
 ### 4.3 Documentación desde el código (*DocOps*)
+
+Usa el script `.github/scripts/generate_module_readmes.py` para mantener sincronizados el [Catálogo de Recetas](recipes/README.md) y los [Recursos de Onboarding](onboarding/README.md) cuando agregues nuevo contenido.
 
 - Generar README por módulo automáticamente.
 - Construir glosario técnico vivo a partir de comentarios/*docstrings*.
@@ -239,18 +243,18 @@ jobs:
 ```text
 docs/
   the-wise-tech-adevelopment.md   # este documento
-  principles-essential.md         # 5-8 principios no negociables
-  checklist-pr.md                 # checklist vivo de PR
+  principles-essential.md         # 5-8 principios no negociables (ver ejemplo en el repo)
+  checklist-pr.md                 # checklist vivo de PR (ver ejemplo en el repo)
   recipes/
-    errors-handling.md
-    observability.md
-    testing-contracts.md
-    resiliency.md
+    errors-handling.md            # ejemplo poblado
+    observability.md              # ejemplo poblado
+    testing-contracts.md          # ejemplo poblado
+    resiliency.md                 # ejemplo poblado
   onboarding/
-    tour.md
-    learning-paths.md
-  glossary.md
-  changelog-guidelines.md
+    tour.md                       # ejemplo poblado
+    learning-paths.md             # ejemplo poblado
+  glossary.md                     # ejemplo poblado
+  changelog-guidelines.md         # ejemplo poblado
 ```
 
 ## 10. Roles y responsabilidades

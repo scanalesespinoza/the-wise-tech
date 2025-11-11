@@ -41,3 +41,9 @@ Reflexiona sobre estas preguntas para identificar oportunidades donde tus accion
 - **Diagrama de proceso:** [Representación visual](wise-tech-approach-visual-representation.md) muestra los ciclos de retroalimentación integrados de punta a punta.
 - **Línea de tiempo simbiótica:** [Diagrama del proceso simbiótico](symbiotic-process-diagram.md) ilustra cómo desarrolladores, plataformas y personas usuarias se refuerzan entre sí.
 - **Guía práctica:** [The Wise Tech + aDevelopment](docs/the-wise-tech-adevelopment.md) explica cómo combinar la experiencia acumulada con desarrollo aumentado por IA.
+- **Barandales esenciales:** [Principios Esenciales](docs/principles-essential.md) definen la identidad innegociable de nuestros sistemas.
+- **Checklist viva:** [Checklist de Pull Request](docs/checklist-pr.md) mantiene visibles las preocupaciones esenciales, operativas e impacto.
+- **Biblioteca de patrones:** [Catálogo de Recetas](docs/recipes/README.md) captura prácticas repetibles fundamentadas en el repositorio.
+- **Onboarding fluido:** [Recursos de Onboarding](docs/onboarding/README.md) ofrecen recorridos guiados y rutas de aprendizaje para nuevas personas.
+- **Vocabulario compartido:** [Glosario Vivo](docs/glossary.md) mantiene terminología consistente.
+- **Evidencia narrativa:** [Guías de Changelog](docs/changelog-guidelines.md) ayudan a traducir cambios en historias comprensibles para stakeholders.

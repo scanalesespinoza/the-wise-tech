@@ -41,3 +41,9 @@ Reflect on these prompts to identify opportunities where your actions can align 
 - **Process Diagram:** [Visual Representation](wise-tech-approach-visual-representation.md) showcases the integrated, end-to-end feedback loops.
 - **Symbiotic Timeline:** [Symbiotic Process Diagram](symbiotic-process-diagram.md) illustrates how developers, platforms, and consumers reinforce each other.
 - **Practice Playbook:** [The Wise Tech + aDevelopment](docs/the-wise-tech-adevelopment.md) explains how to pair accumulated experience with AI-augmented development.
+- **Essential Guardrails:** [Essential Principles](docs/principles-essential.md) define the non-negotiable identity of our systems.
+- **Living Checklist:** [Pull Request Checklist](docs/checklist-pr.md) keeps Essential, operational, and impact concerns visible.
+- **Pattern Library:** [Recipe Catalog](docs/recipes/README.md) captures repeatable practices grounded in the repository.
+- **Smooth Onboarding:** [Onboarding Assets](docs/onboarding/README.md) offer guided tours and learning paths for new teammates.
+- **Shared Vocabulary:** [Living Glossary](docs/glossary.md) maintains consistent terminology.
+- **Narrative Evidence:** [Changelog Guidelines](docs/changelog-guidelines.md) help translate changes into stakeholder-friendly stories.
