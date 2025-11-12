@@ -15,6 +15,16 @@
 - Automación de infraestructura como código con validaciones previas.
 - Catálogo de servicios con niveles de servicio y runbooks compartidos.
 
+## Primeros 60 minutos
+- Reproduce `make ci` y guarda los tiempos de cada etapa para detectar cuellos de botella.
+- Sincroniza runbooks de `scenarios/payments/docs` con los hallazgos del último ejercicio de caos.
+- Publica un resumen en el canal de plataforma con acciones concretas para Developers y Consumers.
+
+## Indicadores clave de experimento
+- **MTTR simulado**: objetivo ≤ 15 minutos desde el fallo detectado hasta `make ci` exitoso.
+- **Cobertura de runbooks**: 100% de procedimientos críticos documentados en EN/ES.
+- **Satisfacción de equipos**: incremento mensual del feedback positivo en issues etiquetados como `platform`.
+
 ## See also
 - [Developer playbook](developer-playbook.md)
 - [Wise Tech approach](../principles/wise-tech-approach.md)
