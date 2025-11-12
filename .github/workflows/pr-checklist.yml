@@ -8,6 +8,8 @@ jobs:
   enforce:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
       - name: Ensure checklist template exists
         run: |
           if [ ! -f ".github/PULL_REQUEST_TEMPLATE.md" ]; then
