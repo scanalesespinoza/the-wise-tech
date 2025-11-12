@@ -1,0 +1,44 @@
+name: Experience report
+description: Document feedback from users, support, or collaborators to guide continuous improvement.
+title: "[Feedback] "
+labels:
+  - feedback
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Purpose
+        Capture human insights that should inform Wise Tech evolution.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Experience summary
+      description: Describe what the user/support team experienced and why it matters.
+      placeholder: Clear, human-centred story of the experience.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence or artefacts
+      description: Link conversations, logs, screenshots, or analytics that support the experience.
+  - type: textarea
+    id: expectations
+    attributes:
+      label: Desired outcomes
+      description: What would success look like from the user or collaborator perspective?
+  - type: textarea
+    id: follow_up
+    attributes:
+      label: Proposed next steps
+      description: Suggested experiments, fixes, or discussions to keep the feedback loop active.
+  - type: checkboxes
+    id: acknowledgements
+    attributes:
+      label: Alignment
+      description: Confirm the issue aligns with Wise Tech principles.
+      options:
+        - label: Improves simplicity or clarity
+        - label: Strengthens resilience or reliability
+        - label: Encourages human connection and responsible tech use
