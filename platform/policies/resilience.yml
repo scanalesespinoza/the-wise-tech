@@ -1,0 +1,66 @@
+{
+  "timeouts": {
+    "default_request_ms": 1200,
+    "max_request_ms": 5000,
+    "heartbeat_interval_ms": 500,
+    "failure_detection_ms": 2000
+  },
+  "retries": {
+    "default": {
+      "max_attempts": 3,
+      "backoff_ms": 200
+    },
+    "idempotent": {
+      "max_attempts": 5,
+      "backoff_ms": 150
+    }
+  },
+  "quorums": {
+    "read_minimum": 1,
+    "write_minimum": 2,
+    "total_nodes": 3
+  },
+  "circuit_breakers": {
+    "error_rate_threshold": 0.25,
+    "rolling_window_s": 60,
+    "cooldown_s": 30
+  },
+  "ttl": {
+    "cache_seconds": 45,
+    "session_seconds": 600
+  },
+  "replication": {
+    "primary-backup": {
+      "requires_idempotency": false,
+      "degradation_mode": "lecturas contra réplica secundaria",
+      "supported_profiles": ["strict", "causal"]
+    },
+    "active": {
+      "requires_idempotency": true,
+      "degradation_mode": "retry con idempotency-key",
+      "supported_profiles": ["causal", "eventual"]
+    },
+    "quorum": {
+      "requires_idempotency": true,
+      "degradation_mode": "ajuste dinámico de quórums",
+      "supported_profiles": ["strict", "causal"]
+    }
+  },
+  "services": [
+    {
+      "name": "checkout-api",
+      "timeouts_ms": 1500,
+      "retry_policy": "idempotent",
+      "quorum": {
+        "read": 2,
+        "write": 2
+      }
+    },
+    {
+      "name": "catalog-query",
+      "timeouts_ms": 900,
+      "retry_policy": "default",
+      "cache_ttl_seconds": 30
+    }
+  ]
+}

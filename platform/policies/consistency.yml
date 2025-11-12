@@ -1,0 +1,73 @@
+{
+  "profiles": {
+    "strict": {
+      "description": "Lecturas linealizables y aislamiento cercano a serializable.",
+      "guarantees": [
+        "linearisable-reads",
+        "single-writer-serialization"
+      ],
+      "client_centric": ["read-your-writes", "monotonic-reads"],
+      "recommended_for": ["pagos", "control de inventario"],
+      "compatible_replication": ["primary-backup", "quorum"]
+    },
+    "causal": {
+      "description": "Preserva dependencias causales entre operaciones relacionadas.",
+      "guarantees": [
+        "causal-reads",
+        "session-order"
+      ],
+      "client_centric": ["read-your-writes", "monotonic-reads", "monotonic-writes"],
+      "recommended_for": ["experiencias colaborativas", "actividad de usuario"],
+      "compatible_replication": ["active", "quorum"]
+    },
+    "eventual": {
+      "description": "Convergencia con latencia mínima y reconciliación explícita.",
+      "guarantees": [
+        "eventual-convergence"
+      ],
+      "client_centric": ["best-effort-session"],
+      "recommended_for": ["catálogo", "métricas"],
+      "compatible_replication": ["active", "fanout-cache"]
+    }
+  },
+  "access_patterns": {
+    "read_dominant": {
+      "allowed_profiles": ["eventual", "causal", "strict"],
+      "preferred_profiles": ["causal"],
+      "notes": "El caché debe respetar TTL coherentes con el perfil elegido."
+    },
+    "write_conflict": {
+      "allowed_profiles": ["strict", "causal"],
+      "preferred_profiles": ["strict"],
+      "notes": "Requiere bloqueo optimista o serialización determinista."
+    },
+    "session_mutation": {
+      "allowed_profiles": ["causal", "strict"],
+      "preferred_profiles": ["causal"],
+      "notes": "Necesita garantías read-your-writes para UX consistente."
+    }
+  },
+  "services": [
+    {
+      "name": "checkout-api",
+      "environment": "production",
+      "profile": "strict",
+      "access_pattern": "write_conflict",
+      "replica_strategy": "quorum"
+    },
+    {
+      "name": "catalog-query",
+      "environment": "production",
+      "profile": "eventual",
+      "access_pattern": "read_dominant",
+      "replica_strategy": "active"
+    },
+    {
+      "name": "collab-notes",
+      "environment": "staging",
+      "profile": "causal",
+      "access_pattern": "session_mutation",
+      "replica_strategy": "active"
+    }
+  ]
+}
