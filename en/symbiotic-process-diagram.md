@@ -1,35 +1,4 @@
-# The Wise Tech Approach: Symbiotic Process Diagram
+# Symbiotic process diagram (English)
 
-## Developer Timeline Supported by the Platform
-```
-+----------------------------------------------------------------------------+
-|                                Overall Process                             |
-|                                                                            |
-|   +---------------------------------------------------------------+        |
-|   |                        Developer Timeline                     |        |
-|   |                                                               |        |
-|   |   - Development Requirements   <--->    Runtime Feedback      |        |
-|   |                                                               |        |
-|   +---------------------------------------------------------------+        |
-|                          |                     |                           |
-|                          |                     |                           |
-|                          v                     v                           |
-|   +---------------------------------------------------------------+        |
-|   |                        Platform Support                       |        |
-|   |                                                               |        |
-|   |   - Operational Stability  <--->  Maintenance Requirements    |        |
-|   |                                                               |        |
-|   +---------------------------------------------------------------+        |
-|                          ^                     ^                           |
-|                          |                     |                           |
-|                          +---------------------+                           |
-|                               Symbiotic Feedback Loop                       |
-|                                                                            |
-|   +---------------------------------------------------------------+        |
-|   |                    Consumer Feedback Loop                     |        |
-|   |   - User Experience   <--->  Product Improvement              |        |
-|   +---------------------------------------------------------------+        |
-+----------------------------------------------------------------------------+
-```
-
-The diagram emphasizes how developer activities, platform responsibilities, and consumer insights reinforce one another through shared feedback channels.
+The current system view lives in [docs/diagrams/wise-tech-approach-ascii.md](../docs/diagrams/wise-tech-approach-ascii.md).
+We keep this file so external references still resolve, but the maintained source is the diagram under `docs/diagrams`.

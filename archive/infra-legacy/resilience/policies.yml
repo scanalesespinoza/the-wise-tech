@@ -1,5 +1,5 @@
-# Resilience policies catalogue aligned with the Wise Tech principles.
-# Keep bilingual fallback strategies synchronized.
+# Baseline timeout and retry policies for external dependencies.
+# Mantener sincronizadas las definiciones en ambos idiomas.
 
 services:
   payments-checkout:

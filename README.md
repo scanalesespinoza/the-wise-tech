@@ -1,49 +1,75 @@
 # The Wise Tech
 
-The Wise Tech repository captures the methodology, diagrams, and playbooks that describe how the organization blends human expertise with AI-assisted practices across the software lifecycle.
+El repositorio que convierte la filosofía Wise Tech en acciones compartidas: un mapa navegable para aprender, construir y operar tecnología con propósito humano.
 
-Welcome to The Wise Tech knowledge base. This repository is organized in two fully synchronized language trees so that every document is available both in English and in Spanish. Choose the path that best fits your needs:
+## Choose your path
 
-- [English content](en/README.md)
-- [Contenido en español](es/README.md)
+| Rol | Descripción | CTA |
+| --- | --- | --- |
+| Consumidores de tecnología | Explora cómo protegemos experiencias claras y confiables. | [Ir a la ruta](docs/personas/consumers-overview.md) |
+| Software Developers | Acelera entregas resilientes con prácticas compartidas. | [Ir a la ruta](docs/personas/developers-overview.md) |
+| Platform Engineers | Escala operaciones y feedback continuo entre equipos. | [Ir a la ruta](docs/personas/platform-engineers-overview.md) |
 
-Each language folder mirrors the same structure (guides, visual references, and practice playbooks) to make navigation predictable regardless of the language you select. If you update a document in one language, remember to reflect the change in the counterpart file so that both versions remain aligned.
+## Quick start
+1. Lee el [quickstart](docs/guides/quickstart.md) y prepara el entorno.
+2. Ejecuta `python scripts/check-links.py --strict` para validar enlaces.
+3. Abre un issue o PR siguiendo la [guía de contribución](docs/guides/contribution-guide.md).
 
-## How the repository is organized
+## Navigation Map
 
-```text
-├── en/                 # English source of truth for every document
-├── es/                 # Spanish translation with the same structure and filenames
-└── scenarios/payments/ # Business scenario that demonstrates Wise Tech end-to-end
+```
+/ (README one-page)
+├─ Principles → docs/principles/
+├─ Personas
+│ ├─ Consumers → docs/personas/consumers-overview.md
+│ ├─ Developers → docs/personas/developers-overview.md
+│ └─ Platform Engineers → docs/personas/platform-engineers-overview.md
+├─ Guides → docs/guides/
+├─ Playbooks → docs/playbooks/
+├─ Scenarios → docs/scenarios/
+├─ Diagrams → docs/diagrams/
+└─ Roadmap → docs/roadmap/roadmap.md
 ```
 
-Both language trees contain:
+## Recommendations by Interest
+- **Productividad y simplicidad:** Empieza por el [quickstart](docs/guides/quickstart.md) y profundiza en [principios](docs/principles/wise-tech-principles.md).
+- **Resiliencia operacional:** Sigue el [platform playbook](docs/playbooks/platform-playbook.md) y el [escenario de pagos](docs/scenarios/payments-overview.md).
+- **Mejora continua y mentoring:** Usa la [guía de contribución](docs/guides/contribution-guide.md) y revisa el [roadmap](docs/roadmap/roadmap.md).
 
-- A language-specific `README.md` that expands on The Wise Tech vision and provides curated links.
-- Conceptual guides that contrast The Wise Tech approach with traditional practices.
-- Visual ASCII diagrams that illustrate the end-to-end process and symbiotic feedback loops.
-- The "The Wise Tech + aDevelopment" playbook describing how to blend accumulated expertise with AI-augmented workflows.
+## Popular paths
 
-## Key Resources
+| Ruta | ¿Por qué? |
+| --- | --- |
+| [Wise Tech principles](docs/principles/wise-tech-principles.md) | Punto de partida para alinear decisiones. |
+| [Wise Tech approach](docs/principles/wise-tech-approach.md) | Cómo combinamos juicio humano y automatización. |
+| [Developers overview](docs/personas/developers-overview.md) | Ruta rápida de onboarding técnico. |
+| [Platform playbook](docs/playbooks/platform-playbook.md) | Expectativas de resiliencia y operabilidad. |
+| [Payments overview](docs/scenarios/payments-overview.md) | Escenario completo para ensayar prácticas. |
+| [Wise Tech ASCII](docs/diagrams/wise-tech-approach-ascii.md) | Visual simple para contar la historia. |
+| [Roadmap](docs/roadmap/roadmap.md) | Próximos hitos y métricas compartidas. |
+| [Contribution guide](docs/guides/contribution-guide.md) | Pasos concretos para proponer cambios. |
+| [ADR index](adr/README.md) | Historial de decisiones estratégicas. |
 
-- [Essential Principles](en/docs/principles-essential.md) / [Principios Esenciales](es/docs/principles-essential.md)
-- [PR Checklist](en/docs/checklist-pr.md) / [Checklist de PR](es/docs/checklist-pr.md)
-- [Recipe Catalog](en/docs/recipes/README.md) / [Catálogo de Recetas](es/docs/recipes/README.md)
-- [Onboarding Assets](en/docs/onboarding/README.md) / [Recursos de Onboarding](es/docs/onboarding/README.md)
-- [Narrative Changelog Guidelines](en/docs/changelog-guidelines.md) / [Guías de Changelog Narrativo](es/docs/changelog-guidelines.md)
-- [Living Glossary](en/docs/glossary.md) / [Glosario Vivo](es/docs/glossary.md)
-- [Payments Scenario](scenarios/payments/README.md) bundles code, contracts, tests, and runbooks that operationalize the principles.
+## How we work
+- **Simplicidad:** Buscamos el menor esfuerzo que entregue valor. [Ver principios](docs/principles/wise-tech-principles.md#simplicity)
+- **Mejora continua:** Iteramos con experimentos pequeños y visibles. [Ver principios](docs/principles/wise-tech-principles.md#mejora-continua)
+- **Resiliencia:** Diseñamos para fallar con gracia y recuperarnos rápido. [Ver principios](docs/principles/wise-tech-principles.md#resiliencia)
+- **Capitalización del conocimiento:** Documentamos para escalar aprendizajes. [Ver principios](docs/principles/wise-tech-principles.md#capitalización-del-conocimiento)
+- **Propósito humano:** Alineamos la tecnología con necesidades reales. [Ver principios](docs/principles/wise-tech-principles.md#propósito-humano)
+- **Conexión humana:** Priorizamos relaciones y feedback transparente. [Ver principios](docs/principles/wise-tech-principles.md#conexión-humana)
 
-The payments folder acts as a canonical business scenario: the service errors showcase error-handling recipes, the contracts illustrate consumer-driven testing, and bilingual runbooks make resilience actionable.
+## Contribute
+- Sigue la [guía de contribución](docs/guides/contribution-guide.md) para abrir issues y PRs.
+- Usa la plantilla de issues [Feedback User Experience](.github/ISSUE_TEMPLATE/feedback-user-experience.md).
+- Completa la [plantilla de Pull Request](.github/PULL_REQUEST_TEMPLATE.md) para resaltar principios reforzados.
 
-## Contributing
+## FAQ
+- **¿Dónde encuentro los principios originales?** → [Principles hub](docs/principles/_index.md)
+- **¿Cómo valido enlaces antes de publicar?** → Ejecuta `python scripts/check-links.py --strict`.
+- **¿Existe un escenario de referencia?** → Sí, visita [payments overview](docs/scenarios/payments-overview.md).
+- **¿Dónde documento decisiones?** → Usa el [índice de ADR](adr/README.md) y enlaza desde tu PR.
+- **¿Qué hago si detecto fricciones de usuario?** → Abre un issue con la plantilla de experiencia.
 
-When proposing changes, please update the English document first and then provide an equivalent translation under `es/`. Use the pull request template checklist and link back to the Essential principles, recipes, and onboarding guides whenever you introduce new knowledge.
-
-Automation keeps both languages synchronized. Run `python scripts/check_bilingual_parity.py --check-scenarios` locally or rely on the **Bilingual Parity** GitHub Action before merging.
-
-For detailed expectations, consult [Contributing Guide (English)](CONTRIBUTING.md) and [Guía de Contribución (Español)](CONTRIBUTING.es.md).
-
----
-
-For licensing information, see [LICENSE](LICENSE).
+## Footer
+- Licencia: [MIT](LICENSE)
+- Badges: [![Docs validation](https://github.com/scanalesespinoza/the-wise-tech/actions/workflows/docs-validation.yml/badge.svg)](https://github.com/scanalesespinoza/the-wise-tech/actions/workflows/docs-validation.yml)
