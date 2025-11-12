@@ -1,33 +1,77 @@
 site_name: The Wise Tech
 site_description: Documentation portal generated from the Wise Tech repository.
-site_url: https://example.com
+site_url: https://the-wise-tech.org
+
+docs_dir: docs
 
 nav:
-  - Home (EN): en/README.md
-  - Inicio (ES): es/README.md
+  - Home: en/README.md
   - Recipes:
-      - Catalog (EN): en/docs/recipes/README.md
-      - Catálogo (ES): es/docs/recipes/README.md
+      - Catalog: en/docs/recipes/README.md
   - Onboarding:
-      - Guide (EN): en/docs/onboarding/README.md
-      - Guía (ES): es/docs/onboarding/README.md
+      - Guide: en/docs/onboarding/README.md
   - Scenarios:
       - Payments:
           - Overview: scenarios/payments/README.md
-          - Runbook (EN): scenarios/payments/docs/en/runbook.md
-          - Runbook (ES): scenarios/payments/docs/es/runbook.md
-          - Observability (EN): scenarios/payments/docs/en/observability.md
-          - Observabilidad (ES): scenarios/payments/docs/es/observability.md
+          - Runbook: scenarios/payments/docs/en/runbook.md
+          - Observability: scenarios/payments/docs/en/observability.md
           - Contract: scenarios/payments/contracts/payments/v2/README.md
   - Governance:
-      - Contribution Guide (EN): CONTRIBUTING.md
-      - Guía de Contribución (ES): CONTRIBUTING.es.md
+      - Contribution Guide: CONTRIBUTING.md
   - Automation:
       - PR Checklist Workflow: .github/workflows/pr-checklist.yml
       - PR Summarizer Workflow: .github/workflows/pr-summarizer.yml
       - Documentation Generator Workflow: .github/workflows/doc-gen.yml
       - Bilingual Parity Workflow: .github/workflows/bilingual-parity.yml
 
-docs_dir: .
-repo_url: https://github.com/example/the-wise-tech
+repo_url: https://github.com/the-wise-tech/the-wise-tech
 repo_name: the-wise-tech
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.top
+    - search.highlight
+    - search.suggest
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: folder
+      languages:
+        - locale: en
+          name: English
+          default: true
+          link: /
+        - locale: es
+          name: Español
+          nav_translations:
+            Home: Inicio
+            Recipes: Recetas
+            Catalog: Catálogo
+            Onboarding: Incorporación
+            Guide: Guía
+            Scenarios: Escenarios
+            Payments: Pagos
+            Overview: Descripción general
+            Runbook: Manual operativo
+            Observability: Observabilidad
+            Contract: Contrato
+            Governance: Gobernanza
+            Contribution Guide: Guía de contribución
+            Automation: Automatización
+            PR Checklist Workflow: Flujo de checklist de PR
+            PR Summarizer Workflow: Flujo de resumen de PR
+            Documentation Generator Workflow: Flujo de generación de documentación
+            Bilingual Parity Workflow: Flujo de paridad bilingüe
+
+extra:
+  alternate:
+    - name: English
+      link: /
+      lang: en
+    - name: Español
+      link: /es/
+      lang: es

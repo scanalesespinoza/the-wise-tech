@@ -1,0 +1,13 @@
+# Default owners receive notifications for every change.
+* @scanalesespinoza
+
+# Documentation maintainers
+/docs/ @docs-maintainers
+/en/ @docs-maintainers
+/es/ @docs-maintainers
+
+# Payments scenario subject-matter experts
+/scenarios/payments/ @payments-sme-team
+
+# Automation workflows
+/.github/workflows/ @platform-automation
