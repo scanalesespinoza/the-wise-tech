@@ -1,0 +1,85 @@
+#!/usr/bin/env python3
+"""Validate relative Markdown links within the repository."""
+
+from __future__ import annotations
+
+import argparse
+import re
+import sys
+from pathlib import Path
+from typing import Iterable, List, Tuple
+
+MARKDOWN_PATTERN = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
+IGNORED_PREFIXES = ("http://", "https://", "mailto:", "tel:", "{{", "{#")
+
+
+def extract_links(markdown: str) -> Iterable[str]:
+    for match in MARKDOWN_PATTERN.finditer(markdown):
+        yield match.group(1)
+
+
+def is_relative(link: str) -> bool:
+    if link.startswith("#"):
+        return False
+    if link.startswith("/"):
+        return True
+    return not link.startswith(IGNORED_PREFIXES)
+
+
+def validate_file(md_file: Path) -> List[Tuple[str, str]]:
+    text = md_file.read_text(encoding="utf-8")
+    errors: List[Tuple[str, str]] = []
+    for link in extract_links(text):
+        if not is_relative(link):
+            continue
+        if link.startswith("/"):
+            errors.append((link, "absolute paths are not allowed"))
+            continue
+        target, *_anchor = (link.split("#", 1) + [None])[:2]
+        target_path = (md_file.parent / target).resolve()
+        if not target_path.exists():
+            errors.append((link, "target does not exist"))
+    return errors
+
+
+def run(root: Path, strict: bool) -> int:
+    markdown_files = sorted(root.rglob("*.md"))
+    all_errors: List[Tuple[Path, str, str]] = []
+    for md_file in markdown_files:
+        posix_path = md_file.as_posix()
+        if ".git/" in posix_path:
+            continue
+        if "/archive/" in posix_path:
+            continue
+        for link, reason in validate_file(md_file):
+            all_errors.append((md_file, link, reason))
+    if all_errors:
+        for path, link, reason in all_errors:
+            print(f"[ERROR] {path.relative_to(root)} → {link} ({reason})")
+        return 1
+    if strict:
+        print("All Markdown links are valid.")
+    return 0
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--strict",
+        action="store_true",
+        help="Print success message when no issues are found.",
+    )
+    parser.add_argument(
+        "path",
+        nargs="?",
+        default=".",
+        type=Path,
+        help="Root path to scan (defaults to current directory).",
+    )
+    args = parser.parse_args()
+    root = args.path.resolve()
+    sys.exit(run(root, args.strict))
+
+
+if __name__ == "__main__":
+    main()

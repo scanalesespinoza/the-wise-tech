@@ -1,20 +1,34 @@
 # The Wise Tech
 
-The Wise Tech repository captures the methodology, diagrams, and playbooks that describe how the organization blends human expertise with AI-assisted practices across the software lifecycle.
+El repositorio que convierte la filosofía Wise Tech en acciones compartidas: un mapa navegable para aprender, construir y operar tecnología con propósito humano.
 
-Welcome to The Wise Tech knowledge base. This repository is organized in two fully synchronized language trees so that every document is available both in English and in Spanish. Choose the path that best fits your needs:
+## Choose your path
 
-- [English content](en/README.md)
-- [Contenido en español](es/README.md)
+| Rol | Descripción | CTA |
+| --- | --- | --- |
+| Consumidores de tecnología | Explora cómo protegemos experiencias claras y confiables. | [Ir a la ruta](docs/personas/consumers-overview.md) |
+| Software Developers | Acelera entregas resilientes con prácticas compartidas. | [Ir a la ruta](docs/personas/developers-overview.md) |
+| Platform Engineers | Escala operaciones y feedback continuo entre equipos. | [Ir a la ruta](docs/personas/platform-engineers-overview.md) |
 
-Each language folder mirrors the same structure (guides, visual references, and practice playbooks) to make navigation predictable regardless of the language you select. If you update a document in one language, remember to reflect the change in the counterpart file so that both versions remain aligned.
+## Quick start
+1. Lee el [quickstart](docs/guides/quickstart.md) y prepara el entorno.
+2. Ejecuta `python scripts/check-links.py --strict` para validar enlaces.
+3. Abre un issue o PR siguiendo la [guía de contribución](docs/guides/contribution-guide.md).
 
-## How the repository is organized
+## Navigation Map
 
-```text
-├── en/                 # English source of truth for every document
-├── es/                 # Spanish translation with the same structure and filenames
-└── scenarios/payments/ # Business scenario that demonstrates Wise Tech end-to-end
+```
+/ (README one-page)
+├─ Principles → docs/principles/
+├─ Personas
+│ ├─ Consumers → docs/personas/consumers-overview.md
+│ ├─ Developers → docs/personas/developers-overview.md
+│ └─ Platform Engineers → docs/personas/platform-engineers-overview.md
+├─ Guides → docs/guides/
+├─ Playbooks → docs/playbooks/
+├─ Scenarios → docs/scenarios/
+├─ Diagrams → docs/diagrams/
+└─ Roadmap → docs/roadmap/roadmap.md
 ```
 
 Both language trees contain:

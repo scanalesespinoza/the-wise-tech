@@ -1,35 +1,24 @@
-# Contributing Guide (English)
+# Contributing Guide
 
-Thank you for investing in The Wise Tech knowledge base. This repository mirrors every artifact in English and Spanish, so please keep both versions aligned.
+Thank you for helping grow The Wise Tech knowledge base. This repository now uses a single navigation tree in `docs/` with role-
+based journeys.
 
 ## Workflow Overview
-1. Update the English document or asset first.
-2. Reflect the change in the Spanish counterpart with equivalent structure and intent.
-3. Run `.github/scripts/generate_module_readmes.py` when you add recipes or onboarding guides.
-4. Open a pull request using the template and complete the checklist.
-5. Tag mentors or subject matter experts for Essential principle updates.
+1. Lee el [quickstart](docs/guides/quickstart.md) y prepara tu entorno (`make install`).
+2. Crea una rama descriptiva (`feat-docs-one-page`) y realiza cambios pequeños y revisables.
+3. Ejecuta `python scripts/check-links.py --strict` y cualquier prueba relevante antes de subir cambios.
+4. Abre una PR usando la [plantilla oficial](.github/PULL_REQUEST_TEMPLATE.md) y enlaza el principio reforzado.
+5. Solicita revisión cruzada a personas de los roles impactados (Consumers, Developers, Platform Engineers).
 
-## Translation Expectations
-- Preserve headings, callouts, and links so the navigation stays symmetrical.
-- Prefer neutral Spanish that is inclusive and accessible to Latin America and Spain.
-- Document idioms or terminology in `en/docs/glossary.md` and `es/docs/glossary.md`.
+## Documentación clave
+- [Wise Tech principles](docs/principles/wise-tech-principles.md)
+- [Developers overview](docs/personas/developers-overview.md)
+- [Platform playbook](docs/playbooks/platform-playbook.md)
+- [Roadmap](docs/roadmap/roadmap.md)
 
-## Documentation Types
-- **Essential:** [`en/docs/principles-essential.md`](en/docs/principles-essential.md)
-- **Checklists:** [`en/docs/checklist-pr.md`](en/docs/checklist-pr.md)
-- **Recipes:** `en/docs/recipes/*.md`
-- **Onboarding:** `en/docs/onboarding/*.md`
-- **Narrative changelog:** [`en/docs/changelog-guidelines.md`](en/docs/changelog-guidelines.md)
+## Automatización
+- El workflow [`docs-validation`](.github/workflows/docs-validation.yml) verifica enlaces y convenciones.
+- Reutiliza `scripts/check-links.py` en tu CI local para iterar más rápido.
+- Documenta decisiones en [ADR](adr/README.md) cuando cambies procesos estratégicos.
 
-## Automation
-- GitHub Actions enforce the presence of the checklist template and prepare PR summaries when a webhook is configured.
-- `Doc Generation` workflow keeps recipe/onboarding catalogs up to date.
-- Reference the workflow files under `.github/workflows/` to adapt automations to your organization.
-
-## Review Criteria
-- Essential principles referenced in the PR description and respected in the diff.
-- Tests, observability, and security implications addressed or justified.
-- Documentation updated or explicitly deferred with an issue link.
-- Spanish translation reviewed by a bilingual peer when possible.
-
-Please also read the [Código de Contribución en Español](CONTRIBUTING.es.md) if you prefer guidance in Spanish.
+For guidance in Spanish, consulta [CONTRIBUTING.es.md](CONTRIBUTING.es.md).

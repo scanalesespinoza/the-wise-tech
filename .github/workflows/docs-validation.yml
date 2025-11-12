@@ -1,0 +1,33 @@
+name: docs-validation
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements-dev.txt ]; then pip install -r requirements-dev.txt; fi
+      - name: Validate Markdown links
+        run: python scripts/check-links.py --strict
+
+  check-names:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Ensure Markdown filenames have no spaces
+        run: |
+          violations=$(find docs -path '*/.*' -prune -o -type f -name '*.md' -name '* *' -print)
+          if [ -n "$violations" ]; then
+            echo "Found Markdown filenames with spaces:" && echo "$violations"
+            exit 1
+          fi
