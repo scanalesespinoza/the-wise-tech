@@ -1,0 +1,14 @@
+{
+  "refund_id": "re_67890",
+  "charge_id": "ch_12345",
+  "amount": 1250,
+  "currency": "USD",
+  "reason_en": "customer-request",
+  "reason_es": "solicitud-cliente",
+  "idempotency_key": "refund-dev-example-1",
+  "metadata": {
+    "scenario": "payments",
+    "notes_en": "Validate refund retries remain idempotent",
+    "notes_es": "Valida que los reintentos de reembolso se mantengan idempotentes"
+  }
+}

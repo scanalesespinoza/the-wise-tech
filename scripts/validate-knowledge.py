@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-from __future__ import annotations
-
 """Validate knowledge base metadata, quotes, and links."""
+
+from __future__ import annotations
 
 import json
 import re
@@ -61,7 +61,9 @@ def expect_files(slug_dir: Path) -> None:
         if not expected.exists():
             missing.append(expected.relative_to(ROOT))
     if missing:
-        raise ValidationError(f"Missing required files for {slug}: {', '.join(map(str, missing))}")
+        raise ValidationError(
+            f"Missing required files for {slug}: {', '.join(map(str, missing))}"
+        )
 
 
 def validate_metadata(slug_dir: Path) -> None:
@@ -87,14 +89,18 @@ def validate_metadata(slug_dir: Path) -> None:
     }
     for field, expected_type in required_fields.items():
         if field not in data:
-            raise ValidationError(f"Missing field '{field}' in {path.relative_to(ROOT)}")
+            raise ValidationError(
+                f"Missing field '{field}' in {path.relative_to(ROOT)}"
+            )
         if not isinstance(data[field], expected_type):
             raise ValidationError(
                 f"Field '{field}' in {path.relative_to(ROOT)} must be {expected_type.__name__}"
             )
 
     if data["source"] not in ALLOWED_SOURCES:
-        raise ValidationError(f"Unsupported source '{data['source']}' in {path.relative_to(ROOT)}")
+        raise ValidationError(
+            f"Unsupported source '{data['source']}' in {path.relative_to(ROOT)}"
+        )
 
     try:
         datetime.strptime(data["published_date"], "%Y-%m-%d")
@@ -104,9 +110,13 @@ def validate_metadata(slug_dir: Path) -> None:
         )
 
     if not data["topics"]:
-        raise ValidationError(f"Field 'topics' must not be empty in {path.relative_to(ROOT)}")
+        raise ValidationError(
+            f"Field 'topics' must not be empty in {path.relative_to(ROOT)}"
+        )
     if any(not isinstance(topic, str) or not topic for topic in data["topics"]):
-        raise ValidationError(f"All topics must be non-empty strings in {path.relative_to(ROOT)}")
+        raise ValidationError(
+            f"All topics must be non-empty strings in {path.relative_to(ROOT)}"
+        )
 
     personas = data["personas"]
     if not personas or any(p not in ALLOWED_PERSONAS for p in personas):
@@ -120,8 +130,12 @@ def validate_metadata(slug_dir: Path) -> None:
             f"Wise Tech principles must be subset of {sorted(ALLOWED_PRINCIPLES)} in {path.relative_to(ROOT)}"
         )
 
-    if len(data["hash"]) != 64 or not all(c in "0123456789abcdef" for c in data["hash"].lower()):
-        raise ValidationError(f"Hash must be a 64-char hex string in {path.relative_to(ROOT)}")
+    if len(data["hash"]) != 64 or not all(
+        c in "0123456789abcdef" for c in data["hash"].lower()
+    ):
+        raise ValidationError(
+            f"Hash must be a 64-char hex string in {path.relative_to(ROOT)}"
+        )
 
     if data["extraction_mode"] not in {"structured-summary", "full-text"}:
         raise ValidationError(

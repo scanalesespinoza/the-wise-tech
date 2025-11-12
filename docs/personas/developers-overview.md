@@ -1,26 +1,21 @@
-# Developers Overview
+# Developers — Quickstart
 
-## Propósito
-Este espacio reúne recursos esenciales para desarrolladoras y desarrolladores que combinan maestría humana con prácticas aumentadas por IA.
+## Primeros 10 minutos
+1. `make install` — instala dependencias runtime y de documentación.
+2. `make test` — ejecuta todos los tests del escenario de pagos.
+3. `make parity` — asegura paridad bilingüe antes de abrir PR.
+4. `make docs` — navega la experiencia local en `http://127.0.0.1:8000`.
+5. `make ci` — reproduce el mismo pipeline que corre en el workflow `quality`.
 
-## Recommended reads
-- [aDevelopment: la nueva era del desarrollo aumentado — Resumen ES](../knowledge/articles/adevelopment-la-nueva-era-del-desarrollo-aumentado/adevelopment-la-nueva-era-del-desarrollo-aumentado-summary-es.md) / [Summary EN](../knowledge/articles/adevelopment-la-nueva-era-del-desarrollo-aumentado/adevelopment-la-nueva-era-del-desarrollo-aumentado-summary-en.md)
-- [Whitepaper: Measuring the Impact of Augmented Development — Resumen ES](../knowledge/articles/whitepaper-measuring-the-impact-of-augmented-development/whitepaper-measuring-the-impact-of-augmented-development-summary-es.md) / [Summary EN](../knowledge/articles/whitepaper-measuring-the-impact-of-augmented-development/whitepaper-measuring-the-impact-of-augmented-development-summary-en.md)
-- [Don't Blame the Cloud: Empowering Resilient Applications — Resumen ES](../knowledge/articles/dont-blame-the-cloud-empowering-resilient-applications/dont-blame-the-cloud-empowering-resilient-applications-summary-es.md) / [Summary EN](../knowledge/articles/dont-blame-the-cloud-empowering-resilient-applications/dont-blame-the-cloud-empowering-resilient-applications-summary-en.md)
-- [What about having Super Apps? — Resumen ES](../knowledge/articles/what-about-having-super-apps/what-about-having-super-apps-summary-es.md) / [Summary EN](../knowledge/articles/what-about-having-super-apps/what-about-having-super-apps-summary-en.md)
-- [The Hadron Pattern for Microservices — Resumen ES](../knowledge/articles/the-hadron-pattern-for-microservices/the-hadron-pattern-for-microservices-summary-es.md) / [Summary EN](../knowledge/articles/the-hadron-pattern-for-microservices/the-hadron-pattern-for-microservices-summary-en.md)
+## Escenario de pagos: primeros pasos
+- Datos de prueba en `scenarios/payments/tests/fixtures/` (`valid-charge.json` y `refund-request.json`).
+- Ejecuta pruebas focalizadas:
+  ```bash
+  python -m unittest scenarios/payments/tests/test_payments_flow.py -v
+  ```
+- Si necesitas depurar traducciones o errores, revisa `scenarios/payments/service/errors.py` y registra aprendizajes en `adr/`.
 
-## Primeros 60 minutos
-- Ejecuta el [quickstart de 5 pasos](../guides/quickstart.md) y registra tiempos por comando.
-- Revisa el [contrato del escenario de pagos](https://github.com/the-wise-tech/the-wise-tech/blob/main/scenarios/payments/contracts/payments/v2/README.md) y agrega una nota en el changelog si detectas nuevas reglas.
-- Esboza un experimento en el [developer playbook](../playbooks/developer-playbook.md#primeros-60-minutos) para automatizar un check adicional.
-
-## Indicadores clave de aprendizaje
-- **Tiempo de ciclo del escenario de pagos**: duración desde `make test` hasta `make docs` sin errores.
-- **Defectos evitados**: cantidad de fallas detectadas por `make parity` o `make links` antes del merge.
-- **Cobertura de conocimiento**: número de referencias nuevas al glosario o principios en tus PRs.
-
-## Prácticas destacadas
-- [Checklist de resiliencia cloud](../knowledge/articles/dont-blame-the-cloud-empowering-resilient-applications/dont-blame-the-cloud-empowering-resilient-applications-practices.md)
-- [Guía rápida de Super Apps](../knowledge/articles/what-about-having-super-apps/what-about-having-super-apps-practices.md)
-- [Patrón Hadron en acción](../knowledge/articles/the-hadron-pattern-for-microservices/the-hadron-pattern-for-microservices-practices.md)
+## Prácticas compartidas (mínimas)
+- **Idempotencia**: usa `idempotency_key` en tus handlers críticos y verifica reintentos con los fixtures.
+- **Trazabilidad**: añade un `correlation_id` a tus logs (ver snippet en el [Developer Playbook](../playbooks/developer-playbook.md#trazabilidad-con-correlation-id)).
+- **Capitalización**: cada entrega debe apuntar al principio reforzado de Wise Tech y documentar decisiones en el tablero de ADRs.

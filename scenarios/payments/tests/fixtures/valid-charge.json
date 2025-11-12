@@ -1,0 +1,13 @@
+{
+  "charge_id": "ch_12345",
+  "amount": 1250,
+  "currency": "USD",
+  "status_en": "approved",
+  "status_es": "aprobado",
+  "correlation_id": "dev-example-1",
+  "metadata": {
+    "scenario": "payments",
+    "notes_en": "Use to verify success responses and trace ids",
+    "notes_es": "Úsalo para validar respuestas exitosas y trazas"
+  }
+}
