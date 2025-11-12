@@ -16,6 +16,6 @@
 - Returning stack traces or implementation details to consumers.
 - Creating divergent error taxonomies across services.
 
-**Local example.** See `services/payments/errors.py` for the canonical domain exceptions and how they map to API responses.
+**Local example.** See `scenarios/payments/service/errors.py` for the canonical domain exceptions and how they map to API responses.
 
 **Related principles.** [Respect the domain contract](../principles-essential.md), [Design for graceful failure](../principles-essential.md).

@@ -16,6 +16,6 @@
 - Desplegar sin notificar a las personas consumidoras sobre actualizaciones necesarias.
 - Permitir la coexistencia de múltiples variantes de contrato sin documentar.
 
-**Ejemplo local.** Revisa `contracts/payments/v2` para ver los archivos Pact y el README que explica los comportamientos esperados.
+**Ejemplo local.** Revisa `scenarios/payments/contracts/payments/v2` para ver los archivos Pact y el README que explica los comportamientos esperados.
 
 **Principios relacionados.** [Respeta el contrato del dominio](../principles-essential.md), [Inclínate por la simplicidad mantenible](../principles-essential.md).

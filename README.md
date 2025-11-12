@@ -12,8 +12,9 @@ Each language folder mirrors the same structure (guides, visual references, and 
 ## How the repository is organized
 
 ```text
-├── en/           # English source of truth for every document
-└── es/           # Spanish translation with the same structure and filenames
+├── en/                 # English source of truth for every document
+├── es/                 # Spanish translation with the same structure and filenames
+└── scenarios/payments/ # Business scenario that demonstrates Wise Tech end-to-end
 ```
 
 Both language trees contain:
@@ -31,10 +32,15 @@ Both language trees contain:
 - [Onboarding Assets](en/docs/onboarding/README.md) / [Recursos de Onboarding](es/docs/onboarding/README.md)
 - [Narrative Changelog Guidelines](en/docs/changelog-guidelines.md) / [Guías de Changelog Narrativo](es/docs/changelog-guidelines.md)
 - [Living Glossary](en/docs/glossary.md) / [Glosario Vivo](es/docs/glossary.md)
+- [Payments Scenario](scenarios/payments/README.md) bundles code, contracts, tests, and runbooks that operationalize the principles.
+
+The payments folder acts as a canonical business scenario: the service errors showcase error-handling recipes, the contracts illustrate consumer-driven testing, and bilingual runbooks make resilience actionable.
 
 ## Contributing
 
 When proposing changes, please update the English document first and then provide an equivalent translation under `es/`. Use the pull request template checklist and link back to the Essential principles, recipes, and onboarding guides whenever you introduce new knowledge.
+
+Automation keeps both languages synchronized. Run `python scripts/check_bilingual_parity.py --check-scenarios` locally or rely on the **Bilingual Parity** GitHub Action before merging.
 
 For detailed expectations, consult [Contributing Guide (English)](CONTRIBUTING.md) and [Guía de Contribución (Español)](CONTRIBUTING.es.md).
 

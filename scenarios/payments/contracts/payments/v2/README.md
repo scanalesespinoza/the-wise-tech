@@ -46,3 +46,8 @@ so reviewers and stakeholders can reason about the same artifact.
 - Pact files live alongside this README under `pacts/` (add them as you
   evolve scenarios) / Los archivos Pact viven junto a este README en
   `pacts/` (agrégalos conforme evoluciones los escenarios).
+- Automated verification lives in
+  `scenarios/payments/tests/test_contract_pact.py` to detect schema drift
+  during CI runs. / La verificación automática vive en
+  `scenarios/payments/tests/test_contract_pact.py` para detectar desvíos
+  de esquema durante las ejecuciones de CI.
