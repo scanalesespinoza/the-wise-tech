@@ -1,11 +1,8 @@
-/ (README one-page)
+/ (README)
 ├─ Principles → docs/principles/
-├─ Personas
-│ ├─ Consumers → docs/personas/consumers-overview.md
-│ ├─ Developers → docs/personas/developers-overview.md
-│ └─ Platform Engineers → docs/personas/platform-engineers-overview.md
+├─ Personas → docs/personas/
 ├─ Guides → docs/guides/
 ├─ Playbooks → docs/playbooks/
 ├─ Scenarios → docs/scenarios/
-├─ Diagrams → docs/diagrams/
+│  └─ Payments → scenarios/payments/
 └─ Roadmap → docs/roadmap/roadmap.md

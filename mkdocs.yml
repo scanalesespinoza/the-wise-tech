@@ -19,10 +19,11 @@ nav:
   - Governance:
       - Contribution Guide: CONTRIBUTING.md
   - Automation:
+      - Quality Workflow: .github/workflows/quality.yml
+      - Links Workflow: .github/workflows/links.yml
       - PR Checklist Workflow: .github/workflows/pr-checklist.yml
       - PR Summarizer Workflow: .github/workflows/pr-summarizer.yml
       - Documentation Generator Workflow: .github/workflows/doc-gen.yml
-      - Bilingual Parity Workflow: .github/workflows/bilingual-parity.yml
   - Knowledge:
       - Index: knowledge/index.md
       - Articles:

@@ -16,7 +16,7 @@ Gracias por aportar a The Wise Tech. Toda la documentación vive ahora en `docs/
 - [Roadmap](docs/roadmap/roadmap.md)
 
 ## Automatización
-- El workflow [`docs-validation`](.github/workflows/docs-validation.yml) valida enlaces y convenciones.
+- Los workflows [`quality`](.github/workflows/quality.yml) y [`links`](.github/workflows/links.yml) corren los mismos comandos del Makefile (install → lint → fmt → test → parity) y vigilan los enlaces internos.
 - Usa `scripts/check-links.py` en local para evitar sorpresas en CI.
 - Documenta decisiones estratégicas en el [índice de ADR](adr/README.md).
 

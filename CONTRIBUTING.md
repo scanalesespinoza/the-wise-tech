@@ -17,7 +17,7 @@ based journeys.
 - [Roadmap](docs/roadmap/roadmap.md)
 
 ## Automatización
-- El workflow [`docs-validation`](.github/workflows/docs-validation.yml) verifica enlaces y convenciones.
+- Los workflows [`quality`](.github/workflows/quality.yml) y [`links`](.github/workflows/links.yml) ejecutan el mismo flujo de comandos del Makefile (install → lint → fmt → test → parity) y aseguran que los enlaces internos sigan funcionando.
 - Reutiliza `scripts/check-links.py` en tu CI local para iterar más rápido.
 - Documenta decisiones en [ADR](adr/README.md) cuando cambies procesos estratégicos.
 
