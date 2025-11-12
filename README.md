@@ -68,6 +68,17 @@ The payments folder acts as a canonical business scenario: the service errors sh
 - [Platform playbook](docs/playbooks/platform-playbook.md#indicadores-clave-de-experimento) explica cómo medir MTTR simulado, cobertura de runbooks y satisfacción de equipos.
 - Cada [ruta por rol](docs/personas/_index.md) incluye "Primeros 60 minutos" para convertir aprendizaje en acción inmediata.
 
+## FAQ
+
+### ¿Qué comandos ejecutan los workflows de CI?
+Los pipelines [`quality`](.github/workflows/quality.yml) y [`links`](.github/workflows/links.yml) reutilizan las tareas del Makefile, por lo que `make install && make lint && make fmt && make test && make parity` más `python scripts/check-links.py --strict` entregan el mismo veredicto antes de abrir una PR.
+
+### ¿Cómo valido bilingüismo cuando sólo edito una lengua?
+Ejecuta `make parity` para comparar las rutas `en/` y `es/`. Si todavía no existe la traducción, agrega una nota `TODO (parity)` en el archivo y documenta el plan en tu PR para que el pipeline no falle.
+
+### ¿Qué hacer si MkDocs ya usa el puerto 8000?
+Puedes redefinir el puerto temporalmente con `mkdocs serve -a 127.0.0.1:8010` o exportar `MKDOCS_SERVE_ADDR=127.0.0.1:8010` antes de correr `make docs`.
+
 ## Contributing
 
 When proposing changes, please update the English document first and then provide an equivalent translation under `es/`. Use the pull request template checklist and link back to the Essential principles, recipes, and onboarding guides whenever you introduce new knowledge.
