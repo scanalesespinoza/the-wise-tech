@@ -48,3 +48,35 @@
 
 ## Por qué importa
 El enfoque The Wise Tech reemplaza cadenas fragmentadas por un sistema simbiótico. Desarrolladores, personas ingenieras de plataforma y consumidoras de tecnología comparten la responsabilidad por la calidad, la resiliencia y el impacto humano. Cuando la retroalimentación fluye sin obstáculos, creamos productos relevantes, confiables y genuinamente útiles.
+
+## Anexo: Perfiles de Consistencia y Estrategias de Réplica
+
+Este anexo convierte las salvaguardas de sistemas distribuidos en un plan incremental para Wise Tech. Cada servicio declara su **perfil de consistencia** y su **estrategia de réplica** para que la automatización valide la combinación antes de integrar o desplegar código.
+
+### Matriz de decisión
+
+| Perfil / Estrategia | Garantías principales | Estrategias de réplica compatibles | Cuándo elegirlo | Riesgos a vigilar |
+| --- | --- | --- | --- | --- |
+| **Strict** | Aislamiento cercano a serializable, lecturas linealizables, escrituras deterministas | Primary-backup, Quórums | Flujos financieros, órdenes, cambios de inventario global | Contención de latencia, riesgo de *split-brain* si falla la membresía |
+| **Causal** | Respeta dependencias causales, lecturas monotónicas y *read-your-writes* mediante vectores de sesión | Réplica activa, Quórums | Experiencias colaborativas, cronologías de actividad de usuarios | Complejidad al gestionar clocks cuando se pierden metadatos |
+| **Eventual** | Convergencia por políticas de reconciliación con latencia mínima | Réplica activa, *fan-out* con cachés TTL | Catálogos, contenido, métricas agregadas | Divergencia visible si no hay idempotencia y reconciliación explícita |
+
+### Guías de implementación
+
+1. **Consistencia declarativa:** Los servicios registran su perfil en `platform/policies/consistency.yml`. El *check* de CI en `ci/consistency-check` contrasta el perfil con los patrones de acceso y con la estrategia de réplica declarada.
+2. **Garantías centradas en el cliente:** El middleware de sesión adjunta encabezados con relojes vectoriales para que clientes móviles y web observen *read-your-writes* y lecturas monotónicas aunque roten de réplica.
+3. **Consistency vs. coherence:** Las políticas distinguen reglas a nivel de dataset (consistency) de las cachés por ítem (coherence). Las TTL deben alinearse al perfil elegido para evitar lecturas obsoletas.
+4. **Migraciones controladas:** Las ADR detallan cómo cambiar de un perfil a otro —por ejemplo, de eventual a causal— mediante despliegues *blue/green* por partición y *checkpoints* de observabilidad.
+
+### Ganchos de resiliencia operativa
+
+- **Catálogo de réplicas:** Las políticas de primary-backup, réplica activa y quórums viven en `platform/policies/resilience.yml`, cada una con validaciones automáticas de idempotencia y expectativas de estado compartido.
+- **Pruebas de fallos parciales:** Los escenarios en `ci/resilience-lint` y `ci/causality-test` simulan nodos lentos, pérdida de miembros y tormentas de reintentos para asegurar degradaciones controladas.
+- **Gestión de membresía:** `guides/platform-playbook.md` mantiene alineados heartbeats, timeouts y el orden de eventos de grupo con la estrategia de réplica declarada.
+
+### Quality Gates y retroalimentación humana
+
+- **Checks automatizados:** Cada Pull Request ejecuta validaciones de consistencia, resiliencia y causalidad para detectar configuraciones incompatibles.
+- **Idempotencia por contrato:** Los servicios que optan por réplica activa deben exponer claves de idempotencia o efectos secundarios verificables para sobrevivir a reintentos.
+- **Continuidad de sesión:** Soporte y UX consultan vectores de sesión antes de responder cuando una persona usuaria cambia de réplica, garantizando continuidad.
+- **Capitalización de conocimiento:** Las plantillas de issues y PR registran decisiones de consistencia y réplica junto con aprendizajes de usuarios, reforzando la memoria organizacional.

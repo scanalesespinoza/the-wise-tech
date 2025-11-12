@@ -48,3 +48,35 @@
 
 ## Why It Matters
 The Wise Tech approach replaces fragmented chains with a symbiotic system. Developers, platform engineers, and technology consumers share responsibility for quality, resilience, and human impact. When feedback flows freely, we build products that stay relevant, trustworthy, and genuinely helpful.
+
+## Annex: Consistency Profiles & Replication Strategies
+
+This annex translates distributed-system guardrails into Wise Tech’s incremental playbook. Each service declares its preferred **consistency profile** and **replication strategy** so that automation can verify the combination before code is merged or deployed.
+
+### Decision Matrix
+
+| Profile / Strategy | Primary guarantees | Compatible replication strategies | When to choose it | Watch-outs |
+| --- | --- | --- | --- | --- |
+| **Strict** | Near-serializable isolation, linearizable reads, deterministic writes | Primary-backup, Quorums | Financial flows, orders, global inventory updates | Latency contention, split-brain risk if membership falters |
+| **Causal** | Preserves causal dependencies, monotonic reads, read-your-writes with session vectors | Active replication, Quorums | Collaborative experiences, user activity timelines | Clock management complexity when metadata is lost |
+| **Eventual** | Convergence through policy-driven reconciliation and minimal latency | Active replication, Fan-out caches with TTL | Catalogs, content, aggregated metrics | Visible divergence without explicit idempotency and reconciliation |
+
+### Implementation Guidelines
+
+1. **Declarative consistency:** Services record their profile in `platform/policies/consistency.yml`. The CI check in `ci/consistency-check` matches the profile with access patterns and the declared replication approach.
+2. **Client-centric guarantees:** Session middleware attaches vector-clock headers so mobile and web clients observe read-your-writes and monotonic reads even across replicas.
+3. **Consistency vs. coherence:** Policies distinguish between dataset-level rules (consistency) and item-level caching (coherence). Cache TTLs must align with the selected profile to avoid stale reads.
+4. **Controlled migrations:** Architectural Decision Records describe how to shift between profiles—e.g., from eventual to causal—using partition-aware blue/green rollouts and observability checkpoints.
+
+### Operational Resilience Hooks
+
+- **Replica catalog:** Primary-backup, active replication, and quorum-based policies are expressed in `platform/policies/resilience.yml`, each with automated validation for idempotency and shared state expectations.
+- **Partial-failure drills:** CI scenarios within `ci/resilience-lint` and `ci/causality-test` simulate slow nodes, member loss, and retry storms to set expectations for graceful degradation.
+- **Membership management:** The `guides/platform-playbook.md` walkthrough keeps heartbeats, timeouts, and group-event ordering in sync with the declared replication strategy.
+
+### Quality Gates & Human Feedback
+
+- **Automated checks:** Pull requests trigger consistency, resilience, and causality validations so that incompatible configurations are caught early.
+- **Idempotency by contract:** Services opting into active replication must expose idempotency keys or verifiable side effects to survive retries.
+- **Session continuity:** Support and UX flows read session vectors before responding when a user switches replicas, ensuring continuity.
+- **Knowledge capture:** Issue and PR templates prompt teams to log consistency and replication decisions alongside user lessons, reinforcing organizational memory.
