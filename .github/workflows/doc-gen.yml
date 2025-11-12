@@ -1,0 +1,33 @@
+name: Doc Generation
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  generate-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Generate catalog READMEs
+        run: |
+          python .github/scripts/generate_module_readmes.py
+      - name: Check for changes
+        id: git-diff
+        run: |
+          if git status --short | grep -qE 'en/docs|es/docs'; then
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Commit documentation updates
+        if: steps.git-diff.outputs.has_changes == 'true'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "docs: update generated catalogs"
+          file_pattern: "en/docs/** es/docs/**"

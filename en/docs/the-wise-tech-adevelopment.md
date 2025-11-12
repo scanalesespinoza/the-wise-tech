@@ -73,6 +73,8 @@ AI helps mine these patterns and generate reusable knowledge (summaries, guides,
 
 ### 4.2 Living checklists in PRs (Essential + Operational)
 
+Anchor your reviews with the [Pull Request Checklist](checklist-pr.md) so Essential, operational, and impact considerations stay visible for every change.
+
 - Essential principles (idempotency, domain boundaries, handled errors).
 - Security (secrets, dependencies, SCA scanning).
 - Observability (logs, metrics, traces with correlation ID).
@@ -89,6 +91,8 @@ AI helps mine these patterns and generate reusable knowledge (summaries, guides,
 - [ ] No secrets in code (see SCA scan).
 
 ### 4.3 Documentation from code (DocOps)
+
+Use the automation script under `.github/scripts/generate_module_readmes.py` to keep the [Recipe Catalog](recipes/README.md) and [Onboarding Assets](onboarding/README.md) synchronized with new material.
 
 - Auto-generate module READMEs.
 - Build a living technical glossary from comments/docstrings.
@@ -239,18 +243,18 @@ jobs:
 ```text
 docs/
   the-wise-tech-adevelopment.md   # this document
-  principles-essential.md         # 5–8 non-negotiable principles
-  checklist-pr.md                 # living PR checklist
+  principles-essential.md         # 5–8 non-negotiable principles (see repository seed)
+  checklist-pr.md                 # living PR checklist (see repository seed)
   recipes/
-    errors-handling.md
-    observability.md
-    testing-contracts.md
-    resiliency.md
+    errors-handling.md            # populated example
+    observability.md              # populated example
+    testing-contracts.md          # populated example
+    resiliency.md                 # populated example
   onboarding/
-    tour.md
-    learning-paths.md
-  glossary.md
-  changelog-guidelines.md
+    tour.md                       # populated example
+    learning-paths.md             # populated example
+  glossary.md                     # populated example
+  changelog-guidelines.md         # populated example
 ```
 
 ## 10. Roles and responsibilities

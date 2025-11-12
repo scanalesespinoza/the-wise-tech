@@ -23,9 +23,20 @@ Both language trees contain:
 - Visual ASCII diagrams that illustrate the end-to-end process and symbiotic feedback loops.
 - The "The Wise Tech + aDevelopment" playbook describing how to blend accumulated expertise with AI-augmented workflows.
 
+## Key Resources
+
+- [Essential Principles](en/docs/principles-essential.md) / [Principios Esenciales](es/docs/principles-essential.md)
+- [PR Checklist](en/docs/checklist-pr.md) / [Checklist de PR](es/docs/checklist-pr.md)
+- [Recipe Catalog](en/docs/recipes/README.md) / [Catálogo de Recetas](es/docs/recipes/README.md)
+- [Onboarding Assets](en/docs/onboarding/README.md) / [Recursos de Onboarding](es/docs/onboarding/README.md)
+- [Narrative Changelog Guidelines](en/docs/changelog-guidelines.md) / [Guías de Changelog Narrativo](es/docs/changelog-guidelines.md)
+- [Living Glossary](en/docs/glossary.md) / [Glosario Vivo](es/docs/glossary.md)
+
 ## Contributing
 
-When proposing changes, please update the English document first and then provide an equivalent translation under `es/`. Pull requests that keep both versions in sync are easier to review and help us maintain an inclusive documentation space.
+When proposing changes, please update the English document first and then provide an equivalent translation under `es/`. Use the pull request template checklist and link back to the Essential principles, recipes, and onboarding guides whenever you introduce new knowledge.
+
+For detailed expectations, consult [Contributing Guide (English)](CONTRIBUTING.md) and [Guía de Contribución (Español)](CONTRIBUTING.es.md).
 
 ---
 

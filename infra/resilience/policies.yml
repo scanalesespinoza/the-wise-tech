@@ -1,0 +1,47 @@
+# Baseline timeout and retry policies for external dependencies.
+# Mantener sincronizadas las definiciones en ambos idiomas.
+
+services:
+  payments-checkout:
+    dependencies:
+      bank-gateway:
+        tier: critical
+        timeout_ms: 2000
+        retry:
+          attempts: 3
+          backoff: exponential
+          base_delay_ms: 200
+        circuit_breaker:
+          failure_threshold: 5
+          recovery_seconds: 60
+        fallback:
+          strategy_en: "Queue payment for manual review and notify support."
+          strategy_es: "Encola el pago para revisión manual y notifica a soporte."
+      fraud-service:
+        tier: important
+        timeout_ms: 800
+        retry:
+          attempts: 2
+          backoff: jitter
+          base_delay_ms: 150
+        circuit_breaker:
+          failure_threshold: 10
+          recovery_seconds: 30
+        fallback:
+          strategy_en: "Allow deferred decision with temporary hold on order."
+          strategy_es: "Permite decisión diferida con retención temporal del pedido."
+  reporting-worker:
+    dependencies:
+      analytics-warehouse:
+        tier: standard
+        timeout_ms: 3000
+        retry:
+          attempts: 4
+          backoff: linear
+          base_delay_ms: 500
+        circuit_breaker:
+          failure_threshold: 8
+          recovery_seconds: 45
+        fallback:
+          strategy_en: "Store batch locally and requeue once dependency is healthy."
+          strategy_es: "Guarda el lote localmente y lo reprograma cuando la dependencia esté sana."

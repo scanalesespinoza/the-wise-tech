@@ -1,0 +1,28 @@
+{
+  "consumer": {"name": "checkout-ui"},
+  "provider": {"name": "payments"},
+  "interactions": [
+    {
+      "description": "authorize payment succeeds",
+      "request": {
+        "method": "POST",
+        "path": "/payments",
+        "body": {"order_id": "ORDER-123", "amount": 42.5, "currency": "USD"}
+      },
+      "response": {
+        "status": 201,
+        "headers": {"Content-Type": "application/json"},
+        "body": {
+          "payment_id": "PAY-789",
+          "status": "AUTHORIZED",
+          "amount": 42.5,
+          "currency": "USD"
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "language": ["en", "es"],
+    "created_at": "2024-05-05T12:00:00Z"
+  }
+}
