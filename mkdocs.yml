@@ -23,6 +23,19 @@ nav:
       - PR Summarizer Workflow: .github/workflows/pr-summarizer.yml
       - Documentation Generator Workflow: .github/workflows/doc-gen.yml
       - Bilingual Parity Workflow: .github/workflows/bilingual-parity.yml
+  - Knowledge:
+      - Index: knowledge/index.md
+      - Articles:
+          - "aDevelopment": knowledge/articles/adevelopment-la-nueva-era-del-desarrollo-aumentado/adevelopment-la-nueva-era-del-desarrollo-aumentado-summary-en.md
+          - "Whitepaper — aDevelopment impact": knowledge/articles/whitepaper-measuring-the-impact-of-augmented-development/whitepaper-measuring-the-impact-of-augmented-development-summary-en.md
+          - "The architecture we inhabit": knowledge/articles/la-arquitectura-que-se-habita/la-arquitectura-que-se-habita-summary-en.md
+          - "Don't Blame the Cloud": knowledge/articles/dont-blame-the-cloud-empowering-resilient-applications/dont-blame-the-cloud-empowering-resilient-applications-summary-en.md
+          - "Going into the Unknown": knowledge/articles/going-into-the-unknown/going-into-the-unknown-summary-en.md
+          - "Future-Proof Technology": knowledge/articles/future-proof-technology/future-proof-technology-summary-en.md
+          - "Architecting Open Source Teams": knowledge/articles/architecting-open-source-teams-building-people-before-platforms/architecting-open-source-teams-building-people-before-platforms-summary-en.md
+          - "What about having Super Apps?": knowledge/articles/what-about-having-super-apps/what-about-having-super-apps-summary-en.md
+          - "2024: The Year of IT Team Experience": knowledge/articles/2024-the-year-of-it-team-experience/2024-the-year-of-it-team-experience-summary-en.md
+          - "The Hadron Pattern for Microservices": knowledge/articles/the-hadron-pattern-for-microservices/the-hadron-pattern-for-microservices-summary-en.md
 
 repo_url: https://github.com/the-wise-tech/the-wise-tech
 repo_name: the-wise-tech

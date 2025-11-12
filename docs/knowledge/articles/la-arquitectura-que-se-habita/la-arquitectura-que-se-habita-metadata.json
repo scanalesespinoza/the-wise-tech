@@ -1,0 +1,27 @@
+{
+  "title": "La arquitectura que se habita",
+  "author": "Sergio Canales Espinoza",
+  "source": "LinkedIn",
+  "original_url": "https://www.linkedin.com/pulse/la-arquitectura-que-se-habita-sergio-canales-espinoza-igiqe",
+  "published_date": "2025-07-29",
+  "topics": [
+    "architecture",
+    "user-experience",
+    "team-culture",
+    "simplicity"
+  ],
+  "personas": [
+    "developers",
+    "platform-engineers",
+    "consumers"
+  ],
+  "wise_tech_principles": [
+    "human-purpose",
+    "simplicity",
+    "resilience",
+    "human-connection"
+  ],
+  "license_notes": "https://www.linkedin.com/legal/user-agreement",
+  "extraction_mode": "structured-summary",
+  "hash": "8ee63e6afd463c0c0fb7d837ca7743dd2c4b30b684ebb04915f0f7fbf4cdeb2f"
+}

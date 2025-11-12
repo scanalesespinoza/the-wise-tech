@@ -1,23 +1,16 @@
 # Platform Engineers Overview
 
-## Operabilidad y observabilidad mínimas
-- Instrumenta servicios con métricas de latencia, tasa de errores y capacidad en cada despliegue.
-- Exige tableros compartidos y alertas claras antes de considerar un servicio listo para producción.
-- Documenta runbooks resilientes en el [platform playbook](../playbooks/platform-playbook.md).
+## Propósito
+Recopila aprendizajes para quienes diseñan plataformas resilientes, habilitan equipos y conectan comunidades open source con necesidades de negocio.
 
-## Políticas y perfiles
-- Aplica políticas de acceso mínimo y consistencia de despliegues descritas en `infra/`.
-- Define perfiles de servicio (bronze/silver/gold) y enlázalos al [roadmap](../roadmap/roadmap.md) para priorizar mejoras.
-- Refuerza acuerdos de confiabilidad en el [developer playbook](../playbooks/developer-playbook.md).
+## Recommended reads
+- [Future-Proof Technology — Resumen ES](../knowledge/articles/future-proof-technology/future-proof-technology-summary-es.md) / [Summary EN](../knowledge/articles/future-proof-technology/future-proof-technology-summary-en.md)
+- [🛠️ Architecting Open Source Teams — Resumen ES](../knowledge/articles/architecting-open-source-teams-building-people-before-platforms/architecting-open-source-teams-building-people-before-platforms-summary-es.md) / [Summary EN](../knowledge/articles/architecting-open-source-teams-building-people-before-platforms/architecting-open-source-teams-building-people-before-platforms-summary-en.md)
+- [Don't Blame the Cloud — Resumen ES](../knowledge/articles/dont-blame-the-cloud-empowering-resilient-applications/dont-blame-the-cloud-empowering-resilient-applications-summary-es.md) / [Summary EN](../knowledge/articles/dont-blame-the-cloud-empowering-resilient-applications/dont-blame-the-cloud-empowering-resilient-applications-summary-en.md)
+- [What about having Super Apps? — Resumen ES](../knowledge/articles/what-about-having-super-apps/what-about-having-super-apps-summary-es.md) / [Summary EN](../knowledge/articles/what-about-having-super-apps/what-about-having-super-apps-summary-en.md)
+- [The Hadron Pattern for Microservices — Resumen ES](../knowledge/articles/the-hadron-pattern-for-microservices/the-hadron-pattern-for-microservices-summary-es.md) / [Summary EN](../knowledge/articles/the-hadron-pattern-for-microservices/the-hadron-pattern-for-microservices-summary-en.md)
 
-## Flujo de feedback
-- Coordina weekly reviews con Developers para revisar telemetría y deuda operativa.
-- Captura hallazgos en `adr/` y anuncia decisiones en el [contribution guide](../guides/contribution-guide.md).
-- Solicita feedback de usuarios finales vía el [consumers overview](consumers-overview.md) y comparte resultados.
-
-## See also
-- [Wise Tech principles](../principles/wise-tech-principles.md)
-- [Quickstart](../guides/quickstart.md)
-- [Platform playbook](../playbooks/platform-playbook.md)
-- [Roadmap](../roadmap/roadmap.md)
-- [FAQ](../../README.md#faq)
+## Prácticas destacadas
+- [Manifiesto de plataforma centrado en personas](../knowledge/articles/future-proof-technology/future-proof-technology-practices.md)
+- [Playbook de equipos open source](../knowledge/articles/architecting-open-source-teams-building-people-before-platforms/architecting-open-source-teams-building-people-before-platforms-practices.md)
+- [Capacidades base para Super Apps](../knowledge/articles/what-about-having-super-apps/what-about-having-super-apps-practices.md)

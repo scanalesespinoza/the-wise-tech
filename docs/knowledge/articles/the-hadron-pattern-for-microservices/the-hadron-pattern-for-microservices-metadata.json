@@ -1,0 +1,26 @@
+{
+  "title": "The Hadron Pattern for Microservices",
+  "author": "Sergio Canales Espinoza",
+  "source": "Medium",
+  "original_url": "https://sergio-canales-e.medium.com/the-hadron-pattern-for-microservices-5f03fcb890fa",
+  "published_date": "2023-12-27",
+  "topics": [
+    "microservices",
+    "architecture",
+    "resilience",
+    "coordination"
+  ],
+  "personas": [
+    "developers",
+    "platform-engineers"
+  ],
+  "wise_tech_principles": [
+    "simplicity",
+    "knowledge-capitalization",
+    "resilience",
+    "continuous-improvement"
+  ],
+  "license_notes": "https://policy.medium.com/medium-terms-of-service-9db0094a1e0f",
+  "extraction_mode": "structured-summary",
+  "hash": "4ff1b7ac354443fc2f5c6402a70a2c7c4ca035af015dd3996fcb16e892700f6b"
+}

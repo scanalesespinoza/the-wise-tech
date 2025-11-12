@@ -31,45 +31,45 @@ El repositorio que convierte la filosofía Wise Tech en acciones compartidas: un
 └─ Roadmap → docs/roadmap/roadmap.md
 ```
 
-## Recommendations by Interest
-- **Productividad y simplicidad:** Empieza por el [quickstart](docs/guides/quickstart.md) y profundiza en [principios](docs/principles/wise-tech-principles.md).
-- **Resiliencia operacional:** Sigue el [platform playbook](docs/playbooks/platform-playbook.md) y el [escenario de pagos](docs/scenarios/payments-overview.md).
-- **Mejora continua y mentoring:** Usa la [guía de contribución](docs/guides/contribution-guide.md) y revisa el [roadmap](docs/roadmap/roadmap.md).
+Both language trees contain:
 
-## Popular paths
+- A language-specific `README.md` that expands on The Wise Tech vision and provides curated links.
+- Conceptual guides that contrast The Wise Tech approach with traditional practices.
+- Visual ASCII diagrams that illustrate the end-to-end process and symbiotic feedback loops.
+- The "The Wise Tech + aDevelopment" playbook describing how to blend accumulated expertise with AI-augmented workflows.
 
-| Ruta | ¿Por qué? |
-| --- | --- |
-| [Wise Tech principles](docs/principles/wise-tech-principles.md) | Punto de partida para alinear decisiones. |
-| [Wise Tech approach](docs/principles/wise-tech-approach.md) | Cómo combinamos juicio humano y automatización. |
-| [Developers overview](docs/personas/developers-overview.md) | Ruta rápida de onboarding técnico. |
-| [Platform playbook](docs/playbooks/platform-playbook.md) | Expectativas de resiliencia y operabilidad. |
-| [Payments overview](docs/scenarios/payments-overview.md) | Escenario completo para ensayar prácticas. |
-| [Wise Tech ASCII](docs/diagrams/wise-tech-approach-ascii.md) | Visual simple para contar la historia. |
-| [Roadmap](docs/roadmap/roadmap.md) | Próximos hitos y métricas compartidas. |
-| [Contribution guide](docs/guides/contribution-guide.md) | Pasos concretos para proponer cambios. |
-| [ADR index](adr/README.md) | Historial de decisiones estratégicas. |
+## Key Resources
 
-## How we work
-- **Simplicidad:** Buscamos el menor esfuerzo que entregue valor. [Ver principios](docs/principles/wise-tech-principles.md#simplicity)
-- **Mejora continua:** Iteramos con experimentos pequeños y visibles. [Ver principios](docs/principles/wise-tech-principles.md#mejora-continua)
-- **Resiliencia:** Diseñamos para fallar con gracia y recuperarnos rápido. [Ver principios](docs/principles/wise-tech-principles.md#resiliencia)
-- **Capitalización del conocimiento:** Documentamos para escalar aprendizajes. [Ver principios](docs/principles/wise-tech-principles.md#capitalización-del-conocimiento)
-- **Propósito humano:** Alineamos la tecnología con necesidades reales. [Ver principios](docs/principles/wise-tech-principles.md#propósito-humano)
-- **Conexión humana:** Priorizamos relaciones y feedback transparente. [Ver principios](docs/principles/wise-tech-principles.md#conexión-humana)
+- [Essential Principles](en/docs/principles-essential.md) / [Principios Esenciales](es/docs/principles-essential.md)
+- [PR Checklist](en/docs/checklist-pr.md) / [Checklist de PR](es/docs/checklist-pr.md)
+- [Recipe Catalog](en/docs/recipes/README.md) / [Catálogo de Recetas](es/docs/recipes/README.md)
+- [Onboarding Assets](en/docs/onboarding/README.md) / [Recursos de Onboarding](es/docs/onboarding/README.md)
+- [Narrative Changelog Guidelines](en/docs/changelog-guidelines.md) / [Guías de Changelog Narrativo](es/docs/changelog-guidelines.md)
+- [Living Glossary](en/docs/glossary.md) / [Glosario Vivo](es/docs/glossary.md)
+- [Payments Scenario](scenarios/payments/README.md) bundles code, contracts, tests, and runbooks that operationalize the principles.
 
-## Contribute
-- Sigue la [guía de contribución](docs/guides/contribution-guide.md) para abrir issues y PRs.
-- Usa la plantilla de issues [Feedback User Experience](.github/ISSUE_TEMPLATE/feedback-user-experience.md).
-- Completa la [plantilla de Pull Request](.github/PULL_REQUEST_TEMPLATE.md) para resaltar principios reforzados.
+The payments folder acts as a canonical business scenario: the service errors showcase error-handling recipes, the contracts illustrate consumer-driven testing, and bilingual runbooks make resilience actionable.
 
-## FAQ
-- **¿Dónde encuentro los principios originales?** → [Principles hub](docs/principles/_index.md)
-- **¿Cómo valido enlaces antes de publicar?** → Ejecuta `python scripts/check-links.py --strict`.
-- **¿Existe un escenario de referencia?** → Sí, visita [payments overview](docs/scenarios/payments-overview.md).
-- **¿Dónde documento decisiones?** → Usa el [índice de ADR](adr/README.md) y enlaza desde tu PR.
-- **¿Qué hago si detecto fricciones de usuario?** → Abre un issue con la plantilla de experiencia.
+## Recommended by interest
 
-## Footer
-- Licencia: [MIT](LICENSE)
-- Badges: [![Docs validation](https://github.com/scanalesespinoza/the-wise-tech/actions/workflows/docs-validation.yml/badge.svg)](https://github.com/scanalesespinoza/the-wise-tech/actions/workflows/docs-validation.yml)
+- Augmented delivery, metrics, and ROI: [aDevelopment summary (ES)](docs/knowledge/articles/adevelopment-la-nueva-era-del-desarrollo-aumentado/adevelopment-la-nueva-era-del-desarrollo-aumentado-summary-es.md) / [summary (EN)](docs/knowledge/articles/adevelopment-la-nueva-era-del-desarrollo-aumentado/adevelopment-la-nueva-era-del-desarrollo-aumentado-summary-en.md)
+- Measuring augmented development impact: [whitepaper summary (ES)](docs/knowledge/articles/whitepaper-measuring-the-impact-of-augmented-development/whitepaper-measuring-the-impact-of-augmented-development-summary-es.md) / [summary (EN)](docs/knowledge/articles/whitepaper-measuring-the-impact-of-augmented-development/whitepaper-measuring-the-impact-of-augmented-development-summary-en.md)
+- Human-centered architecture: [la arquitectura que se habita summary (ES)](docs/knowledge/articles/la-arquitectura-que-se-habita/la-arquitectura-que-se-habita-summary-es.md) / [summary (EN)](docs/knowledge/articles/la-arquitectura-que-se-habita/la-arquitectura-que-se-habita-summary-en.md)
+- Cloud resilience baseline: [Don’t Blame the Cloud practices](docs/knowledge/articles/dont-blame-the-cloud-empowering-resilient-applications/dont-blame-the-cloud-empowering-resilient-applications-practices.md)
+- People-before-platform strategy: [Future-Proof Technology practices](docs/knowledge/articles/future-proof-technology/future-proof-technology-practices.md)
+- Open source team dynamics: [Architecting Open Source Teams summary (EN)](docs/knowledge/articles/architecting-open-source-teams-building-people-before-platforms/architecting-open-source-teams-building-people-before-platforms-summary-en.md)
+- Resilient capabilities for distributed systems: [Super Apps checklist](docs/knowledge/articles/what-about-having-super-apps/what-about-having-super-apps-practices.md)
+- Team experience scorecards: [2024 IT Team Experience practices](docs/knowledge/articles/2024-the-year-of-it-team-experience/2024-the-year-of-it-team-experience-practices.md)
+- Microservices coordination pattern: [Hadron summary (EN)](docs/knowledge/articles/the-hadron-pattern-for-microservices/the-hadron-pattern-for-microservices-summary-en.md)
+
+## Contributing
+
+When proposing changes, please update the English document first and then provide an equivalent translation under `es/`. Use the pull request template checklist and link back to the Essential principles, recipes, and onboarding guides whenever you introduce new knowledge.
+
+Automation keeps both languages synchronized. Run `python scripts/check_bilingual_parity.py --check-scenarios` locally or rely on the **Bilingual Parity** GitHub Action before merging.
+
+For detailed expectations, consult [Contributing Guide (English)](CONTRIBUTING.md) and [Guía de Contribución (Español)](CONTRIBUTING.es.md).
+
+---
+
+For licensing information, see [LICENSE](LICENSE).

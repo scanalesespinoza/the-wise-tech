@@ -1,22 +1,15 @@
 # Consumers Overview
 
-## Qué encontrarás
-- Resumen claro del valor que entrega Wise Tech en experiencias digitales.
-- Principios que garantizan transparencia y control para las personas usuarias.
-- Historias de servicio que muestran resiliencia frente a fallas.
+## Propósito
+Guía a quienes consumen productos y plataformas Wise Tech para comprender cómo las decisiones tecnológicas se orientan al valor humano y a la capitalización del conocimiento.
 
-## Primeros pasos
-- Lee el [mapa de principios](../principles/wise-tech-principles.md) para entender nuestra brújula ética.
-- Revisa el [quickstart](../guides/quickstart.md) y comparte feedback sobre la experiencia.
-- Explora el [escenario de pagos](../scenarios/payments-overview.md) para ver flujos end-to-end.
+## Recommended reads
+- [La arquitectura que se habita — Resumen ES](../knowledge/articles/la-arquitectura-que-se-habita/la-arquitectura-que-se-habita-summary-es.md) / [Summary EN](../knowledge/articles/la-arquitectura-que-se-habita/la-arquitectura-que-se-habita-summary-en.md)
+- [Going into the Unknown — Resumen ES](../knowledge/articles/going-into-the-unknown/going-into-the-unknown-summary-es.md) / [Summary EN](../knowledge/articles/going-into-the-unknown/going-into-the-unknown-summary-en.md)
+- [2024: The Year of IT Team Experience — Resumen ES](../knowledge/articles/2024-the-year-of-it-team-experience/2024-the-year-of-it-team-experience-summary-es.md) / [Summary EN](../knowledge/articles/2024-the-year-of-it-team-experience/2024-the-year-of-it-team-experience-summary-en.md)
+- [Future-Proof Technology — Resumen ES](../knowledge/articles/future-proof-technology/future-proof-technology-summary-es.md) / [Summary EN](../knowledge/articles/future-proof-technology/future-proof-technology-summary-en.md)
 
-## Medir impacto humano
-Cada iniciativa define una métrica de bienestar (satisfacción, tiempo de respuesta, accesibilidad). Los equipos recogen feedback
-mensual y lo documentan en el [roadmap](../roadmap/roadmap.md) junto con acciones correctivas.
-
-## See also
-- [Developers overview](developers-overview.md)
-- [Platform engineers overview](platform-engineers-overview.md)
-- [Contribution guide](../guides/contribution-guide.md)
-- [Roadmap](../roadmap/roadmap.md)
-- [FAQ](../../README.md#faq)
+## Prácticas destacadas
+- [Arquitectura habitada](../knowledge/articles/la-arquitectura-que-se-habita/la-arquitectura-que-se-habita-practices.md)
+- [Programa de mentoring y exploración](../knowledge/articles/going-into-the-unknown/going-into-the-unknown-practices.md)
+- [Scorecard de experiencia de equipos](../knowledge/articles/2024-the-year-of-it-team-experience/2024-the-year-of-it-team-experience-practices.md)

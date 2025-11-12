@@ -1,23 +1,16 @@
 # Developers Overview
 
-## Onboarding rápido
-- Configura el IDE con extensiones de linting y IA recomendadas en `scripts/` (ver README).
-- Ejecuta `make install` para dependencias locales y revisa `scripts/check-links.py` antes de abrir PRs.
-- Usa los ejemplos del [escenario de pagos](../scenarios/payments-overview.md) para practicar flujos end-to-end.
+## Propósito
+Este espacio reúne recursos esenciales para desarrolladoras y desarrolladores que combinan maestría humana con prácticas aumentadas por IA.
 
-## Calidad y resiliencia
-- Ejecuta las suites de pruebas descritas en `ci/` y mantén la idempotencia en pipelines.
-- Revisa el [platform playbook](../playbooks/platform-playbook.md) para conocer expectativas de observabilidad.
-- Documenta supuestos y límites en el [developer playbook](../playbooks/developer-playbook.md).
+## Recommended reads
+- [aDevelopment: la nueva era del desarrollo aumentado — Resumen ES](../knowledge/articles/adevelopment-la-nueva-era-del-desarrollo-aumentado/adevelopment-la-nueva-era-del-desarrollo-aumentado-summary-es.md) / [Summary EN](../knowledge/articles/adevelopment-la-nueva-era-del-desarrollo-aumentado/adevelopment-la-nueva-era-del-desarrollo-aumentado-summary-en.md)
+- [Whitepaper: Measuring the Impact of Augmented Development — Resumen ES](../knowledge/articles/whitepaper-measuring-the-impact-of-augmented-development/whitepaper-measuring-the-impact-of-augmented-development-summary-es.md) / [Summary EN](../knowledge/articles/whitepaper-measuring-the-impact-of-augmented-development/whitepaper-measuring-the-impact-of-augmented-development-summary-en.md)
+- [Don't Blame the Cloud: Empowering Resilient Applications — Resumen ES](../knowledge/articles/dont-blame-the-cloud-empowering-resilient-applications/dont-blame-the-cloud-empowering-resilient-applications-summary-es.md) / [Summary EN](../knowledge/articles/dont-blame-the-cloud-empowering-resilient-applications/dont-blame-the-cloud-empowering-resilient-applications-summary-en.md)
+- [What about having Super Apps? — Resumen ES](../knowledge/articles/what-about-having-super-apps/what-about-having-super-apps-summary-es.md) / [Summary EN](../knowledge/articles/what-about-having-super-apps/what-about-having-super-apps-summary-en.md)
+- [The Hadron Pattern for Microservices — Resumen ES](../knowledge/articles/the-hadron-pattern-for-microservices/the-hadron-pattern-for-microservices-summary-es.md) / [Summary EN](../knowledge/articles/the-hadron-pattern-for-microservices/the-hadron-pattern-for-microservices-summary-en.md)
 
-## Knowledge capitalization
-- Registra decisiones estratégicas en `adr/` y enlázalas desde el [roadmap](../roadmap/roadmap.md).
-- Actualiza el [contribution guide](../guides/contribution-guide.md) cuando cambien rituales.
-- Documenta aprendizajes en el [diagrama de enfoque](../diagrams/wise-tech-approach-ascii.md) para compartir patrones.
-
-## See also
-- [Consumers overview](consumers-overview.md)
-- [Platform engineers overview](platform-engineers-overview.md)
-- [Quickstart](../guides/quickstart.md)
-- [Developer playbook](../playbooks/developer-playbook.md)
-- [FAQ](../../README.md#faq)
+## Prácticas destacadas
+- [Checklist de resiliencia cloud](../knowledge/articles/dont-blame-the-cloud-empowering-resilient-applications/dont-blame-the-cloud-empowering-resilient-applications-practices.md)
+- [Guía rápida de Super Apps](../knowledge/articles/what-about-having-super-apps/what-about-having-super-apps-practices.md)
+- [Patrón Hadron en acción](../knowledge/articles/the-hadron-pattern-for-microservices/the-hadron-pattern-for-microservices-practices.md)
