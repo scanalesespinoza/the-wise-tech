@@ -16,6 +16,6 @@
 - Devolver stack traces o detalles de implementación a las personas consumidoras.
 - Crear taxonomías de errores divergentes entre servicios.
 
-**Ejemplo local.** Consulta `services/payments/errors.py` para ver las excepciones de dominio canónicas y cómo se mapean a respuestas de API.
+**Ejemplo local.** Consulta `scenarios/payments/service/errors.py` para ver las excepciones de dominio canónicas y cómo se mapean a respuestas de API.
 
 **Principios relacionados.** [Respeta el contrato del dominio](../principles-essential.md), [Diseña para el fallo elegante](../principles-essential.md).

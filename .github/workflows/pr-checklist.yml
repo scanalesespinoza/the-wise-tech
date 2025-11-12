@@ -19,7 +19,7 @@ jobs:
           echo "PR template detected."
       - name: Validate checklist items are present
         run: |
-          body="${{ github.event.pull_request.body }}"
+          body=$(jq -r '.pull_request.body // ""' "$GITHUB_EVENT_PATH")
           required=(
             "Essential principles referenced and respected"
             "Tests added or updated with evidence attached"

@@ -16,6 +16,6 @@
 - Deploying without notifying consumers about required updates.
 - Allowing multiple undocumented contract variants to coexist.
 
-**Local example.** Inspect `contracts/payments/v2` for Pact files and the README that explains expected behaviors.
+**Local example.** Inspect `scenarios/payments/contracts/payments/v2` for Pact files and the README that explains expected behaviors.
 
 **Related principles.** [Respect the domain contract](../principles-essential.md), [Bias toward maintainable simplicity](../principles-essential.md).
