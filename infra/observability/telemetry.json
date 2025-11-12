@@ -1,0 +1,53 @@
+{
+  "service": "payments",
+  "component": "checkout-api",
+  "version": "2024.05.0",
+  "log_fields": {
+    "timestamp": "ISO-8601",
+    "level": ["DEBUG", "INFO", "WARN", "ERROR"],
+    "operation": "string",
+    "correlation_id": "uuid",
+    "user_id": "string | null",
+    "order_id": "string | null",
+    "latency_ms": "number"
+  },
+  "metrics": {
+    "payments.checkout.request.count": {
+      "type": "counter",
+      "description_en": "Number of checkout requests processed.",
+      "description_es": "Número de solicitudes de checkout procesadas.",
+      "labels": ["status", "provider"],
+      "slo": {
+        "target": "99.5% requests succeed within 24h",
+        "alert_when": "> 0.5% failures for 3 consecutive intervals"
+      }
+    },
+    "payments.checkout.latency.p95": {
+      "type": "gauge",
+      "description_en": "95th percentile latency for checkout operations (ms).",
+      "description_es": "Percentil 95 de latencia para operaciones de checkout (ms).",
+      "labels": ["provider"],
+      "slo": {
+        "target": "< 600ms",
+        "alert_when": ">= 600ms for 2 consecutive intervals"
+      }
+    }
+  },
+  "tracing": {
+    "propagation": ["traceparent", "baggage"],
+    "required_spans": [
+      "payments.checkout.validate_cart",
+      "payments.checkout.authorize",
+      "payments.checkout.capture"
+    ],
+    "span_attributes": {
+      "payments.checkout.authorize": [
+        "payments.provider",
+        "payments.amount",
+        "payments.currency",
+        "payments.failure_reason"
+      ]
+    }
+  },
+  "runbook": "en/docs/recipes/observability.md"
+}
