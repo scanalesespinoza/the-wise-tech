@@ -1,0 +1,26 @@
+{
+  "title": "What about having Super Apps?",
+  "author": "Sergio Canales Espinoza",
+  "source": "Medium",
+  "original_url": "https://sergio-canales-e.medium.com/what-about-having-super-apps-c1e70255caef",
+  "published_date": "2024-03-05",
+  "topics": [
+    "super-apps",
+    "resilience",
+    "microservices",
+    "cloud"
+  ],
+  "personas": [
+    "developers",
+    "platform-engineers"
+  ],
+  "wise_tech_principles": [
+    "resilience",
+    "continuous-improvement",
+    "knowledge-capitalization",
+    "simplicity"
+  ],
+  "license_notes": "https://policy.medium.com/medium-terms-of-service-9db0094a1e0f",
+  "extraction_mode": "structured-summary",
+  "hash": "2daa54febf9e2acfec0da904ce1ef3606de41cd70324308fc74b002d8f66cdce"
+}

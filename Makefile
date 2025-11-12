@@ -6,6 +6,7 @@ help:
 	@echo "  make test            # Run automated scenario tests"
 	@echo "  make parity          # Ensure bilingual documentation parity"
 	@echo "  make docs            # Build the MkDocs site"
+	@echo "  make docs-knowledge  # Validate knowledge assets and build docs"
 	@echo "  make docs-serve      # Serve the documentation locally"
 	@echo "  make policies-check  # Validate resilience policies definitions"
 	@echo "  make ci              # Run the local quality gate (test+checks)"
@@ -24,6 +25,12 @@ parity:
 	@$(PARITY_CMD)
 
 docs:
+	@echo "Building documentation"
+	@$(DOCS_BUILD_CMD)
+
+docs-knowledge:
+	@echo "Validating knowledge base"
+	@python scripts/validate-knowledge.py
 	@echo "Building documentation"
 	@$(DOCS_BUILD_CMD)
 

@@ -1,0 +1,26 @@
+{
+  "title": "Don't Blame the Cloud: Empowering Resilient Applications",
+  "author": "Sergio Canales Espinoza",
+  "source": "LinkedIn",
+  "original_url": "https://www.linkedin.com/pulse/dont-blame-cloud-empowering-resilient-applications-canales-espinoza-jhpqe",
+  "published_date": "2024-12-11",
+  "topics": [
+    "resilience",
+    "cloud",
+    "observability",
+    "reliability"
+  ],
+  "personas": [
+    "developers",
+    "platform-engineers"
+  ],
+  "wise_tech_principles": [
+    "resilience",
+    "continuous-improvement",
+    "simplicity",
+    "human-purpose"
+  ],
+  "license_notes": "https://www.linkedin.com/legal/user-agreement",
+  "extraction_mode": "structured-summary",
+  "hash": "2bbefe8fee9041c1486219acd29c75a6880984dae7032868c1083fb88bb3d590"
+}
