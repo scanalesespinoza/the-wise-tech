@@ -13,6 +13,8 @@ El repositorio que convierte la filosofía Wise Tech en acciones compartidas: un
   - Cadena de feedback entre escenarios y pipelines de observabilidad.
 - Technology Consumers → [docs/personas/consumers-overview.md](docs/personas/consumers-overview.md)
   - Recorridos para evaluar claridad de runbooks y decisiones de resiliencia.
+- Ideal Candidates → [docs/personas/ideal-candidate-overview-es-en.md](docs/personas/ideal-candidate-overview-es-en.md)
+  - Primeros wins bilingües, KPIs mínimos y perfil extendido para facilitar contribuciones.
 
 ## Quick start
 1. `git clone https://github.com/the-wise-tech/the-wise-tech.git`
@@ -29,6 +31,7 @@ Consulta el [quickstart extendido](docs/guides/quickstart.md) para entender qué
 / (README)
 ├─ Principles → docs/principles/
 ├─ Personas → docs/personas/
+│  └─ Ideal Candidate → docs/personas/ideal-candidate-overview-es-en.md
 ├─ Guides → docs/guides/
 ├─ Playbooks → docs/playbooks/
 ├─ Scenarios → docs/scenarios/
@@ -61,6 +64,7 @@ The payments folder acts as a canonical business scenario: the service errors sh
 | Productividad & simplicidad | Reducir fricción y acelerar la instalación. | [aDevelopment summary](docs/knowledge/articles/adevelopment-la-nueva-era-del-desarrollo-aumentado/adevelopment-la-nueva-era-del-desarrollo-aumentado-summary-es.md) · [Whitepaper impacto](docs/knowledge/articles/whitepaper-measuring-the-impact-of-augmented-development/whitepaper-measuring-the-impact-of-augmented-development-summary-es.md) |
 | Resiliencia & operabilidad | Validar escenarios end-to-end y detección temprana. | [Don’t Blame the Cloud practices](docs/knowledge/articles/dont-blame-the-cloud-empowering-resilient-applications/dont-blame-the-cloud-empowering-resilient-applications-practices.md) · [Super Apps checklist](docs/knowledge/articles/what-about-having-super-apps/what-about-having-super-apps-practices.md) |
 | Mentoring & experiencia | Compartir aprendizajes y decisiones humanas. | [Arquitectura habitada](docs/knowledge/articles/la-arquitectura-que-se-habita/la-arquitectura-que-se-habita-summary-es.md) · [Going into the Unknown](docs/knowledge/articles/going-into-the-unknown/going-into-the-unknown-summary-es.md) |
+| Primeros wins & contribución | Convertir teoría en práctica con entregas pequeñas. | [First Wins](docs/personas/ideal-candidate-overview-es-en.md#first-win-1-2-h) · [Playbooks por rol](docs/personas/_index.md) · [Personas](docs/personas/personas-focus-overview.md) |
 
 ## Learning outcomes & KPIs
 
