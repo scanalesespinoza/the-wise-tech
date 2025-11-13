@@ -1,26 +1,19 @@
 name: quality
-
 on:
   pull_request:
     branches: [ main ]
-
+  push:
+    branches: [ main ]
 jobs:
   quality:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
-      - name: Install
-        run: make install
-      - name: Lint & Format
-        run: make lint && make fmt
-      - name: Tests
-        run: make test
-      - name: Parity
-        run: make parity
-      - name: Resilience Policies
-        run: make policies-check
-      - name: Docs Build
-        run: make docs-build
+      - name: CI (local equivalence)
+        run: |
+          make ci

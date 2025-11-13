@@ -16,4 +16,4 @@
 - [Quickstart](../guides/quickstart.md)
 - [Contribution guide](../guides/contribution-guide.md)
 - [Personas hub](../personas/_index.md)
-- [Navigation map](../../README.md#navigation-map)
+- [Navigation map](../index.md#navigation-map)

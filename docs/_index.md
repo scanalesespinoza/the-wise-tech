@@ -8,8 +8,8 @@
 - Consulta diagramas y roadmap para planificar próximos pasos.
 
 ## See also
-- [README one-page](../README.md)
+- [Docs home](index.md)
 - [Wise Tech principles](principles/wise-tech-principles.md)
 - [Quickstart](guides/quickstart.md)
 - [Roadmap](roadmap/roadmap.md)
-- [FAQ](../README.md#faq)
+- [FAQ](index.md#faq)

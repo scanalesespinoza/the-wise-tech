@@ -35,7 +35,7 @@
 ## Automation and Validation
 - No automated check for Markdown link validity or filename conventions in CI.
 
-**Action:** Introduce `scripts/check-links.py` and a `docs-validation` GitHub Action. Optionally add a lints job to guard filename rules.
+**Action:** Introduce `scripts/check-links.py` and una acción `docs-and-links` en GitHub. Optionally add a lints job to guard filename rules.
 
 ## Next Steps
 1. Migrate valuable content into the new `docs/` structure.

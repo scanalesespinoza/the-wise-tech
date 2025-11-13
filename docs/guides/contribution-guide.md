@@ -6,7 +6,7 @@
 - Usa la plantilla de PR para detallar impacto y feedback referenciado.
 
 ## Flujo de aceptación
-- Ejecuta `python scripts/check-links.py --strict` y cualquier prueba relevante (`make test`).
+- Ejecuta `make ci` para validar formato, lint, pruebas, paridad, docs y enlaces antes del PR.
 - Busca revisiones cruzadas de al menos una persona por rol impactado.
 - Documenta decisiones en `adr/` cuando introduzcas cambios estratégicos.
 

@@ -11,4 +11,4 @@
 - [Contribution guide](../guides/contribution-guide.md)
 - [Wise Tech principles](../principles/wise-tech-principles.md)
 - [Platform playbook](../playbooks/platform-playbook.md)
-- [FAQ](../../README.md#faq)
+- [FAQ](../index.md#faq)

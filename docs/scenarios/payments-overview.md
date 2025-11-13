@@ -17,4 +17,4 @@ El escenario de pagos ilustra cómo Wise Tech integra descubrimiento, desarrollo
 - [Platform engineers overview](../personas/platform-engineers-overview.md)
 - [Consumers overview](../personas/consumers-overview.md)
 - [Wise Tech approach](../principles/wise-tech-approach.md)
-- [FAQ](../../README.md#faq)
+- [FAQ](../index.md#faq)

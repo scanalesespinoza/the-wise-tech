@@ -30,4 +30,4 @@
 - [Wise Tech approach](../principles/wise-tech-approach.md)
 - [Platform engineers overview](../personas/platform-engineers-overview.md)
 - [Roadmap](../roadmap/roadmap.md)
-- [FAQ](../../README.md#faq)
+- [FAQ](../index.md#faq)
