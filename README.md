@@ -5,6 +5,8 @@
 
 El repositorio que convierte la filosofía Wise Tech en acciones compartidas: una one-page navegable para aprender, construir y operar tecnología con propósito humano.
 
+➡️ Explora la documentación completa en [Docs Home](docs/index.md).
+
 ## Choose your path
 
 - **Technology Consumers** → [consumers overview](docs/personas/consumers-overview.md)
