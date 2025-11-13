@@ -3,77 +3,60 @@
 [![Quality](https://github.com/the-wise-tech/the-wise-tech/actions/workflows/quality.yml/badge.svg)](https://github.com/the-wise-tech/the-wise-tech/actions/workflows/quality.yml)
 [![Links](https://github.com/the-wise-tech/the-wise-tech/actions/workflows/links.yml/badge.svg)](https://github.com/the-wise-tech/the-wise-tech/actions/workflows/links.yml)
 
-El repositorio que convierte la filosofía Wise Tech en acciones compartidas: un mapa navegable para aprender, construir y operar tecnología con propósito humano.
+El repositorio que convierte la filosofía Wise Tech en acciones compartidas: una one-page navegable para aprender, construir y operar tecnología con propósito humano.
 
 ## Choose your path
 
-- Developers → [docs/personas/developers-overview.md](docs/personas/developers-overview.md)
-  - Flujo express (install → test → parity → docs) y fixtures listos para experimentar.
-- Platform Engineers → [docs/personas/platform-engineers-overview.md](docs/personas/platform-engineers-overview.md)
-  - Cadena de feedback entre escenarios y pipelines de observabilidad.
-- Technology Consumers → [docs/personas/consumers-overview.md](docs/personas/consumers-overview.md)
-  - Recorridos para evaluar claridad de runbooks y decisiones de resiliencia.
-- Ideal Candidates → [docs/personas/ideal-candidate-overview-es-en.md](docs/personas/ideal-candidate-overview-es-en.md)
-  - Primeros wins bilingües, KPIs mínimos y perfil extendido para facilitar contribuciones.
+- **Technology Consumers** → [consumers overview](docs/personas/consumers-overview.md)
+- **Software Developers** → [developers overview](docs/personas/developers-overview.md)
+- **Platform Engineers** → [platform engineers overview](docs/personas/platform-engineers-overview.md)
 
-## Quick start
-1. `git clone https://github.com/the-wise-tech/the-wise-tech.git`
-2. `cd the-wise-tech`
-3. `make install`
-4. `make test && make parity`
-5. `make docs` (sirve MkDocs en `http://127.0.0.1:8000`)
+## Quick start (5 pasos)
 
-Consulta el [quickstart extendido](docs/guides/quickstart.md) para entender qué valida cada comando y cómo compartir resultados.
+1) make install
+2) make test
+3) make parity
+4) make docs
+5) abre http://127.0.0.1:8000 y sigue “Choose your path”
 
-## Navigation Map
+Consulta el [quickstart general](docs/guides/quickstart.md) cuando necesites la versión ultracorta para compartir con tu equipo.
 
-```
-/ (README)
-├─ Principles → docs/principles/
-├─ Personas → docs/personas/
-│  └─ Ideal Candidate → docs/personas/ideal-candidate-overview-es-en.md
-├─ Guides → docs/guides/
-├─ Playbooks → docs/playbooks/
-├─ Scenarios → docs/scenarios/
-│  └─ Payments → scenarios/payments/
-└─ Roadmap → docs/roadmap/roadmap.md
-```
+## Navigation map
 
-Both language trees contain:
+/ (README one-page)
+├─ Principles → [docs/principles/](docs/principles/)  
+├─ Personas  
+│  ├─ Consumers → [docs/personas/consumers-overview.md](docs/personas/consumers-overview.md)  
+│  ├─ Developers → [docs/personas/developers-overview.md](docs/personas/developers-overview.md)  
+│  └─ Platform Engineers → [docs/personas/platform-engineers-overview.md](docs/personas/platform-engineers-overview.md)  
+├─ Guides → [docs/guides/](docs/guides/)  
+├─ Playbooks → [docs/playbooks/](docs/playbooks/)  
+├─ Scenarios → [docs/scenarios/](docs/scenarios/)  
+└─ Roadmap → [docs/roadmap/roadmap.md](docs/roadmap/roadmap.md)
 
-- A language-specific `README.md` that expands on The Wise Tech vision and provides curated links.
-- Conceptual guides that contrast The Wise Tech approach with traditional practices.
-- Visual ASCII diagrams that illustrate the end-to-end process and symbiotic feedback loops.
-- The "The Wise Tech + aDevelopment" playbook describing how to blend accumulated expertise with AI-augmented workflows.
+## Recommended by interest
 
-## Key Resources
+- **Productividad & simplicidad** → [docs/guides/quickstart.md](docs/guides/quickstart.md), [docs/principles/](docs/principles/)
+- **Resiliencia & operación** → [docs/playbooks/](docs/playbooks/), [docs/scenarios/](docs/scenarios/)
+- **Mentoría & mejora continua** → [docs/roadmap/roadmap.md](docs/roadmap/roadmap.md), [.github/](.github/)
 
+> Social preview: ver [assets/social/wise-tech-1280x640.png](assets/social/wise-tech-1280x640.png)
+
+## Key resources
 - [Wise Tech principles](docs/principles/wise-tech-principles.md) condensan los acuerdos fundacionales del repositorio.
 - [Contribution guide](docs/guides/contribution-guide.md) explica cómo documentar aprendizajes y referencias cruzadas.
-- [Quickstart detallado](docs/guides/quickstart.md) expone qué valida cada comando del flujo local.
 - [Developer playbook](docs/playbooks/developer-playbook.md) / [Platform playbook](docs/playbooks/platform-playbook.md) proponen primeros wins y KPIs por rol.
 - [Wise Tech approach (EN)](en/wise-tech-approach.md) / [Enfoque Wise Tech (ES)](es/wise-tech-approach.md) articulan la narrativa estratégica.
 - [Payments Scenario](scenarios/payments/README.md) integra código, contratos, pruebas y runbooks bilingües.
 
-The payments folder acts as a canonical business scenario: the service errors showcase error-handling recipes, the contracts illustrate consumer-driven testing, and bilingual runbooks make resilience actionable.
-
-## Recommended by interest
-
-| Interés | Objetivo | Lecturas |
-| --- | --- | --- |
-| Productividad & simplicidad | Reducir fricción y acelerar la instalación. | [aDevelopment summary](docs/knowledge/articles/adevelopment-la-nueva-era-del-desarrollo-aumentado/adevelopment-la-nueva-era-del-desarrollo-aumentado-summary-es.md) · [Whitepaper impacto](docs/knowledge/articles/whitepaper-measuring-the-impact-of-augmented-development/whitepaper-measuring-the-impact-of-augmented-development-summary-es.md) |
-| Resiliencia & operabilidad | Validar escenarios end-to-end y detección temprana. | [Don’t Blame the Cloud practices](docs/knowledge/articles/dont-blame-the-cloud-empowering-resilient-applications/dont-blame-the-cloud-empowering-resilient-applications-practices.md) · [Super Apps checklist](docs/knowledge/articles/what-about-having-super-apps/what-about-having-super-apps-practices.md) |
-| Mentoring & experiencia | Compartir aprendizajes y decisiones humanas. | [Arquitectura habitada](docs/knowledge/articles/la-arquitectura-que-se-habita/la-arquitectura-que-se-habita-summary-es.md) · [Going into the Unknown](docs/knowledge/articles/going-into-the-unknown/going-into-the-unknown-summary-es.md) |
-| Primeros wins & contribución | Convertir teoría en práctica con entregas pequeñas. | [First Wins](docs/personas/ideal-candidate-overview-es-en.md#first-win-12-h) · [Playbooks por rol](docs/personas/_index.md) · [Personas](docs/personas/personas-focus-overview.md) |
+El escenario de pagos funciona como caso de negocio canónico: los errores del servicio muestran recetas de manejo de fallas, los contratos ilustran consumer-driven testing y los runbooks bilingües hacen que la resiliencia sea accionable.
 
 ## Learning outcomes & KPIs
-
 - [Developer playbook](docs/playbooks/developer-playbook.md#indicadores-clave-de-experimento) detalla KPIs como tiempo de ciclo del escenario de pagos y defectos detectados antes del merge.
 - [Platform playbook](docs/playbooks/platform-playbook.md#indicadores-clave-de-experimento) explica cómo medir MTTR simulado, cobertura de runbooks y satisfacción de equipos.
 - Cada [ruta por rol](docs/personas/_index.md) incluye "Primeros 60 minutos" para convertir aprendizaje en acción inmediata.
 
 ## FAQ
-
 ### ¿Qué comandos ejecutan los workflows de CI?
 Los pipelines [`quality`](.github/workflows/quality.yml) y [`links`](.github/workflows/links.yml) reutilizan las tareas del Makefile, por lo que `make install && make lint && make fmt && make test && make parity` más `python scripts/check-links.py --strict` entregan el mismo veredicto antes de abrir una PR.
 
@@ -84,7 +67,6 @@ Ejecuta `make parity` para comparar las rutas `en/` y `es/`. Si todavía no exis
 Puedes redefinir el puerto temporalmente con `mkdocs serve -a 127.0.0.1:8010` o exportar `MKDOCS_SERVE_ADDR=127.0.0.1:8010` antes de correr `make docs`.
 
 ## Contributing
-
 When proposing changes, please update the English document first and then provide an equivalent translation under `es/`. Use the pull request template checklist and link back to the Essential principles, recipes, and onboarding guides whenever you introduce new knowledge.
 
 Automation keeps both languages synchronized. Ejecuta `make parity` o confía en la acción de GitHub **Bilingual Parity** antes de fusionar.
