@@ -46,7 +46,7 @@ Reflexiona sobre estas preguntas para identificar oportunidades donde tus accion
 - **Biblioteca de patrones:** [Catálogo de Recetas](docs/recipes/README.md) captura prácticas repetibles fundamentadas en el repositorio.
 - **Onboarding fluido:** [Recursos de Onboarding](docs/onboarding/README.md) ofrecen recorridos guiados y rutas de aprendizaje para nuevas personas.
 - **Vocabulario compartido:** [Glosario Vivo](docs/glossary.md) mantiene terminología consistente.
-- [Escenario de Pagos](../scenarios/payments/README.md) agrupa código, contratos, pruebas y runbooks que operacionalizan los principios.
+- [Escenario de Pagos](../../scenarios/payments/README.md) agrupa código, contratos, pruebas y runbooks que operacionalizan los principios.
 - **Evidencia narrativa:** [Guías de Changelog](docs/changelog-guidelines.md) ayudan a traducir cambios en historias comprensibles para stakeholders.
 
 La carpeta de pagos actúa como escenario de negocio canónico: las excepciones del servicio ilustran la receta de manejo de errores, los contratos muestran pruebas orientadas al consumidor y los runbooks bilingües vuelven accionable la resiliencia.
@@ -55,4 +55,4 @@ La carpeta de pagos actúa como escenario de negocio canónico: las excepciones 
 
 La automatización mantiene ambos idiomas sincronizados. Ejecuta `python scripts/check_bilingual_parity.py --check-scenarios` de forma local o apóyate en la acción de GitHub **Bilingual Parity** antes de fusionar.
 
-Para expectativas detalladas consulta la [Guía de Contribución (English)](../CONTRIBUTING.md) y la [Guía de Contribución (Español)](../CONTRIBUTING.es.md).
+Para expectativas detalladas consulta la [Guía de Contribución (English)](../../CONTRIBUTING.md) y la [Guía de Contribución (Español)](../../CONTRIBUTING.es.md).

@@ -1,7 +1,8 @@
 # The Wise Tech
 
-[![Quality](https://github.com/the-wise-tech/the-wise-tech/actions/workflows/quality.yml/badge.svg)](https://github.com/the-wise-tech/the-wise-tech/actions/workflows/quality.yml)
-[![Links](https://github.com/the-wise-tech/the-wise-tech/actions/workflows/links.yml/badge.svg)](https://github.com/the-wise-tech/the-wise-tech/actions/workflows/links.yml)
+## Status
+[![quality](https://github.com/scanalesespinoza/the-wise-tech/actions/workflows/quality.yml/badge.svg)](https://github.com/scanalesespinoza/the-wise-tech/actions/workflows/quality.yml)
+[![docs-and-links](https://github.com/scanalesespinoza/the-wise-tech/actions/workflows/docs-and-links.yml/badge.svg)](https://github.com/scanalesespinoza/the-wise-tech/actions/workflows/docs-and-links.yml)
 
 El repositorio que convierte la filosofía Wise Tech en acciones compartidas: una one-page navegable para aprender, construir y operar tecnología con propósito humano.
 
@@ -60,7 +61,10 @@ El escenario de pagos funciona como caso de negocio canónico: los errores del s
 
 ## FAQ
 ### ¿Qué comandos ejecutan los workflows de CI?
-Los pipelines [`quality`](.github/workflows/quality.yml) y [`links`](.github/workflows/links.yml) reutilizan las tareas del Makefile, por lo que `make install && make lint && make fmt && make test && make parity` más `python scripts/check-links.py --strict` entregan el mismo veredicto antes de abrir una PR.
+El pipeline [`quality`](.github/workflows/quality.yml) ejecuta exactamente `make ci`, que encadena `install`, `fmt`, `lint`, `test`, `parity`, `docs` y `verify-links`. Ejecutar `make ci` en local te entrega el mismo veredicto antes de abrir una PR.
+
+### ¿Cómo se validan la documentación y los enlaces?
+El workflow [`docs-and-links`](.github/workflows/docs-and-links.yml) se activa cuando cambian archivos Markdown o de MkDocs. Reconstruye el sitio con `mkdocs build --strict` y ejecuta `python scripts/check-links.py` para detectar enlaces internos rotos.
 
 ### ¿Cómo valido bilingüismo cuando sólo edito una lengua?
 Ejecuta `make parity` para comparar las rutas `en/` y `es/`. Si todavía no existe la traducción, agrega una nota `TODO (parity)` en el archivo y documenta el plan en tu PR para que el pipeline no falle.

@@ -12,4 +12,4 @@ view telemetry to adapt. This approach leans on lightweight rituals, observable 
 - [Developer playbook](../playbooks/developer-playbook.md)
 - [Platform playbook](../playbooks/platform-playbook.md)
 - [Roadmap](../roadmap/roadmap.md)
-- [Navigation map](../../README.md#navigation-map)
+- [Navigation map](../index.md#navigation-map)

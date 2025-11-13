@@ -30,7 +30,7 @@ def log_with_correlation_id(correlation_id: str):
 
 ## Ciclo local → CI
 - `make ci` encadena install + lint + fmt + test + parity.
-- El workflow [`quality`](../../.github/workflows/quality.yml) ejecuta exactamente los mismos comandos.
+- El workflow [`quality`](https://github.com/scanalesespinoza/the-wise-tech/blob/main/.github/workflows/quality.yml) ejecuta exactamente los mismos comandos.
 - Usa `make docs` para verificar navegación bilingüe antes de pedir revisión.
 
 ## ADR y decisiones compartidas
@@ -39,5 +39,5 @@ def log_with_correlation_id(correlation_id: str):
 
 ## Indicadores clave de experimento
 - **Tiempo de ciclo**: ≤ 5 minutos desde `make test` hasta detener `make docs`.
-- **Defectos prevenidos**: al menos 1 hallazgo semanal detectado por `make parity` o `python scripts/check-links.py --strict`.
+- **Defectos prevenidos**: al menos 1 hallazgo semanal detectado por `make parity` o `make verify-links`.
 - **Cobertura documental**: cada PR cita al menos un recurso en `docs/knowledge/` o `docs/playbooks/`.

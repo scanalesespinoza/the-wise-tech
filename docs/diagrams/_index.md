@@ -11,4 +11,4 @@
 - [Developer playbook](../playbooks/developer-playbook.md)
 - [Quickstart](../guides/quickstart.md)
 - [Roadmap](../roadmap/roadmap.md)
-- [FAQ](../../README.md#faq)
+- [FAQ](../index.md#faq)
