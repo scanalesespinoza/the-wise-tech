@@ -20,3 +20,7 @@ jobs:
         run: make test
       - name: Parity
         run: make parity
+      - name: Resilience Policies
+        run: make policies-check
+      - name: Docs Build
+        run: make docs-build
