@@ -16,6 +16,10 @@ nav:
   - Playbooks:
       - Developer: playbooks/developer-playbook.md
       - Platform: playbooks/platform-playbook.md
+  - Paths:
+      - Consumers 30/60/90: paths/consumers-30-60-90.md
+      - Developers 30/60/90: paths/developers-30-60-90.md
+      - Platform 30/60/90: paths/platform-engineers-30-60-90.md
   - Scenarios:
       - Payments: scenarios/payments-overview.md
   - Roadmap:

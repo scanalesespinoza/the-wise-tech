@@ -11,8 +11,11 @@ El repositorio que convierte la filosofía Wise Tech en acciones compartidas: un
 ## Choose your path
 
 - **Technology Consumers** → [consumers overview](docs/personas/consumers-overview.md)
+  - Learning Path 30/60/90 → [docs/paths/consumers-30-60-90.md](docs/paths/consumers-30-60-90.md)
 - **Software Developers** → [developers overview](docs/personas/developers-overview.md)
+  - Learning Path 30/60/90 → [docs/paths/developers-30-60-90.md](docs/paths/developers-30-60-90.md)
 - **Platform Engineers** → [platform engineers overview](docs/personas/platform-engineers-overview.md)
+  - Learning Path 30/60/90 → [docs/paths/platform-engineers-30-60-90.md](docs/paths/platform-engineers-30-60-90.md)
 
 ## Quick start (5 pasos)
 
@@ -39,9 +42,9 @@ Consulta el [quickstart general](docs/guides/quickstart.md) cuando necesites la 
 
 ## Recommended by interest
 
-- **Productividad & simplicidad** → [docs/guides/quickstart.md](docs/guides/quickstart.md), [docs/principles/](docs/principles/)
-- **Resiliencia & operación** → [docs/playbooks/](docs/playbooks/), [docs/scenarios/](docs/scenarios/)
-- **Mentoría & mejora continua** → [docs/roadmap/roadmap.md](docs/roadmap/roadmap.md), [.github/](.github/)
+- **Productividad & simplicidad** → [docs/guides/quickstart.md](docs/guides/quickstart.md), [docs/principles/](docs/principles/), [Learning Path 30/60/90 — Consumers](docs/paths/consumers-30-60-90.md)
+- **Resiliencia & operación** → [docs/playbooks/](docs/playbooks/), [docs/scenarios/](docs/scenarios/), [Learning Path 30/60/90 — Platform](docs/paths/platform-engineers-30-60-90.md)
+- **Mentoría & mejora continua** → [docs/roadmap/roadmap.md](docs/roadmap/roadmap.md), [.github/](.github/), [Learning Path 30/60/90 — Developers](docs/paths/developers-30-60-90.md)
 
 > Social preview: ver [assets/social/wise-tech-1280x640.png](assets/social/wise-tech-1280x640.png)
 

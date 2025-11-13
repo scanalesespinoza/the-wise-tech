@@ -1,43 +1,59 @@
-# Developer Playbook (mínimo)
+# Developer Playbook — mínimos accionables
 
-## Idempotencia práctica
-- Todas las operaciones críticas deben aceptar un `idempotency_key` (usa el fixture `refund-request.json` para replicar reintentos).
-- Define claramente qué campos participan en el hash; documenta supuestos junto al handler.
-- Las pruebas deben validar que dos invocaciones consecutivas no generan efectos colaterales.
+## Principios operativos (≤5)
+- Idempotencia en handlers críticos usando llaves de idempotencia asociadas a cada solicitud.
+- Registra `correlation-id` en logs y trazas para seguir el flujo end-to-end.
+- Escala tus pruebas en orden: unitarias → contractuales → resiliencia.
+- CI local debe reflejar CI remoto (`make ci` como contrato de salud).
+- Documenta decisiones con ADR breves que enlacen principios de Wise Tech.
 
-## Trazabilidad con correlation-id
-```python
-import logging
-from contextlib import contextmanager
+## Snippets rápidos
+- [Snippet de correlation-id en Python](../snippets/python-correlation-id.md).
+- Ejecuta `python -m pytest scenarios/payments/tests/test_payments_flow.py::test_successful_payment` como test focalizado.
+- Inspírate en `scenarios/payments/tests/test_service_errors.py` para validar reintentos e idempotencia.
 
-logger = logging.getLogger("payments")
+## Checklist PR (dev)
+- [ ] Tests verdes (`make test`).
+- [ ] Paridad bilingüe (`make parity`).
+- [ ] Lint/format (`make lint` / `make fmt`).
+- [ ] Documentación actualizada con enlaces relativos.
+- [ ] Referencia explícita al/los principio(s) de Wise Tech aplicados.
 
-@contextmanager
-def log_with_correlation_id(correlation_id: str):
-    try:
-        logger = logging.LoggerAdapter(logging.getLogger("payments"), {"correlation_id": correlation_id})
-        yield logger
-    finally:
-        logger.info("correlation-id released")
-```
-- Inserta el `correlation_id` en cada log relevante y replica el patrón en runbooks.
-- Reutiliza los IDs incluidos en `valid-charge.json` para mantener trazas consistentes.
+## KPIs mínimos (dev)
+- Tiempo hasta el primer commit (TTFC) < 1 día.
+- 1 PR pequeño que combine test + doc.
+- Flaky tests detectados en la PR: 0.
 
-## Diseño de pruebas escalonado
-1. **Unitarias** (`python -m unittest scenarios/payments/tests/test_service_errors.py`).
-2. **Flow tests** (`python -m unittest scenarios/payments/tests/test_payments_flow.py -v`).
-3. **Resiliencia** (`make parity` + validaciones de enlaces).
+---
 
-## Ciclo local → CI
-- `make ci` encadena install + lint + fmt + test + parity.
-- El workflow [`quality`](https://github.com/scanalesespinoza/the-wise-tech/blob/main/.github/workflows/quality.yml) ejecuta exactamente los mismos comandos.
-- Usa `make docs` para verificar navegación bilingüe antes de pedir revisión.
+# Developer Playbook — actionable minimums (EN)
 
-## ADR y decisiones compartidas
-- Registra cada cambio estructural en `adr/` y enlaza el principio de Wise Tech reforzado.
-- Añade referencias al runbook o contrato que impacta el cambio.
+## Operating principles (≤5)
+- Enforce idempotency on critical handlers via request-scoped idempotency keys.
+- Capture the `correlation-id` in logs and traces to follow the end-to-end flow.
+- Layer your testing strategy: unit → contract → resilience checks.
+- Local CI must mirror remote CI (`make ci` as the shared health contract).
+- Record decisions with concise ADRs referencing Wise Tech principles.
 
-## Indicadores clave de experimento
-- **Tiempo de ciclo**: ≤ 5 minutos desde `make test` hasta detener `make docs`.
-- **Defectos prevenidos**: al menos 1 hallazgo semanal detectado por `make parity` o `make verify-links`.
-- **Cobertura documental**: cada PR cita al menos un recurso en `docs/knowledge/` o `docs/playbooks/`.
+## Quick snippets
+- [Python correlation-id snippet](../snippets/python-correlation-id.md).
+- Run `python -m pytest scenarios/payments/tests/test_payments_flow.py::test_successful_payment` as a focused test example.
+- Use `scenarios/payments/tests/test_service_errors.py` to validate retries and idempotency behaviour.
+
+## PR checklist (dev)
+- [ ] Tests are green (`make test`).
+- [ ] Bilingual parity verified (`make parity`).
+- [ ] Lint/format checks (`make lint` / `make fmt`).
+- [ ] Documentation refreshed with relative links.
+- [ ] Explicit reference to the applicable Wise Tech principle(s).
+
+## Minimum KPIs (dev)
+- Time to first commit (TTFC) < 1 day.
+- One small PR combining tests + docs.
+- Flaky tests detected in the PR: 0.
+
+## See also / Ver también
+- [Wise Tech principles](../principles/wise-tech-principles.md)
+- [Quickstart](../guides/quickstart.md)
+- [Payments overview](../scenarios/payments-overview.md)
+- [Platform playbook](platform-playbook.md)
