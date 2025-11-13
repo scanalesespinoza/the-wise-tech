@@ -1,0 +1,24 @@
+service: payments
+version: v1
+timeouts_ms:
+  http_client_default: 1500
+  db_default: 1200
+retries:
+  enabled: true
+  max_attempts: 2
+  backoff: exponential   # fixed|linear|exponential
+  base_ms: 100
+circuit_breaker:
+  enabled: true
+  failure_threshold: 0.25    # 0..1
+  min_samples: 20
+  reset_timeout_ms: 5000
+bulkhead:
+  enabled: true
+  max_concurrent: 50
+cache:
+  enabled: true
+  ttl_s: 60
+notes:
+  - "Ajustar http_client_default si p95 > 350ms de forma sostenida"
+  - "Activar freeze de despliegues si error-rate > 5% durante 15m"

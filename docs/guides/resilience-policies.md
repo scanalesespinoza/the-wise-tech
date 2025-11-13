@@ -1,0 +1,17 @@
+# Resilience Policies — Cómo usarlas
+Las políticas definen **contratos operativos** por servicio/escenario:
+- **timeouts_ms**: límites por cliente/infra (1–120000 ms)
+- **retries**: on/off, intentos (1–10), backoff (fixed|linear|exponential), base_ms (10–60000)
+- **circuit_breaker**: on/off, failure_threshold (0–1), min_samples, reset_timeout_ms
+- **bulkhead**: on/off, max_concurrent
+- **cache**: on/off, ttl_s
+## Flujo recomendado
+1) Edita `platform/policies/resilience.yml` con valores iniciales realistas.
+2) Ejecuta `make resilience-check` en local.
+3) Sube PR; CI validará automáticamente la política.
+4) Documenta cualquier ajuste y su “por qué” en el PR.
+## Ejemplo
+Ver `platform/policies/resilience.yml` (payments).
+## Próximos pasos
+- Integrar SLOs y presupuestos de error (Iteración 6).
+- Añadir snippets de instrumentación (telemetría) y runbooks.
