@@ -1,33 +1,53 @@
-# Platform Playbook
+# Platform Playbook — mínimos operables
 
-## Objetivos del equipo
-- Garantizar disponibilidad y tiempos de recuperación acordados.
-- Proveer pipelines seguros y reproducibles para cada servicio.
-- Facilitar visibilidad operativa unificada para todos los roles.
+## Contratos de operación
+- Revisa SLOs y error budgets vigentes; documenta acciones ante cada brecha.
+- Aplica políticas de resiliencia: timeouts, retries, circuit-breakers y bulkheads alineados al escenario.
+- Asegura telemetría mínima: métricas accionables, logs estructurados y trazas enlazadas a `correlation-id`.
 
-## Rituales clave
-- Revisión semanal de telemetría y incidentes con Developers.
-- Ejercicios mensuales de respuesta a incidentes centrados en usuarios.
-- Actualización trimestral de políticas de acceso y seguridad.
+## Runbooks & feedback
+- Runbook del escenario “payments”: sigue el [Payments overview](../scenarios/payments-overview.md) y navega a `scenarios/payments/docs/`.
+- Plantilla de postmortem (coming soon): [Knowledge base](../knowledge/index.md).
+- Usa issues y plantillas de PR como bucle de feedback continuo.
 
-## Capacidades fundamentales
-- Observabilidad end-to-end con métricas, logs y traces accesibles.
-- Automación de infraestructura como código con validaciones previas.
-- Catálogo de servicios con niveles de servicio y runbooks compartidos.
+## Checklist PR (platform)
+- [ ] Validar políticas (`make resilience-check`).
+- [ ] Validar SLOs (`make slos`) si existe.
+- [ ] Verificar enlaces (`make verify-links`).
+- [ ] CI verde (quality + docs-and-links).
 
-## Primeros 60 minutos
-- Reproduce `make ci` y guarda los tiempos de cada etapa para detectar cuellos de botella.
-- Sincroniza runbooks de `scenarios/payments/docs` con los hallazgos del último ejercicio de caos.
-- Publica un resumen en el canal de plataforma con acciones concretas para Developers y Consumers.
+## KPIs mínimos (platform)
+- 0 enlaces rotos en cada PR.
+- 100% de políticas válidas en PRs que toquen `platform/**`.
+- Reducir tiempo de diagnóstico local en 20% con trazas, métricas y logs presentes.
 
-## Indicadores clave de experimento
-- **MTTR simulado**: objetivo ≤ 15 minutos desde el fallo detectado hasta `make ci` exitoso.
-- **Cobertura de runbooks**: 100% de procedimientos críticos documentados en EN/ES.
-- **Satisfacción de equipos**: incremento mensual del feedback positivo en issues etiquetados como `platform`.
+---
 
-## See also
+# Platform Playbook — operational minimums (EN)
+
+## Operating contracts
+- Review active SLOs and error budgets; document actions for each breach.
+- Enforce resilience policies: timeouts, retries, circuit breakers, and bulkheads aligned with the scenario.
+- Guarantee baseline telemetry: actionable metrics, structured logs, and traces linked to the `correlation-id`.
+
+## Runbooks & feedback loops
+- Payments scenario runbook: follow the [Payments overview](../scenarios/payments-overview.md) and browse `scenarios/payments/docs/`.
+- Postmortem template (coming soon): [Knowledge base](../knowledge/index.md).
+- Use issue and PR templates as continuous feedback loops.
+
+## PR checklist (platform)
+- [ ] Validate policies (`make resilience-check`).
+- [ ] Validate SLOs (`make slos`) if available.
+- [ ] Verify links (`make verify-links`).
+- [ ] Green CI (quality + docs-and-links).
+
+## Minimum KPIs (platform)
+- Zero broken links per PR.
+- 100% of policies validated on PRs touching `platform/**`.
+- Reduce local diagnostic time by 20% through traces, metrics, and logs.
+
+## See also / Ver también
 - [Developer playbook](developer-playbook.md)
-- [Wise Tech approach](../principles/wise-tech-approach.md)
+- [Payments overview](../scenarios/payments-overview.md)
 - [Platform engineers overview](../personas/platform-engineers-overview.md)
 - [Roadmap](../roadmap/roadmap.md)
-- [FAQ](../index.md#faq)
