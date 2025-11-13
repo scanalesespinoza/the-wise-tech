@@ -7,7 +7,7 @@ install:
 	- test -f requirements.txt && pip install -r requirements.txt || true
 	- test -f requirements-dev.txt && pip install -r requirements-dev.txt || true
 	# Herramientas recomendadas
-	- python -m pip install ruff mkdocs mkdocs-material
+	- python -m pip install ruff mkdocs mkdocs-material mkdocs-static-i18n
 
 fmt:
 	@echo "Formatting code"
