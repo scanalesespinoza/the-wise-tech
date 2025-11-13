@@ -1,14 +1,8 @@
-# Wise Tech Principles Hub
+# Principles — Index
 
-- Understand the mindset through the [Wise Tech principles](wise-tech-principles.md).
-- Explore how the approach blends humans and AI in [Wise Tech approach](wise-tech-approach.md).
-- Share success stories in the [platform playbook](../playbooks/platform-playbook.md).
-- Align strategic direction with the [roadmap](../roadmap/roadmap.md).
-- Review decision history in the [ADR index](../../adr/README.md).
+Los principios de Wise Tech articulan los acuerdos que priorizan impacto humano, resiliencia y co-creación con inteligencia aumentada. Cada equipo puede usarlos como brújula para evaluar decisiones tácticas y estratégicas.
 
 ## See also
-- [Personas overview](../personas/_index.md)
-- [Guides quick start](../guides/quickstart.md)
-- [Developer playbook](../playbooks/developer-playbook.md)
-- [Platform playbook](../playbooks/platform-playbook.md)
-- [Navigation map](../../README.md#navigation-map)
+- [Wise Tech Principles](./wise-tech-principles.md)
+- [Playbooks](../playbooks/)
+- [Personas](../personas/)

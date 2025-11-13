@@ -1,91 +1,55 @@
 site_name: The Wise Tech
-site_description: Documentation portal generated from the Wise Tech repository.
-site_url: https://the-wise-tech.org
-
-docs_dir: docs
+site_description: Knowledge & implementation for resilient, human-centered technology
+site_url: https://scanalesespinoza.github.io/the-wise-tech
+repo_url: https://github.com/scanalesespinoza/the-wise-tech
 
 nav:
-  - Home: en/README.md
-  - Recipes:
-      - Catalog: en/docs/recipes/README.md
-  - Onboarding:
-      - Guide: en/docs/onboarding/README.md
+  - Home: index.md
+  - Principles:
+      - Overview: principles/wise-tech-principles.md
+  - Personas:
+      - Consumers: personas/consumers-overview.md
+      - Developers: personas/developers-overview.md
+      - Platform Engineers: personas/platform-engineers-overview.md
+  - Guides:
+      - Quickstart: guides/quickstart.md
+  - Playbooks:
+      - Developer: playbooks/developer-playbook.md
+      - Platform: playbooks/platform-playbook.md
   - Scenarios:
-      - Payments:
-          - Overview: scenarios/payments/README.md
-          - Runbook: scenarios/payments/docs/en/runbook.md
-          - Observability: scenarios/payments/docs/en/observability.md
-          - Contract: scenarios/payments/contracts/payments/v2/README.md
-  - Governance:
-      - Contribution Guide: CONTRIBUTING.md
-  - Automation:
-      - Quality Workflow: .github/workflows/quality.yml
-      - Links Workflow: .github/workflows/links.yml
-      - PR Checklist Workflow: .github/workflows/pr-checklist.yml
-      - PR Summarizer Workflow: .github/workflows/pr-summarizer.yml
-      - Documentation Generator Workflow: .github/workflows/doc-gen.yml
-  - Knowledge:
-      - Index: knowledge/index.md
-      - Articles:
-          - "aDevelopment": knowledge/articles/adevelopment-la-nueva-era-del-desarrollo-aumentado/adevelopment-la-nueva-era-del-desarrollo-aumentado-summary-en.md
-          - "Whitepaper — aDevelopment impact": knowledge/articles/whitepaper-measuring-the-impact-of-augmented-development/whitepaper-measuring-the-impact-of-augmented-development-summary-en.md
-          - "The architecture we inhabit": knowledge/articles/la-arquitectura-que-se-habita/la-arquitectura-que-se-habita-summary-en.md
-          - "Don't Blame the Cloud": knowledge/articles/dont-blame-the-cloud-empowering-resilient-applications/dont-blame-the-cloud-empowering-resilient-applications-summary-en.md
-          - "Going into the Unknown": knowledge/articles/going-into-the-unknown/going-into-the-unknown-summary-en.md
-          - "Future-Proof Technology": knowledge/articles/future-proof-technology/future-proof-technology-summary-en.md
-          - "Architecting Open Source Teams": knowledge/articles/architecting-open-source-teams-building-people-before-platforms/architecting-open-source-teams-building-people-before-platforms-summary-en.md
-          - "What about having Super Apps?": knowledge/articles/what-about-having-super-apps/what-about-having-super-apps-summary-en.md
-          - "2024: The Year of IT Team Experience": knowledge/articles/2024-the-year-of-it-team-experience/2024-the-year-of-it-team-experience-summary-en.md
-          - "The Hadron Pattern for Microservices": knowledge/articles/the-hadron-pattern-for-microservices/the-hadron-pattern-for-microservices-summary-en.md
-
-repo_url: https://github.com/the-wise-tech/the-wise-tech
-repo_name: the-wise-tech
+      - Payments: scenarios/payments-overview.md
+  - Roadmap:
+      - Overview: roadmap/roadmap.md
 
 theme:
   name: material
-  language: en
   features:
-    - navigation.tabs
-    - navigation.top
-    - search.highlight
     - search.suggest
+    - search.highlight
+    - navigation.top
+    - navigation.indexes
+    - content.action.edit
 
 plugins:
   - search
   - i18n:
-      docs_structure: folder
+      default_language: en
       languages:
         - locale: en
           name: English
           default: true
-          link: /
+          build: true
         - locale: es
           name: Español
-          nav_translations:
-            Home: Inicio
-            Recipes: Recetas
-            Catalog: Catálogo
-            Onboarding: Incorporación
-            Guide: Guía
-            Scenarios: Escenarios
-            Payments: Pagos
-            Overview: Descripción general
-            Runbook: Manual operativo
-            Observability: Observabilidad
-            Contract: Contrato
-            Governance: Gobernanza
-            Contribution Guide: Guía de contribución
-            Automation: Automatización
-            PR Checklist Workflow: Flujo de checklist de PR
-            PR Summarizer Workflow: Flujo de resumen de PR
-            Documentation Generator Workflow: Flujo de generación de documentación
-            Bilingual Parity Workflow: Flujo de paridad bilingüe
+          build: true
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - attr_list
 
 extra:
-  alternate:
-    - name: English
-      link: /
-      lang: en
-    - name: Español
-      link: /es/
-      lang: es
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/scanalesespinoza/the-wise-tech

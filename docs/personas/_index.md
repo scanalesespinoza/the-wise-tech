@@ -1,14 +1,8 @@
-# Personas Hub
+# Personas — Index
 
-- Start with the [consumer overview](consumers-overview.md) to empathize with end users.
-- Understand developer onboarding expectations in [developers overview](developers-overview.md).
-- Align platform reliability goals via [platform engineers overview](platform-engineers-overview.md).
-- Share insights across roles through the [feedback loops](../guides/contribution-guide.md).
-- Track roadmap priorities tied to each persona in the [roadmap](../roadmap/roadmap.md).
+Las rutas por rol orientan cómo colaborar con consumidores, desarrolladores y plataformas sin perder consistencia. Cada overview resume expectativas, primeros pasos y entregables medibles para escalar la experiencia.
 
 ## See also
-- [Wise Tech principles](../principles/wise-tech-principles.md)
-- [Quickstart guide](../guides/quickstart.md)
-- [Developer playbook](../playbooks/developer-playbook.md)
-- [Platform playbook](../playbooks/platform-playbook.md)
-- [FAQ](../../README.md#faq)
+- [Consumers](./consumers-overview.md)
+- [Developers](./developers-overview.md)
+- [Platform Engineers](./platform-engineers-overview.md)
