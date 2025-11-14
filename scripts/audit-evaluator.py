@@ -97,9 +97,7 @@ def _summarize_failures(summary):
 
 
 def _llm_payload(summary):
-    model = os.environ.get(
-        "LLM_MODEL", "DeepSeek-R1-Distill-Qwen-14B-W4A16"
-    )
+    model = os.environ.get("LLM_MODEL", "DeepSeek-R1-Distill-Qwen-14B-W4A16")
     system_prompt = (
         "You are assisting with an internal audit. Given the JSON summary of the "
         "automated checks, return a short JSON object with the fields 'status' "
