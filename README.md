@@ -30,6 +30,11 @@ El repositorio que convierte la filosofía Wise Tech en acciones compartidas: un
 
 Consulta el [quickstart general](docs/guides/quickstart.md) cuando necesites la versión ultracorta para compartir con tu equipo.
 
+### How to give feedback
+- Abre un Issue con la plantilla **Feedback — User Experience** o **Proposal — Improvement**.
+- Para incidentes operacionales, usa **Ops — Postmortem**.
+- En tus PRs, completa **Human Feedback References** y **Ops Signals**.
+
 ## Navigation map
 
 / (README one-page)
@@ -57,6 +62,9 @@ Consulta el [quickstart general](docs/guides/quickstart.md) cuando necesites la 
 - **Productividad & simplicidad** → [docs/guides/quickstart.md](docs/guides/quickstart.md), [docs/principles/](docs/principles/), [Learning Path 30/60/90 — Consumers](docs/paths/consumers-30-60-90.md)
 - **Resiliencia & operación** → [docs/playbooks/](docs/playbooks/), [docs/scenarios/](docs/scenarios/), [docs/guides/resilience-policies.md](docs/guides/resilience-policies.md), [docs/guides/slo-how-to.md](docs/guides/slo-how-to.md), [Policies YAML (payments)](platform/policies/resilience.yml), [SLO Spec (payments)](platform/slo/slo-spec.yml), [Learning Path 30/60/90 — Platform](docs/paths/platform-engineers-30-60-90.md)
 - **Mentoría & mejora continua** → [docs/roadmap/roadmap.md](docs/roadmap/roadmap.md), [.github/](.github/), [Learning Path 30/60/90 — Developers](docs/paths/developers-30-60-90.md)
+- **Feedback Loops** → [docs/guides/feedback-loops.md](docs/guides/feedback-loops.md)
+- **Postmortems** → [docs/guides/postmortem-guide.md](docs/guides/postmortem-guide.md)
+- **Contribution Mentoring** → [docs/guides/contribution-mentoring.md](docs/guides/contribution-mentoring.md)
 - **Observability & Traceability** → [docs/guides/telemetry-minima.md](docs/guides/telemetry-minima.md)
 - **Correlation-ID (Python)** → [docs/snippets/python-correlation-id.md](docs/snippets/python-correlation-id.md)
 - **Labs prácticos con KPIs** → [docs/labs/lab-01-resilience-basics.md](docs/labs/lab-01-resilience-basics.md), [docs/labs/lab-02-observability-minima.md](docs/labs/lab-02-observability-minima.md), [docs/labs/lab-03-adevelopment-loop.md](docs/labs/lab-03-adevelopment-loop.md)

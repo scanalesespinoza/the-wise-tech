@@ -1,0 +1,24 @@
+name: "Proposal — Improvement"
+description: Proponer una mejora concreta (docs, scripts, CI, resiliencia)
+labels: ["enhancement","proposal"]
+body:
+  - type: textarea
+    id: problem
+    attributes: { label: Problema a resolver, description: "Describe la fricción o brecha" }
+    validations: { required: true }
+  - type: textarea
+    id: solution
+    attributes: { label: Solución propuesta, description: "Cambios mínimos, archivos, rutas" }
+    validations: { required: true }
+  - type: input
+    id: scope
+    attributes: { label: Alcance, placeholder: "docs/guides/*, scripts/*, platform/*" }
+  - type: checkboxes
+    id: kpis
+    attributes:
+      label: KPIs esperados
+      options:
+        - label: TTFC/Lead-time ↓
+        - label: p95/error-rate mejora
+        - label: Menos enlaces rotos
+        - label: Mayor tasa de PRs pequeños
