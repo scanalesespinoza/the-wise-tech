@@ -135,12 +135,32 @@ jobs:
                   core.info(`Issue #${issueNumber} does not include scope entries. Skipping file validation.`);
                 }
 
-                await github.rest.issues.update({
-                  owner,
-                  repo,
-                  issue_number: issueNumber,
-                  state: 'closed',
-                });
+                let issueClosed = false;
+
+                try {
+                  await github.rest.issues.update({
+                    owner,
+                    repo,
+                    issue_number: issueNumber,
+                    state: 'closed',
+                  });
+
+                  issueClosed = true;
+                } catch (error) {
+                  if (error.status === 403) {
+                    core.warning(
+                      `Insufficient permissions to close issue #${issueNumber}. Skipping closure.`,
+                    );
+                    continue;
+                  } else {
+                    throw error;
+                  }
+                }
+
+                if (!issueClosed) {
+                  core.info(`Issue #${issueNumber} was not closed. Skipping further processing.`);
+                  continue;
+                }
 
                 processedIssues.add(issueNumber);
 
