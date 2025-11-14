@@ -3,11 +3,13 @@ title: "Quickstart"
 tags: ["developers", "quickstart", "paths"]
 ---
 # Quickstart
-1) make install
-2) make test
-3) make parity
-4) make docs
-5) abre http://127.0.0.1:8000 y sigue “Choose your path”
+1) git clone https://github.com/scanalesespinoza/the-wise-tech.git
+2) cd the-wise-tech
+3) make install
+4) make test
+5) make parity
+6) make docs
+7) abre http://127.0.0.1:8000 y sigue “Choose your path”
 
 Notas:
 - Mantén PRs pequeños y enlaza la doc que actualizas.
