@@ -1,3 +1,7 @@
+---
+title: "Security Minimum"
+tags: ["developers", "resilience", "playbooks"]
+---
 # Seguridad mínima — Contributors
 Esta guía define controles prácticos y reproducibles:
 - **Secretos**: nunca en el repo. Usa variables de entorno o secretos en GitHub.
@@ -17,3 +21,8 @@ Esta guía define controles prácticos y reproducibles:
 ## Próximos pasos
 - Añadir SAST/linters específicos cuando el stack lo requiera.
 - Firmado de commits y/o provenance de artefactos (release pipeline).
+
+## See also
+- [Security Policy](https://github.com/scanalesespinoza/the-wise-tech/blob/main/.github/SECURITY.md)
+- [Developer playbook](../playbooks/developer-playbook.md)
+- [Contribution Guide](contribution-guide.md)
