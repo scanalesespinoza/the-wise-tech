@@ -192,9 +192,7 @@ def _candidate_urls():
     """Determine the sequence of URLs to try when contacting the LLM service."""
 
     env_url = os.environ.get("LLM_API_URL")
-    default_seed = (
-        "https://litellm-litemaas.apps.prod.rhoai.rh-aiservices-bu.com/v1/chat/completions"
-    )
+    default_seed = "https://litellm-litemaas.apps.prod.rhoai.rh-aiservices-bu.com/v1/chat/completions"
     candidates = OrderedDict()
 
     for seed in filter(None, [env_url, default_seed]):
@@ -298,7 +296,9 @@ def maybe_llm_verdict(summary):
         message = _extract_message(payload)
 
         if not message:
-            logging.warning("Empty message from LLM response (%s): %s", api_url, payload)
+            logging.warning(
+                "Empty message from LLM response (%s): %s", api_url, payload
+            )
             errors.append({"url": api_url, "error": "empty response", "raw": payload})
             continue
 

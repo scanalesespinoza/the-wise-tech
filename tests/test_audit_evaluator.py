@@ -5,7 +5,9 @@ import sys
 import unittest
 from unittest import mock
 
-MODULE_PATH = pathlib.Path(__file__).resolve().parents[1] / "scripts" / "audit-evaluator.py"
+MODULE_PATH = (
+    pathlib.Path(__file__).resolve().parents[1] / "scripts" / "audit-evaluator.py"
+)
 SPEC = importlib.util.spec_from_file_location("audit_evaluator", MODULE_PATH)
 audit_evaluator = importlib.util.module_from_spec(SPEC)
 sys.modules.setdefault("audit_evaluator", audit_evaluator)
@@ -51,27 +53,23 @@ class CandidateUrlTests(unittest.TestCase):
 
 class ExtractMessageTests(unittest.TestCase):
     def test_extracts_from_chat_completion(self):
-        payload = {"choices": [{"message": {"content": "{\"status\": \"PASS\"}"}}]}
+        payload = {"choices": [{"message": {"content": '{"status": "PASS"}'}}]}
         message = audit_evaluator._extract_message(payload)
-        self.assertEqual("{\"status\": \"PASS\"}", message)
+        self.assertEqual('{"status": "PASS"}', message)
 
     def test_extracts_from_responses_format(self):
         payload = {
             "output": [
-                {
-                    "content": [
-                        {"type": "output_text", "text": "{\"status\": \"FAIL\"}"}
-                    ]
-                }
+                {"content": [{"type": "output_text", "text": '{"status": "FAIL"}'}]}
             ]
         }
         message = audit_evaluator._extract_message(payload)
-        self.assertEqual("{\"status\": \"FAIL\"}", message)
+        self.assertEqual('{"status": "FAIL"}', message)
 
     def test_extracts_from_top_level_string(self):
-        payload = {"response": "{\"status\": \"UNKNOWN\"}"}
+        payload = {"response": '{"status": "UNKNOWN"}'}
         message = audit_evaluator._extract_message(payload)
-        self.assertEqual("{\"status\": \"UNKNOWN\"}", message)
+        self.assertEqual('{"status": "UNKNOWN"}', message)
 
 
 if __name__ == "__main__":
