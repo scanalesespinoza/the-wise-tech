@@ -1,16 +1,22 @@
 #!/usr/bin/env python3
-import os
-import sys
-import yaml
 import json
 import logging
+import os
+import subprocess
+import sys
 import urllib.error
 import urllib.request
 from collections import OrderedDict
-from urllib.parse import urljoin, urlparse
+from typing import Dict, List, Optional
+from urllib.parse import quote, urljoin, urlparse
+
+import yaml
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 AUDIT = os.path.join(ROOT, "audit")
+GITHUB_API_URL = os.environ.get("GITHUB_API_URL", "https://api.github.com")
+
+logging.basicConfig(level=logging.INFO, format="[%(levelname)s] %(message)s")
 
 
 def load_yaml(path):
@@ -346,12 +352,247 @@ def maybe_llm_verdict(summary):
     }
 
 
+def _run_git_command(args: List[str]) -> str:
+    try:
+        result = subprocess.run(
+            ["git", *args],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        return result.stdout.strip()
+    except subprocess.CalledProcessError as exc:
+        logging.warning("git %s failed: %s", " ".join(args), exc)
+        return ""
+
+
+def _determine_base_commit() -> Optional[str]:
+    event_path = os.environ.get("GITHUB_EVENT_PATH")
+    if event_path and os.path.isfile(event_path):
+        try:
+            with open(event_path, "r", encoding="utf-8") as fp:
+                payload = json.load(fp)
+        except (OSError, json.JSONDecodeError) as exc:
+            logging.warning("Unable to parse event payload: %s", exc)
+        else:
+            pr = payload.get("pull_request")
+            if isinstance(pr, dict):
+                sha = pr.get("base", {}).get("sha")
+                if sha:
+                    return sha
+            before = payload.get("before")
+            if isinstance(before, str) and before.strip():
+                return before.strip()
+
+    base_ref = os.environ.get("GITHUB_BASE_REF")
+    if base_ref:
+        ref = f"origin/{base_ref}"
+        sha = _run_git_command(["rev-parse", ref])
+        if sha:
+            return sha
+
+    sha = _run_git_command(["rev-parse", "HEAD^"])
+    return sha or None
+
+
+def collect_change_summary() -> Dict[str, object]:
+    base = _determine_base_commit()
+    summary: Dict[str, object] = {}
+    if base:
+        summary["base_commit"] = base
+        names = _run_git_command(["diff", f"{base}...HEAD", "--name-only"])
+        if names:
+            files = [line for line in names.splitlines() if line.strip()]
+            summary["changed_files"] = files
+            summary["changed_file_count"] = len(files)
+        diffstat = _run_git_command(["diff", f"{base}...HEAD", "--stat"])
+        if diffstat:
+            lines = diffstat.splitlines()
+            if len(lines) > 20:
+                lines = lines[:19] + ["…" + lines[-1]]
+            summary["diffstat"] = "\n".join(lines)
+    else:
+        logging.info("Unable to determine base commit; diff summary unavailable")
+
+    return summary
+
+
+def _github_request(
+    method: str,
+    path: str,
+    token: str,
+    payload: Optional[Dict[str, object]] = None,
+) -> Dict[str, object]:
+    url = f"{GITHUB_API_URL.rstrip('/')}/{path.lstrip('/')}"
+    data = json.dumps(payload).encode("utf-8") if payload is not None else None
+    headers = {
+        "Accept": "application/vnd.github+json",
+        "Authorization": f"Bearer {token}",
+    }
+    if data is not None:
+        headers["Content-Type"] = "application/json"
+
+    request = urllib.request.Request(url, data=data, headers=headers, method=method)
+    with urllib.request.urlopen(request, timeout=30) as response:
+        body = response.read().decode("utf-8")
+    return json.loads(body) if body else {}
+
+
+def _ensure_label(
+    repo: str, token: str, name: str, color: str, description: str
+) -> None:
+    try:
+        _github_request("GET", f"/repos/{repo}/labels/{quote(name)}", token)
+        return
+    except urllib.error.HTTPError as exc:
+        if exc.code != 404:
+            raise
+
+    payload = {"name": name, "color": color, "description": description}
+    try:
+        _github_request("POST", f"/repos/{repo}/labels", token, payload)
+    except urllib.error.HTTPError as exc:
+        # Ignore race conditions where another workflow created it first
+        if exc.code != 422:
+            raise
+
+
+def _find_existing_issue(
+    repo: str, token: str, fingerprint: str
+) -> Optional[Dict[str, object]]:
+    params = f"state=open&labels={quote('automation:audit')}"  # urlencoded
+    try:
+        issues = _github_request(
+            "GET", f"/repos/{repo}/issues?{params}&per_page=100", token
+        )
+    except urllib.error.HTTPError as exc:
+        logging.warning("Unable to list issues: %s", exc)
+        return None
+
+    if isinstance(issues, list):
+        marker = f"<!-- audit-fingerprint: {fingerprint} -->"
+        for issue in issues:
+            if marker in issue.get("body", ""):
+                return issue
+    return None
+
+
+def maybe_create_issue(summary: Dict[str, object]) -> Dict[str, object]:
+    failing_rules = [
+        item.get("rule", "unknown")
+        for item in summary.get("breakdown", [])
+        if not item.get("ok", False)
+    ]
+
+    if not failing_rules:
+        return {"created": False, "reason": "no failing rules"}
+
+    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+    repo = os.environ.get("GITHUB_REPOSITORY")
+    if not token or not repo:
+        return {"created": False, "reason": "missing GitHub credentials"}
+
+    fingerprint = "|".join(sorted(failing_rules))
+    try:
+        _ensure_label(
+            repo,
+            token,
+            "automation:audit",
+            color="0E8A16",
+            description="Automated audit improvements",
+        )
+    except Exception as exc:  # pragma: no cover
+        logging.error("Unable to ensure audit label: %s", exc)
+        return {"created": False, "error": str(exc)}
+
+    existing = _find_existing_issue(repo, token, fingerprint)
+    if existing:
+        logging.info(
+            "Audit improvement already tracked in issue #%s", existing.get("number")
+        )
+        return {
+            "created": False,
+            "reason": "existing issue",
+            "issue": {
+                "number": existing.get("number"),
+                "url": existing.get("html_url"),
+            },
+        }
+
+    diff = summary.get("changes", {})
+    body_lines = [
+        "## Audit improvement opportunity",
+        "",
+        "The automated audit detected the following failing rules:",
+    ]
+    for rule in failing_rules:
+        body_lines.append(f"- `{rule}`")
+
+    body_lines.extend(
+        [
+            "",
+            "### Suggested next steps",
+            "- Review the failing rule(s) and propose concrete improvements.",
+            "- Use the local LLM workflow to draft changes that address the issues.",
+            "- Open a pull request referencing this issue and ensure the audit passes.",
+        ]
+    )
+
+    if diff:
+        body_lines.extend(["", "### Context from the triggering run"])
+        base_commit = diff.get("base_commit")
+        if base_commit:
+            body_lines.append(f"- Base commit: `{base_commit}`")
+        file_count = diff.get("changed_file_count")
+        if file_count:
+            body_lines.append(f"- Files changed: {file_count}")
+        changed_files = diff.get("changed_files", [])
+        if changed_files:
+            preview = "\n".join(f"  - {name}" for name in changed_files[:15])
+            if preview:
+                body_lines.extend(["- Sample of changed files:", preview])
+        diffstat = diff.get("diffstat")
+        if diffstat:
+            body_lines.extend(["", "```", diffstat, "```"])
+
+    body_lines.extend(
+        [
+            "",
+            f"<!-- audit-fingerprint: {fingerprint} -->",
+        ]
+    )
+
+    payload = {
+        "title": f"Audit improvement: {', '.join(failing_rules[:3])}",
+        "body": "\n".join(body_lines),
+        "labels": ["automation:audit"],
+    }
+
+    try:
+        response = _github_request("POST", f"/repos/{repo}/issues", token, payload)
+    except urllib.error.HTTPError as exc:
+        error_body = exc.read().decode("utf-8", errors="ignore") if exc.fp else str(exc)
+        logging.error("Unable to create audit issue: %s", error_body)
+        return {"created": False, "error": error_body or str(exc)}
+
+    logging.info("Created audit improvement issue #%s", response.get("number"))
+    return {
+        "created": True,
+        "issue": {
+            "number": response.get("number"),
+            "url": response.get("html_url"),
+        },
+    }
+
+
 def main():
     rubric = load_yaml(os.path.join(AUDIT, "rubric.yml"))
     score, breakdown = score_rules(rubric.get("rules", {}))
     thresholds = rubric.get("thresholds", {})
     pass_score = thresholds.get("pass_score", 30)
     inputs = summarize_audit_inputs()
+    changes = collect_change_summary()
 
     summary = {
         "score": score,
@@ -360,10 +601,18 @@ def main():
         "breakdown": breakdown,
         "audit_inputs": inputs,
     }
+    if changes:
+        summary["changes"] = changes
+    summary["failing_rules"] = [
+        item.get("rule", "unknown") for item in breakdown if not item.get("ok", False)
+    ]
     print(json.dumps(summary, ensure_ascii=False, indent=2))
 
     llm = maybe_llm_verdict(summary)
     print(json.dumps({"llm_evaluation": llm}, ensure_ascii=False))
+
+    issue = maybe_create_issue(summary)
+    print(json.dumps({"improvement_issue": issue}, ensure_ascii=False))
 
     if score < pass_score:
         print("Audit NOK: score below threshold.")
