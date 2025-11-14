@@ -1,4 +1,4 @@
-.PHONY: install fmt lint test parity docs verify-links ci resilience-check resilience-sample slos check-error-budget telemetry-smoke
+.PHONY: install fmt lint test parity docs verify-links ci resilience-check resilience-sample slos check-error-budget telemetry-smoke lab-01 lab-02 lab-03 lab-run-all
 
 install:
 	@echo "Installing dev dependencies"
@@ -55,3 +55,22 @@ check-error-budget:
 telemetry-smoke:
 	@echo "Running telemetry smoke (logs estructurados + p95 simulado)…"
 	python scripts/telemetry-smoke.py
+
+lab-01:
+	@echo "Lab 01 — Resilience Basics"
+	make resilience-check || true
+	make check-error-budget || true
+	@echo "Completa la plantilla: docs/labs/evidence-templates/evidence-lab-01.md"
+
+lab-02:
+	@echo "Lab 02 — Observability Minimum"
+	make telemetry-smoke || python scripts/telemetry-smoke.py
+	@echo "Completa la plantilla: docs/labs/evidence-templates/evidence-lab-02.md"
+
+lab-03:
+	@echo "Lab 03 — aDevelopment Loop"
+	@echo "Genera un test/doc pequeño, ejecuta make test, y registra KPIs."
+	@echo "Completa la plantilla: docs/labs/evidence-templates/evidence-lab-03.md"
+
+lab-run-all: lab-01 lab-02 lab-03
+	@echo "Labs completados (recuerda subir evidencia en PR)."

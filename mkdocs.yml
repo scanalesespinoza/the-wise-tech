@@ -16,6 +16,10 @@ nav:
       - Resilience Policies: guides/resilience-policies.md
       - SLOs & Error Budget: guides/slo-how-to.md
       - Telemetry (Minimum): guides/telemetry-minima.md
+  - Labs:
+      - Lab 01 — Resilience Basics: labs/lab-01-resilience-basics.md
+      - Lab 02 — Observability Minimum: labs/lab-02-observability-minima.md
+      - Lab 03 — aDevelopment Loop: labs/lab-03-adevelopment-loop.md
   - Snippets:
       - Python — Correlation ID: snippets/python-correlation-id.md
   - Playbooks:

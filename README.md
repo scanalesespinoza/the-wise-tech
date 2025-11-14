@@ -16,6 +16,9 @@ El repositorio que convierte la filosofía Wise Tech en acciones compartidas: un
   - Learning Path 30/60/90 → [docs/paths/developers-30-60-90.md](docs/paths/developers-30-60-90.md)
 - **Platform Engineers** → [platform engineers overview](docs/personas/platform-engineers-overview.md)
   - Learning Path 30/60/90 → [docs/paths/platform-engineers-30-60-90.md](docs/paths/platform-engineers-30-60-90.md)
+- **Labs** → [Lab 01 — Resilience Basics](docs/labs/lab-01-resilience-basics.md)
+  - Observability Minimum → [docs/labs/lab-02-observability-minima.md](docs/labs/lab-02-observability-minima.md)
+  - aDevelopment Loop → [docs/labs/lab-03-adevelopment-loop.md](docs/labs/lab-03-adevelopment-loop.md)
 
 ## Quick start (5 pasos)
 
@@ -52,6 +55,7 @@ Consulta el [quickstart general](docs/guides/quickstart.md) cuando necesites la 
 - **Mentoría & mejora continua** → [docs/roadmap/roadmap.md](docs/roadmap/roadmap.md), [.github/](.github/), [Learning Path 30/60/90 — Developers](docs/paths/developers-30-60-90.md)
 - **Observability & Traceability** → [docs/guides/telemetry-minima.md](docs/guides/telemetry-minima.md)
 - **Correlation-ID (Python)** → [docs/snippets/python-correlation-id.md](docs/snippets/python-correlation-id.md)
+- **Labs prácticos con KPIs** → [docs/labs/lab-01-resilience-basics.md](docs/labs/lab-01-resilience-basics.md), [docs/labs/lab-02-observability-minima.md](docs/labs/lab-02-observability-minima.md), [docs/labs/lab-03-adevelopment-loop.md](docs/labs/lab-03-adevelopment-loop.md)
 
 > Social preview: ver [assets/social/wise-tech-1280x640.png](assets/social/wise-tech-1280x640.png)
 
