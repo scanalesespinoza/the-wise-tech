@@ -15,7 +15,11 @@ on:
 
 jobs:
   audit:
+    environment: on
     runs-on: ubuntu-latest
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      LLM_API_URL: ${{ vars.LLM_API_URL }}
     steps:
       - uses: actions/checkout@v4
       - name: Setup Python
