@@ -16,14 +16,14 @@ jobs:
       - name: Collect PR context
         id: context
         run: |
-          git fetch origin "${{ github.base_ref }}" --depth=1
-          git diff "origin/${{ github.base_ref }}"...HEAD > pr.diff || true
+          git fetch origin "${{ github.event.pull_request.base.sha }}"
+          git diff "${{ github.event.pull_request.base.sha }}"...HEAD > pr.diff || true
           {
             echo "title=${{ github.event.pull_request.title }}"
-            echo "body<<'EOF'"
+            echo "body<<EOF"
             printf '%s\n' "${{ github.event.pull_request.body }}"
             echo "EOF"
-            echo "diff<<'EOF'"
+            echo "diff<<EOF"
             sed 's/`/`/g' pr.diff
             echo "EOF"
           } >> "$GITHUB_OUTPUT"
@@ -50,7 +50,7 @@ jobs:
                 "diff": os.environ.get("PR_DIFF", ""),
             }
             print(json.dumps(summary))
-PY
+          PY
           )
           curl -sSf -X POST "$SUMMARY_WEBHOOK" -H 'Content-Type: application/json' -d "$payload" > summary.md
           echo "status=posted" >> "$GITHUB_OUTPUT"
