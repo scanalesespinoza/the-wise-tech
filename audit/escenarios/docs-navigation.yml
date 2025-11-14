@@ -1,0 +1,9 @@
+id: docs-navigation
+steps:
+  - "Buscar rutas clave desde el README"
+  - "Verificar navegación en mkdocs.yml"
+  - "Recorrer labs y guías en docs/"
+expected_artifacts:
+  - "mkdocs.yml"
+  - "docs/guides/"
+  - "docs/labs/"

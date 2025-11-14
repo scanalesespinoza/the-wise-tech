@@ -1,4 +1,4 @@
-.PHONY: install fmt lint test parity docs verify-links content-meta ci resilience-check resilience-sample slos check-error-budget telemetry-smoke lab-01 lab-02 lab-03 lab-run-all security-scan docs-live dev-up dev-down dev-logs dev-status
+.PHONY: install fmt lint test parity docs verify-links content-meta ci resilience-check resilience-sample slos check-error-budget telemetry-smoke lab-01 lab-02 lab-03 lab-run-all security-scan docs-live dev-up dev-down dev-logs dev-status audit
 
 install:
 	@echo "Installing dev dependencies"
@@ -57,6 +57,9 @@ verify-links:
 
 ci: install fmt lint test parity docs verify-links content-meta slos
 	@echo "CI (local) complete ✅"
+
+audit:
+	@python scripts/audit-evaluator.py
 
 resilience-check:
 	@echo "Validando políticas de resiliencia…"

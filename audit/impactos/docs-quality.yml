@@ -1,0 +1,12 @@
+id: docs-quality
+kpis:
+  - name: "docs_broken_links"
+    target: 0
+    direction: "max"
+  - name: "front_matter_compliance"
+    target: 95
+    direction: "min"
+evidence_sources:
+  - "scripts/check-links.py"
+  - "scripts/validate-content-metadata.py"
+  - "mkdocs.yml"
