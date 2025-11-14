@@ -6,6 +6,7 @@
 - Mide latencia (ms) y deriva un p95 simple
 - Muestra contadores de requests/errores
 """
+
 import json
 import random
 import statistics
@@ -54,11 +55,7 @@ def main(n: int = 50):
         lat, err = simulate_request()
         lats.append(lat)
         errors += 1 if err else 0
-    p95 = (
-        int(statistics.quantiles(lats, n=20)[18])
-        if len(lats) >= 20
-        else max(lats)
-    )
+    p95 = int(statistics.quantiles(lats, n=20)[18]) if len(lats) >= 20 else max(lats)
     print(
         json.dumps(
             {

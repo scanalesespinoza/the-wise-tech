@@ -3,7 +3,9 @@ import unittest
 from pathlib import Path
 
 
-PACT_FILE = Path("scenarios/payments/contracts/payments/v2/pacts/checkout-ui-payments.json")
+PACT_FILE = Path(
+    "scenarios/payments/contracts/payments/v2/pacts/checkout-ui-payments.json"
+)
 
 
 class PactContractTests(unittest.TestCase):

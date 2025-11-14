@@ -3,6 +3,7 @@
 The module is bilingual by design: docstrings include English and Spanish
 context so teams across regions can share the same artifacts.
 """
+
 from __future__ import annotations
 
 from dataclasses import dataclass
@@ -66,7 +67,9 @@ class PaymentTimeout(PaymentsError):
 class PaymentUnknownFailure(PaymentsError):
     """Unexpected provider response / Respuesta inesperada del proveedor."""
 
-    def __init__(self, *, provider: str, reference_id: str, hint: RemediationHint) -> None:
+    def __init__(
+        self, *, provider: str, reference_id: str, hint: RemediationHint
+    ) -> None:
         super().__init__(
             "Unknown failure from provider. Escalate with context attached.",
             "Fallo desconocido del proveedor. Escala el incidente con contexto adjunto.",

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Ensure documentation pairs stay in sync across languages."""
+
 from __future__ import annotations
 
 import argparse
@@ -35,7 +36,11 @@ def compare_pairs(pairs: Iterable[tuple[Path, Path]]) -> int:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--check-scenarios", action="store_true", help="Check scenario documentation parity as well")
+    parser.add_argument(
+        "--check-scenarios",
+        action="store_true",
+        help="Check scenario documentation parity as well",
+    )
     args = parser.parse_args()
 
     repo_root = Path(__file__).resolve().parents[1]

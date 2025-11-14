@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Lint para políticas de resiliencia: valida rangos y consistencia básica."""
+
 from __future__ import annotations
 
 import json
@@ -77,7 +78,9 @@ def lint() -> int:
     for service in services:
         label = service.get("name", "<sin-nombre>")
         timeout = service.get("timeouts_ms")
-        if timeout is not None and timeout > timeouts.get("max_request_ms", sys.maxsize):
+        if timeout is not None and timeout > timeouts.get(
+            "max_request_ms", sys.maxsize
+        ):
             warnings.append(
                 f"{label}: timeouts_ms ({timeout}) excede max_request_ms global"
             )

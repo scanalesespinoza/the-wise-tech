@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Valida compatibilidad entre perfiles de consistencia, patrones de acceso y estrategias de réplica."""
+
 from __future__ import annotations
 
 import json
@@ -61,17 +62,13 @@ def validate() -> int:
                 f"{name}: estrategia '{strategy}' incompatible con perfil '{profile}'"
             )
 
-        supported_profiles = replication_catalog[strategy].get(
-            "supported_profiles", []
-        )
+        supported_profiles = replication_catalog[strategy].get("supported_profiles", [])
         if supported_profiles and profile not in supported_profiles:
             errors.append(
                 f"{name}: perfil '{profile}' no soportado por estrategia '{strategy}'"
             )
 
-        requires_idempotency = replication_catalog[strategy].get(
-            "requires_idempotency"
-        )
+        requires_idempotency = replication_catalog[strategy].get("requires_idempotency")
         if requires_idempotency and pattern == "write_conflict":
             warnings.append(
                 f"{name}: verificar claves de idempotencia para '{strategy}' en escenarios de conflicto"

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Simula escenarios de causalidad y fallos parciales usando relojes vectoriales."""
+
 from __future__ import annotations
 
 from dataclasses import dataclass
@@ -56,9 +57,7 @@ def simulate() -> str:
         "r2": VectorClock({"r2": 0}),
         "r3": VectorClock({"r3": 0}),
     }
-    session_vectors: Dict[str, VectorClock] = {
-        "session-123": VectorClock({})
-    }
+    session_vectors: Dict[str, VectorClock] = {"session-123": VectorClock({})}
 
     timeline: List[str] = []
 
@@ -71,14 +70,14 @@ def simulate() -> str:
     local_view = replicas["r2"].copy()
     assert_condition(
         not local_view.dominates(session_vectors["session-123"]),
-        "r2 no debería tener todavía la sesión sincronizada"
+        "r2 no debería tener todavía la sesión sincronizada",
     )
     # El middleware espera hasta que el estado refleje la sesión
     replicas["r2"].merge(session_vectors["session-123"])
     local_view = replicas["r2"].copy()
     assert_condition(
         local_view.dominates(session_vectors["session-123"]),
-        "r2 debe garantizar read-your-writes antes de responder"
+        "r2 debe garantizar read-your-writes antes de responder",
     )
     timeline.append("r2:sync_read")
 
@@ -89,10 +88,12 @@ def simulate() -> str:
     # r1 recibe el evento de r3 después de recuperarse del fallo parcial
     incoming = replicas["r3"].copy()
     r1_before = replicas["r1"].copy()
-    concurrent = not incoming.happened_before(r1_before) and not r1_before.happened_before(incoming)
+    concurrent = not incoming.happened_before(
+        r1_before
+    ) and not r1_before.happened_before(incoming)
     assert_condition(
         concurrent,
-        "El evento de r3 debe detectarse como concurrente respecto al estado de r1"
+        "El evento de r3 debe detectarse como concurrente respecto al estado de r1",
     )
     replicas["r1"].merge(incoming)
     timeline.append("r1:merge_concurrent")
@@ -102,7 +103,7 @@ def simulate() -> str:
     replicas["r1"].merge(replay)
     assert_condition(
         replicas["r1"].dominates(replay),
-        "Después de un replay, el estado debe permanecer convergente"
+        "Después de un replay, el estado debe permanecer convergente",
     )
     timeline.append("r1:replay_idempotent")
 
