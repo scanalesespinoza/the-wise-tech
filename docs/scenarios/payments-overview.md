@@ -1,3 +1,7 @@
+---
+title: "Payments Overview"
+tags: ["developers", "resilience", "playbooks"]
+---
 # Payments Overview
 
 El escenario de pagos ilustra cómo Wise Tech integra descubrimiento, desarrollo y operación.

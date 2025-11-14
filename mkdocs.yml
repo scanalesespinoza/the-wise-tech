@@ -12,6 +12,10 @@ nav:
       - Developers: personas/developers-overview.md
       - Platform Engineers: personas/platform-engineers-overview.md
   - Guides:
+      - Content Style Guide: guides/content-style-guide.md
+      - Editorial Workflow: guides/editorial-workflow.md
+      - Versioning Docs: guides/versioning-docs.md
+      - Taxonomy & Tags: guides/taxonomy-tags.md
       - Quickstart: guides/quickstart.md
       - Resilience Policies: guides/resilience-policies.md
       - SLOs & Error Budget: guides/slo-how-to.md

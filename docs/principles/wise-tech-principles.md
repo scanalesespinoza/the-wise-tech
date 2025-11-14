@@ -1,3 +1,7 @@
+---
+title: "Wise Tech Principles"
+tags: ["consumers", "principles", "knowledge-capitalization"]
+---
 # Wise Tech Principles
 
 ## Simplicity

@@ -1,3 +1,7 @@
+---
+title: "Developer Playbook — mínimos accionables"
+tags: ["developers", "playbooks", "resilience"]
+---
 # Developer Playbook — mínimos accionables
 
 ## Principios operativos (≤5)

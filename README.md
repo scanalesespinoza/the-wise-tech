@@ -39,6 +39,10 @@ Consulta el [quickstart general](docs/guides/quickstart.md) cuando necesites la 
 │  ├─ Developers → [docs/personas/developers-overview.md](docs/personas/developers-overview.md)  
 │  └─ Platform Engineers → [docs/personas/platform-engineers-overview.md](docs/personas/platform-engineers-overview.md)  
 ├─ Guides → [docs/guides/](docs/guides/)
+│  ├─ Content Style Guide → [docs/guides/content-style-guide.md](docs/guides/content-style-guide.md)
+│  ├─ Editorial Workflow → [docs/guides/editorial-workflow.md](docs/guides/editorial-workflow.md)
+│  ├─ Versioning Docs → [docs/guides/versioning-docs.md](docs/guides/versioning-docs.md)
+│  ├─ Taxonomy & Tags → [docs/guides/taxonomy-tags.md](docs/guides/taxonomy-tags.md)
 │  ├─ Resilience Policies → [docs/guides/resilience-policies.md](docs/guides/resilience-policies.md)
 │  ├─ SLOs & Error Budget → [docs/guides/slo-how-to.md](docs/guides/slo-how-to.md)
 │  └─ Telemetry (Minimum) → [docs/guides/telemetry-minima.md](docs/guides/telemetry-minima.md)
@@ -56,6 +60,7 @@ Consulta el [quickstart general](docs/guides/quickstart.md) cuando necesites la 
 - **Observability & Traceability** → [docs/guides/telemetry-minima.md](docs/guides/telemetry-minima.md)
 - **Correlation-ID (Python)** → [docs/snippets/python-correlation-id.md](docs/snippets/python-correlation-id.md)
 - **Labs prácticos con KPIs** → [docs/labs/lab-01-resilience-basics.md](docs/labs/lab-01-resilience-basics.md), [docs/labs/lab-02-observability-minima.md](docs/labs/lab-02-observability-minima.md), [docs/labs/lab-03-adevelopment-loop.md](docs/labs/lab-03-adevelopment-loop.md)
+- **How we write (Style Guide)** → [docs/guides/content-style-guide.md](docs/guides/content-style-guide.md), [Editorial workflow](docs/guides/editorial-workflow.md), [Versioning Docs](docs/guides/versioning-docs.md), [Taxonomy & tags](docs/guides/taxonomy-tags.md)
 
 > Social preview: ver [assets/social/wise-tech-1280x640.png](assets/social/wise-tech-1280x640.png)
 
@@ -78,7 +83,7 @@ El escenario de pagos funciona como caso de negocio canónico: los errores del s
 El pipeline [`quality`](.github/workflows/quality.yml) ejecuta exactamente `make ci`, que encadena `install`, `fmt`, `lint`, `test`, `parity`, `docs` y `verify-links`. Ejecutar `make ci` en local te entrega el mismo veredicto antes de abrir una PR.
 
 ### ¿Cómo se validan la documentación y los enlaces?
-El workflow [`docs-and-links`](.github/workflows/docs-and-links.yml) se activa cuando cambian archivos Markdown o de MkDocs. Reconstruye el sitio con `mkdocs build --strict` y ejecuta `python scripts/check-links.py` para detectar enlaces internos rotos.
+El workflow [`docs-and-links`](.github/workflows/docs-and-links.yml) se activa cuando cambian archivos Markdown o de MkDocs. Reconstruye el sitio con `mkdocs build --strict`, valida front-matter y "See also" con `python scripts/validate-content-metadata.py`, y ejecuta `python scripts/check-links.py` para detectar enlaces internos rotos. En local puedes correr `make content-meta` antes de subir cambios.
 
 ### ¿Cómo valido bilingüismo cuando sólo edito una lengua?
 Ejecuta `make parity` para comparar las rutas `en/` y `es/`. Si todavía no existe la traducción, agrega una nota `TODO (parity)` en el archivo y documenta el plan en tu PR para que el pipeline no falle.

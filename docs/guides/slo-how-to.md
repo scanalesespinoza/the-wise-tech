@@ -1,3 +1,7 @@
+---
+title: "SLOs & Error Budget — Cómo usarlos"
+tags: ["platform-engineers", "slo", "resilience"]
+---
 # SLOs & Error Budget — Cómo usarlos
 Los SLOs definen expectativas operativas medibles; el presupuesto de error marca cuánto “fallo” es tolerable en la ventana (p. ej., 30 días).
 ## Flujo recomendado (mínimo)
@@ -11,3 +15,9 @@ Los SLOs definen expectativas operativas medibles; el presupuesto de error marca
 ## Próximos pasos
 - Conectar métricas reales (prometheus/otlp) cuando estén disponibles.
 - Integrar SLOs con resiliencia y postmortems.
+
+## See also
+- [Resilience Policies — Cómo usarlas](resilience-policies.md)
+- [Telemetry (Minimum)](telemetry-minima.md)
+- [Platform playbook](../playbooks/platform-playbook.md)
+- [Platform Engineers — 30/60/90](../paths/platform-engineers-30-60-90.md)
