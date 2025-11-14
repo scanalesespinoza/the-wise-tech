@@ -37,8 +37,11 @@ Consulta el [quickstart general](docs/guides/quickstart.md) cuando necesites la 
 │  └─ Platform Engineers → [docs/personas/platform-engineers-overview.md](docs/personas/platform-engineers-overview.md)  
 ├─ Guides → [docs/guides/](docs/guides/)
 │  ├─ Resilience Policies → [docs/guides/resilience-policies.md](docs/guides/resilience-policies.md)
-│  └─ SLOs & Error Budget → [docs/guides/slo-how-to.md](docs/guides/slo-how-to.md)
-├─ Playbooks → [docs/playbooks/](docs/playbooks/)  
+│  ├─ SLOs & Error Budget → [docs/guides/slo-how-to.md](docs/guides/slo-how-to.md)
+│  └─ Telemetry (Minimum) → [docs/guides/telemetry-minima.md](docs/guides/telemetry-minima.md)
+├─ Snippets → [docs/snippets/](docs/snippets/)
+│  └─ Python — Correlation ID → [docs/snippets/python-correlation-id.md](docs/snippets/python-correlation-id.md)
+├─ Playbooks → [docs/playbooks/](docs/playbooks/)
 ├─ Scenarios → [docs/scenarios/](docs/scenarios/)  
 └─ Roadmap → [docs/roadmap/roadmap.md](docs/roadmap/roadmap.md)
 
@@ -47,6 +50,8 @@ Consulta el [quickstart general](docs/guides/quickstart.md) cuando necesites la 
 - **Productividad & simplicidad** → [docs/guides/quickstart.md](docs/guides/quickstart.md), [docs/principles/](docs/principles/), [Learning Path 30/60/90 — Consumers](docs/paths/consumers-30-60-90.md)
 - **Resiliencia & operación** → [docs/playbooks/](docs/playbooks/), [docs/scenarios/](docs/scenarios/), [docs/guides/resilience-policies.md](docs/guides/resilience-policies.md), [docs/guides/slo-how-to.md](docs/guides/slo-how-to.md), [Policies YAML (payments)](platform/policies/resilience.yml), [SLO Spec (payments)](platform/slo/slo-spec.yml), [Learning Path 30/60/90 — Platform](docs/paths/platform-engineers-30-60-90.md)
 - **Mentoría & mejora continua** → [docs/roadmap/roadmap.md](docs/roadmap/roadmap.md), [.github/](.github/), [Learning Path 30/60/90 — Developers](docs/paths/developers-30-60-90.md)
+- **Observability & Traceability** → [docs/guides/telemetry-minima.md](docs/guides/telemetry-minima.md)
+- **Correlation-ID (Python)** → [docs/snippets/python-correlation-id.md](docs/snippets/python-correlation-id.md)
 
 > Social preview: ver [assets/social/wise-tech-1280x640.png](assets/social/wise-tech-1280x640.png)
 

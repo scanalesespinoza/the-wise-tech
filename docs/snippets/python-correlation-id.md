@@ -1,58 +1,44 @@
-# Snippet: Correlation-ID en Python
-
-Usa este snippet para instrumentar logs con `correlation-id` y mantener trazas consistentes entre servicios.
-
 ```python
-import logging
-from contextlib import contextmanager
-from typing import Iterator
+import uuid, time, json, logging
+from contextvars import ContextVar
+from functools import wraps
 
-LOG = logging.getLogger("payments")
+CORR_ID = ContextVar("correlation_id", default=None)
+SERVICE = "wise-tech-example"
 
-@contextmanager
-def log_with_correlation_id(correlation_id: str) -> Iterator[logging.LoggerAdapter]:
-    adapter = logging.LoggerAdapter(LOG, {"correlation_id": correlation_id})
-    try:
-        adapter.debug("starting scoped operation")
-        yield adapter
-    finally:
-        adapter.info("correlation-id released")
+def ensure_correlation_id(headers: dict) -> str:
+    cid = headers.get("x-correlation-id") or str(uuid.uuid4())
+    CORR_ID.set(cid)
+    return cid
+
+def log_struct(level, event, **kw):
+    rec = {
+        "timestamp": int(time.time() * 1000),
+        "level": level.upper(),
+        "service": SERVICE,
+        "event": event,
+        "correlation_id": CORR_ID.get(),
+    }
+    rec.update(kw)
+    print(json.dumps(rec))
+
+def traced(fn):
+    @wraps(fn)
+    def _w(*args, **kwargs):
+        start = time.time()
+        try:
+            return fn(*args, **kwargs)
+        finally:
+            elapsed_ms = int((time.time() - start) * 1000)
+            log_struct("info", "span.end", fn=fn.__name__, latency_ms=elapsed_ms)
+    return _w
+
+# Ejemplo de uso:
+# headers = {"x-correlation-id": "..."}  # si no viene, se creará
+# ensure_correlation_id(headers)
+# log_struct("info", "payment.start", route="/payments/charge")
+# @traced
+# def do_work(): ...
 ```
 
-## Cómo aplicarlo
-- Inserta el contexto alrededor de llamadas a APIs externas o handlers de eventos.
-- Propaga el `correlation-id` desde el entrypoint (por ejemplo, `refund-request.json`).
-- Añade asserts en pruebas de `scenarios/payments/tests/` para garantizar el log estructurado.
-
----
-
-# Snippet: Correlation-ID in Python (EN)
-
-Use this snippet to instrument logs with a `correlation-id` and keep traces consistent across services.
-
-```python
-import logging
-from contextlib import contextmanager
-from typing import Iterator
-
-LOG = logging.getLogger("payments")
-
-@contextmanager
-def log_with_correlation_id(correlation_id: str) -> Iterator[logging.LoggerAdapter]:
-    adapter = logging.LoggerAdapter(LOG, {"correlation_id": correlation_id})
-    try:
-        adapter.debug("starting scoped operation")
-        yield adapter
-    finally:
-        adapter.info("correlation-id released")
-```
-
-## How to apply
-- Wrap external API calls or event handlers with the context manager.
-- Propagate the `correlation-id` from the entrypoint (for example, `refund-request.json`).
-- Add assertions inside `scenarios/payments/tests/` to guarantee structured logging.
-
-## See also / Ver también
-- [Developer Playbook](../playbooks/developer-playbook.md)
-- [Payments overview](../scenarios/payments-overview.md)
-- [Contribution guide](../guides/contribution-guide.md)
+(Nota: si prefieres Node.js, crear también docs/snippets/nodejs-correlation-id.md con middleware Express equivalente — opcional en esta iteración.)

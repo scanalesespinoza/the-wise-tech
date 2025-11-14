@@ -15,6 +15,9 @@ nav:
       - Quickstart: guides/quickstart.md
       - Resilience Policies: guides/resilience-policies.md
       - SLOs & Error Budget: guides/slo-how-to.md
+      - Telemetry (Minimum): guides/telemetry-minima.md
+  - Snippets:
+      - Python — Correlation ID: snippets/python-correlation-id.md
   - Playbooks:
       - Developer: playbooks/developer-playbook.md
       - Platform: playbooks/platform-playbook.md
