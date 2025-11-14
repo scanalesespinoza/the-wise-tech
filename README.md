@@ -8,6 +8,12 @@
 
 El repositorio que convierte la filosofía Wise Tech en acciones compartidas: una one-page navegable para aprender, construir y operar tecnología con propósito humano.
 
+## Start here
+
+1. Lee el resumen en [Docs Home](docs/index.md) para ubicar los principios, rutas y laboratorios.
+2. Revisa tu rol en [Choose your path](#choose-your-path) y sigue el enlace de "Learning Path 30/60/90" correspondiente.
+3. Si quieres levantar el entorno local, continúa con la sección [Quick start (7 pasos)](#quick-start-7-pasos).
+
 ➡️ Explora la documentación completa en [Docs Home](docs/index.md) o visita la versión publicada en GitHub Pages: https://scanalesespinoza.github.io/the-wise-tech/.
 
 ## Choose your path

@@ -6,6 +6,8 @@ import json
 import logging
 import urllib.error
 import urllib.request
+from collections import OrderedDict
+from urllib.parse import urljoin, urlparse
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 AUDIT = os.path.join(ROOT, "audit")
@@ -96,7 +98,7 @@ def _summarize_failures(summary):
     )
 
 
-def _llm_payload(summary):
+def _llm_payload(summary, endpoint="chat"):
     model = os.environ.get("LLM_MODEL", "DeepSeek-R1-Distill-Qwen-14B-W4A16")
     system_prompt = (
         "You are assisting with an internal audit. Given the JSON summary of the "
@@ -104,6 +106,32 @@ def _llm_payload(summary):
         "(values: PASS or FAIL) and 'rationale' (a concise explanation)."
     )
     summary_text = json.dumps(summary, ensure_ascii=False)
+    if endpoint == "responses":
+        return {
+            "model": model,
+            "input": [
+                {
+                    "role": "system",
+                    "content": [{"type": "text", "text": system_prompt}],
+                },
+                {
+                    "role": "user",
+                    "content": [
+                        {
+                            "type": "text",
+                            "text": (
+                                "Audit summary:\n"
+                                + summary_text
+                                + "\nRespond only with JSON."
+                            ),
+                        }
+                    ],
+                },
+            ],
+            "temperature": 0.1,
+            "max_output_tokens": 200,
+        }
+
     return {
         "model": model,
         "messages": [
@@ -120,6 +148,98 @@ def _llm_payload(summary):
     }
 
 
+def _join_url(base, path):
+    """Helper to safely append a path segment to the provided base URL."""
+
+    return urljoin(base.rstrip("/") + "/", path.lstrip("/"))
+
+
+def _expand_candidate(seed):
+    """Return candidate URLs inferred from the provided seed value."""
+
+    if not seed:
+        return []
+
+    seed = seed.strip()
+    if not seed:
+        return []
+
+    parsed = urlparse(seed)
+    path = parsed.path.rstrip("/")
+
+    if path.endswith("/chat/completions"):
+        return [(seed.rstrip("/"), "chat")]
+    if path.endswith("/responses"):
+        return [(seed.rstrip("/"), "responses")]
+
+    # If the seed already includes a path (e.g. /v1) treat it as a base path.
+    if path:
+        base = seed.rstrip("/")
+        return [
+            (_join_url(base, "chat/completions"), "chat"),
+            (_join_url(base, "responses"), "responses"),
+        ]
+
+    # Otherwise assume it is only the origin and append the OpenAI-compatible paths.
+    with_v1 = _join_url(seed, "v1")
+    return [
+        (_join_url(with_v1, "chat/completions"), "chat"),
+        (_join_url(with_v1, "responses"), "responses"),
+    ]
+
+
+def _candidate_urls():
+    """Determine the sequence of URLs to try when contacting the LLM service."""
+
+    env_url = os.environ.get("LLM_API_URL")
+    default_seed = "https://litellm-litemaas.apps.prod.rhoai.rh-aiservices-bu.com/v1/chat/completions"
+    candidates = OrderedDict()
+
+    for seed in filter(None, [env_url, default_seed]):
+        for url, endpoint in _expand_candidate(seed):
+            candidates.setdefault((url, endpoint), None)
+
+    # Ensure we also consider the responses endpoint for the default seed.
+    for url, endpoint in _expand_candidate(
+        "https://litellm-litemaas.apps.prod.rhoai.rh-aiservices-bu.com/v1/responses"
+    ):
+        candidates.setdefault((url, endpoint), None)
+
+    return list(candidates.keys())
+
+
+def _extract_message(payload):
+    """Extract the textual message from different response schemas."""
+
+    # OpenAI / LiteLLM chat completion format
+    choices = payload.get("choices")
+    if choices:
+        message = choices[0].get("message", {}).get("content", "")
+        if message:
+            return message.strip()
+
+    # OpenAI responses API format
+    output = payload.get("output") or payload.get("outputs")
+    if output:
+        parts = []
+        for item in output:
+            for content in item.get("content", []):
+                if content.get("type") in {"output_text", "text"}:
+                    text = content.get("text", "")
+                    if text:
+                        parts.append(text.strip())
+        if parts:
+            return "\n".join(part for part in parts if part)
+
+    # Some providers return the message directly at the top level
+    for key in ("message", "response", "result"):
+        value = payload.get(key)
+        if isinstance(value, str) and value.strip():
+            return value.strip()
+
+    return ""
+
+
 def maybe_llm_verdict(summary):
     """Optional step that relies on OPENAI_API_KEY to request a qualitative verdict."""
 
@@ -134,58 +254,70 @@ def maybe_llm_verdict(summary):
             "basis": "deterministic audit rules",
         }
 
-    api_url = os.environ.get(
-        "LLM_API_URL",
-        "https://litellm-litemaas.apps.prod.rhoai.rh-aiservices-bu.com/v1/chat/completions",
-    )
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {api_key}",
+    }
 
-    request_body = json.dumps(_llm_payload(summary)).encode("utf-8")
-    request = urllib.request.Request(
-        api_url,
-        data=request_body,
-        headers={
-            "Content-Type": "application/json",
-            "Authorization": f"Bearer {api_key}",
-        },
-        method="POST",
-    )
+    errors = []
 
-    try:
-        with urllib.request.urlopen(request, timeout=30) as response:
-            raw_body = response.read().decode("utf-8")
-            payload = json.loads(raw_body)
-    except urllib.error.HTTPError as exc:
-        body = exc.read().decode("utf-8", errors="ignore") if exc.fp else ""
-        logging.error("LLM request failed: %s", body or exc)
+    for api_url, endpoint in _candidate_urls():
+        request_body = json.dumps(_llm_payload(summary, endpoint)).encode("utf-8")
+        request = urllib.request.Request(
+            api_url,
+            data=request_body,
+            headers=headers,
+            method="POST",
+        )
+
+        try:
+            with urllib.request.urlopen(request, timeout=30) as response:
+                raw_body = response.read().decode("utf-8")
+                payload = json.loads(raw_body)
+        except urllib.error.HTTPError as exc:
+            body = exc.read().decode("utf-8", errors="ignore") if exc.fp else ""
+            logging.error("LLM request failed for %s: %s", api_url, body or exc)
+            if exc.code in {404, 405}:
+                errors.append({"url": api_url, "status": exc.code, "error": body})
+                continue
+            return {
+                "llm_used": False,
+                "verdict": f"error contacting LLM (status {exc.code})",
+                "error": body or str(exc),
+            }
+        except (urllib.error.URLError, TimeoutError) as exc:
+            logging.error("LLM request error for %s: %s", api_url, exc)
+            errors.append({"url": api_url, "error": str(exc)})
+            continue
+        except json.JSONDecodeError as exc:
+            logging.error("Invalid JSON from LLM response: %s", exc)
+            return {"llm_used": False, "verdict": "invalid JSON from LLM response"}
+
+        message = _extract_message(payload)
+
+        if not message:
+            logging.warning(
+                "Empty message from LLM response (%s): %s", api_url, payload
+            )
+            errors.append({"url": api_url, "error": "empty response", "raw": payload})
+            continue
+
+        try:
+            verdict = json.loads(message)
+        except json.JSONDecodeError:
+            verdict = {"status": "UNKNOWN", "rationale": message}
+
         return {
-            "llm_used": False,
-            "verdict": f"error contacting LLM (status {exc.code})",
-            "error": body or str(exc),
+            "llm_used": True,
+            "verdict": verdict,
+            "raw": payload,
+            "endpoint": api_url,
         }
-    except (urllib.error.URLError, TimeoutError) as exc:
-        logging.error("LLM request error: %s", exc)
-        return {"llm_used": False, "verdict": f"error contacting LLM: {exc}"}
-    except json.JSONDecodeError as exc:
-        logging.error("Invalid JSON from LLM response: %s", exc)
-        return {"llm_used": False, "verdict": "invalid JSON from LLM response"}
-
-    message = (
-        payload.get("choices", [{}])[0].get("message", {}).get("content", "").strip()
-    )
-
-    if not message:
-        logging.warning("Empty message from LLM response: %s", payload)
-        return {"llm_used": False, "verdict": "empty LLM response", "raw": payload}
-
-    try:
-        verdict = json.loads(message)
-    except json.JSONDecodeError:
-        verdict = {"status": "UNKNOWN", "rationale": message}
 
     return {
-        "llm_used": True,
-        "verdict": verdict,
-        "raw": payload,
+        "llm_used": False,
+        "verdict": "error contacting LLM",
+        "attempts": errors,
     }
 
 
