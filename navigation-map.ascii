@@ -2,6 +2,10 @@
 ├─ Principles → docs/principles/
 ├─ Personas → docs/personas/
 ├─ Guides → docs/guides/
+├─ Labs → docs/labs/
+│  ├─ Lab 01 — Resilience Basics → docs/labs/lab-01-resilience-basics.md
+│  ├─ Lab 02 — Observability Minimum → docs/labs/lab-02-observability-minima.md
+│  └─ Lab 03 — aDevelopment Loop → docs/labs/lab-03-adevelopment-loop.md
 ├─ Playbooks → docs/playbooks/
 ├─ Scenarios → docs/scenarios/
 │  └─ Payments → scenarios/payments/
