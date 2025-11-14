@@ -1,0 +1,33 @@
+name: "Ops — Postmortem"
+description: Registrar incidente operativa y aprendizajes accionables
+labels: ["ops","postmortem"]
+body:
+  - type: input
+    id: service
+    attributes: { label: Servicio/Escenario, placeholder: "payments" }
+    validations: { required: true }
+  - type: textarea
+    id: impact
+    attributes: { label: Impacto en usuario, description: "¿Qué vivió la persona usuaria?" }
+    validations: { required: true }
+  - type: textarea
+    id: timeline
+    attributes: { label: Línea de tiempo, description: "Hechos con horas" }
+  - type: textarea
+    id: root
+    attributes: { label: Causa raíz / condiciones contribuyentes }
+  - type: textarea
+    id: actions
+    attributes: { label: Acciones y owners, description: "Fix inmediato / Hardening / Follow-up" }
+  - type: checkboxes
+    id: signals
+    attributes:
+      label: Señales observadas
+      options:
+        - label: SLO burn (fast/slow)
+        - label: Error budget impact
+        - label: Latency p95 degradada
+        - label: Falta de correlation-id / observabilidad
+  - type: textarea
+    id: wise
+    attributes: { label: Aprendizajes (Wise Tech), description: "Simplicity, resiliencia, capitalización, etc." }

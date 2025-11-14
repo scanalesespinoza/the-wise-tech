@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Contributing Guide
+    url: https://github.com/scanalesespinoza/the-wise-tech#contributing
+    about: Lee cómo contribuir y los principios del repositorio
+  - name: Docs Home
+    url: https://scanalesespinoza.github.io/the-wise-tech
+    about: Navega la documentación completa

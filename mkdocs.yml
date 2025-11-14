@@ -17,6 +17,9 @@ nav:
       - Versioning Docs: guides/versioning-docs.md
       - Taxonomy & Tags: guides/taxonomy-tags.md
       - Quickstart: guides/quickstart.md
+      - Feedback Loops: guides/feedback-loops.md
+      - Postmortems: guides/postmortem-guide.md
+      - Contribution Mentoring: guides/contribution-mentoring.md
       - Resilience Policies: guides/resilience-policies.md
       - SLOs & Error Budget: guides/slo-how-to.md
       - Telemetry (Minimum): guides/telemetry-minima.md
