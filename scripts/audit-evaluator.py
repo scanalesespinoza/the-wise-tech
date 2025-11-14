@@ -97,7 +97,9 @@ def _summarize_failures(summary):
 
 
 def _llm_payload(summary):
-    model = os.environ.get("LLM_MODEL", "gpt-4o-mini")
+    model = os.environ.get(
+        "LLM_MODEL", "DeepSeek-R1-Distill-Qwen-14B-W4A16"
+    )
     system_prompt = (
         "You are assisting with an internal audit. Given the JSON summary of the "
         "automated checks, return a short JSON object with the fields 'status' "
@@ -123,7 +125,7 @@ def _llm_payload(summary):
 def maybe_llm_verdict(summary):
     """Optional step that relies on OPENAI_API_KEY to request a qualitative verdict."""
 
-    api_key = os.environ.get("OPENAI_API_KEY")
+    api_key = os.environ.get("LITELLM_API_KEY") or os.environ.get("OPENAI_API_KEY")
     if not api_key:
         return {
             "llm_used": False,
@@ -135,7 +137,8 @@ def maybe_llm_verdict(summary):
         }
 
     api_url = os.environ.get(
-        "LLM_API_URL", "https://api.openai.com/v1/chat/completions"
+        "LLM_API_URL",
+        "https://litellm-litemaas.apps.prod.rhoai.rh-aiservices-bu.com/v1/chat/completions",
     )
 
     request_body = json.dumps(_llm_payload(summary)).encode("utf-8")

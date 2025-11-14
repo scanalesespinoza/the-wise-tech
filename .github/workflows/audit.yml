@@ -18,8 +18,10 @@ jobs:
     environment: on
     runs-on: ubuntu-latest
     env:
+      LITELLM_API_KEY: ${{ secrets.LITELLM_API_KEY }}
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       LLM_API_URL: ${{ vars.LLM_API_URL }}
+      LLM_MODEL: DeepSeek-R1-Distill-Qwen-14B-W4A16
     steps:
       - uses: actions/checkout@v4
       - name: Setup Python
