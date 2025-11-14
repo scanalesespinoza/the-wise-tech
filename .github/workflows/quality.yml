@@ -17,3 +17,4 @@ jobs:
       - name: CI (local equivalence)
         run: |
           make ci
+          make resilience-check

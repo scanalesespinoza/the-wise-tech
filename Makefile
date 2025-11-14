@@ -1,4 +1,4 @@
-.PHONY: install fmt lint test parity docs verify-links ci
+.PHONY: install fmt lint test parity docs verify-links ci resilience-check resilience-sample
 
 install:
 	@echo "Installing dev dependencies"
@@ -35,3 +35,11 @@ verify-links:
 
 ci: install fmt lint test parity docs verify-links
 	@echo "CI (local) complete ✅"
+
+resilience-check:
+	@echo "Validando políticas de resiliencia…"
+	python scripts/validate-resilience.py platform/policies/resilience.yml
+
+resilience-sample:
+	@echo "Mostrando ejemplo y campos soportados"
+	@echo "Ver: platform/policies/resilience.yml y scripts/validate-resilience.py"

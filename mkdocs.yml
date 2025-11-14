@@ -13,6 +13,7 @@ nav:
       - Platform Engineers: personas/platform-engineers-overview.md
   - Guides:
       - Quickstart: guides/quickstart.md
+      - Resilience Policies: guides/resilience-policies.md
   - Playbooks:
       - Developer: playbooks/developer-playbook.md
       - Platform: playbooks/platform-playbook.md

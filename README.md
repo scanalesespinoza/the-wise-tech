@@ -35,7 +35,8 @@ Consulta el [quickstart general](docs/guides/quickstart.md) cuando necesites la 
 │  ├─ Consumers → [docs/personas/consumers-overview.md](docs/personas/consumers-overview.md)  
 │  ├─ Developers → [docs/personas/developers-overview.md](docs/personas/developers-overview.md)  
 │  └─ Platform Engineers → [docs/personas/platform-engineers-overview.md](docs/personas/platform-engineers-overview.md)  
-├─ Guides → [docs/guides/](docs/guides/)  
+├─ Guides → [docs/guides/](docs/guides/)
+│  └─ Resilience Policies → [docs/guides/resilience-policies.md](docs/guides/resilience-policies.md)
 ├─ Playbooks → [docs/playbooks/](docs/playbooks/)  
 ├─ Scenarios → [docs/scenarios/](docs/scenarios/)  
 └─ Roadmap → [docs/roadmap/roadmap.md](docs/roadmap/roadmap.md)
@@ -43,7 +44,7 @@ Consulta el [quickstart general](docs/guides/quickstart.md) cuando necesites la 
 ## Recommended by interest
 
 - **Productividad & simplicidad** → [docs/guides/quickstart.md](docs/guides/quickstart.md), [docs/principles/](docs/principles/), [Learning Path 30/60/90 — Consumers](docs/paths/consumers-30-60-90.md)
-- **Resiliencia & operación** → [docs/playbooks/](docs/playbooks/), [docs/scenarios/](docs/scenarios/), [Learning Path 30/60/90 — Platform](docs/paths/platform-engineers-30-60-90.md)
+- **Resiliencia & operación** → [docs/playbooks/](docs/playbooks/), [docs/scenarios/](docs/scenarios/), [docs/guides/resilience-policies.md](docs/guides/resilience-policies.md), [Policies YAML (payments)](platform/policies/resilience.yml), [Learning Path 30/60/90 — Platform](docs/paths/platform-engineers-30-60-90.md)
 - **Mentoría & mejora continua** → [docs/roadmap/roadmap.md](docs/roadmap/roadmap.md), [.github/](.github/), [Learning Path 30/60/90 — Developers](docs/paths/developers-30-60-90.md)
 
 > Social preview: ver [assets/social/wise-tech-1280x640.png](assets/social/wise-tech-1280x640.png)
