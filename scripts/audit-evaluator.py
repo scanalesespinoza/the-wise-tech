@@ -214,9 +214,34 @@ def _extract_message(payload):
     # OpenAI / LiteLLM chat completion format
     choices = payload.get("choices")
     if choices:
-        message = choices[0].get("message", {}).get("content", "")
-        if message:
-            return message.strip()
+        message = choices[0].get("message", {})
+
+        # OpenAI compatible responses normally return a string in "content"
+        content = message.get("content", "")
+        if isinstance(content, str) and content.strip():
+            return content.strip()
+
+        # Some providers (including LiteLLM reasoning models) return a list of
+        # message parts. Collect the textual pieces if present.
+        if isinstance(content, list):
+            parts = []
+            for item in content:
+                if isinstance(item, str) and item.strip():
+                    parts.append(item.strip())
+                elif isinstance(item, dict):
+                    text = item.get("text") or item.get("value")
+                    if isinstance(text, str) and text.strip():
+                        parts.append(text.strip())
+            if parts:
+                return "\n".join(parts)
+
+        # Reasoning models (e.g. DeepSeek-R1) may surface the assistant reply
+        # under "reasoning_content" while leaving "content" empty when the
+        # response is truncated. Treat it as a fallback so we can surface the
+        # provider's output instead of treating it as an empty response.
+        reasoning = message.get("reasoning_content")
+        if isinstance(reasoning, str) and reasoning.strip():
+            return reasoning.strip()
 
     # OpenAI responses API format
     output = payload.get("output") or payload.get("outputs")
