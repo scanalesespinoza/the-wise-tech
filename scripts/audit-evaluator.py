@@ -478,7 +478,113 @@ def _find_existing_issue(
     return None
 
 
-def maybe_create_issue(summary: Dict[str, object]) -> Dict[str, object]:
+def _describe_rule(name: str, rule: Dict[str, object]) -> List[str]:
+    """Return a human-readable bullet list describing the rule requirements."""
+
+    if not rule:
+        return [f"- No metadata available for `{name}`."]
+
+    details = []
+    weight = rule.get("weight")
+    if weight is not None:
+        details.append(f"- Weight: {weight}")
+
+    target_file = rule.get("file")
+    if target_file:
+        details.append(f"- File to inspect: `{target_file}`")
+
+    must_contain = rule.get("must_contain") or []
+    if must_contain:
+        formatted = "\n".join(f"    - `{value}`" for value in must_contain)
+        details.append("- Required content in file:\n" + formatted)
+
+    paths = rule.get("path_exists") or []
+    if paths:
+        formatted = "\n".join(f"    - `{path}`" for path in paths)
+        details.append("- Required paths:\n" + formatted)
+
+    return details or [f"- `{name}` is marked as failing but has no extra details."]
+
+
+def _build_codex_prompt(
+    summary: Dict[str, object],
+    failing_rules: List[str],
+    rubric_rules: Dict[str, object],
+) -> str:
+    """Create a detailed prompt that can be copied into Codex or another LLM."""
+
+    score = summary.get("score")
+    pass_score = summary.get("pass_score")
+    audit_inputs = summary.get("audit_inputs", {})
+    changes = summary.get("changes", {})
+
+    lines: List[str] = [
+        "You are assisting with thewise.tech internal audit automation.",
+        "Update the repository so the audit passes.",
+        "",
+        f"Current audit score: {score} (pass threshold: {pass_score}).",
+        "Failing rules:",
+    ]
+
+    for rule_name in failing_rules:
+        rule = rubric_rules.get(rule_name, {})
+        lines.append(f"- {rule_name}:")
+        for detail in _describe_rule(rule_name, rule):
+            # indent nested bullet lines for readability inside the prompt block
+            detail_lines = detail.splitlines()
+            if detail_lines:
+                lines.extend(f"  {line}" for line in detail_lines)
+
+    persona_count = audit_inputs.get("personas")
+    scenario_count = audit_inputs.get("scenarios")
+    impact_count = audit_inputs.get("impacts")
+
+    lines.append("")
+    lines.append("Repository context:")
+    if persona_count is not None:
+        lines.append(f"- Personas defined: {persona_count}")
+    if scenario_count is not None:
+        lines.append(f"- Scenarios defined: {scenario_count}")
+    if impact_count is not None:
+        lines.append(f"- Impact analyses defined: {impact_count}")
+
+    base_commit = changes.get("base_commit")
+    if base_commit:
+        lines.append(f"- Base commit for comparison: {base_commit}")
+    file_count = changes.get("changed_file_count")
+    if file_count:
+        lines.append(f"- Files changed in triggering ref: {file_count}")
+
+    changed_files = changes.get("changed_files", [])
+    if changed_files:
+        lines.append("- Recently modified files:")
+        preview = changed_files[:15]
+        lines.extend(f"  - {name}" for name in preview)
+        if len(changed_files) > len(preview):
+            lines.append("  - …")
+
+    diffstat = changes.get("diffstat")
+    if diffstat:
+        lines.append("")
+        lines.append("Diff summary:")
+        lines.extend(diffstat.splitlines())
+
+    lines.extend(
+        [
+            "",
+            "Deliverables:",
+            "- Implement the necessary files and content updates to satisfy all failing rules.",
+            "- Run the local quality checks (ruff, tests, docs/link validation) before opening a PR.",
+            "- Provide a summary of the changes in the PR description.",
+        ]
+    )
+
+    return "\n".join(lines)
+
+
+def maybe_create_issue(
+    summary: Dict[str, object], rubric: Dict[str, object]
+) -> Dict[str, object]:
     failing_rules = [
         item.get("rule", "unknown")
         for item in summary.get("breakdown", [])
@@ -526,8 +632,17 @@ def maybe_create_issue(summary: Dict[str, object]) -> Dict[str, object]:
         "",
         "The automated audit detected the following failing rules:",
     ]
+    rules = rubric.get("rules", {})
     for rule in failing_rules:
         body_lines.append(f"- `{rule}`")
+
+    body_lines.extend(["", "### Rule requirements"])
+    for rule in failing_rules:
+        body_lines.append(f"- `{rule}`")
+        rule_details = _describe_rule(rule, rules.get(rule, {}))
+        for detail in rule_details:
+            for detail_line in detail.splitlines():
+                body_lines.append(f"  {detail_line}")
 
     body_lines.extend(
         [
@@ -555,6 +670,20 @@ def maybe_create_issue(summary: Dict[str, object]) -> Dict[str, object]:
         diffstat = diff.get("diffstat")
         if diffstat:
             body_lines.extend(["", "```", diffstat, "```"])
+
+    codex_prompt = _build_codex_prompt(summary, failing_rules, rules)
+    if codex_prompt.strip():
+        body_lines.extend(
+            [
+                "",
+                "### Prompt for Codex or other LLM",
+                "Copy the following block into Codex to generate a remediation plan:",
+                "",
+                "```",
+                codex_prompt,
+                "```",
+            ]
+        )
 
     body_lines.extend(
         [
@@ -611,7 +740,7 @@ def main():
     llm = maybe_llm_verdict(summary)
     print(json.dumps({"llm_evaluation": llm}, ensure_ascii=False))
 
-    issue = maybe_create_issue(summary)
+    issue = maybe_create_issue(summary, rubric)
     print(json.dumps({"improvement_issue": issue}, ensure_ascii=False))
 
     if score < pass_score:
