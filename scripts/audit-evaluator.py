@@ -63,13 +63,43 @@ def summarize_audit_inputs():
     return {"personas": personas, "scenarios": scenarios, "impacts": impacts}
 
 
-def _llm_payload(summary_text):
+def _summarize_failures(summary):
+    """Build a terse rationale based on the deterministic audit results."""
+
+    breakdown = summary.get("breakdown", [])
+    failed_rules = [item.get("rule", "unknown") for item in breakdown if not item.get("ok", False)]
+
+    if summary.get("passed"):
+        return (
+            f"Score {summary.get('score')} meets the pass threshold "
+            f"of {summary.get('pass_score')}"
+            + (
+                ". All required rules passed."
+                if not failed_rules
+                else ". Minor rule deviations detected but overall score passed."
+            )
+        )
+
+    if failed_rules:
+        failures = ", ".join(failed_rules[:5])
+        if len(failed_rules) > 5:
+            failures += ", …"
+        return (
+            f"Score {summary.get('score')} below pass threshold "
+            f"{summary.get('pass_score')}. Failing rules: {failures}."
+        )
+
+    return f"Score {summary.get('score')} below pass threshold {summary.get('pass_score')}"
+
+
+def _llm_payload(summary):
     model = os.environ.get("LLM_MODEL", "gpt-4o-mini")
     system_prompt = (
         "You are assisting with an internal audit. Given the JSON summary of the "
         "automated checks, return a short JSON object with the fields 'status' "
         "(values: PASS or FAIL) and 'rationale' (a concise explanation)."
     )
+    summary_text = json.dumps(summary, ensure_ascii=False)
     return {
         "model": model,
         "messages": [
@@ -86,18 +116,25 @@ def _llm_payload(summary_text):
     }
 
 
-def maybe_llm_verdict(summary_text):
+def maybe_llm_verdict(summary):
     """Optional step that relies on OPENAI_API_KEY to request a qualitative verdict."""
 
     api_key = os.environ.get("OPENAI_API_KEY")
     if not api_key:
-        return {"llm_used": False, "verdict": "skipped (no OPENAI_API_KEY)"}
+        return {
+            "llm_used": False,
+            "verdict": {
+                "status": "PASS" if summary.get("passed") else "FAIL",
+                "rationale": _summarize_failures(summary),
+            },
+            "basis": "deterministic audit rules",
+        }
 
     api_url = os.environ.get(
         "LLM_API_URL", "https://api.openai.com/v1/chat/completions"
     )
 
-    request_body = json.dumps(_llm_payload(summary_text)).encode("utf-8")
+    request_body = json.dumps(_llm_payload(summary)).encode("utf-8")
     request = urllib.request.Request(
         api_url,
         data=request_body,
@@ -166,7 +203,7 @@ def main():
     }
     print(json.dumps(summary, ensure_ascii=False, indent=2))
 
-    llm = maybe_llm_verdict(json.dumps(summary, ensure_ascii=False))
+    llm = maybe_llm_verdict(summary)
     print(json.dumps({"llm_evaluation": llm}, ensure_ascii=False))
 
     if score < pass_score:
