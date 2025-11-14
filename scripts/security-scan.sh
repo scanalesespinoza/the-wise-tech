@@ -7,4 +7,4 @@ if ! command -v gitleaks >/dev/null 2>&1; then
   exit 2
 fi
 echo "[security] ejecutando gitleaks (working tree)…"
-gitleaks detect --source . --no-git -v
+gitleaks detect --config ci/gitleaks-allowlist.toml --source . --no-git -v
