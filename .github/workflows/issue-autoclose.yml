@@ -148,8 +148,12 @@ jobs:
                   issueClosed = true;
                 } catch (error) {
                   if (error.status === 403) {
-                    core.warning(
-                      `Insufficient permissions to close issue #${issueNumber}. Skipping closure.`,
+                    core.notice(
+                      [
+                        `Insufficient permissions to close issue #${issueNumber}. Skipping closure.`,
+                        'Grant the workflow write access to issues under Settings → Actions → General → Workflow permissions,',
+                        'or provide a custom token with at least triage access via secrets.GITHUB_TOKEN.',
+                      ].join(' '),
                     );
                     continue;
                   } else {
