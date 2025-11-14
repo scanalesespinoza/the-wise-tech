@@ -19,9 +19,13 @@ on:
 
 jobs:
   audit:
+    permissions:
+      contents: read
+      issues: write
     environment: "on"
     runs-on: ubuntu-latest
     env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       LITELLM_API_KEY: ${{ secrets.LITELLM_API_KEY }}
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       LLM_API_URL: ${{ vars.LLM_API_URL }}
