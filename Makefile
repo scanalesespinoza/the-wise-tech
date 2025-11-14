@@ -1,4 +1,4 @@
-.PHONY: install fmt lint test parity docs verify-links ci resilience-check resilience-sample slos check-error-budget
+.PHONY: install fmt lint test parity docs verify-links ci resilience-check resilience-sample slos check-error-budget telemetry-smoke
 
 install:
 	@echo "Installing dev dependencies"
@@ -51,3 +51,7 @@ slos:
 check-error-budget:
 	@echo "Chequeando presupuesto de error (mock/local)…"
 	python scripts/check-error-budget.py platform/slo/slo-spec.yml || true
+
+telemetry-smoke:
+	@echo "Running telemetry smoke (logs estructurados + p95 simulado)…"
+	python scripts/telemetry-smoke.py
