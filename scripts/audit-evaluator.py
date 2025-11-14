@@ -478,6 +478,81 @@ def _find_existing_issue(
     return None
 
 
+def _render_issue_body(
+    failing_rules: List[str],
+    rubric_rules: Dict[str, object],
+    summary: Dict[str, object],
+    fingerprint: str,
+) -> str:
+    body_lines = [
+        "## Audit improvement opportunity",
+        "",
+        "The automated audit detected the following failing rules:",
+    ]
+
+    for rule in failing_rules:
+        body_lines.append(f"- `{rule}`")
+
+    body_lines.extend(["", "### Rule requirements"])
+    for rule in failing_rules:
+        body_lines.append(f"- `{rule}`")
+        rule_details = _describe_rule(rule, rubric_rules.get(rule, {}))
+        for detail in rule_details:
+            for detail_line in detail.splitlines():
+                body_lines.append(f"  {detail_line}")
+
+    body_lines.extend(
+        [
+            "",
+            "### Suggested next steps",
+            "- Review the failing rule(s) and propose concrete improvements.",
+            "- Use the local LLM workflow to draft changes that address the issues.",
+            "- Open a pull request referencing this issue and ensure the audit passes.",
+        ]
+    )
+
+    diff = summary.get("changes", {})
+    if diff:
+        body_lines.extend(["", "### Context from the triggering run"])
+        base_commit = diff.get("base_commit")
+        if base_commit:
+            body_lines.append(f"- Base commit: `{base_commit}`")
+        file_count = diff.get("changed_file_count")
+        if file_count:
+            body_lines.append(f"- Files changed: {file_count}")
+        changed_files = diff.get("changed_files", [])
+        if changed_files:
+            preview = "\n".join(f"  - {name}" for name in changed_files[:15])
+            if preview:
+                body_lines.extend(["- Sample of changed files:", preview])
+        diffstat = diff.get("diffstat")
+        if diffstat:
+            body_lines.extend(["", "```", diffstat, "```"])
+
+    codex_prompt = _build_codex_prompt(summary, failing_rules, rubric_rules)
+    if codex_prompt.strip():
+        body_lines.extend(
+            [
+                "",
+                "### Prompt for Codex or other LLM",
+                "Copy the following block into Codex to generate a remediation plan:",
+                "",
+                "```",
+                codex_prompt,
+                "```",
+            ]
+        )
+
+    body_lines.extend(
+        [
+            "",
+            f"<!-- audit-fingerprint: {fingerprint} -->",
+        ]
+    )
+
+    return "\n".join(body_lines)
+
+
 def _describe_rule(name: str, rule: Dict[str, object]) -> List[str]:
     """Return a human-readable bullet list describing the rule requirements."""
 
@@ -612,89 +687,43 @@ def maybe_create_issue(
         logging.error("Unable to ensure audit label: %s", exc)
         return {"created": False, "error": str(exc)}
 
+    rules = rubric.get("rules", {})
+    rendered_body = _render_issue_body(failing_rules, rules, summary, fingerprint)
+
     existing = _find_existing_issue(repo, token, fingerprint)
     if existing:
         logging.info(
             "Audit improvement already tracked in issue #%s", existing.get("number")
         )
+        existing_body = (existing.get("body") or "").strip()
+        updated = False
+        if existing_body != rendered_body.strip():
+            logging.info(
+                "Updating audit issue #%s with latest context", existing.get("number")
+            )
+            try:
+                _github_request(
+                    "PATCH",
+                    f"/repos/{repo}/issues/{existing.get('number')}",
+                    token,
+                    {"body": rendered_body},
+                )
+                updated = True
+            except urllib.error.HTTPError as exc:
+                logging.error("Unable to update audit issue: %s", exc)
         return {
             "created": False,
             "reason": "existing issue",
             "issue": {
                 "number": existing.get("number"),
                 "url": existing.get("html_url"),
+                "updated": updated,
             },
         }
 
-    diff = summary.get("changes", {})
-    body_lines = [
-        "## Audit improvement opportunity",
-        "",
-        "The automated audit detected the following failing rules:",
-    ]
-    rules = rubric.get("rules", {})
-    for rule in failing_rules:
-        body_lines.append(f"- `{rule}`")
-
-    body_lines.extend(["", "### Rule requirements"])
-    for rule in failing_rules:
-        body_lines.append(f"- `{rule}`")
-        rule_details = _describe_rule(rule, rules.get(rule, {}))
-        for detail in rule_details:
-            for detail_line in detail.splitlines():
-                body_lines.append(f"  {detail_line}")
-
-    body_lines.extend(
-        [
-            "",
-            "### Suggested next steps",
-            "- Review the failing rule(s) and propose concrete improvements.",
-            "- Use the local LLM workflow to draft changes that address the issues.",
-            "- Open a pull request referencing this issue and ensure the audit passes.",
-        ]
-    )
-
-    if diff:
-        body_lines.extend(["", "### Context from the triggering run"])
-        base_commit = diff.get("base_commit")
-        if base_commit:
-            body_lines.append(f"- Base commit: `{base_commit}`")
-        file_count = diff.get("changed_file_count")
-        if file_count:
-            body_lines.append(f"- Files changed: {file_count}")
-        changed_files = diff.get("changed_files", [])
-        if changed_files:
-            preview = "\n".join(f"  - {name}" for name in changed_files[:15])
-            if preview:
-                body_lines.extend(["- Sample of changed files:", preview])
-        diffstat = diff.get("diffstat")
-        if diffstat:
-            body_lines.extend(["", "```", diffstat, "```"])
-
-    codex_prompt = _build_codex_prompt(summary, failing_rules, rules)
-    if codex_prompt.strip():
-        body_lines.extend(
-            [
-                "",
-                "### Prompt for Codex or other LLM",
-                "Copy the following block into Codex to generate a remediation plan:",
-                "",
-                "```",
-                codex_prompt,
-                "```",
-            ]
-        )
-
-    body_lines.extend(
-        [
-            "",
-            f"<!-- audit-fingerprint: {fingerprint} -->",
-        ]
-    )
-
     payload = {
         "title": f"Audit improvement: {', '.join(failing_rules[:3])}",
-        "body": "\n".join(body_lines),
+        "body": rendered_body,
         "labels": ["automation:audit"],
     }
 
