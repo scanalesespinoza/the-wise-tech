@@ -1,0 +1,31 @@
+service: payments
+version: v1
+objectives:
+  availability:
+    target: 99.5          # %
+    window: 30d
+    alerting:
+      fast_burn_multiple: 2.0
+      slow_burn_multiple: 1.0
+  latency_p95_ms:
+    target: 350           # milliseconds
+    window: 30d
+    alerting:
+      fast_burn_multiple: 2.0
+      slow_burn_multiple: 1.0
+error_budget_policies:
+  - name: freeze-non-critical
+    condition: "error_budget_spent >= 25%"
+    actions:
+      - "require SRE approval for non-critical changes"
+  - name: rollback-and-hardening
+    condition: "error_budget_spent >= 50%"
+    actions:
+      - "rollback last risky deploy"
+      - "enable additional retries/circuit-breakers"
+telemetry:
+  exporters:
+    traces: "otlp"
+    metrics: "otlp"
+  correlation:
+    header: "x-correlation-id"

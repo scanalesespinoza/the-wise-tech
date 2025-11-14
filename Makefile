@@ -1,4 +1,4 @@
-.PHONY: install fmt lint test parity docs verify-links ci resilience-check resilience-sample
+.PHONY: install fmt lint test parity docs verify-links ci resilience-check resilience-sample slos check-error-budget
 
 install:
 	@echo "Installing dev dependencies"
@@ -33,7 +33,7 @@ verify-links:
 	@echo "Checking internal Markdown links"
 	python scripts/check-links.py
 
-ci: install fmt lint test parity docs verify-links
+ci: install fmt lint test parity docs verify-links slos
 	@echo "CI (local) complete ✅"
 
 resilience-check:
@@ -43,3 +43,11 @@ resilience-check:
 resilience-sample:
 	@echo "Mostrando ejemplo y campos soportados"
 	@echo "Ver: platform/policies/resilience.yml y scripts/validate-resilience.py"
+
+slos:
+	@echo "Validando SLOs…"
+	python scripts/validate-slos.py platform/slo/slo-spec.yml
+
+check-error-budget:
+	@echo "Chequeando presupuesto de error (mock/local)…"
+	python scripts/check-error-budget.py platform/slo/slo-spec.yml || true

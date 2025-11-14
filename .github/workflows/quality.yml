@@ -18,3 +18,5 @@ jobs:
         run: |
           make ci
           make resilience-check
+          make slos
+          make check-error-budget
