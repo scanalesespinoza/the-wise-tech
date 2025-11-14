@@ -8,7 +8,7 @@
 
 El repositorio que convierte la filosofía Wise Tech en acciones compartidas: una one-page navegable para aprender, construir y operar tecnología con propósito humano.
 
-➡️ Explora la documentación completa en [Docs Home](docs/index.md).
+➡️ Explora la documentación completa en [Docs Home](docs/index.md) o visita la versión publicada en GitHub Pages: https://scanalesespinoza.github.io/the-wise-tech/.
 
 ## Choose your path
 
@@ -22,13 +22,15 @@ El repositorio que convierte la filosofía Wise Tech en acciones compartidas: un
   - Observability Minimum → [docs/labs/lab-02-observability-minima.md](docs/labs/lab-02-observability-minima.md)
   - aDevelopment Loop → [docs/labs/lab-03-adevelopment-loop.md](docs/labs/lab-03-adevelopment-loop.md)
 
-## Quick start (5 pasos)
+## Quick start (7 pasos)
 
-1) make install
-2) make test
-3) make parity
-4) make docs
-5) abre http://127.0.0.1:8000 y sigue “Choose your path”
+1) git clone https://github.com/scanalesespinoza/the-wise-tech.git
+2) cd the-wise-tech
+3) make install
+4) make test
+5) make parity
+6) make docs
+7) abre http://127.0.0.1:8000 y sigue “Choose your path”
 
 Opcional (dev stack):
 
