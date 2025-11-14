@@ -1,3 +1,7 @@
+---
+title: "Contribution Guide"
+tags: ["developers", "playbooks", "knowledge-capitalization"]
+---
 # Contribution Guide
 
 ## Cómo proponer cambios

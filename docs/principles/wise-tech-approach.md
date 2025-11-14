@@ -1,3 +1,7 @@
+---
+title: "Wise Tech Approach"
+tags: ["consumers", "simplicity", "principles"]
+---
 # Wise Tech Approach
 
 Wise Tech combines human judgment with AI-assisted loops. Teams start with clear intent, codify guardrails, and continuously re

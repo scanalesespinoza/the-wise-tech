@@ -1,3 +1,7 @@
+---
+title: "Resilience Policies — Cómo usarlas"
+tags: ["developers", "resilience", "playbooks"]
+---
 # Resilience Policies — Cómo usarlas
 Las políticas definen **contratos operativos** por servicio/escenario:
 - **timeouts_ms**: límites por cliente/infra (1–120000 ms)
@@ -15,3 +19,9 @@ Ver `platform/policies/resilience.yml` (payments).
 ## Próximos pasos
 - Integrar SLOs y presupuestos de error (Iteración 6).
 - Añadir snippets de instrumentación (telemetría) y runbooks.
+
+## See also
+- [SLOs & Error Budget](slo-how-to.md)
+- [Telemetry (Minimum)](telemetry-minima.md)
+- [Platform playbook](../playbooks/platform-playbook.md)
+- [Platform Engineers — 30/60/90](../paths/platform-engineers-30-60-90.md)

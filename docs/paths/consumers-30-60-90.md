@@ -1,3 +1,7 @@
+---
+title: "Consumers — 30/60/90"
+tags: ["consumers", "paths", "simplicity"]
+---
 # Consumers — 30/60/90
 
 ## 30 min (orientación)

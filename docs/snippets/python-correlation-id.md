@@ -1,3 +1,9 @@
+---
+title: "Python Correlation-ID Snippet"
+tags: ["developers", "observability", "quickstart"]
+---
+# Python Correlation-ID Snippet
+
 ```python
 import uuid, time, json, logging
 from contextvars import ContextVar
@@ -42,3 +48,8 @@ def traced(fn):
 ```
 
 (Nota: si prefieres Node.js, crear también docs/snippets/nodejs-correlation-id.md con middleware Express equivalente — opcional en esta iteración.)
+
+## See also
+- [Telemetría mínima (Dev & Platform)](../guides/telemetry-minima.md)
+- [Content-Style-Guide — Wise Tech](../guides/content-style-guide.md)
+- [Editorial-Workflow — Propuesta→Draft→Review→Publish](../guides/editorial-workflow.md)

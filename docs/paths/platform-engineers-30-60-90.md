@@ -1,3 +1,7 @@
+---
+title: "Platform Engineers — 30/60/90"
+tags: ["platform-engineers", "paths", "resilience"]
+---
 # Platform Engineers — 30/60/90
 
 ## 30 min

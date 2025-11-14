@@ -1,3 +1,7 @@
+---
+title: "Style Guide"
+tags: ["developers", "principles", "knowledge-capitalization"]
+---
 # Style Guide
 
 - Usa títulos con guiones medios en nombres de archivo y evita espacios.

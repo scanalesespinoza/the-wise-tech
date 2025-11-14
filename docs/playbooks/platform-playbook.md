@@ -1,3 +1,7 @@
+---
+title: "Platform Playbook — mínimos operables"
+tags: ["platform-engineers", "playbooks", "resilience"]
+---
 # Platform Playbook — mínimos operables
 
 ## Contratos de operación

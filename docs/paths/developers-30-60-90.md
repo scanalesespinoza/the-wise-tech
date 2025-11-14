@@ -1,3 +1,7 @@
+---
+title: "Developers — 30/60/90"
+tags: ["developers", "paths", "quickstart"]
+---
 # Developers — 30/60/90
 
 ## 30 min

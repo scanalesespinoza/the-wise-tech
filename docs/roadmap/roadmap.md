@@ -1,3 +1,7 @@
+---
+title: "Roadmap"
+tags: ["consumers", "knowledge-capitalization", "principles"]
+---
 # Roadmap
 
 | Hito | Fecha tentativa | Resultado esperado |

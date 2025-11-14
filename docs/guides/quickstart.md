@@ -1,3 +1,7 @@
+---
+title: "Quickstart"
+tags: ["developers", "quickstart", "paths"]
+---
 # Quickstart
 1) make install
 2) make test
@@ -8,3 +12,9 @@
 Notas:
 - Mantén PRs pequeños y enlaza la doc que actualizas.
 - Si algo no está claro, abre un issue con tu contexto y propuesta.
+
+## See also
+- [Content-Style-Guide — Wise Tech](content-style-guide.md)
+- [Editorial-Workflow — Propuesta→Draft→Review→Publish](editorial-workflow.md)
+- [Taxonomy — Tags permitidos](taxonomy-tags.md)
+- [Developers 30/60/90](../paths/developers-30-60-90.md)

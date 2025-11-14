@@ -1,3 +1,7 @@
+---
+title: "Telemetría mínima (Dev & Platform)"
+tags: ["developers", "observability", "quickstart"]
+---
 # Telemetría mínima (Dev & Platform)
 Esta guía define la base de observabilidad reproducible:
 - **Correlation-ID**: propaga `x-correlation-id` entre servicios; genera uno si falta.
@@ -19,3 +23,9 @@ Esta guía define la base de observabilidad reproducible:
 - ¿Logs estructurados y métrica p95 presentes? Sí/No.
 ## Próximos pasos
 - Conectar con SLOs (iteración 6) y políticas de resiliencia (iteración 5).
+
+## See also
+- [SLOs & Error Budget — Cómo usarlos](slo-how-to.md)
+- [Resilience Policies — Cómo usarlas](resilience-policies.md)
+- [Python correlation-id snippet](../snippets/python-correlation-id.md)
+- [Platform playbook](../playbooks/platform-playbook.md)

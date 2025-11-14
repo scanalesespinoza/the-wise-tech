@@ -1,4 +1,4 @@
-.PHONY: install fmt lint test parity docs verify-links ci resilience-check resilience-sample slos check-error-budget telemetry-smoke lab-01 lab-02 lab-03 lab-run-all
+.PHONY: install fmt lint test parity docs verify-links content-meta ci resilience-check resilience-sample slos check-error-budget telemetry-smoke lab-01 lab-02 lab-03 lab-run-all
 
 install:
 	@echo "Installing dev dependencies"
@@ -29,11 +29,15 @@ docs:
 	@echo "Building docs"
 	mkdocs build --strict
 
+content-meta:
+	@echo "Validando front-matter (tags) y 'See also'…"
+	python scripts/validate-content-metadata.py
+
 verify-links:
 	@echo "Checking internal Markdown links"
 	python scripts/check-links.py
 
-ci: install fmt lint test parity docs verify-links slos
+ci: install fmt lint test parity docs verify-links content-meta slos
 	@echo "CI (local) complete ✅"
 
 resilience-check:
