@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Validate the structure and contents of the resilience policies catalogue."""
+
 from __future__ import annotations
 
 import sys
@@ -29,7 +30,9 @@ def _require(condition: bool, message: str) -> None:
 def load_policies(policies_path: Path) -> dict:
     _require(policies_path.exists(), f"Policies file not found: {policies_path}")
     data = yaml.safe_load(policies_path.read_text(encoding="utf-8"))
-    _require(isinstance(data, dict), "Policies file must define a mapping at the root level")
+    _require(
+        isinstance(data, dict), "Policies file must define a mapping at the root level"
+    )
     return data
 
 
@@ -68,7 +71,9 @@ def validate_dependency(service: str, name: str, spec: dict) -> None:
     )
 
     circuit_breaker = spec.get("circuit_breaker")
-    _require(isinstance(circuit_breaker, dict), f"{prefix}.circuit_breaker must be a mapping")
+    _require(
+        isinstance(circuit_breaker, dict), f"{prefix}.circuit_breaker must be a mapping"
+    )
     failure_threshold = circuit_breaker.get("failure_threshold")
     _require(
         isinstance(failure_threshold, int) and failure_threshold > 0,
@@ -96,7 +101,10 @@ def validate_dependency(service: str, name: str, spec: dict) -> None:
 
 def validate_policies(data: dict) -> None:
     services = data.get("services")
-    _require(isinstance(services, dict) and services, "Policies must define at least one service")
+    _require(
+        isinstance(services, dict) and services,
+        "Policies must define at least one service",
+    )
 
     for service_name, service_spec in services.items():
         service_prefix = f"services.{service_name}"

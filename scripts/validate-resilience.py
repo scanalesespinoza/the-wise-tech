@@ -7,15 +7,18 @@ import yaml
 OK = "\033[92mOK\033[0m"
 ERR = "\033[91mERR\033[0m"
 
+
 def in_range(val, low, high, inclusive=True):
     if inclusive:
         return low <= val <= high
     return low < val < high
 
+
 def expect_bool(d, k, errs):
     if k not in d or not isinstance(d[k], bool):
         errs.append(f"{k} debe ser booleano")
     return d.get(k)
+
 
 def expect_int(d, k, errs, low=None, high=None):
     if k not in d or not isinstance(d[k], int):
@@ -26,6 +29,7 @@ def expect_int(d, k, errs, low=None, high=None):
         errs.append(f"{k} fuera de rango [{low},{high}]: {v}")
     return v
 
+
 def expect_float(d, k, errs, low=None, high=None):
     if k not in d or not isinstance(d[k], (int, float)):
         errs.append(f"{k} debe ser número")
@@ -35,13 +39,22 @@ def expect_float(d, k, errs, low=None, high=None):
         errs.append(f"{k} fuera de rango [{low},{high}]: {v}")
     return v
 
+
 def main(path):
     with open(path, "r", encoding="utf-8") as f:
         doc = yaml.safe_load(f)
 
     errs = []
     # campos base
-    for k in ["service","version","timeouts_ms","retries","circuit_breaker","bulkhead","cache"]:
+    for k in [
+        "service",
+        "version",
+        "timeouts_ms",
+        "retries",
+        "circuit_breaker",
+        "bulkhead",
+        "cache",
+    ]:
         if k not in doc:
             errs.append(f"Falta la clave requerida: {k}")
 
@@ -58,7 +71,7 @@ def main(path):
         if enabled:
             expect_int(r, "max_attempts", errs, 1, 10)
             backoff = r.get("backoff")
-            if backoff not in ("fixed","linear","exponential"):
+            if backoff not in ("fixed", "linear", "exponential"):
                 errs.append("retries.backoff debe ser fixed|linear|exponential")
             expect_int(r, "base_ms", errs, 10, 60000)
 
@@ -93,10 +106,18 @@ def main(path):
     else:
         print(f"{OK} {path} válido.")
         # salida JSON opcional para debugging en CI
-        print(json.dumps({"service": doc.get("service"), "version": doc.get("version")}, ensure_ascii=False))
+        print(
+            json.dumps(
+                {"service": doc.get("service"), "version": doc.get("version")},
+                ensure_ascii=False,
+            )
+        )
+
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Uso: python scripts/validate-resilience.py platform/policies/resilience.yml")
+        print(
+            "Uso: python scripts/validate-resilience.py platform/policies/resilience.yml"
+        )
         sys.exit(2)
     main(sys.argv[1])

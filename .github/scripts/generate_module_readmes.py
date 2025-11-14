@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Generate catalog READMEs for recipes and onboarding assets in both languages."""
+
 from __future__ import annotations
 
 import pathlib
@@ -8,6 +9,7 @@ from typing import Iterable
 
 REPO_ROOT = pathlib.Path(__file__).resolve().parents[2]
 LANGUAGES = ("en", "es")
+
 
 @dataclass(frozen=True)
 class SectionConfig:
@@ -50,7 +52,9 @@ def write_readme(config: SectionConfig) -> None:
     )
     list_items = build_list_items(files, config.folder) if files else empty_placeholder
     content_lines = [config.heading, "", config.intro.strip(), "", list_items]
-    config.folder.joinpath("README.md").write_text("\n".join(content_lines) + "\n", encoding="utf-8")
+    config.folder.joinpath("README.md").write_text(
+        "\n".join(content_lines) + "\n", encoding="utf-8"
+    )
 
 
 def main() -> None:
@@ -62,7 +66,9 @@ def main() -> None:
                 SectionConfig(
                     language=language,
                     folder=lang_root / "recipes",
-                    heading="# Recipe Catalog" if language == "en" else "# Catálogo de Recetas",
+                    heading="# Recipe Catalog"
+                    if language == "en"
+                    else "# Catálogo de Recetas",
                     intro=(
                         "Browse repeatable patterns grounded in real repository examples."
                         if language == "en"
@@ -72,7 +78,9 @@ def main() -> None:
                 SectionConfig(
                     language=language,
                     folder=lang_root / "onboarding",
-                    heading="# Onboarding Assets" if language == "en" else "# Recursos de Onboarding",
+                    heading="# Onboarding Assets"
+                    if language == "en"
+                    else "# Recursos de Onboarding",
                     intro=(
                         "Guided tours and learning paths that accelerate contributors' first deliveries."
                         if language == "en"
