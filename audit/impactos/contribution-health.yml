@@ -1,0 +1,12 @@
+id: contribution-health
+kpis:
+  - name: "active_workflows"
+    target: 2
+    direction: "min"
+  - name: "good_first_issues"
+    target: 3
+    direction: "min"
+evidence_sources:
+  - ".github/workflows/"
+  - "README.md"
+  - "CONTRIBUTING.md"

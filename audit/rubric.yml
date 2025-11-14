@@ -1,0 +1,57 @@
+rules:
+  readme_has_start_here:
+    weight: 8
+    file: "README.md"
+    must_contain:
+      - "Empieza aquí"
+      - "Start here"
+  labs_exist:
+    weight: 8
+    path_exists:
+      - "docs/labs/lab-01-resilience-basics.md"
+      - "docs/labs/lab-02-observability-minima.md"
+      - "docs/labs/lab-03-adevelopment-loop.md"
+  make_targets:
+    weight: 6
+    file: "Makefile"
+    must_contain:
+      - "lab-01"
+      - "lab-02"
+      - "lab-03"
+      - "ci"
+      - "verify-links"
+  policies_exist:
+    weight: 6
+    path_exists:
+      - "platform/policies/resilience.yml"
+  slos_exist:
+    weight: 6
+    path_exists:
+      - "platform/slo/slo-spec.yml"
+  telemetry_smoke:
+    weight: 5
+    path_exists:
+      - "scripts/telemetry-smoke.py"
+  mkdocs_configured:
+    weight: 5
+    file: "mkdocs.yml"
+    must_contain:
+      - "site_url"
+      - "nav:"
+      - "Guides:"
+      - "Labs:"
+  links_checker:
+    weight: 4
+    path_exists:
+      - "scripts/check-links.py"
+  editorial_checks:
+    weight: 4
+    path_exists:
+      - "scripts/validate-content-metadata.py"
+  workflows_present:
+    weight: 6
+    path_exists:
+      - ".github/workflows/quality.yml"
+      - ".github/workflows/docs-and-links.yml"
+thresholds:
+  pass_score: 34

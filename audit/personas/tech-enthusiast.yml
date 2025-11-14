@@ -1,0 +1,10 @@
+id: tech-enthusiast
+age: 20-45
+goals:
+  - "Explorar demos y quickstarts sin fricción"
+  - "Probar herramientas sin instalar dependencias complejas"
+must_have:
+  - "Quickstart destacado con prerequisitos claros"
+  - "Comandos copy-paste para levantar el entorno"
+nice_to_have:
+  - "Videos cortos o gifs de walkthrough"
