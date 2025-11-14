@@ -1,0 +1,6 @@
+[allowlist]
+  description = "Allow known dummy secrets referenced in documentation"
+  regexes = [
+    "AKIAIMNOJVGFDXXXE4OA",
+    "cafebabe:deadbeef"
+  ]

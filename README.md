@@ -3,6 +3,7 @@
 ## Status
 [![quality](https://github.com/scanalesespinoza/the-wise-tech/actions/workflows/quality.yml/badge.svg)](https://github.com/scanalesespinoza/the-wise-tech/actions/workflows/quality.yml)
 [![docs-and-links](https://github.com/scanalesespinoza/the-wise-tech/actions/workflows/docs-and-links.yml/badge.svg)](https://github.com/scanalesespinoza/the-wise-tech/actions/workflows/docs-and-links.yml)
+[![gitleaks](https://github.com/scanalesespinoza/the-wise-tech/actions/workflows/gitleaks.yml/badge.svg)](https://github.com/scanalesespinoza/the-wise-tech/actions/workflows/gitleaks.yml)
 
 El repositorio que convierte la filosofía Wise Tech en acciones compartidas: una one-page navegable para aprender, construir y operar tecnología con propósito humano.
 
@@ -50,6 +51,7 @@ Consulta el [quickstart general](docs/guides/quickstart.md) cuando necesites la 
 │  ├─ Taxonomy & Tags → [docs/guides/taxonomy-tags.md](docs/guides/taxonomy-tags.md)
 │  ├─ Resilience Policies → [docs/guides/resilience-policies.md](docs/guides/resilience-policies.md)
 │  ├─ SLOs & Error Budget → [docs/guides/slo-how-to.md](docs/guides/slo-how-to.md)
+│  ├─ Security (Minimum) → [docs/guides/security-minima.md](docs/guides/security-minima.md)
 │  └─ Telemetry (Minimum) → [docs/guides/telemetry-minima.md](docs/guides/telemetry-minima.md)
 ├─ Snippets → [docs/snippets/](docs/snippets/)
 │  └─ Python — Correlation ID → [docs/snippets/python-correlation-id.md](docs/snippets/python-correlation-id.md)
@@ -68,6 +70,7 @@ Consulta el [quickstart general](docs/guides/quickstart.md) cuando necesites la 
 - **Observability & Traceability** → [docs/guides/telemetry-minima.md](docs/guides/telemetry-minima.md)
 - **Correlation-ID (Python)** → [docs/snippets/python-correlation-id.md](docs/snippets/python-correlation-id.md)
 - **Labs prácticos con KPIs** → [docs/labs/lab-01-resilience-basics.md](docs/labs/lab-01-resilience-basics.md), [docs/labs/lab-02-observability-minima.md](docs/labs/lab-02-observability-minima.md), [docs/labs/lab-03-adevelopment-loop.md](docs/labs/lab-03-adevelopment-loop.md)
+- **Security & Supply Chain** → [.github/SECURITY.md](.github/SECURITY.md), [docs/guides/security-minima.md](docs/guides/security-minima.md)
 - **How we write (Style Guide)** → [docs/guides/content-style-guide.md](docs/guides/content-style-guide.md), [Editorial workflow](docs/guides/editorial-workflow.md), [Versioning Docs](docs/guides/versioning-docs.md), [Taxonomy & tags](docs/guides/taxonomy-tags.md)
 
 > Social preview: ver [assets/social/wise-tech-1280x640.png](assets/social/wise-tech-1280x640.png)

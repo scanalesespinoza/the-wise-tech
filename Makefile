@@ -1,4 +1,4 @@
-.PHONY: install fmt lint test parity docs verify-links content-meta ci resilience-check resilience-sample slos check-error-budget telemetry-smoke lab-01 lab-02 lab-03 lab-run-all
+.PHONY: install fmt lint test parity docs verify-links content-meta ci resilience-check resilience-sample slos check-error-budget telemetry-smoke lab-01 lab-02 lab-03 lab-run-all security-scan
 
 install:
 	@echo "Installing dev dependencies"
@@ -78,3 +78,6 @@ lab-03:
 
 lab-run-all: lab-01 lab-02 lab-03
 	@echo "Labs completados (recuerda subir evidencia en PR)."
+
+security-scan:
+	@bash scripts/security-scan.sh || true
