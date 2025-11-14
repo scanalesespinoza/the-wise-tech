@@ -15,7 +15,9 @@ def load_yaml(path):
 
 def file_contains(path, substrings):
     try:
-        with open(os.path.join(ROOT, path), "r", encoding="utf-8", errors="ignore") as f:
+        with open(
+            os.path.join(ROOT, path), "r", encoding="utf-8", errors="ignore"
+        ) as f:
             text = f.read()
         return all(s in text for s in substrings)
     except FileNotFoundError:
@@ -46,7 +48,9 @@ def summarize_audit_inputs():
     for sub in ("personas", "escenarios", "impactos"):
         directory = os.path.join(AUDIT, sub)
         if os.path.isdir(directory):
-            count = sum(1 for f in os.listdir(directory) if f.endswith((".yml", ".yaml")))
+            count = sum(
+                1 for f in os.listdir(directory) if f.endswith((".yml", ".yaml"))
+            )
             if sub == "personas":
                 personas = count
             if sub == "escenarios":
