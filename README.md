@@ -4,6 +4,7 @@
 [![quality](https://github.com/scanalesespinoza/the-wise-tech/actions/workflows/quality.yml/badge.svg)](https://github.com/scanalesespinoza/the-wise-tech/actions/workflows/quality.yml)
 [![docs-and-links](https://github.com/scanalesespinoza/the-wise-tech/actions/workflows/docs-and-links.yml/badge.svg)](https://github.com/scanalesespinoza/the-wise-tech/actions/workflows/docs-and-links.yml)
 [![gitleaks](https://github.com/scanalesespinoza/the-wise-tech/actions/workflows/gitleaks.yml/badge.svg)](https://github.com/scanalesespinoza/the-wise-tech/actions/workflows/gitleaks.yml)
+[![pre-commit](https://github.com/scanalesespinoza/the-wise-tech/actions/workflows/pre-commit.yml/badge.svg)](https://github.com/scanalesespinoza/the-wise-tech/actions/workflows/pre-commit.yml)
 
 El repositorio que convierte la filosofía Wise Tech en acciones compartidas: una one-page navegable para aprender, construir y operar tecnología con propósito humano.
 
@@ -30,6 +31,13 @@ El repositorio que convierte la filosofía Wise Tech en acciones compartidas: un
 5) abre http://127.0.0.1:8000 y sigue “Choose your path”
 
 Consulta el [quickstart general](docs/guides/quickstart.md) cuando necesites la versión ultracorta para compartir con tu equipo.
+
+Opcional (DX)
+
+Instala just: https://github.com/casey/just
+
+Usa just como atajo a Make:
+just install | test | docs | ci | links | slos | telemetry
 
 ### How to give feedback
 - Abre un Issue con la plantilla **Feedback — User Experience** o **Proposal — Improvement**.

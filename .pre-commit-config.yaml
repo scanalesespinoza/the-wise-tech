@@ -1,0 +1,32 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.6.9
+    hooks:
+      - id: ruff
+        args: [--fix]
+      - id: ruff-format
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.41.0
+    hooks:
+      - id: markdownlint
+        files: \.(md|MD)$
+        args: ["--disable", "MD013"]  # allow long lines en docs cuando sea necesario
+  - repo: https://github.com/adrienverge/yamllint
+    rev: v1.35.1
+    hooks:
+      - id: yamllint
+        files: \.(yml|yaml)$
+        exclude: ^\.github/(ISSUE_TEMPLATE/|workflows/pr-summarizer\.yml)
+        args: ["-d", "{extends: relaxed, rules: {line-length: {max: 120}}}"]
+  - repo: local
+    hooks:
+      - id: md-internal-links
+        name: md-internal-links
+        entry: python scripts/check-links.py
+        language: system
+        files: \.(md|MD)$
+      - id: docs-front-matter
+        name: docs-front-matter
+        entry: python scripts/validate-content-metadata.py
+        language: system
+        files: ^docs/.*\.md$
