@@ -50,7 +50,7 @@ jobs:
                 "diff": os.environ.get("PR_DIFF", ""),
             }
             print(json.dumps(summary))
-PY
+          PY
           )
           curl -sSf -X POST "$SUMMARY_WEBHOOK" -H 'Content-Type: application/json' -d "$payload" > summary.md
           echo "status=posted" >> "$GITHUB_OUTPUT"
