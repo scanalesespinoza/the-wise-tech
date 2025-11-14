@@ -41,17 +41,17 @@ jobs:
             exit 0
           fi
           payload=$(python - <<'PY'
-import json
-import os
+            import json
+            import os
 
-summary = {
-    "title": os.environ.get("PR_TITLE", ""),
-    "body": os.environ.get("PR_BODY", ""),
-    "diff": os.environ.get("PR_DIFF", ""),
-}
-print(json.dumps(summary))
+            summary = {
+                "title": os.environ.get("PR_TITLE", ""),
+                "body": os.environ.get("PR_BODY", ""),
+                "diff": os.environ.get("PR_DIFF", ""),
+            }
+            print(json.dumps(summary))
 PY
-)
+          )
           curl -sSf -X POST "$SUMMARY_WEBHOOK" -H 'Content-Type: application/json' -d "$payload" > summary.md
           echo "status=posted" >> "$GITHUB_OUTPUT"
       - name: Publish summary comment
