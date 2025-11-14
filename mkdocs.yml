@@ -24,6 +24,7 @@ nav:
       - Resilience Policies: guides/resilience-policies.md
       - SLOs & Error Budget: guides/slo-how-to.md
       - Security (Minimum): guides/security-minima.md
+      - Dev stack (local): guides/dev-stack-local.md
       - Telemetry (Minimum): guides/telemetry-minima.md
   - Labs:
       - Lab 01 — Resilience Basics: labs/lab-01-resilience-basics.md

@@ -30,6 +30,11 @@ El repositorio que convierte la filosofía Wise Tech en acciones compartidas: un
 4) make docs
 5) abre http://127.0.0.1:8000 y sigue “Choose your path”
 
+Opcional (dev stack):
+
+- `make dev-up` → Jaeger en `http://127.0.0.1:16686`, OTLP en `:4318`
+- `make docs-live` → Docs en `http://127.0.0.1:8000`
+
 Consulta el [quickstart general](docs/guides/quickstart.md) cuando necesites la versión ultracorta para compartir con tu equipo.
 
 Opcional (DX)
@@ -60,6 +65,7 @@ just install | test | docs | ci | links | slos | telemetry
 │  ├─ Resilience Policies → [docs/guides/resilience-policies.md](docs/guides/resilience-policies.md)
 │  ├─ SLOs & Error Budget → [docs/guides/slo-how-to.md](docs/guides/slo-how-to.md)
 │  ├─ Security (Minimum) → [docs/guides/security-minima.md](docs/guides/security-minima.md)
+│  ├─ Dev stack local → [docs/guides/dev-stack-local.md](docs/guides/dev-stack-local.md)
 │  └─ Telemetry (Minimum) → [docs/guides/telemetry-minima.md](docs/guides/telemetry-minima.md)
 ├─ Snippets → [docs/snippets/](docs/snippets/)
 │  └─ Python — Correlation ID → [docs/snippets/python-correlation-id.md](docs/snippets/python-correlation-id.md)
@@ -76,6 +82,7 @@ just install | test | docs | ci | links | slos | telemetry
 - **Postmortems** → [docs/guides/postmortem-guide.md](docs/guides/postmortem-guide.md)
 - **Contribution Mentoring** → [docs/guides/contribution-mentoring.md](docs/guides/contribution-mentoring.md)
 - **Observability & Traceability** → [docs/guides/telemetry-minima.md](docs/guides/telemetry-minima.md)
+- **Dev stack local (docs + OTEL/Jaeger)** → [docs/guides/dev-stack-local.md](docs/guides/dev-stack-local.md)
 - **Correlation-ID (Python)** → [docs/snippets/python-correlation-id.md](docs/snippets/python-correlation-id.md)
 - **Labs prácticos con KPIs** → [docs/labs/lab-01-resilience-basics.md](docs/labs/lab-01-resilience-basics.md), [docs/labs/lab-02-observability-minima.md](docs/labs/lab-02-observability-minima.md), [docs/labs/lab-03-adevelopment-loop.md](docs/labs/lab-03-adevelopment-loop.md)
 - **Security & Supply Chain** → [.github/SECURITY.md](.github/SECURITY.md), [docs/guides/security-minima.md](docs/guides/security-minima.md)

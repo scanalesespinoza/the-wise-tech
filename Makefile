@@ -1,4 +1,4 @@
-.PHONY: install fmt lint test parity docs verify-links content-meta ci resilience-check resilience-sample slos check-error-budget telemetry-smoke lab-01 lab-02 lab-03 lab-run-all security-scan
+.PHONY: install fmt lint test parity docs verify-links content-meta ci resilience-check resilience-sample slos check-error-budget telemetry-smoke lab-01 lab-02 lab-03 lab-run-all security-scan docs-live dev-up dev-down dev-logs dev-status
 
 install:
 	@echo "Installing dev dependencies"
@@ -28,6 +28,24 @@ parity:
 docs:
 	@echo "Building docs"
 	mkdocs build --strict
+
+docs-live:
+	@echo "Iniciando MkDocs con live reload en :8000…"
+	@bash scripts/run-docs-live.sh
+
+dev-up:
+	@echo "Levantando dev stack (otel-collector, jaeger, docs opcional)…"
+	@docker compose -f dev/docker-compose.dev.yml up -d
+
+dev-down:
+	@echo "Deteniendo dev stack…"
+	@docker compose -f dev/docker-compose.dev.yml down -v
+
+dev-logs:
+	@docker compose -f dev/docker-compose.dev.yml logs -f --tail=200
+
+dev-status:
+	@docker compose -f dev/docker-compose.dev.yml ps
 
 content-meta:
 	@echo "Validando front-matter (tags) y 'See also'…"
