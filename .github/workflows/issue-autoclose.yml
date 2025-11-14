@@ -1,0 +1,176 @@
+name: Close issues referenced on main
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  close-issues:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Close issues mentioned in commits
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const commits = context.payload.commits || [];
+
+            if (commits.length === 0) {
+              core.info('No commits to process in this push.');
+              return;
+            }
+
+            const processedIssues = new Set();
+
+            const escapeRegex = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+            const buildPatterns = (issueNumber, explicitBranch) => {
+              if (explicitBranch) {
+                return [explicitBranch];
+              }
+
+              return [
+                `issue-${issueNumber}`,
+                `issue/${issueNumber}`,
+                `issues/${issueNumber}`,
+                `feature/issue-${issueNumber}`,
+                `feature-${issueNumber}`,
+                `feature/${issueNumber}`,
+              ];
+            };
+
+            const collectScopeEntries = (issueBody) => {
+              if (!issueBody) {
+                return [];
+              }
+
+              const sections = issueBody.match(/###\s*Alcance\s*([\s\S]*?)(?:\n###|\n##|$)/i);
+              let values = [];
+
+              if (sections && sections[1]) {
+                values = sections[1]
+                  .split(/[\n,]+/)
+                  .map((entry) => entry.trim())
+                  .filter(Boolean);
+              }
+
+              if (values.length === 0) {
+                const fallback = issueBody.match(/scope\s*[:=]\s*(.*)/i);
+                if (fallback && fallback[1]) {
+                  values = fallback[1]
+                    .split(/[\n,]+/)
+                    .map((entry) => entry.trim())
+                    .filter(Boolean);
+                }
+              }
+
+              return values;
+            };
+
+            for (const commit of commits) {
+              const message = commit.message || '';
+              const issueMatches = [...message.matchAll(/#(\d+)/g)];
+
+              if (issueMatches.length === 0) {
+                core.info(`Commit ${commit.id} does not mention an issue.`);
+                continue;
+              }
+
+              const branchMatch = message.match(/branch\s*[:=]\s*([\w\-/.]+)/i);
+              const explicitBranch = branchMatch ? branchMatch[1] : null;
+
+              const commitData = await github.rest.repos.getCommit({
+                owner,
+                repo,
+                ref: commit.id,
+              });
+
+              const changedFiles = (commitData.data.files || []).map((file) => file.filename);
+
+              for (const issueMatch of issueMatches) {
+                const issueNumber = Number(issueMatch[1]);
+
+                if (processedIssues.has(issueNumber)) {
+                  core.info(`Issue #${issueNumber} already processed. Skipping.`);
+                  continue;
+                }
+
+                const issue = await github.rest.issues.get({
+                  owner,
+                  repo,
+                  issue_number: issueNumber,
+                });
+
+                const scopeEntries = collectScopeEntries(issue.data.body);
+
+                if (scopeEntries.length > 0) {
+                  const missing = [];
+
+                  for (const scopeEntry of scopeEntries) {
+                    const pattern = '^' + scopeEntry.split('*').map(escapeRegex).join('.*') + '$';
+                    const regex = new RegExp(pattern);
+
+                    if (!changedFiles.some((file) => regex.test(file))) {
+                      missing.push(scopeEntry);
+                    }
+                  }
+
+                  if (missing.length > 0) {
+                    core.setFailed(
+                      `Commit ${commit.id} referencing issue #${issueNumber} is missing expected file updates: ${missing.join(', ')}`,
+                    );
+                    return;
+                  }
+                } else {
+                  core.info(`Issue #${issueNumber} does not include scope entries. Skipping file validation.`);
+                }
+
+                await github.rest.issues.update({
+                  owner,
+                  repo,
+                  issue_number: issueNumber,
+                  state: 'closed',
+                });
+
+                processedIssues.add(issueNumber);
+
+                const branchCandidates = buildPatterns(issueNumber, explicitBranch);
+
+                for (const branch of branchCandidates) {
+                  try {
+                    await github.rest.git.deleteRef({
+                      owner,
+                      repo,
+                      ref: `heads/${branch}`,
+                    });
+                    core.info(`Deleted branch ${branch}.`);
+                    break;
+                  } catch (error) {
+                    if (error.status === 404 || error.status === 422) {
+                      core.info(`Branch ${branch} not found or already deleted.`);
+                    } else {
+                      core.warning(`Failed to delete branch ${branch}: ${error.message}`);
+                    }
+                  }
+                }
+              }
+            }
+
+            if (processedIssues.size === 0) {
+              core.info('No issues were processed in this push.');
+            } else {
+              core.summary
+                .addHeading('Issues closed automatically')
+                .addList(Array.from(processedIssues).map((issue) => `#${issue}`))
+                .write();
+            }
