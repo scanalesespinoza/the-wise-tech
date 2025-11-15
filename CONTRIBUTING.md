@@ -19,6 +19,6 @@ based journeys.
 ## Automatización
 - Los workflows [`quality`](.github/workflows/quality.yml) y [`docs-and-links`](.github/workflows/docs-and-links.yml) ejecutan exactamente los comandos del Makefile (`make ci` y la validación de documentación) para mantener paridad entre local y remoto.
 - Ejecuta `make verify-links` o `python scripts/check-links.py` cuando edites documentación extensa para detectar enlaces internos rotos.
-- Documenta decisiones en [ADR](adr/README.md) cuando cambies procesos estratégicos.
+- Documenta decisiones en [ADR](adr/INDEX.md) cuando cambies procesos estratégicos.
 
 For guidance in Spanish, consulta [CONTRIBUTING.es.md](CONTRIBUTING.es.md).

@@ -47,3 +47,4 @@
 - Contenido bilingüe legado movido a `archive/` para referencia histórica.
 - Diagramas y configuraciones previas agrupados en `archive/legacy-diagrams/` y `archive/config/`.
 - Los nuevos índices dentro de `docs/` orientan la navegación y reemplazan referencias anteriores.
+- Puentes heredados viven en `docs/en/` y `docs/es/` para mantener enlaces estables durante la transición.

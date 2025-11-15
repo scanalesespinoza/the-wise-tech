@@ -60,7 +60,7 @@ def main(spec_path, metrics_path=None):
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print(
-            "Uso: python scripts/check-error-budget.py platform/slo/slo-spec.yml [metrics.json]"
+            "Uso: python scripts/check-error-budget.py scenarios/payments/slo/slo-spec.yml [metrics.json]"
         )
         sys.exit(2)
     spec = sys.argv[1]

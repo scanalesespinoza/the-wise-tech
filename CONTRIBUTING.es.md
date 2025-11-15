@@ -18,6 +18,6 @@ Gracias por aportar a The Wise Tech. Toda la documentación vive ahora en `docs/
 ## Automatización
 - Los workflows [`quality`](.github/workflows/quality.yml) y [`docs-and-links`](.github/workflows/docs-and-links.yml) ejecutan exactamente los comandos del Makefile (`make ci` y la validación de documentación) para mantener paridad entre local y remoto.
 - Ejecuta `make verify-links` o `python scripts/check-links.py` cuando edites documentación extensa para detectar enlaces internos rotos a tiempo.
-- Documenta decisiones estratégicas en el [índice de ADR](adr/README.md).
+- Documenta decisiones estratégicas en el [índice de ADR](adr/INDEX.md).
 
 Para referencia en inglés, visita [CONTRIBUTING.md](CONTRIBUTING.md).

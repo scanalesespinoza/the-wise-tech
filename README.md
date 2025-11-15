@@ -52,6 +52,11 @@ Instala just: https://github.com/casey/just
 Usa just como atajo a Make:
 just install | test | docs | ci | links | slos | telemetry
 
+## ¿Solo quiero leer o contribuir?
+
+- 🧭 **Solo quiero leer** → abre la versión publicada en [GitHub Pages](https://scanalesespinoza.github.io/the-wise-tech/) y sigue la sección [Choose your path](#choose-your-path) para navegar por rol.
+- 🛠️ **Quiero contribuir** → prepara tu entorno con [Dev environment — devcontainer, pre-commit y just](docs/guides/dev-environment.md) y toma una tarea pequeña de [PR ideas](docs/roadmap/pr-ideas.md).
+
 ### How to give feedback
 - Abre un Issue con la plantilla **Feedback — User Experience** o **Proposal — Improvement**.
 - Para incidentes operacionales, usa **Ops — Postmortem**.
@@ -77,15 +82,19 @@ just install | test | docs | ci | links | slos | telemetry
 │  └─ Telemetry (Minimum) → [docs/guides/telemetry-minima.md](docs/guides/telemetry-minima.md)
 ├─ Snippets → [docs/snippets/](docs/snippets/)
 │  └─ Python — Correlation ID → [docs/snippets/python-correlation-id.md](docs/snippets/python-correlation-id.md)
+├─ Templates → [docs/templates/](docs/templates/)
+│  ├─ ADR — short form → [docs/templates/adr-short.md](docs/templates/adr-short.md)
+│  └─ Postmortem — quick capture → [docs/templates/postmortem-light.md](docs/templates/postmortem-light.md)
+├─ CI → [docs/continuous-integration/index.md](docs/continuous-integration/index.md)
 ├─ Playbooks → [docs/playbooks/](docs/playbooks/)
-├─ Scenarios → [docs/scenarios/](docs/scenarios/)  
+├─ Scenarios → [docs/scenarios/](docs/scenarios/)
 └─ Roadmap → [docs/roadmap/roadmap.md](docs/roadmap/roadmap.md)
 
 ## Recommended by interest
 
 - **Productividad & simplicidad** → [docs/guides/quickstart.md](docs/guides/quickstart.md), [docs/principles/](docs/principles/), [Learning Path 30/60/90 — Consumers](docs/paths/consumers-30-60-90.md)
-- **Resiliencia & operación** → [docs/playbooks/](docs/playbooks/), [docs/scenarios/](docs/scenarios/), [docs/guides/resilience-policies.md](docs/guides/resilience-policies.md), [docs/guides/slo-how-to.md](docs/guides/slo-how-to.md), [Policies YAML (payments)](platform/policies/resilience.yml), [SLO Spec (payments)](platform/slo/slo-spec.yml), [Learning Path 30/60/90 — Platform](docs/paths/platform-engineers-30-60-90.md)
-- **Mentoría & mejora continua** → [docs/roadmap/roadmap.md](docs/roadmap/roadmap.md), [.github/](.github/), [Learning Path 30/60/90 — Developers](docs/paths/developers-30-60-90.md)
+- **Resiliencia & operación** → [docs/playbooks/](docs/playbooks/), [docs/scenarios/](docs/scenarios/), [docs/guides/resilience-policies.md](docs/guides/resilience-policies.md), [docs/guides/slo-how-to.md](docs/guides/slo-how-to.md), [Policies YAML (payments)](scenarios/payments/policies/resilience.yml), [SLO Spec (payments)](scenarios/payments/slo/slo-spec.yml), [Learning Path 30/60/90 — Platform](docs/paths/platform-engineers-30-60-90.md)
+- **Mentoría & mejora continua** → [docs/roadmap/roadmap.md](docs/roadmap/roadmap.md), [docs/roadmap/pr-ideas.md](docs/roadmap/pr-ideas.md), [.github/](.github/), [Learning Path 30/60/90 — Developers](docs/paths/developers-30-60-90.md)
 - **Feedback Loops** → [docs/guides/feedback-loops.md](docs/guides/feedback-loops.md)
 - **Postmortems** → [docs/guides/postmortem-guide.md](docs/guides/postmortem-guide.md)
 - **Contribution Mentoring** → [docs/guides/contribution-mentoring.md](docs/guides/contribution-mentoring.md)
@@ -102,7 +111,8 @@ just install | test | docs | ci | links | slos | telemetry
 - [Wise Tech principles](docs/principles/wise-tech-principles.md) condensan los acuerdos fundacionales del repositorio.
 - [Contribution guide](docs/guides/contribution-guide.md) explica cómo documentar aprendizajes y referencias cruzadas.
 - [Developer playbook](docs/playbooks/developer-playbook.md) / [Platform playbook](docs/playbooks/platform-playbook.md) proponen primeros wins y KPIs por rol.
-- [Wise Tech approach (EN)](en/wise-tech-approach.md) / [Enfoque Wise Tech (ES)](es/wise-tech-approach.md) articulan la narrativa estratégica.
+- [Wise Tech approach (EN)](docs/en/wise-tech-approach.md) / [Enfoque Wise Tech (ES)](docs/es/wise-tech-approach.md) articulan la narrativa estratégica.
+- [Architecture decisions](adr/INDEX.md) centraliza los ADR con su historial y tags.
 - [Payments Scenario](scenarios/payments/README.md) integra código, contratos, pruebas y runbooks bilingües.
 
 El escenario de pagos funciona como caso de negocio canónico: los errores del servicio muestran recetas de manejo de fallas, los contratos ilustran consumer-driven testing y los runbooks bilingües hacen que la resiliencia sea accionable.
@@ -120,7 +130,7 @@ El pipeline [`quality`](.github/workflows/quality.yml) ejecuta exactamente `make
 El workflow [`docs-and-links`](.github/workflows/docs-and-links.yml) se activa cuando cambian archivos Markdown o de MkDocs. Reconstruye el sitio con `mkdocs build --strict`, valida front-matter y "See also" con `python scripts/validate-content-metadata.py`, y ejecuta `python scripts/check-links.py` para detectar enlaces internos rotos. En local puedes correr `make content-meta` antes de subir cambios.
 
 ### ¿Cómo valido bilingüismo cuando sólo edito una lengua?
-Ejecuta `make parity` para comparar las rutas `en/` y `es/`. Si todavía no existe la traducción, agrega una nota `TODO (parity)` en el archivo y documenta el plan en tu PR para que el pipeline no falle.
+Ejecuta `make parity` para comparar las rutas `docs/en/` y `docs/es/`. Si todavía no existe la traducción, agrega una nota `TODO (parity)` en el archivo y documenta el plan en tu PR para que el pipeline no falle.
 
 ### ¿Qué hacer si MkDocs ya usa el puerto 8000?
 Puedes redefinir el puerto temporalmente con `mkdocs serve -a 127.0.0.1:8010` o exportar `MKDOCS_SERVE_ADDR=127.0.0.1:8010` antes de correr `make docs`.

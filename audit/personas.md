@@ -21,7 +21,7 @@
 ## 3. Ingeniera de plataforma enfocada en resiliencia
 - **Contexto**: Necesita validar que los artefactos de plataforma (SLOs, políticas, runbooks) son accionables.
 - **Objetivos**:
-  - Revisar la cobertura de resiliencia en `platform/policies/resilience.yml` y la alineación con `docs/guides/resilience-policies.md`.
+- Revisar la cobertura de resiliencia en `scenarios/payments/policies/resilience.yml` y la alineación con `docs/guides/resilience-policies.md`.
   - Confirmar que los escenarios de pagos (`scenarios/payments/`) tienen contratos y pruebas listas para ejecutarse.
 - **Preguntas frecuentes**:
   - ¿Los runbooks bilingües reflejan los KPIs descritos en `docs/playbooks/platform-playbook.md`?

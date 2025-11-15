@@ -117,7 +117,7 @@ def main(path):
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print(
-            "Uso: python scripts/validate-resilience.py platform/policies/resilience.yml"
+            "Uso: python scripts/validate-resilience.py scenarios/payments/policies/resilience.yml"
         )
         sys.exit(2)
     main(sys.argv[1])

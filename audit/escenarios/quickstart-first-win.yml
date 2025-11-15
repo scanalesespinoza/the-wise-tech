@@ -6,4 +6,4 @@ steps:
 expected_artifacts:
   - "Makefile con target lab-01"
   - "docs/labs/lab-01-resilience-basics.md"
-  - "docs/labs/evidence-templates/evidence-lab-01.md"
+  - "docs/templates/labs/evidence-lab-01.md"

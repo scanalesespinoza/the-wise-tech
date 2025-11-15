@@ -6,7 +6,7 @@ tags: ["platform-engineers", "paths", "resilience"]
 
 ## 30 min
 - Ejecuta `make install && make parity && make docs` para comprobar el setup base.
-- Revisa `platform/policies/` y/o `platform/slo/` si existen para entender los contratos actuales.
+- Revisa `scenarios/payments/policies/` y `scenarios/payments/slo/` para entender los contratos actuales.
 
 ## 60 min (first win)
 - Habilita o verifica la ejecución de `make verify-links` en CI (workflow docs-and-links).
@@ -18,7 +18,7 @@ tags: ["platform-engineers", "paths", "resilience"]
 
 **KPIs**
 - 0 enlaces rotos en la PR.
-- Políticas válidas en PRs que toquen `platform/**`.
+- Políticas válidas en PRs que toquen `scenarios/payments/**`.
 - CI verde garantizado.
 
 ---
@@ -27,7 +27,7 @@ tags: ["platform-engineers", "paths", "resilience"]
 
 ## 30 min
 - Run `make install && make parity && make docs` to confirm the baseline setup.
-- Review `platform/policies/` and/or `platform/slo/` (if present) to understand current contracts.
+- Review `scenarios/payments/policies/` and `scenarios/payments/slo/` to understand current contracts.
 
 ## 60 min (first win)
 - Enable or verify `make verify-links` in CI (docs-and-links workflow).
@@ -39,7 +39,7 @@ tags: ["platform-engineers", "paths", "resilience"]
 
 **KPIs**
 - Zero broken links in the PR.
-- Policies validated on PRs touching `platform/**`.
+- Policies validated on PRs touching `scenarios/payments/**`.
 - CI remains green.
 
 ## See also / Ver también

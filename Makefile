@@ -63,19 +63,19 @@ audit:
 
 resilience-check:
 	@echo "Validando políticas de resiliencia…"
-	python scripts/validate-resilience.py platform/policies/resilience.yml
+	@python scripts/validate-resilience.py scenarios/payments/policies/resilience.yml
 
 resilience-sample:
 	@echo "Mostrando ejemplo y campos soportados"
-	@echo "Ver: platform/policies/resilience.yml y scripts/validate-resilience.py"
+	@echo "Ver: scenarios/payments/policies/resilience.yml y scripts/validate-resilience.py"
 
 slos:
 	@echo "Validando SLOs…"
-	python scripts/validate-slos.py platform/slo/slo-spec.yml
+	@python scripts/validate-slos.py scenarios/payments/slo/slo-spec.yml
 
 check-error-budget:
 	@echo "Chequeando presupuesto de error (mock/local)…"
-	python scripts/check-error-budget.py platform/slo/slo-spec.yml || true
+	@python scripts/check-error-budget.py scenarios/payments/slo/slo-spec.yml || true
 
 telemetry-smoke:
 	@echo "Running telemetry smoke (logs estructurados + p95 simulado)…"
@@ -85,17 +85,17 @@ lab-01:
 	@echo "Lab 01 — Resilience Basics"
 	make resilience-check || true
 	make check-error-budget || true
-	@echo "Completa la plantilla: docs/labs/evidence-templates/evidence-lab-01.md"
+        @echo "Completa la plantilla: docs/templates/labs/evidence-lab-01.md"
 
 lab-02:
 	@echo "Lab 02 — Observability Minimum"
 	make telemetry-smoke || python scripts/telemetry-smoke.py
-	@echo "Completa la plantilla: docs/labs/evidence-templates/evidence-lab-02.md"
+        @echo "Completa la plantilla: docs/templates/labs/evidence-lab-02.md"
 
 lab-03:
 	@echo "Lab 03 — aDevelopment Loop"
 	@echo "Genera un test/doc pequeño, ejecuta make test, y registra KPIs."
-	@echo "Completa la plantilla: docs/labs/evidence-templates/evidence-lab-03.md"
+        @echo "Completa la plantilla: docs/templates/labs/evidence-lab-03.md"
 
 lab-run-all: lab-01 lab-02 lab-03
 	@echo "Labs completados (recuerda subir evidencia en PR)."

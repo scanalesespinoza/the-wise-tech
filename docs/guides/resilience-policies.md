@@ -10,12 +10,12 @@ Las políticas definen **contratos operativos** por servicio/escenario:
 - **bulkhead**: on/off, max_concurrent
 - **cache**: on/off, ttl_s
 ## Flujo recomendado
-1) Edita `platform/policies/resilience.yml` con valores iniciales realistas.
+1) Edita `scenarios/payments/policies/resilience.yml` con valores iniciales realistas.
 2) Ejecuta `make resilience-check` en local.
 3) Sube PR; CI validará automáticamente la política.
 4) Documenta cualquier ajuste y su “por qué” en el PR.
 ## Ejemplo
-Ver `platform/policies/resilience.yml` (payments).
+Ver `scenarios/payments/policies/resilience.yml` (payments).
 ## Próximos pasos
 - Integrar SLOs y presupuestos de error (Iteración 6).
 - Añadir snippets de instrumentación (telemetría) y runbooks.

@@ -4,7 +4,7 @@ goals:
   - "Revisar políticas de resiliencia y automatizaciones"
   - "Integrar pipelines de observabilidad"
 must_have:
-  - "Policies en platform/policies con owners definidos"
+  - "Policies en scenarios/payments/policies con owners definidos"
   - "Scripts reproducibles para validaciones técnicas"
 nice_to_have:
   - "Diagramas de arquitectura en docs/"

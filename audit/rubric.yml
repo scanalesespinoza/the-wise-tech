@@ -23,11 +23,11 @@ rules:
   policies_exist:
     weight: 6
     path_exists:
-      - "platform/policies/resilience.yml"
+      - "scenarios/payments/policies/resilience.yml"
   slos_exist:
     weight: 6
     path_exists:
-      - "platform/slo/slo-spec.yml"
+      - "scenarios/payments/slo/slo-spec.yml"
   telemetry_smoke:
     weight: 5
     path_exists:

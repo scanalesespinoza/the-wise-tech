@@ -39,7 +39,7 @@ ALLOWED_TAGS = {
         "principles",
     },
 }
-EXCLUDED_PARTS = {"assets", "evidence-templates"}
+EXCLUDED_PARTS = {"assets", "templates"}
 
 
 def find_markdown_files() -> Iterable[Path]:

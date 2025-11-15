@@ -6,7 +6,7 @@
 - `python3`, `make`.
 
 ## Pasos
-1) Explora la política: `platform/policies/resilience.yml`.
+1) Explora la política: `scenarios/payments/policies/resilience.yml`.
 2) Valida: `make resilience-check`.
 3) Ajusta `timeouts_ms.http_client_default` y `retries.base_ms` con valores seguros.
 4) Revalida y anota los cambios (por qué, qué esperas mejorar).
@@ -18,7 +18,7 @@
 - `error_budget_spent_% (mock)`: antes/después.
 
 ## Evidencia
-- Usa `docs/labs/evidence-templates/evidence-lab-01.md`.
+- Usa `docs/templates/labs/evidence-lab-01.md`.
 
 ## What’s next
 - Relaciona cambios con un PR real y explica impacto en SLO (latencia p95).
