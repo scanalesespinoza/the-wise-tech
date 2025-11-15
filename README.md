@@ -8,6 +8,14 @@
 
 This repository turns the Wise Tech philosophy into shared actions: a navigable one-page hub for learning, building, and operating technology with a human purpose.
 
+## Vision and purpose
+
+This repository is an expanding knowledge base that elevates technology quality by prioritizing lessons learned, established patterns, and validated designs. Its mission is to break the cycle of low-cost, low-quality software that dominates the market today—software that generates collateral issues such as security gaps, unnecessary spending driven by technical debt, and economic plus environmental harm.
+
+Wise Tech focuses on modern needs while helping orient the future. As experience gaps widen and professionals rely on increasingly shallow tooling and artificial intelligence, durable knowledge becomes the shared advantage. Captured expertise empowers both traditional teams building technology by hand and emerging teams orchestrating AI-led development.
+
+This site curates a taxonomic body of principles, models, and methodologies for delivering world-class technology. Although still young, it aims to become a reference for training AI systems and professionals who must respond to demanding, high-stakes scenarios.
+
 ## Start here
 
 1. Read the overview in [Docs Home](knowledge/docs/index.md) to locate the principles, paths, and labs.
