@@ -12,8 +12,8 @@ from urllib.parse import quote, urljoin, urlparse
 
 import yaml
 
-ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-AUDIT = os.path.join(ROOT, "audit")
+ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+AUDIT = os.path.join(ROOT, "experience", "audit")
 GITHUB_API_URL = os.environ.get("GITHUB_API_URL", "https://api.github.com")
 
 logging.basicConfig(level=logging.INFO, format="[%(levelname)s] %(message)s")
