@@ -1,0 +1,1 @@
+../../governance/CONTRIBUTING.es.md

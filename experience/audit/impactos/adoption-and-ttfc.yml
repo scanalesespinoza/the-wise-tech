@@ -1,0 +1,12 @@
+id: adoption-and-ttfc
+kpis:
+  - name: "ttfc_docs_minutes"
+    target: 30
+    direction: "max"
+  - name: "labs_available"
+    target: 3
+    direction: "min"
+evidence_sources:
+  - "README.md"
+  - "knowledge/docs/labs/"
+  - "knowledge/docs/metrics/site-metrics.md"

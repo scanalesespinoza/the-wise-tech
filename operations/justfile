@@ -1,0 +1,31 @@
+set shell := ["bash", "-uc"]
+
+make := "make -f operations/Makefile"
+
+# Alias rápidos al Makefile centralizado en operations/
+install:    run "{{make}} install"
+fmt:        run "{{make}} fmt"
+lint:       run "{{make}} lint"
+test:       run "{{make}} test"
+parity:     run "{{make}} parity"
+docs:       run "{{make}} docs"
+ci:         run "{{make}} ci"
+links:      run "{{make}} verify-links"
+resilience: run "{{make}} resilience-check"
+slos:       run "{{make}} slos"
+budget:     run "{{make}} check-error-budget"
+telemetry:  run "{{make}} telemetry-smoke"
+docs-live:  run "{{make}} docs-live"
+dev-up:     run "{{make}} dev-up"
+dev-down:   run "{{make}} dev-down"
+dev-logs:   run "{{make}} dev-logs"
+dev-status: run "{{make}} dev-status"
+lab-01:     run "{{make}} lab-01"
+lab-02:     run "{{make}} lab-02"
+lab-03:     run "{{make}} lab-03"
+content:    run "{{make}} content-meta"
+security:   run "{{make}} security-scan"
+
+default:
+  @echo "Comandos disponibles:"
+  @echo "  just install|fmt|lint|test|parity|docs|ci|links|resilience|slos|budget|telemetry|lab-01|lab-02|lab-03|content|security"

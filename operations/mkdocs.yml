@@ -1,0 +1,82 @@
+site_name: The Wise Tech
+site_description: Knowledge & implementation for resilient, human-centered technology
+site_url: https://scanalesespinoza.github.io/the-wise-tech
+repo_url: https://github.com/scanalesespinoza/the-wise-tech
+docs_dir: ../knowledge/docs
+
+nav:
+  - Home: index.md
+  - Principles:
+      - Overview: principles/wise-tech-principles.md
+  - Personas:
+      - Consumers: personas/consumers-overview.md
+      - Developers: personas/developers-overview.md
+      - Platform Engineers: personas/platform-engineers-overview.md
+  - Guides:
+      - Content Style Guide: guides/content-style-guide.md
+      - Editorial Workflow: guides/editorial-workflow.md
+      - Versioning Docs: guides/versioning-docs.md
+      - Taxonomy & Tags: guides/taxonomy-tags.md
+      - Dev Environment: guides/dev-environment.md
+      - Quickstart: guides/quickstart.md
+      - Feedback Loops: guides/feedback-loops.md
+      - Postmortems: guides/postmortem-guide.md
+      - Contribution Mentoring: guides/contribution-mentoring.md
+      - Resilience Policies: guides/resilience-policies.md
+      - SLOs & Error Budget: guides/slo-how-to.md
+      - Security (Minimum): guides/security-minima.md
+      - Dev stack (local): guides/dev-stack-local.md
+      - Telemetry (Minimum): guides/telemetry-minima.md
+  - Labs:
+      - Lab 01 — Resilience Basics: labs/lab-01-resilience-basics.md
+      - Lab 02 — Observability Minimum: labs/lab-02-observability-minima.md
+      - Lab 03 — aDevelopment Loop: labs/lab-03-adevelopment-loop.md
+  - Snippets:
+      - Python — Correlation ID: snippets/python-correlation-id.md
+  - CI:
+      - Overview: continuous-integration/index.md
+  - Playbooks:
+      - Developer: playbooks/developer-playbook.md
+      - Platform: playbooks/platform-playbook.md
+  - Paths:
+      - Consumers 30/60/90: paths/consumers-30-60-90.md
+      - Developers 30/60/90: paths/developers-30-60-90.md
+      - Platform 30/60/90: paths/platform-engineers-30-60-90.md
+  - Scenarios:
+      - Payments: scenarios/payments-overview.md
+  - Roadmap:
+      - Overview: roadmap/roadmap.md
+      - PR ideas: roadmap/pr-ideas.md
+
+theme:
+  name: material
+  features:
+    - search.suggest
+    - search.highlight
+    - navigation.top
+    - navigation.indexes
+    - content.action.edit
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: folder
+      languages:
+        - locale: es
+          name: Español
+          default: true
+          build: true
+        - locale: en
+          name: English
+          build: true
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - attr_list
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/scanalesespinoza/the-wise-tech

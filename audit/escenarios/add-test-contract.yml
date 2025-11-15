@@ -1,9 +1,0 @@
-id: add-test-contract
-steps:
-  - "Identificar endpoint o servicio crítico"
-  - "Agregar prueba de contrato en escenarios/tests"
-  - "Actualizar documentación de cobertura"
-expected_artifacts:
-  - "scenarios/payments/tests/"
-  - "docs/templates/labs/evidence-lab-02.md"
-  - "README con sección de pruebas automatizadas"

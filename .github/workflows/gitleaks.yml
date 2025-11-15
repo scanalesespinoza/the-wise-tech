@@ -13,5 +13,5 @@ jobs:
         uses: gitleaks/gitleaks-action@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITLEAKS_CONFIG: ci/gitleaks-allowlist.toml
+          GITLEAKS_CONFIG: systems/ci/gitleaks-allowlist.toml
       # Si prefieres fallar el build ante hallazgos, añade: --exit-code 1

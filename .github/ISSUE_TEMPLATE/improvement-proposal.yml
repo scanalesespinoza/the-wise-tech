@@ -12,7 +12,7 @@ body:
     validations: { required: true }
   - type: input
     id: scope
-    attributes: { label: Alcance, placeholder: "docs/guides/*, scripts/*, platform/*" }
+    attributes: { label: Alcance, placeholder: "knowledge/docs/guides/*, operations/scripts/*, systems/platform/*" }
   - type: checkboxes
     id: kpis
     attributes:

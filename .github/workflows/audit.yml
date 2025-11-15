@@ -9,12 +9,12 @@ on:
     branches:
       - main
     paths:
-      - audit/**
-      - docs/**
-      - mkdocs.yml
+      - experience/audit/**
+      - knowledge/docs/**
+      - operations/mkdocs.yml
       - README.md
-      - Makefile
-      - scripts/**
+      - operations/Makefile
+      - operations/scripts/**
       - .github/workflows/**
 
 jobs:
@@ -43,4 +43,4 @@ jobs:
           python -m pip install --upgrade pip pyyaml
       - name: Run audit
         run: |
-          python scripts/audit-evaluator.py
+          python operations/scripts/audit-evaluator.py

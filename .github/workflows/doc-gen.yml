@@ -20,7 +20,7 @@ jobs:
       - name: Check for changes
         id: git-diff
         run: |
-          if git status --short | grep -qE 'docs/en/docs|docs/es/docs'; then
+          if git status --short | grep -qE 'knowledge/docs/en/docs|knowledge/docs/es/docs'; then
             echo "has_changes=true" >> "$GITHUB_OUTPUT"
           else
             echo "has_changes=false" >> "$GITHUB_OUTPUT"
@@ -30,4 +30,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "docs: update generated catalogs"
-          file_pattern: "docs/en/docs/** docs/es/docs/**"
+          file_pattern: "knowledge/docs/en/docs/** knowledge/docs/es/docs/**"

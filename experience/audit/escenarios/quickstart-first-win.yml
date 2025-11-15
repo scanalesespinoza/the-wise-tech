@@ -1,0 +1,9 @@
+id: quickstart-first-win
+steps:
+  - "Seguir Quickstart del README"
+  - "Ejecutar make -f operations/Makefile ci"
+  - "Correr lab-01 y registrar evidencia"
+expected_artifacts:
+  - "Makefile con target lab-01"
+  - "knowledge/docs/labs/lab-01-resilience-basics.md"
+  - "knowledge/docs/templates/labs/evidence-lab-01.md"
