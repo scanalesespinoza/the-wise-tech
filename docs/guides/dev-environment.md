@@ -7,6 +7,12 @@ tags: ["quickstart","developers","platform-engineers","dx"]
 - **Codespaces/containers**: abre en GitHub Codespaces o `Dev Containers` en VS Code.
 - **Local**: `pip install pre-commit ruff` y `pre-commit install`.
 
+## Componentes del entorno
+- [`dev/`](https://github.com/scanalesespinoza/the-wise-tech/tree/main/dev) — docker compose para OTEL collector, Jaeger y servicios auxiliares.
+- [`.devcontainer/`](https://github.com/scanalesespinoza/the-wise-tech/tree/main/.devcontainer) — definición de contenedor para Codespaces o VS Code.
+- [`scripts/`](https://github.com/scanalesespinoza/the-wise-tech/tree/main/scripts) — utilidades para validaciones (`validate-resilience.py`, `check-links.py`, etc.).
+- [`justfile`](https://github.com/scanalesespinoza/the-wise-tech/blob/main/justfile) / [`Makefile`](https://github.com/scanalesespinoza/the-wise-tech/blob/main/Makefile) — comandos espejo para flujos rápidos.
+
 ## Primeros 5 minutos
 1) `just install` o `make install`
 2) `pre-commit install`

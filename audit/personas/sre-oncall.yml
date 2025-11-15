@@ -4,7 +4,7 @@ goals:
   - "Garantizar cobertura de alertas y SLOs"
   - "Responder incidentes con runbooks claros"
 must_have:
-  - "SLOs versionados en platform/slo/"
+  - "SLOs versionados en scenarios/payments/slo/"
   - "Playbooks y runbooks enlazados desde docs/"
 nice_to_have:
   - "Tableros de métricas o enlaces a observabilidad"

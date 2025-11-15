@@ -21,6 +21,8 @@ auditarse.
 - `docs/`: operational runbooks, observability guides and other
   governance assets. / runbooks operativos, guías de observabilidad y
   otros activos de gobernanza.
+- `policies/`: resilience policies parametrized for the scenario. / políticas de resiliencia parametrizadas para el escenario.
+- `slo/`: service-level objectives and error-budget rules. / objetivos de servicio y reglas de error budget.
 - `tests/`: executable evidence that the scenario behaves as expected. /
   evidencia ejecutable de que el escenario se comporta como se espera.
 

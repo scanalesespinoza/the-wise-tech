@@ -5,5 +5,5 @@ steps:
   - "Actualizar documentación de cobertura"
 expected_artifacts:
   - "scenarios/payments/tests/"
-  - "docs/labs/evidence-templates/evidence-lab-02.md"
+  - "docs/templates/labs/evidence-lab-02.md"
   - "README con sección de pruebas automatizadas"

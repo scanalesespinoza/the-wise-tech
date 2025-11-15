@@ -7,6 +7,6 @@ kpis:
     target: 1
     direction: "min"
 evidence_sources:
-  - "platform/policies/resilience.yml"
+  - "scenarios/payments/policies/resilience.yml"
   - "docs/playbooks/"
-  - "platform/slo/slo-spec.yml"
+  - "scenarios/payments/slo/slo-spec.yml"

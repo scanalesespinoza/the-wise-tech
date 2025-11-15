@@ -63,6 +63,8 @@ def main(path):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Uso: python scripts/validate-slos.py platform/slo/slo-spec.yml")
+        print(
+            "Uso: python scripts/validate-slos.py scenarios/payments/slo/slo-spec.yml"
+        )
         sys.exit(2)
     main(sys.argv[1])

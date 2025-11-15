@@ -19,7 +19,7 @@
 - `make test` → verde.
 
 ## Evidencia
-- Usa `docs/labs/evidence-templates/evidence-lab-03.md`.
+- Usa `docs/templates/labs/evidence-lab-03.md`.
 
 ## What’s next
 - Encadenar con resiliencia (timeouts/retries) o con SLO (impacto percibido).

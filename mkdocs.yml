@@ -32,6 +32,8 @@ nav:
       - Lab 03 — aDevelopment Loop: labs/lab-03-adevelopment-loop.md
   - Snippets:
       - Python — Correlation ID: snippets/python-correlation-id.md
+  - CI:
+      - Overview: continuous-integration/index.md
   - Playbooks:
       - Developer: playbooks/developer-playbook.md
       - Platform: playbooks/platform-playbook.md
@@ -43,6 +45,7 @@ nav:
       - Payments: scenarios/payments-overview.md
   - Roadmap:
       - Overview: roadmap/roadmap.md
+      - PR ideas: roadmap/pr-ideas.md
 
 theme:
   name: material
@@ -56,13 +59,14 @@ theme:
 plugins:
   - search
   - i18n:
+      docs_structure: folder
       languages:
-        - locale: en
-          name: English
-          default: true
-          build: true
         - locale: es
           name: Español
+          default: true
+          build: true
+        - locale: en
+          name: English
           build: true
 
 markdown_extensions:

@@ -70,7 +70,7 @@ Este anexo convierte las salvaguardas de sistemas distribuidos en un plan increm
 
 ### Ganchos de resiliencia operativa
 
-- **Catálogo de réplicas:** Las políticas de primary-backup, réplica activa y quórums viven en `platform/policies/resilience.yml`, cada una con validaciones automáticas de idempotencia y expectativas de estado compartido.
+- **Catálogo de réplicas:** Las políticas de primary-backup, réplica activa y quórums viven en `scenarios/payments/policies/resilience.yml`, cada una con validaciones automáticas de idempotencia y expectativas de estado compartido.
 - **Pruebas de fallos parciales:** Los escenarios en `ci/resilience-lint` y `ci/causality-test` simulan nodos lentos, pérdida de miembros y tormentas de reintentos para asegurar degradaciones controladas.
 - **Gestión de membresía:** `guides/platform-playbook.md` mantiene alineados heartbeats, timeouts y el orden de eventos de grupo con la estrategia de réplica declarada.
 

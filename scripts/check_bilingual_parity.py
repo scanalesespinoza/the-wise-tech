@@ -44,8 +44,9 @@ def main() -> int:
     args = parser.parse_args()
 
     repo_root = Path(__file__).resolve().parents[1]
+    docs_root = repo_root / "docs"
     pairs: list[tuple[Path, Path]] = [
-        (repo_root / "en", repo_root / "es"),
+        (docs_root / "en", docs_root / "es"),
     ]
 
     if args.check_scenarios:

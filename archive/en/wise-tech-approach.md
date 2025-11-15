@@ -70,7 +70,7 @@ This annex translates distributed-system guardrails into Wise Tech’s increment
 
 ### Operational Resilience Hooks
 
-- **Replica catalog:** Primary-backup, active replication, and quorum-based policies are expressed in `platform/policies/resilience.yml`, each with automated validation for idempotency and shared state expectations.
+- **Replica catalog:** Primary-backup, active replication, and quorum-based policies are expressed in `scenarios/payments/policies/resilience.yml`, each with automated validation for idempotency and shared state expectations.
 - **Partial-failure drills:** CI scenarios within `ci/resilience-lint` and `ci/causality-test` simulate slow nodes, member loss, and retry storms to set expectations for graceful degradation.
 - **Membership management:** The `guides/platform-playbook.md` walkthrough keeps heartbeats, timeouts, and group-event ordering in sync with the declared replication strategy.
 

@@ -17,7 +17,7 @@
 - `latency_p95_ms`: valor observado; documenta impacto de tu cambio.
 
 ## Evidencia
-- Usa `docs/labs/evidence-templates/evidence-lab-02.md`.
+- Usa `docs/templates/labs/evidence-lab-02.md`.
 
 ## What’s next
 - Conectar p95 con una acción de resiliencia (timeouts/retries) o con SLO p95.

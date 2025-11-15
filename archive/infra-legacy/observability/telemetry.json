@@ -49,5 +49,5 @@
       ]
     }
   },
-  "runbook": "en/docs/recipes/observability.md"
+  "runbook": "docs/guides/telemetry-minima.md"
 }

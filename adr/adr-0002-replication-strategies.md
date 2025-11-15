@@ -10,7 +10,7 @@ Los servicios distribuídos han adoptado diferentes patrones de réplica sin un 
 ## Decisión
 
 1. El catálogo soportado incluye **Primary-Backup**, **Active Replication** (state-machine) y **Quórums** (lectura/escritura).
-2. Cada servicio declara su estrategia en `platform/policies/consistency.yml` y los parámetros específicos (timeouts, reintentos, quórums) en `platform/policies/resilience.yml`.
+2. Cada servicio declara su estrategia en `platform/policies/consistency.yml` y los parámetros específicos (timeouts, reintentos, quórums) en `scenarios/<servicio>/policies/resilience.yml` (p.ej. `scenarios/payments/policies/resilience.yml`).
 3. La plataforma valida que los servicios que eligen réplica activa declaren handlers idempotentes y orden determinista; los que usan quórums especifican tamaños de lectura/escritura consistentes.
 4. Se documentan guías de degradación aceptable (p.ej., primary-backup degrada a lectura, quórums ajustan tamaños dinámicamente).
 5. El pipeline de CI ejecuta escenarios de fallos parciales para cada estrategia.
