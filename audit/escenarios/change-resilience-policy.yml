@@ -1,9 +1,0 @@
-id: change-resilience-policy
-steps:
-  - "Revisar scenarios/payments/policies/resilience.yml"
-  - "Actualizar owners y políticas de mitigación"
-  - "Ejecutar scripts/validate-resilience.py"
-expected_artifacts:
-  - "scenarios/payments/policies/resilience.yml"
-  - "scripts/validate-resilience.py"
-  - "docs/playbooks/resilience/"

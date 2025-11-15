@@ -1,0 +1,10 @@
+id: platform-engineer
+age: 30-40
+goals:
+  - "Revisar políticas de resiliencia y automatizaciones"
+  - "Integrar pipelines de observabilidad"
+must_have:
+  - "Policies en experience/scenarios/payments/policies con owners definidos"
+  - "Scripts reproducibles para validaciones técnicas"
+nice_to_have:
+  - "Diagramas de arquitectura en knowledge/docs/"

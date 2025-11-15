@@ -22,11 +22,11 @@ repos:
     hooks:
       - id: md-internal-links
         name: md-internal-links
-        entry: python scripts/check-links.py
+        entry: python operations/scripts/check-links.py
         language: system
         files: \.(md|MD)$
       - id: docs-front-matter
         name: docs-front-matter
-        entry: python scripts/validate-content-metadata.py
+        entry: python operations/scripts/validate-content-metadata.py
         language: system
-        files: ^docs/.*\.md$
+        files: ^knowledge/docs/.*\.md$

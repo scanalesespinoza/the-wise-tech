@@ -17,4 +17,4 @@ jobs:
       - name: Validate PR feedback references
         env:
           PR_BODY: ${{ steps.body.outputs.body }}
-        run: python scripts/validate-pr-feedback-references.py
+        run: python operations/scripts/validate-pr-feedback-references.py

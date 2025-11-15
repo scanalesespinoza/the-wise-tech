@@ -16,7 +16,7 @@ jobs:
           python-version: '3.x'
       - name: CI (local equivalence)
         run: |
-          make ci
-          make resilience-check
-          make slos
-          make check-error-budget
+          make -f operations/Makefile ci
+          make -f operations/Makefile resilience-check
+          make -f operations/Makefile slos
+          make -f operations/Makefile check-error-budget

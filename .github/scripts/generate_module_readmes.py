@@ -59,7 +59,7 @@ def write_readme(config: SectionConfig) -> None:
 
 def main() -> None:
     configs = []
-    docs_root = REPO_ROOT / "docs"
+    docs_root = REPO_ROOT / "knowledge" / "docs"
     for language in LANGUAGES:
         lang_root = docs_root / language / "docs"
         configs.extend(

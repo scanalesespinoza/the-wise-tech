@@ -3,17 +3,17 @@ on:
   pull_request:
     paths:
       - '**.md'
-      - 'mkdocs.yml'
-      - 'docs/**'
-      - 'scripts/check-links.py'
+      - 'operations/mkdocs.yml'
+      - 'knowledge/docs/**'
+      - 'operations/scripts/check-links.py'
       - '.github/workflows/docs-and-links.yml'
   push:
     branches: [ main ]
     paths:
       - '**.md'
-      - 'mkdocs.yml'
-      - 'docs/**'
-      - 'scripts/check-links.py'
+      - 'operations/mkdocs.yml'
+      - 'knowledge/docs/**'
+      - 'operations/scripts/check-links.py'
 jobs:
   docs_and_links:
     runs-on: ubuntu-latest
@@ -29,8 +29,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install mkdocs mkdocs-material mkdocs-static-i18n pyyaml
       - name: Build docs
-        run: mkdocs build --strict
+        run: mkdocs build --strict -f operations/mkdocs.yml
       - name: Check links
-        run: python scripts/check-links.py
+        run: python operations/scripts/check-links.py
       - name: Validate content metadata (front-matter + See also)
-        run: python scripts/validate-content-metadata.py
+        run: python operations/scripts/validate-content-metadata.py

@@ -3,10 +3,10 @@ name: Knowledge Validate
 on:
   pull_request:
     paths:
-      - 'docs/knowledge/**'
-      - 'scripts/validate-knowledge.py'
+      - 'knowledge/docs/knowledge/**'
+      - 'operations/scripts/validate-knowledge.py'
       - '.github/workflows/knowledge-validate.yml'
-      - 'docs/personas/**'
+      - 'knowledge/docs/personas/**'
 
 jobs:
   validate:
@@ -21,6 +21,6 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements-dev.txt || true
+          pip install -r operations/requirements-dev.txt || true
       - name: Validate knowledge base
-        run: python scripts/validate-knowledge.py
+        run: python operations/scripts/validate-knowledge.py

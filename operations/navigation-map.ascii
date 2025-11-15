@@ -1,0 +1,13 @@
+/ (README)
+├─ knowledge/ — principles, personas, guides, labs, roadmap
+│  ├─ Principles → knowledge/docs/principles/
+│  ├─ Guides → knowledge/docs/guides/
+│  ├─ Labs → knowledge/docs/labs/
+│  └─ Roadmap → knowledge/docs/roadmap/roadmap.md
+├─ experience/ — audits, personas, living scenarios
+│  └─ Payments Scenario → experience/scenarios/payments/
+├─ systems/ — platform policies, infra experiments, local dev stack, tests
+│  ├─ Platform → systems/platform/
+│  └─ Dev stack → systems/dev/
+├─ operations/ — automation toolkit (Makefile, scripts, MkDocs, requirements)
+└─ governance/ — contribution guides & changelog

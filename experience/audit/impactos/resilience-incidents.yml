@@ -1,0 +1,12 @@
+id: resilience-incidents
+kpis:
+  - name: "mttr_minutes"
+    target: 45
+    direction: "max"
+  - name: "incident_playbooks"
+    target: 1
+    direction: "min"
+evidence_sources:
+  - "experience/scenarios/payments/policies/resilience.yml"
+  - "knowledge/docs/playbooks/"
+  - "experience/scenarios/payments/slo/slo-spec.yml"
