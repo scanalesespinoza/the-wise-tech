@@ -8,13 +8,131 @@ import sys
 import urllib.error
 import urllib.request
 from collections import OrderedDict
-from typing import Dict, List, Optional
+from dataclasses import dataclass, field
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Dict, List, Optional, Sequence
 from urllib.parse import quote, urljoin, urlparse
 
 import yaml
 
+try:
+    from git import InvalidGitRepositoryError, Repo
+except ImportError:  # pragma: no cover - GitPython is optional during tests
+    InvalidGitRepositoryError = Repo = None  # type: ignore
+
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 AUDIT = os.path.join(ROOT, "experience", "audit")
+CONTENT_DIRECTORIES: Sequence[str] = (
+    "knowledge",
+    "experience",
+    "implementation",
+    "governance",
+)
+AUDIT_REPORT_PATH = os.path.join(ROOT, "audit-report.md")
+ISSUES_REPORT_PATH = os.path.join(ROOT, "docs-with-issues.md")
+JSON_REPORT_PATH = os.path.join(ROOT, "audit-report.json")
+
+CRITERIA_CONFIG = OrderedDict(
+    [
+        (
+            "purpose",
+            {
+                "label": "🎯 Propósito explícito",
+                "keywords": [
+                    "purpose",
+                    "objetivo",
+                    "goal",
+                    "problem",
+                    "reto",
+                    "desafío",
+                    "why",
+                ],
+                "suggestion": "Explica qué problema resuelve el documento y por qué importa.",
+            },
+        ),
+        (
+            "audience",
+            {
+                "label": "👥 Audiencia definida",
+                "keywords": [
+                    "audience",
+                    "para quién",
+                    "personas",
+                    "rol",
+                    "stakeholder",
+                    "equipo",
+                    "quién",
+                ],
+                "suggestion": "Alinea el contenido con la persona, rol o contexto que debe usarlo.",
+            },
+        ),
+        (
+            "behavior",
+            {
+                "label": "🧠 Comportamiento esperado",
+                "keywords": [
+                    "should",
+                    "debe",
+                    "debería",
+                    "expected",
+                    "comportamiento",
+                    "cambio",
+                    "habito",
+                    "behavior",
+                    "adoptar",
+                ],
+                "suggestion": "Describe qué cambio o decisión concreta debe ocurrir después de leerlo.",
+            },
+        ),
+        (
+            "applicability",
+            {
+                "label": "⚙️ Aplicabilidad práctica",
+                "keywords": [
+                    "paso",
+                    "step",
+                    "cómo",
+                    "implement",
+                    "usar",
+                    "aplicar",
+                    "checklist",
+                    "run",
+                ],
+                "suggestion": "Incluye pasos accionables, checklists o ejemplos rápidos para ejecutarlo.",
+                "type": "applicability",
+            },
+        ),
+        (
+            "reflection",
+            {
+                "label": "💡 Reflexión / sabiduría",
+                "keywords": [
+                    "why",
+                    "principio",
+                    "reflexión",
+                    "aprendizaje",
+                    "sabiduría",
+                    "insight",
+                    "porque",
+                    "razón",
+                ],
+                "suggestion": "Conecta el qué con el por qué/para qué y rescata aprendizajes clave.",
+            },
+        ),
+        (
+            "consistency",
+            {
+                "label": "✍️ Consistencia visual",
+                "keywords": [],
+                "suggestion": "Revisa encabezados, emojis y enlaces para que tengan un estilo uniforme.",
+                "type": "consistency",
+            },
+        ),
+    ]
+)
+
+EMOJI_PATTERN = re.compile(r"[\U0001F300-\U0001FAFF]")
 GITHUB_API_URL = os.environ.get("GITHUB_API_URL", "https://api.github.com")
 
 logging.basicConfig(level=logging.INFO, format="[%(levelname)s] %(message)s")
@@ -23,6 +141,448 @@ logging.basicConfig(level=logging.INFO, format="[%(levelname)s] %(message)s")
 def load_yaml(path):
     with open(path, "r", encoding="utf-8") as f:
         return yaml.safe_load(f)
+
+
+@dataclass
+class DocumentAudit:
+    path: str
+    title: str
+    scores: Dict[str, int]
+    missing_sections: List[str] = field(default_factory=list)
+    suggestions: List[str] = field(default_factory=list)
+    issues: List[str] = field(default_factory=list)
+    last_modified: str = "N/A"
+
+    @property
+    def total_score(self) -> int:
+        return sum(self.scores.values())
+
+    @property
+    def max_score(self) -> int:
+        return len(CRITERIA_CONFIG) * 5
+
+    @property
+    def completion_ratio(self) -> float:
+        if not self.max_score:
+            return 0.0
+        return self.total_score / self.max_score
+
+    @property
+    def status_icon(self) -> str:
+        ratio = self.completion_ratio
+        if ratio >= 0.85:
+            return "🟢"
+        if ratio >= 0.6:
+            return "🟡"
+        return "🔴"
+
+    def to_dict(self) -> Dict[str, object]:
+        return {
+            "path": self.path,
+            "title": self.title,
+            "scores": self.scores,
+            "missing_sections": self.missing_sections,
+            "suggestions": self.suggestions,
+            "issues": self.issues,
+            "total_score": self.total_score,
+            "max_score": self.max_score,
+            "status": self.status_icon,
+            "last_modified": self.last_modified,
+        }
+
+
+def _score_with_icon(value: int) -> str:
+    if value >= 4:
+        icon = "✅"
+    elif value == 3:
+        icon = "🟡"
+    else:
+        icon = "❌"
+    return f"{icon} {value}"
+
+
+def _ratio_to_score(ratio: float) -> int:
+    if ratio >= 0.85:
+        return 5
+    if ratio >= 0.6:
+        return 4
+    if ratio >= 0.4:
+        return 3
+    if ratio >= 0.2:
+        return 2
+    return 1
+
+
+def _utcnow() -> datetime:
+    return datetime.now(timezone.utc)
+
+
+def _utc_timestamp() -> str:
+    return _utcnow().isoformat().replace("+00:00", "Z")
+
+
+def _try_load_repo():
+    if Repo is None:
+        logging.warning("GitPython no disponible; se utilizará git CLI para fechas.")
+        return None
+    try:
+        return Repo(ROOT)
+    except InvalidGitRepositoryError:
+        logging.warning("No se pudo inicializar Repo desde %s", ROOT)
+        return None
+
+
+def _last_modified(repo, rel_path: str) -> str:
+    rel_posix = Path(rel_path).as_posix()
+    if repo is not None:
+        try:
+            commit = next(repo.iter_commits(paths=rel_posix, max_count=1))
+        except StopIteration:
+            commit = None
+        if commit is not None:
+            return datetime.fromtimestamp(commit.committed_date).strftime("%Y-%m-%d")
+
+    timestamp = _run_git_command(["log", "-1", "--format=%ct", "--", rel_posix])
+    if timestamp:
+        try:
+            return datetime.utcfromtimestamp(int(timestamp)).strftime("%Y-%m-%d")
+        except ValueError:
+            pass
+    return "N/A"
+
+
+def _collect_markdown_documents() -> List[str]:
+    documents: List[str] = []
+    for directory in CONTENT_DIRECTORIES:
+        root_dir = os.path.join(ROOT, directory)
+        if not os.path.isdir(root_dir):
+            continue
+        for base, _, files in os.walk(root_dir):
+            for name in files:
+                if not name.endswith(".md"):
+                    continue
+                rel_path = os.path.relpath(os.path.join(base, name), ROOT)
+                documents.append(rel_path)
+    return sorted(documents)
+
+
+def _parse_markdown_structure(path: str, text: str) -> Dict[str, object]:
+    lines = text.splitlines()
+    headings: List[Dict[str, object]] = []
+    list_items = 0
+    ordered_items = 0
+    checkbox_items = 0
+    code_blocks = 0
+    in_code = False
+    paragraphs: List[str] = []
+    buffer: List[str] = []
+    emoji_headings = 0
+    broken_links: List[str] = []
+    heading_texts: List[str] = []
+    base_dir = os.path.dirname(os.path.join(ROOT, path))
+    link_pattern = re.compile(r"\[(?P<label>[^\]]+)\]\((?P<target>[^)]+)\)")
+
+    def _flush_paragraph():
+        nonlocal buffer
+        if buffer:
+            paragraphs.append(" ".join(buffer).strip())
+            buffer = []
+
+    def _collect_links(line: str):
+        for match in link_pattern.finditer(line):
+            target = match.group("target").strip()
+            if not target or target.startswith("http") or target.startswith("mailto"):
+                continue
+            if target.startswith("#"):
+                continue
+            local_target = target.split("#", 1)[0]
+            if not local_target:
+                continue
+            resolved = os.path.normpath(os.path.join(base_dir, local_target))
+            if not os.path.exists(resolved):
+                broken_links.append(
+                    f"Enlace roto: {match.group('label')} -> {target}"
+                )
+
+    for line in lines:
+        stripped = line.strip()
+        if stripped.startswith("```") or stripped.startswith("~~~"):
+            in_code = not in_code
+            if in_code:
+                code_blocks += 1
+            continue
+        if in_code:
+            continue
+        heading_match = re.match(r"^(#{1,6})\s+(.*)", line)
+        if heading_match:
+            _flush_paragraph()
+            level = len(heading_match.group(1))
+            text_value = heading_match.group(2).strip()
+            headings.append({"level": level, "text": text_value})
+            heading_texts.append(text_value.lower())
+            if EMOJI_PATTERN.search(text_value):
+                emoji_headings += 1
+            _collect_links(line)
+            continue
+        _collect_links(line)
+        list_match = re.match(r"^\s*([-*+]\s+|\d+\.\s+)(.*)", line)
+        if list_match:
+            content = list_match.group(2).strip()
+            if list_match.group(1).strip().endswith("."):
+                ordered_items += 1
+            else:
+                list_items += 1
+            if content.startswith("[ ") or content.startswith("[x"):
+                checkbox_items += 1
+            paragraphs.append(content)
+            continue
+        if not stripped:
+            _flush_paragraph()
+        else:
+            buffer.append(stripped)
+
+    _flush_paragraph()
+
+    return {
+        "headings": headings,
+        "heading_texts": heading_texts,
+        "paragraphs": paragraphs,
+        "list_items": list_items,
+        "ordered_items": ordered_items,
+        "checkbox_items": checkbox_items,
+        "code_blocks": code_blocks,
+        "emoji_headings": emoji_headings,
+        "broken_links": broken_links,
+        "lower_text": text.lower(),
+        "word_count": len(text.split()),
+    }
+
+
+def _keyword_score(structure: Dict[str, object], keywords: List[str]) -> float:
+    if not keywords:
+        return 0.0
+    lowered = structure.get("lower_text", "")
+    matches = 0
+    normalized = {kw.lower() for kw in keywords}
+    for keyword in normalized:
+        if keyword and keyword in lowered:
+            matches += 1
+    ratio = matches / max(1, len(normalized))
+    heading_texts = structure.get("heading_texts", [])
+    if heading_texts:
+        for heading in heading_texts:
+            if any(keyword in heading for keyword in normalized):
+                ratio = min(1.0, ratio + 0.2)
+                break
+    return ratio
+
+
+def _evaluate_consistency(structure: Dict[str, object]) -> float:
+    penalty = 0.0
+    headings: List[Dict[str, object]] = structure.get("headings", [])
+    if not headings or headings[0].get("level") != 1:
+        penalty += 0.3
+    heading_levels = {item.get("level") for item in headings if item.get("level")}
+    if len(heading_levels) > 3:
+        penalty += 0.2
+    if structure.get("emoji_headings", 0) == 0:
+        penalty += 0.1
+    broken_links = structure.get("broken_links", [])
+    if broken_links:
+        penalty += min(0.4, 0.1 * len(broken_links))
+    ratio = max(0.0, 1.0 - penalty)
+    return ratio
+
+
+def _evaluate_applicability(structure: Dict[str, object], keywords: List[str]) -> float:
+    ratio = _keyword_score(structure, keywords)
+    action_signals = (
+        structure.get("list_items", 0)
+        + structure.get("ordered_items", 0)
+        + structure.get("checkbox_items", 0)
+        + structure.get("code_blocks", 0)
+    )
+    if action_signals >= 6:
+        ratio = max(ratio, 1.0)
+    elif action_signals >= 4:
+        ratio = max(ratio, 0.75)
+    elif action_signals >= 2:
+        ratio = max(ratio, 0.5)
+    elif action_signals >= 1:
+        ratio = max(ratio, 0.3)
+    return min(1.0, ratio)
+
+
+def _evaluate_document(path: str, repo) -> Optional[DocumentAudit]:
+    abs_path = os.path.join(ROOT, path)
+    try:
+        with open(abs_path, "r", encoding="utf-8") as handle:
+            content = handle.read()
+    except FileNotFoundError:
+        logging.warning("No se pudo leer %s", abs_path)
+        return None
+
+    if not content.strip():
+        logging.info("%s está vacío, se omite en el resumen", path)
+        return None
+
+    structure = _parse_markdown_structure(path, content)
+    scores: Dict[str, int] = {}
+    missing: List[str] = []
+    suggestions: List[str] = []
+    issues: List[str] = list(structure.get("broken_links", []))
+
+    for key, config in CRITERIA_CONFIG.items():
+        ratio = 0.0
+        if config.get("type") == "consistency":
+            ratio = _evaluate_consistency(structure)
+        elif config.get("type") == "applicability":
+            ratio = _evaluate_applicability(structure, config.get("keywords", []))
+        else:
+            ratio = _keyword_score(structure, config.get("keywords", []))
+        score = _ratio_to_score(ratio)
+        scores[key] = score
+        if score <= 2:
+            missing.append(config["label"])
+        if score <= 3 and config.get("suggestion"):
+            suggestions.append(f"{config['label']}: {config['suggestion']}")
+
+    title = next(
+        (heading["text"] for heading in structure.get("headings", []) if heading),
+        os.path.basename(path),
+    )
+    last_modified = _last_modified(repo, path)
+    return DocumentAudit(
+        path=path,
+        title=title,
+        scores=scores,
+        missing_sections=missing,
+        suggestions=suggestions,
+        issues=issues,
+        last_modified=last_modified,
+    )
+
+
+def _render_audit_report(reports: List[DocumentAudit]) -> str:
+    if not reports:
+        return "# Content Audit Report\n\nNo se encontraron documentos para auditar."
+
+    generated = _utcnow().strftime("%Y-%m-%d %H:%M UTC")
+    headers = [
+        "Documento",
+        "Última edición",
+        *[config["label"] for config in CRITERIA_CONFIG.values()],
+        "Total",
+        "Estado",
+        "Notas",
+    ]
+    lines = ["# Content Audit Report", "", f"Generado: {generated}", ""]
+    lines.append("| " + " | ".join(headers) + " |")
+    lines.append("| " + " | ".join(["---"] * len(headers)) + " |")
+    max_score = len(CRITERIA_CONFIG) * 5
+
+    for report in reports:
+        row = [f"[{report.path}]({report.path})", report.last_modified]
+        for key in CRITERIA_CONFIG.keys():
+            row.append(_score_with_icon(report.scores.get(key, 0)))
+        row.append(f"{report.total_score}/{max_score}")
+        row.append(report.status_icon)
+        note = ", ".join(report.missing_sections[:1] + report.issues[:1])
+        row.append(note or "Listo")
+        lines.append("| " + " | ".join(row) + " |")
+
+    lines.append("")
+    for report in reports:
+        lines.append(f"## {report.title} (`{report.path}`)")
+        lines.append(
+            f"- Puntaje: {report.status_icon} {report.total_score}/{max_score}"
+        )
+        lines.append(f"- Última edición: {report.last_modified}")
+        if report.missing_sections:
+            lines.append("- Secciones a reforzar:")
+            for item in report.missing_sections:
+                lines.append(f"  - {item}")
+        if report.suggestions:
+            lines.append("- Sugerencias rápidas:")
+            for suggestion in report.suggestions:
+                lines.append(f"  - {suggestion}")
+        if report.issues:
+            lines.append("- Problemas detectados:")
+            for issue in report.issues:
+                lines.append(f"  - {issue}")
+        lines.append("")
+
+    return "\n".join(lines)
+
+
+def _render_docs_with_issues(reports: List[DocumentAudit]) -> str:
+    pending = [
+        report
+        for report in reports
+        if report.missing_sections or report.issues or report.suggestions
+    ]
+    if not pending:
+        return "# Docs with issues\n\nTodo está alineado."
+
+    generated = _utcnow().strftime("%Y-%m-%d %H:%M UTC")
+    lines = ["# Docs with issues", "", f"Generado: {generated}", ""]
+    max_score = len(CRITERIA_CONFIG) * 5
+    for report in pending:
+        lines.append(f"## {report.title} (`{report.path}`)")
+        lines.append(f"- Estado: {report.status_icon} {report.total_score}/{max_score}")
+        lines.append(f"- Última edición: {report.last_modified}")
+        for item in report.missing_sections:
+            lines.append(f"- [ ] Profundizar en {item.lower()}.")
+        for suggestion in report.suggestions:
+            lines.append(f"- [ ] {suggestion}")
+        for issue in report.issues:
+            lines.append(f"- [ ] {issue}")
+        lines.append("")
+    return "\n".join(lines)
+
+
+def _write_content_audit_reports(reports: List[DocumentAudit]) -> Dict[str, str]:
+    if not reports:
+        return {}
+    audit_md = _render_audit_report(reports)
+    issues_md = _render_docs_with_issues(reports)
+    with open(AUDIT_REPORT_PATH, "w", encoding="utf-8") as handle:
+        handle.write(audit_md)
+    with open(ISSUES_REPORT_PATH, "w", encoding="utf-8") as handle:
+        handle.write(issues_md)
+    payload = {
+        "generated_at": _utc_timestamp(),
+        "max_score": len(CRITERIA_CONFIG) * 5,
+        "documents": [report.to_dict() for report in reports],
+    }
+    with open(JSON_REPORT_PATH, "w", encoding="utf-8") as handle:
+        json.dump(payload, handle, ensure_ascii=False, indent=2)
+    return {
+        "audit": os.path.relpath(AUDIT_REPORT_PATH, ROOT),
+        "issues": os.path.relpath(ISSUES_REPORT_PATH, ROOT),
+        "json": os.path.relpath(JSON_REPORT_PATH, ROOT),
+    }
+
+
+def run_content_audit() -> Dict[str, object]:
+    documents = _collect_markdown_documents()
+    if not documents:
+        logging.info("No hay documentos markdown bajo las carpetas objetivo.")
+        return {}
+    repo = _try_load_repo()
+    reports: List[DocumentAudit] = []
+    for doc in documents:
+        report = _evaluate_document(doc, repo)
+        if report:
+            reports.append(report)
+    if not reports:
+        return {}
+    outputs = _write_content_audit_reports(reports)
+    return {
+        "documents": [report.to_dict() for report in reports],
+        "generated_at": _utc_timestamp(),
+        "reports": outputs,
+    }
 
 
 def file_contains(path, substrings):
@@ -950,6 +1510,7 @@ def main():
     inputs = summarize_audit_inputs()
     changes = collect_change_summary()
     roadmap = extract_roadmap_context()
+    content_audit = run_content_audit()
 
     summary = {
         "score": score,
@@ -962,6 +1523,8 @@ def main():
         summary["changes"] = changes
     if roadmap:
         summary["roadmap"] = roadmap
+    if content_audit:
+        summary["content_audit"] = content_audit
     summary["failing_rules"] = [
         item.get("rule", "unknown") for item in breakdown if not item.get("ok", False)
     ]
