@@ -1,3 +1,13 @@
+## 🎯 Purpose
+
+## 👥 Audience
+
+## 🤔 When to use it
+
+## 🧠 What behavior should this enable?
+
+## 💡 Why this matters (wisdom)
+
 # Changelog
 
 ## feat(docs): restructure IA + one-page nav

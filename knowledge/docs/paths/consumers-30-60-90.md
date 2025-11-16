@@ -2,6 +2,17 @@
 title: "Consumers — 30/60/90"
 tags: ["consumers", "paths", "simplicity"]
 ---
+
+## 🎯 Purpose
+
+## 👥 Audience
+
+## 🤔 When to use it
+
+## 🧠 What behavior should this enable?
+
+## 💡 Why this matters (wisdom)
+
 ## Propósito
 Enmarca cómo Consumers — 30/60/90 ayuda a mantener decisiones alineadas con The Wise Tech.
 
@@ -75,4 +86,3 @@ Consúltalo cuando requieras referencias inmediatas para Consumers — 30/60/90 
 💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
-
