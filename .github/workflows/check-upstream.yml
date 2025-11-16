@@ -23,6 +23,7 @@ jobs:
         env:
           DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
           UPSTREAM_URL: https://github.com/scanalesespinoza/the-wise-tech.git
+          REPO_SLUG: ${{ github.repository }}
         run: |
           set -euo pipefail
           DEFAULT_BRANCH=${DEFAULT_BRANCH:-main}
@@ -44,20 +45,20 @@ jobs:
           LOCAL_TAG=$(git describe --tags --abbrev=0 "$LOCAL_REF" 2>/dev/null || echo "none")
           git diff --stat "$LOCAL_REF" "$UPSTREAM_REF" > upstream-diff.txt
           cat <<REPORT > issue-body.md
-### Upstream template update detected
+          ### Upstream template update detected
 
-- Local head: $LOCAL_HEAD
-- Upstream head: $UPSTREAM_HEAD
-- Latest local tag: $LOCAL_TAG
-- Latest upstream tag: $UPSTREAM_TAG
+          - Local head: $LOCAL_HEAD
+          - Upstream head: $UPSTREAM_HEAD
+          - Latest local tag: $LOCAL_TAG
+          - Latest upstream tag: $UPSTREAM_TAG
 
-**Diff summary**
-```
-$(cat upstream-diff.txt)
-```
+          **Diff summary**
+          ```
+          $(cat upstream-diff.txt)
+          ```
 
-Review [UPSTREAM_CHANGES.md](https://github.com/${{ github.repository }}/blob/${DEFAULT_BRANCH}/UPSTREAM_CHANGES.md) for the curated changelog before syncing.
-REPORT
+          Review [UPSTREAM_CHANGES.md](https://github.com/${REPO_SLUG}/blob/${DEFAULT_BRANCH}/UPSTREAM_CHANGES.md) for the curated changelog before syncing.
+          REPORT
           echo "needs_update=true" >> "$GITHUB_OUTPUT"
           echo "upstream_tag=$UPSTREAM_TAG" >> "$GITHUB_OUTPUT"
 
@@ -73,7 +74,8 @@ REPORT
             const upstreamTag = process.env.UPSTREAM_TAG || 'new commits';
             const title = `${titleBase} (${upstreamTag})`;
             const { owner, repo } = context.repo;
-            const { data: openIssues } = await github.rest.issues.listForRepo({ owner, repo, state: 'open', per_page: 100 });
+            const listParams = { owner, repo, state: 'open', per_page: 100 };
+            const { data: openIssues } = await github.rest.issues.listForRepo(listParams);
             const existing = openIssues.find((issue) => issue.title.startsWith(titleBase));
             if (existing) {
               await github.rest.issues.createComment({ owner, repo, issue_number: existing.number, body });

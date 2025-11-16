@@ -125,12 +125,15 @@ jobs:
                     }
                   }
 
-                  if (missing.length > 0) {
-                    core.setFailed(
-                      `Commit ${commit.id} referencing issue #${issueNumber} is missing expected file updates: ${missing.join(', ')}`,
-                    );
-                    return;
-                  }
+                    if (missing.length > 0) {
+                      const missingSummary = missing.join(', ');
+                      const failureMessage = [
+                        `Commit ${commit.id} referencing issue #${issueNumber}`,
+                        `is missing expected file updates: ${missingSummary}`,
+                      ].join(' ');
+                      core.setFailed(failureMessage);
+                      return;
+                    }
                 } else {
                   core.info(`Issue #${issueNumber} does not include scope entries. Skipping file validation.`);
                 }
@@ -147,14 +150,13 @@ jobs:
 
                   issueClosed = true;
                 } catch (error) {
-                  if (error.status === 403) {
-                    core.notice(
-                      [
+                    if (error.status === 403) {
+                      const noticeLines = [
                         `Insufficient permissions to close issue #${issueNumber}. Skipping closure.`,
                         'Grant the workflow write access to issues under Settings → Actions → General → Workflow permissions,',
                         'or provide a custom token with at least triage access via secrets.GITHUB_TOKEN.',
-                      ].join(' '),
-                    );
+                      ];
+                      core.notice(noticeLines.join(' '));
                     continue;
                   } else {
                     throw error;
