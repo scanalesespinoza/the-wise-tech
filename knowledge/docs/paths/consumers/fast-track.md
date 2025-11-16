@@ -45,6 +45,13 @@ Este atajo es para usuarios que quieren un resultado visible en menos de una hor
 - Acceso al repositorio `the-wise-tech` en GitHub.
 - Plantilla `user-experience` disponible en Issues.
 - Tiempo de foco de 10 minutos con los materiales de consumidores abiertos.
+
+## See also / Ver también
+
+- [Consumers — 30/60/90](../consumers-30-60-90.md)
+- [Consumers overview](../../personas/consumers-overview.md)
+- [Quickstart](../../guides/quickstart.md)
+- [Content style guide](../../guides/content-style-guide.md)
 ---
 Última modificación: 2025-11-16
 

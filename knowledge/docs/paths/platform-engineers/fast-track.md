@@ -46,6 +46,13 @@ Atajo diseñado para probar la plataforma mínima antes de continuar con [Platfo
 - `make`, `git` y acceso local a los scripts de operaciones.
 - Permisos para editar políticas dentro del repositorio.
 - Plantilla de issues para documentar experimentos de plataforma.
+
+## See also / Ver también
+
+- [Platform Engineers — 30/60/90](../platform-engineers-30-60-90.md)
+- [Platform Playbook](../../playbooks/platform-playbook.md)
+- [Resilience policies guide](../../guides/resilience-policies.md)
+- [Content style guide](../../guides/content-style-guide.md)
 ---
 Última modificación: 2025-11-16
 

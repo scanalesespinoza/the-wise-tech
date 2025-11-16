@@ -47,6 +47,13 @@ Prototipo exprés para lanzar tu primer aporte técnico antes de seguir la ruta 
 - `git`, `make` y acceso a GitHub para abrir PRs.
 - Acceso al repositorio `the-wise-tech` con permisos de lectura/escritura.
 - Tiempo de foco de 10 minutos sin interrupciones.
+
+## See also / Ver también
+
+- [Developers — 30/60/90](../developers-30-60-90.md)
+- [Developer Playbook](../../playbooks/developer-playbook.md)
+- [Quickstart](../../guides/quickstart.md)
+- [Content style guide](../../guides/content-style-guide.md)
 ---
 Última modificación: 2025-11-16
 
