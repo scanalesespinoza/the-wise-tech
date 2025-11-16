@@ -23,7 +23,9 @@ FEEDBACK_BLOCK = (
     "💬 [Deja tu comentario o sugerencia aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)\n"
     "---\n"
 )
-FEEDBACK_IDENTIFIER = "https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml"
+FEEDBACK_IDENTIFIER = (
+    "https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml"
+)
 
 
 @dataclass
@@ -82,7 +84,9 @@ def generate_context_status_report(entries: List[ContextStatus]) -> None:
     if complete:
         lines.extend(f"- {path}" for path in complete)
     else:
-        lines.append("- Ningún archivo contaba con todas las secciones antes de esta ejecución.")
+        lines.append(
+            "- Ningún archivo contaba con todas las secciones antes de esta ejecución."
+        )
     template_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
