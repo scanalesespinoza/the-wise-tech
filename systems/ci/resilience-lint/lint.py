@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Lint para políticas de resiliencia: valida rangos y consistencia básica."""
+"""Lint for resilience policies that validates ranges and basic consistency."""
 
 from __future__ import annotations
 
@@ -15,14 +15,14 @@ def load() -> dict:
     try:
         return json.loads(POLICY_PATH.read_text(encoding="utf-8"))
     except FileNotFoundError:
-        raise SystemExit(f"archivo no encontrado: {POLICY_PATH}")
+        raise SystemExit(f"file not found: {POLICY_PATH}")
     except json.JSONDecodeError as exc:
-        raise SystemExit(f"{POLICY_PATH} no es JSON/YAML válido: {exc}")
+        raise SystemExit(f"{POLICY_PATH} is not valid JSON/YAML: {exc}")
 
 
 def ensure_positive(value: int | float, label: str, errors: list[str]) -> None:
     if value <= 0:
-        errors.append(f"{label} debe ser mayor a 0, obtenido {value}")
+        errors.append(f"{label} must be greater than 0, found {value}")
 
 
 def lint() -> int:
@@ -34,16 +34,16 @@ def lint() -> int:
     for key, value in timeouts.items():
         ensure_positive(value, f"timeouts.{key}", errors)
     if timeouts.get("max_request_ms", 0) < timeouts.get("default_request_ms", 0):
-        errors.append("max_request_ms debe ser >= default_request_ms")
+        errors.append("max_request_ms must be >= default_request_ms")
 
     retries = data.get("retries", {})
     for name, policy in retries.items():
         attempts = policy.get("max_attempts", 0)
         backoff = policy.get("backoff_ms", -1)
         if attempts < 1:
-            errors.append(f"retries.{name}.max_attempts debe ser >= 1")
+            errors.append(f"retries.{name}.max_attempts must be >= 1")
         if backoff < 0:
-            errors.append(f"retries.{name}.backoff_ms no puede ser negativo")
+            errors.append(f"retries.{name}.backoff_ms cannot be negative")
 
     quorums = data.get("quorums", {})
     total_nodes = quorums.get("total_nodes", 0)
@@ -51,16 +51,16 @@ def lint() -> int:
     read_min = quorums.get("read_minimum", 0)
     write_min = quorums.get("write_minimum", 0)
     if read_min < 0 or write_min < 0:
-        errors.append("quorums.read_minimum y write_minimum no pueden ser negativos")
+        errors.append("quorums.read_minimum and write_minimum cannot be negative")
     if read_min + write_min <= total_nodes:
         warnings.append(
-            "la suma de quórums de lectura y escritura no supera el total de nodos; revisar requisitos de consistencia"
+            "the sum of read/write quorums does not exceed total nodes; revisit consistency requirements"
         )
 
     circuit_breakers = data.get("circuit_breakers", {})
     threshold = circuit_breakers.get("error_rate_threshold", 0)
     if not 0 < threshold < 1:
-        errors.append("error_rate_threshold debe estar en (0,1)")
+        errors.append("error_rate_threshold must be within (0,1)")
     for key in ("rolling_window_s", "cooldown_s"):
         ensure_positive(circuit_breakers.get(key, 0), f"circuit_breakers.{key}", errors)
 
@@ -72,17 +72,17 @@ def lint() -> int:
     for name, details in replication.items():
         profiles = details.get("supported_profiles", [])
         if not profiles:
-            warnings.append(f"replication.{name} no declara supported_profiles")
+            warnings.append(f"replication.{name} does not declare supported_profiles")
 
     services = data.get("services", [])
     for service in services:
-        label = service.get("name", "<sin-nombre>")
+        label = service.get("name", "<unnamed>")
         timeout = service.get("timeouts_ms")
         if timeout is not None and timeout > timeouts.get(
             "max_request_ms", sys.maxsize
         ):
             warnings.append(
-                f"{label}: timeouts_ms ({timeout}) excede max_request_ms global"
+                f"{label}: timeouts_ms ({timeout}) exceeds global max_request_ms"
             )
         quorum = service.get("quorum")
         if quorum:
@@ -90,7 +90,7 @@ def lint() -> int:
             write = quorum.get("write", 0)
             if read > total_nodes or write > total_nodes:
                 errors.append(
-                    f"{label}: quórums de lectura/escritura no pueden exceder total_nodes ({total_nodes})"
+                    f"{label}: read/write quorums cannot exceed total_nodes ({total_nodes})"
                 )
 
     if errors:

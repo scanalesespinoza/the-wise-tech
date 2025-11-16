@@ -13,10 +13,10 @@ REQUIREMENTS_DIR := $(OPS_DIR)
 install:
 	@echo "Installing dev dependencies"
 	python -m pip install --upgrade pip
-	# Ajusta los requirements si ya existen; tolera ausencia sin fallar
+# Adjust the requirements if they already exist; tolerates absence without failing
 	- test -f $(REQUIREMENTS_DIR)/requirements.txt && pip install -r $(REQUIREMENTS_DIR)/requirements.txt || true
 	- test -f $(REQUIREMENTS_DIR)/requirements-dev.txt && pip install -r $(REQUIREMENTS_DIR)/requirements-dev.txt || true
-	# Herramientas recomendadas
+# Recommended tools
 	- python -m pip install "ruff==0.14.5" mkdocs mkdocs-material mkdocs-static-i18n
 
 fmt:
@@ -58,7 +58,7 @@ dev-status:
 	@docker compose -f $(DEV_DIR)/docker-compose.dev.yml ps
 
 content-meta:
-	@echo "Validando front-matter (tags) y 'See also'…"
+	@echo "Validating front matter (tags) and 'See also' links"
 	python $(SCRIPTS_DIR)/validate-content-metadata.py
 
 verify-links:
@@ -72,43 +72,43 @@ audit:
 	@python $(SCRIPTS_DIR)/audit-evaluator.py
 
 resilience-check:
-	@echo "Validando políticas de resiliencia…"
+	@echo "Validating resilience policies…"
 	@python $(SCRIPTS_DIR)/validate-resilience.py $(SCENARIO_DIR)/policies/resilience.yml
 
 resilience-sample:
-	@echo "Mostrando ejemplo y campos soportados"
-	@echo "Ver: $(SCENARIO_DIR)/policies/resilience.yml y $(SCRIPTS_DIR)/validate-resilience.py"
+	@echo "Showing example and supported fields"
+	@echo "See: $(SCENARIO_DIR)/policies/resilience.yml and $(SCRIPTS_DIR)/validate-resilience.py"
 
 slos:
-	@echo "Validando SLOs…"
+	@echo "Validating SLOs…"
 	@python $(SCRIPTS_DIR)/validate-slos.py $(SCENARIO_DIR)/slo/slo-spec.yml
 
 check-error-budget:
-	@echo "Chequeando presupuesto de error (mock/local)…"
+	@echo "Checking error budget (mock/local)…"
 	@python $(SCRIPTS_DIR)/check-error-budget.py $(SCENARIO_DIR)/slo/slo-spec.yml
 
 telemetry-smoke:
-	@echo "Running telemetry smoke (logs estructurados + p95 simulado)…"
+	@echo "Running telemetry smoke (structured logs + simulated p95)…"
 	python $(SCRIPTS_DIR)/telemetry-smoke.py
 
 lab-01:
 	@echo "Lab 01 — Resilience Basics"
 	$(MAKE_CMD) resilience-check || true
 	$(MAKE_CMD) check-error-budget || true
-	@echo "Completa la plantilla: knowledge/docs/templates/labs/evidence-lab-01.md"
+	@echo "Complete the template: knowledge/docs/templates/labs/evidence-lab-01.md"
 
 lab-02:
 	@echo "Lab 02 — Observability Minimum"
 	$(MAKE_CMD) telemetry-smoke || python $(SCRIPTS_DIR)/telemetry-smoke.py
-	@echo "Completa la plantilla: knowledge/docs/templates/labs/evidence-lab-02.md"
+	@echo "Complete the template: knowledge/docs/templates/labs/evidence-lab-02.md"
 
 lab-03:
 	@echo "Lab 03 — aDevelopment Loop"
-	@echo "Genera un test/doc pequeño, ejecuta $(MAKE_CMD) test, y registra KPIs."
-	@echo "Completa la plantilla: knowledge/docs/templates/labs/evidence-lab-03.md"
+	@echo "Create a small test/doc, run $(MAKE_CMD) test, and record KPIs."
+	@echo "Complete the template: knowledge/docs/templates/labs/evidence-lab-03.md"
 
 lab-run-all: lab-01 lab-02 lab-03
-	@echo "Labs completados (recuerda subir evidencia en PR)."
+	@echo "Labs completed (remember to upload evidence in the PR)."
 
 security-scan:
 	@bash $(SCRIPTS_DIR)/security-scan.sh || true

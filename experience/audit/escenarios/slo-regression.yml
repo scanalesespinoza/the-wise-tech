@@ -1,8 +1,8 @@
 id: slo-regression
 steps:
-  - "Consultar métricas de errores recientes"
-  - "Evaluar impacto en experience/scenarios/payments/slo/slo-spec.yml"
-  - "Actualizar planes de remediación en knowledge/docs/playbooks/"
+  - "Review metrics for recent errors"
+  - "Assess the impact on experience/scenarios/payments/slo/slo-spec.yml"
+  - "Update the remediation plans in knowledge/docs/playbooks/"
 expected_artifacts:
   - "experience/scenarios/payments/slo/slo-spec.yml"
   - "knowledge/docs/metrics/site-metrics.md"

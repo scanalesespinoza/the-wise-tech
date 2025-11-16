@@ -1,9 +1,9 @@
 id: add-test-contract
 steps:
-  - "Identificar endpoint o servicio crítico"
-  - "Agregar prueba de contrato en eexperience/scenarios/tests"
-  - "Actualizar documentación de cobertura"
+  - "Identify the critical endpoint or service"
+  - "Add a contract test under experience/scenarios/tests"
+  - "Update the coverage documentation"
 expected_artifacts:
   - "experience/scenarios/payments/systems/tests/"
   - "knowledge/docs/templates/labs/evidence-lab-02.md"
-  - "README con sección de pruebas automatizadas"
+  - "README with an automated tests section"

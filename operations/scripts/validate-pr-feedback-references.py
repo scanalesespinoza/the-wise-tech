@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Falla si el cuerpo del PR declara la sección 'Human Feedback References'
-pero no contiene al menos un #issue o el texto 'N/A'.
-Evita PRs sin vínculo al circuito de feedback cuando aplica.
+Fail if the PR body declares the "Human Feedback References" section but
+does not include at least one #issue or the text "N/A".
+Prevents PRs without a link to the feedback circuit when it applies.
 """
 
 import os

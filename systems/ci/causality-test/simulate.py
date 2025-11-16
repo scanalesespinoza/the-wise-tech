@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Simula escenarios de causalidad y fallos parciales usando relojes vectoriales."""
+"""Simulate causal scenarios and partial failures using vector clocks."""
 
 from __future__ import annotations
 
@@ -38,7 +38,7 @@ class VectorClock:
                 return False
         return True
 
-    def __repr__(self) -> str:  # pragma: no cover - ayuda para debugging manual
+    def __repr__(self) -> str:  # pragma: no cover - manual debugging helper
         return f"VectorClock({self.values})"
 
 
@@ -61,31 +61,31 @@ def simulate() -> str:
 
     timeline: List[str] = []
 
-    # Paso 1: r1 procesa una escritura del usuario
+    # Step 1: r1 processes a user write
     replicas["r1"].increment("r1")
     session_vectors["session-123"].merge(replicas["r1"])
     timeline.append("r1:update_cart")
 
-    # Paso 2: r2 intenta leer antes de recibir la actualización
+    # Step 2: r2 tries to read before receiving the update
     local_view = replicas["r2"].copy()
     assert_condition(
         not local_view.dominates(session_vectors["session-123"]),
-        "r2 no debería tener todavía la sesión sincronizada",
+        "r2 should not have the session synchronized yet",
     )
-    # El middleware espera hasta que el estado refleje la sesión
+    # Middleware waits until state reflects the session
     replicas["r2"].merge(session_vectors["session-123"])
     local_view = replicas["r2"].copy()
     assert_condition(
         local_view.dominates(session_vectors["session-123"]),
-        "r2 debe garantizar read-your-writes antes de responder",
+        "r2 must guarantee read-your-writes before responding",
     )
     timeline.append("r2:sync_read")
 
-    # Paso 3: r3 realiza un update concurrente (fallo parcial en r1 ralentiza la entrega)
+    # Step 3: r3 performs a concurrent update (partial r1 failure slows delivery)
     replicas["r3"].increment("r3")
     timeline.append("r3:inventory_patch")
 
-    # r1 recibe el evento de r3 después de recuperarse del fallo parcial
+    # r1 receives r3's event after recovering from the partial failure
     incoming = replicas["r3"].copy()
     r1_before = replicas["r1"].copy()
     concurrent = not incoming.happened_before(
@@ -93,17 +93,17 @@ def simulate() -> str:
     ) and not r1_before.happened_before(incoming)
     assert_condition(
         concurrent,
-        "El evento de r3 debe detectarse como concurrente respecto al estado de r1",
+        "r3's event must be detected as concurrent relative to r1's state",
     )
     replicas["r1"].merge(incoming)
     timeline.append("r1:merge_concurrent")
 
-    # Paso 4: simular reproceso (replay) para garantizar idempotencia en estrategias activas
+    # Step 4: replay to ensure idempotency on active strategies
     replay = incoming.copy()
     replicas["r1"].merge(replay)
     assert_condition(
         replicas["r1"].dominates(replay),
-        "Después de un replay, el estado debe permanecer convergente",
+        "After replay, the state must remain convergent",
     )
     timeline.append("r1:replay_idempotent")
 
@@ -116,4 +116,4 @@ if __name__ == "__main__":
     except SimulationError as exc:
         print(f"ERROR: {exc}")
         raise SystemExit(1)
-    print("Causalidad OK:", trail)
+    print("Causality OK:", trail)

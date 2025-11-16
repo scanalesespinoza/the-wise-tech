@@ -4,22 +4,22 @@ tags: ["consumers", "knowledge-capitalization", "principles"]
 ---
 # Roadmap
 
-| Hito | Fecha tentativa | Resultado esperado |
+| Milestone | Target date | Expected outcome |
 | --- | --- | --- |
-| Lanzar one-page README y navegación IA | 2024-07-15 | Equipo puede ubicar recursos clave en <2 clics. |
-| Automatizar métricas de resiliencia en pipelines | 2024-08-05 | Alertas unificadas con tableros compartidos entre roles. |
-| Programa de mentoring cruzado | 2024-09-02 | Ciclos mensuales de feedback documentados en playbooks y ADRs. |
+| Launch one-page README and AI navigation | 2024-07-15 | Team can find key resources in <2 clicks. |
+| Automate resilience metrics in pipelines | 2024-08-05 | Unified alerts with dashboards shared across roles. |
+| Cross-mentoring program | 2024-09-02 | Monthly feedback cycles documented in playbooks and ADRs. |
 
-## Seguimiento
-- Revisa avances en la retrospectiva mensual publicada en `knowledge/adr/`.
-- Ajusta prioridades según feedback de personas consumidoras y soporte.
-- Actualiza dependencias en el [platform playbook](../playbooks/platform-playbook.md).
+## Tracking
+- Review progress in the monthly retrospective published in `knowledge/adr/`.
+- Adjust priorities based on feedback from consumers and support.
+- Update dependencies in the [platform playbook](../playbooks/platform-playbook.md).
 
-## Plan de implementación vivo
-- Antes de abrir un PR, lee `implementation/roadmap.md` para entender la etapa actual y el siguiente objetivo.
-- Cada incremento debe generar o actualizar un archivo `implementation/releases/release-XX.md` con la evidencia del avance.
-- Codex (o cualquier agente que continúe el trabajo) debe seguir este orden: **roadmap → releases existentes → nueva implementación → nuevo release**.
-- Si cambias la estrategia, edita primero `implementation/roadmap.md` y documenta el motivo en el release que introduce el cambio.
+## Living implementation plan
+- Before opening a PR, read `implementation/roadmap.md` to understand the current stage and the next objective.
+- Every increment must create or update an `implementation/releases/release-XX.md` file with evidence of the progress.
+- Codex (or any agent who continues the work) must follow this order: **roadmap → existing releases → new implementation → new release**.
+- If you change the strategy, edit `implementation/roadmap.md` first and document the reason in the release that introduces the change.
 
 ## See also
 - [Wise Tech principles](../principles/wise-tech-principles.md)

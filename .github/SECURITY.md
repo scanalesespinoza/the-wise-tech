@@ -1,16 +1,16 @@
 # Security Policy
-**Cómo reportar**  
-- Por favor, NO abras un issue público para vulnerabilidades.  
-- Envía un correo a: security@placeholder.example (actualiza a tu canal real).  
-- Incluye: versión/commit, pasos para reproducir, alcance e impacto esperado.
+**How to report**
+- Please DO NOT open a public issue for vulnerabilities.
+- Email security@placeholder.example (replace with your real channel).
+- Include: version/commit, reproduction steps, scope, and expected impact.
 
-**Alcance inicial**  
-- Código y scripts del repositorio; acciones de CI; documentación con datos sensibles.
+**In-scope**
+- Repository code/scripts, CI actions, docs that may expose sensitive data.
 
-**SLA objetivo**  
-- Reconocimiento en 72h; triage en 7 días; fix/mitigación según severidad.
+**Target SLA**
+- Acknowledge within 72h; triage within 7 days; fix/mitigate based on severity.
 
-**Buenas prácticas mínimas**  
-- No subir credenciales/secretos.  
-- Usar variables de entorno/secretos en CI.  
-- Mantener dependencias al día.
+**Minimum best practices**
+- Never commit credentials/secrets.
+- Use environment variables/secrets in CI.
+- Keep dependencies updated.

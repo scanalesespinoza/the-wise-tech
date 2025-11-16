@@ -1,23 +1,21 @@
-# Guía de Contribución
+# Contribution Guide
 
-Gracias por aportar a The Wise Tech. Toda la documentación vive ahora en `knowledge/docs/` con recorridos por rol.
+Thanks for contributing to The Wise Tech. All documentation now lives in `knowledge/docs/` with curated paths per role.
 
-## Flujo recomendado
-1. Revisa el [quickstart](../knowledge/docs/guides/quickstart.md) y configura tu entorno (`make -f operations/Makefile install`).
-2. Trabaja en ramas pequeñas y descriptivas (`feat-docs-one-page`).
-3. Ejecuta `make -f operations/Makefile ci` para alinear tu veredicto local con los pipelines antes de pedir revisión.
-4. Completa la [plantilla de PR](../.github/PULL_REQUEST_TEMPLATE.md) resaltando el principio reforzado.
-5. Solicita revisión cruzada de las personas impactadas (Consumidores, Developers, Platform Engineers).
+## Recommended Flow
+1. Review the [quickstart](../knowledge/docs/guides/quickstart.md) and configure your environment (`make -f operations/Makefile install`).
+2. Work on small, descriptive branches (`feat-docs-one-page`) so reviews stay focused.
+3. Run `make -f operations/Makefile ci` to mirror the pipeline verdict before you request feedback.
+4. Complete the [PR template](../.github/PULL_REQUEST_TEMPLATE.md) and highlight the principle being reinforced.
+5. Ask for cross-review from the impacted roles (Consumers, Developers, Platform Engineers).
 
-## Recursos esenciales
-- [Principios Wise Tech](../knowledge/docs/principles/wise-tech-principles.md)
-- [Ruta de Developers](../knowledge/docs/personas/developers-overview.md)
+## Essential Resources
+- [Wise Tech principles](../knowledge/docs/principles/wise-tech-principles.md)
+- [Developers journey](../knowledge/docs/personas/developers-overview.md)
 - [Platform playbook](../knowledge/docs/playbooks/platform-playbook.md)
 - [Roadmap](../knowledge/docs/roadmap/roadmap.md)
 
-## Automatización
-- Los workflows [`quality`](../.github/workflows/quality.yml) y [`docs-and-links`](../.github/workflows/docs-and-links.yml) ejecutan exactamente los comandos del Makefile (`make -f operations/Makefile ci` y la validación de documentación) para mantener paridad entre local y remoto.
-- Ejecuta `make -f operations/Makefile verify-links` o `python operations/scripts/check-links.py` cuando edites documentación extensa para detectar enlaces internos rotos a tiempo.
-- Documenta decisiones estratégicas en el [índice de ADR](../knowledge/adr/INDEX.md).
-
-Para referencia en inglés, visita [CONTRIBUTING.md](CONTRIBUTING.md).
+## Automation
+- The [`quality`](../.github/workflows/quality.yml) and [`docs-and-links`](../.github/workflows/docs-and-links.yml) workflows run exactly the Makefile commands (`make -f operations/Makefile ci` plus documentation validation) to maintain parity between local and remote runs.
+- Run `make -f operations/Makefile verify-links` or `python operations/scripts/check-links.py` whenever you edit large docs to catch broken internal links early.
+- Document strategic decisions in the [ADR index](../knowledge/adr/INDEX.md).

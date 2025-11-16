@@ -1,5 +1,5 @@
 name: "Feedback — User Experience"
-description: Captura aprendizajes desde el uso real (personas: consumers/developers/platform)
+description: Capture learnings from real usage (personas: consumers/developers/platform)
 labels: ["feedback","user-experience"]
 body:
   - type: dropdown
@@ -7,24 +7,24 @@ body:
     attributes:
       label: Persona
       options: ["consumers","developers","platform-engineers"]
-      description: ¿Desde qué rol reportas?
+      description: Which role are you reporting from?
     validations: { required: true }
   - type: textarea
     id: context
     attributes:
-      label: Contexto de uso
-      description: ¿Qué intentabas lograr? ¿Dónde te atascaste o qué funcionó bien?
-      placeholder: "Ruta seguida, archivos, comandos, entorno…"
+      label: Usage context
+      description: What were you trying to accomplish? Where did you get stuck or what worked well?
+      placeholder: "Steps taken, files, commands, environment…"
     validations: { required: true }
   - type: textarea
     id: learning
     attributes:
-      label: Aprendizaje y propuesta
-      description: ¿Qué aprendiste? ¿Qué propones cambiar o añadir?
+      label: Learning and proposal
+      description: What did you learn? What would you change or add?
   - type: checkboxes
     id: principles
     attributes:
-      label: Principios Wise Tech relacionados
+      label: Related Wise Tech principles
       options:
         - label: Simplicity
         - label: Continuous Improvement
@@ -34,5 +34,5 @@ body:
   - type: textarea
     id: links
     attributes:
-      label: Evidencia (logs, enlaces, capturas)
-      description: URLs internas del repo, extractos de logs, etc.
+      label: Evidence (logs, links, screenshots)
+      description: Internal repo URLs, log extracts, etc.

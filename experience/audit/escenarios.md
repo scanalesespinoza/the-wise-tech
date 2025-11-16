@@ -1,31 +1,31 @@
-# Escenarios de evaluación
+# Evaluation scenarios
 
-## Escenario A — Coherencia documental
-1. Analiza `README.md` y verifica que todos los paths tengan archivos existentes.
-2. Correlaciona la navegación del README con el índice de MkDocs (`operations/mkdocs.yml`).
-3. Usa `operations/scripts/validate-content-metadata.py` para confirmar que las guías declaren metadatos completos.
-4. Reporta enlaces rotos o secciones desactualizadas en función de los resultados de `make -f operations/Makefile docs`.
+## Scenario A — Documentation coherence
+1. Review `README.md` and confirm that every referenced path points to an existing file.
+2. Cross-check the README navigation with the MkDocs index (`operations/mkdocs.yml`).
+3. Use `operations/scripts/validate-content-metadata.py` to confirm that guides declare complete metadata.
+4. Report broken links or outdated sections based on the results of `make -f operations/Makefile docs`.
 
-### Señales clave
-- Últimos cambios en `knowledge/docs/` relacionados con rutas y guías.
-- Presencia de notas `TODO (parity)` indicando deuda bilingüe.
+### Key signals
+- Recent changes under `knowledge/docs/` related to navigation paths and guides.
+- Presence of `TODO (parity)` notes indicating remaining translation work.
 
-## Escenario B — Calidad del escenario de pagos
-1. Revisa `experience/scenarios/payments/README.md` para entender el flujo end-to-end.
-2. Inspecciona `experience/scenarios/payments/contracts/` y `experience/scenarios/payments/systems/tests/` para validar cobertura de casos.
-3. Cruza los aprendizajes con los playbooks de developers y platform (`knowledge/docs/playbooks/`).
-4. Evalúa si los KPIs definidos en `knowledge/docs/labs/lab-01-resilience-basics.md` se reflejan en los scripts del escenario.
+## Scenario B — Payments scenario quality
+1. Read `experience/scenarios/payments/README.md` to understand the end-to-end flow.
+2. Inspect `experience/scenarios/payments/contracts/` and `experience/scenarios/payments/systems/tests/` to validate case coverage.
+3. Cross-reference lessons with the developer and platform playbooks (`knowledge/docs/playbooks/`).
+4. Evaluate whether the KPIs defined in `knowledge/docs/labs/lab-01-resilience-basics.md` are reflected in the scenario scripts.
 
-### Señales clave
-- Existencia de scripts reproducibles y datos simulados.
-- Ejemplos bilingües consistentes con los runbooks asociados.
+### Key signals
+- Existence of reproducible scripts and simulated data.
+- Examples that match the associated runbooks.
 
-## Escenario C — Experiencia de contribución
-1. Sigue `knowledge/docs/guides/contribution-guide.md` y `knowledge/docs/guides/editorial-workflow.md` para simular la primera contribución.
-2. Valida que las plantillas en `.github/` contemplen feedback humano y señales operacionales.
-3. Comprueba que `make -f operations/Makefile ci` cubre los mismos pasos descritos en `README.md` y workflows de GitHub Actions.
-4. Evalúa si la automatización (`justfile`, `Makefile`) ayuda a mantener paridad entre lenguajes.
+## Scenario C — Contribution experience
+1. Follow `knowledge/docs/guides/contribution-guide.md` and `knowledge/docs/guides/editorial-workflow.md` to simulate a first contribution.
+2. Validate that the templates in `.github/` capture both human feedback and operational signals.
+3. Confirm that `make -f operations/Makefile ci` covers the same steps described in `README.md` and the GitHub Actions workflows.
+4. Evaluate whether automation (`justfile`, `Makefile`) helps maintain consistency across the documentation set.
 
-### Señales clave
-- Documentación de PRs previa en `knowledge/archive/` o `knowledge/adr/` para comparar estándares.
-- Métricas de adopción presentes en `knowledge/docs/playbooks/developer-playbook.md`.
+### Key signals
+- Previous PR documentation in `knowledge/archive/` or `knowledge/adr/` to compare standards.
+- Adoption metrics highlighted in `knowledge/docs/playbooks/developer-playbook.md`.

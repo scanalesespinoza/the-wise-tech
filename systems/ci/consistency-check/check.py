@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Valida compatibilidad entre perfiles de consistencia, patrones de acceso y estrategias de réplica."""
+"""Validate compatibility between consistency profiles, access patterns, and replica strategies."""
 
 from __future__ import annotations
 
@@ -16,9 +16,9 @@ def load_json(path: Path) -> dict:
     try:
         return json.loads(path.read_text(encoding="utf-8"))
     except FileNotFoundError:
-        raise SystemExit(f"archivo no encontrado: {path}")
+        raise SystemExit(f"file not found: {path}")
     except json.JSONDecodeError as exc:
-        raise SystemExit(f"{path} no es JSON/YAML válido: {exc}")
+        raise SystemExit(f"{path} is not valid JSON/YAML: {exc}")
 
 
 def validate() -> int:
@@ -35,43 +35,43 @@ def validate() -> int:
     warnings = []
 
     for service in data.get("services", []):
-        name = service.get("name", "<sin-nombre>")
+        name = service.get("name", "<unnamed>")
         profile = service.get("profile")
         pattern = service.get("access_pattern")
         strategy = service.get("replica_strategy")
 
         if profile not in profiles:
-            errors.append(f"{name}: perfil desconocido '{profile}'")
+            errors.append(f"{name}: unknown profile '{profile}'")
             continue
         if pattern not in patterns:
-            errors.append(f"{name}: patrón de acceso desconocido '{pattern}'")
+            errors.append(f"{name}: unknown access pattern '{pattern}'")
             continue
         if strategy not in replication_catalog:
-            errors.append(f"{name}: estrategia de réplica desconocida '{strategy}'")
+            errors.append(f"{name}: unknown replica strategy '{strategy}'")
             continue
 
         allowed = patterns[pattern].get("allowed_profiles", [])
         if profile not in allowed:
             errors.append(
-                f"{name}: perfil '{profile}' no permitido para patrón '{pattern}'"
+                f"{name}: profile '{profile}' is not allowed for pattern '{pattern}'"
             )
 
         compatible_strategies = profiles[profile].get("compatible_replication", [])
         if strategy not in compatible_strategies:
             errors.append(
-                f"{name}: estrategia '{strategy}' incompatible con perfil '{profile}'"
+                f"{name}: strategy '{strategy}' is incompatible with profile '{profile}'"
             )
 
         supported_profiles = replication_catalog[strategy].get("supported_profiles", [])
         if supported_profiles and profile not in supported_profiles:
             errors.append(
-                f"{name}: perfil '{profile}' no soportado por estrategia '{strategy}'"
+                f"{name}: profile '{profile}' is not supported by strategy '{strategy}'"
             )
 
         requires_idempotency = replication_catalog[strategy].get("requires_idempotency")
         if requires_idempotency and pattern == "write_conflict":
             warnings.append(
-                f"{name}: verificar claves de idempotencia para '{strategy}' en escenarios de conflicto"
+                f"{name}: verify idempotency keys for '{strategy}' when handling conflict scenarios"
             )
 
     if errors:
@@ -86,7 +86,7 @@ def validate() -> int:
         for line in warnings:
             print(f"WARN: {line}")
 
-    print("Consistencia OK: perfiles, patrones y estrategias compatibles.")
+    print("Consistency OK: profiles, patterns, and strategies are compatible.")
     return 0
 
 

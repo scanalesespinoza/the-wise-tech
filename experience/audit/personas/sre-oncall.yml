@@ -1,10 +1,10 @@
 id: sre-oncall
 age: 28-38
 goals:
-  - "Garantizar cobertura de alertas y SLOs"
-  - "Responder incidentes con runbooks claros"
+  - "Guarantee alert and SLO coverage"
+  - "Respond to incidents with clear runbooks"
 must_have:
-  - "SLOs versionados en experience/scenarios/payments/slo/"
-  - "Playbooks y runbooks enlazados desde knowledge/docs/"
+  - "Versioned SLOs under experience/scenarios/payments/slo/"
+  - "Playbooks and runbooks linked from knowledge/docs/"
 nice_to_have:
-  - "Tableros de métricas o enlaces a observabilidad"
+  - "Metric dashboards or observability links"

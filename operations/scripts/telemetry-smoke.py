@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Ejecuta una simulación local:
+"""Run a local simulation that:
 
-- Genera/propaga x-correlation-id
-- Emite logs estructurados
-- Mide latencia (ms) y deriva un p95 simple
-- Muestra contadores de requests/errores
+- Generates/propagates x-correlation-id
+- Emits structured logs
+- Measures latency (ms) and derives a simple p95
+- Prints request/error counters
 """
 
 import json
@@ -33,9 +33,9 @@ def log(event, **kw):
 def simulate_request():
     cid = str(uuid.uuid4())
     t0 = time.time()
-    # 5% error artificial
+    # 5% artificial error rate
     is_err = random.random() < 0.05
-    # lat aleatoria 80–500ms
+    # random latency between 80–500ms
     time.sleep(random.uniform(0.08, 0.5))
     elapsed = int((time.time() - t0) * 1000)
     log(
