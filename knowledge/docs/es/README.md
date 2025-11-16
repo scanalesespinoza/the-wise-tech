@@ -11,6 +11,11 @@ bilingüe anterior y necesitan atajos hacia el nuevo árbol de documentación.
 - [Guía de contribución](../guides/contribution-guide.md)
 - [Playbook de plataforma](../playbooks/platform-playbook.md)
 
+## Enfoque actual
+Wise Tech prioriza las cargas de trabajo de lógica de negocio donde se cruzan la resiliencia y el impacto económico.
+La plataforma y la infraestructura están lo suficientemente maduras para actuar como herramientas de apoyo,
+pero los principios arquitectónicos siempre parten del comportamiento esperado en sistemas distribuidos y microservicios.
+
 ## Paridad de traducciones
 Cada archivo Markdown aquí tiene su contraparte en `../en`.
 Ejecuta `make -f operations/Makefile parity` al agregar o renombrar archivos para mantener la alineación.
