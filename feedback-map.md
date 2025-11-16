@@ -1,7 +1,14 @@
-# Feedback aplicado
+# Feedback Map
 
-## Documentos con feedback habilitado
-
+## Ya contaban con sección de feedback
+- .github/PULL_REQUEST_TEMPLATE-extended.md
+- .github/PULL_REQUEST_TEMPLATE.md
+- .github/SECURITY.md
+- README.md
+- TODO.md
+- docs/onboarding-landing.md
+- docs/ux-redesign-preview.md
+- docs/visual-navigation.md
 - experience/audit/escenarios.md
 - experience/audit/impactos.md
 - experience/audit/personas.md
@@ -15,8 +22,12 @@
 - experience/scenarios/payments/policies/README.md
 - experience/scenarios/payments/slo/README.md
 - experience/scenarios/payments/tests/fixtures/README.md
+- governance/CHANGELOG.md
+- governance/CONTRIBUTING.es.md
+- governance/CONTRIBUTING.md
 - implementation/releases/release-01.md
 - implementation/roadmap.md
+- improvements/TODO.md
 - knowledge/adr/INDEX.md
 - knowledge/adr/adr-0001-consistency-profiles.md
 - knowledge/adr/adr-0002-replication-strategies.md
@@ -165,12 +176,12 @@
 - knowledge/docs/labs/lab-01-resilience-basics.md
 - knowledge/docs/labs/lab-02-observability-minima.md
 - knowledge/docs/labs/lab-03-adevelopment-loop.md
-- knowledge/docs/paths/consumers-30-60-90.md
 - knowledge/docs/paths/consumers/fast-track.md
-- knowledge/docs/paths/developers-30-60-90.md
+- knowledge/docs/paths/consumers-30-60-90.md
 - knowledge/docs/paths/developers/fast-track.md
-- knowledge/docs/paths/platform-engineers-30-60-90.md
+- knowledge/docs/paths/developers-30-60-90.md
 - knowledge/docs/paths/platform-engineers/fast-track.md
+- knowledge/docs/paths/platform-engineers-30-60-90.md
 - knowledge/docs/personas/_index.md
 - knowledge/docs/personas/consumers-overview.md
 - knowledge/docs/personas/developers-overview.md
@@ -198,9 +209,18 @@
 - knowledge/docs/templates/labs/evidence-lab-02.md
 - knowledge/docs/templates/labs/evidence-lab-03.md
 - knowledge/docs/templates/postmortem-light.md
+- onboarding.md
+- operations/reports/SUMMARY-TODO.md
+- operations/reports/onboarding_walkthrough.md
+- start-here.md
+- style-guide.md
+- systems/platform/README.md
 
-## Documentos que ya lo tenían configurado
-- Ninguno, todos quedaron estandarizados en esta ejecución.
+## Se agregó la sección de feedback
+- context-status.md
+- docs/navigation.md
+- feedback-summary.md
+- missing-context-report.md
 
 ---
 📣 **¿Te fue útil este documento?**
