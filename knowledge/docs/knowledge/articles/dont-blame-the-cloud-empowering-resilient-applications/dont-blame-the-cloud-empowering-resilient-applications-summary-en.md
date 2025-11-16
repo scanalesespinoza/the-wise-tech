@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Don't Blame the Cloud: Empowering Resilient Applications" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre don't blame the cloud: empowering resilient applications.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de don't blame the cloud: empowering resilient applications.
+estado: active
+-->
+
 # Don't Blame the Cloud: Empowering Resilient Applications
 **Source:** https://www.linkedin.com/pulse/dont-blame-cloud-empowering-resilient-applications-canales-espinoza-jhpqe  
 **Author:** Sergio Canales Espinoza  
@@ -29,3 +36,14 @@ The article compares an application to a car without sensors: when it fails, the
 
 ## Practical conclusion (≤120 words)
 Treating the cloud as an ally means building applications with sensors, self-protection, and continuous learning. Platform and development teams should agree on minimum capabilities per service (monitoring, graceful degradation, automated recovery) and test them regularly. Doing so prevents blaming the environment and reinforces resilience by design.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

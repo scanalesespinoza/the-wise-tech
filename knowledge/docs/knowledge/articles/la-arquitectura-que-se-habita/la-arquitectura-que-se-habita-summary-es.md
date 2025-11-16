@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "La arquitectura que se habita" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre la arquitectura que se habita.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de la arquitectura que se habita.
+estado: active
+-->
+
 # La arquitectura que se habita
 **Fuente:** https://www.linkedin.com/pulse/la-arquitectura-que-se-habita-sergio-canales-espinoza-igiqe  
 **Autor:** Sergio Canales Espinoza  
@@ -29,3 +36,14 @@ El autor defiende que toda arquitectura —física o digital— debe diseñarse 
 
 ## Conclusión práctica (≤120 palabras)
 Diseñar sistemas habitables demanda una disciplina de observación constante. Los equipos deben experimentar su propio producto, recopilar feedback inmediato y evaluar cada decisión tecnológica según la utilidad que entrega a las personas. Elegir la simplicidad, asegurar fiabilidad y visibilizar contribuciones fortalece la confianza y la adopción.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

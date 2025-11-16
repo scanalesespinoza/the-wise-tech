@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "🛠️ Architecting Open Source Teams: Building People Before Platforms" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre 🛠️ architecting open source teams: building people before platforms.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de 🛠️ architecting open source teams: building people before platforms.
+estado: active
+-->
+
 # 🛠️ Architecting Open Source Teams: Building People Before Platforms
 **Source:** https://sergio-canales-e.medium.com/%EF%B8%8F-architecting-open-source-teams-building-people-before-platforms-ceb88e0906f6  
 **Author:** Sergio Canales Espinoza  
@@ -29,3 +36,14 @@ Building open source teams inside companies depends more on human architecture t
 
 ## Practical conclusion (≤120 words)
 Architecting open source teams means ensuring shared purpose, simple processes, and constant recognition. When people come first, platforms become sustainable and aligned with real outcomes.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

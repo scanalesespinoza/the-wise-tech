@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Payments API Contract v2 / Contrato API de Pagos v2" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre payments api contract v2 / contrato api de pagos v2.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de payments api contract v2 / contrato api de pagos v2.
+estado: active
+-->
+
 # Payments API Contract v2 / Contrato API de Pagos v2
 
 This directory stores the canonical contract used in the recipe for
@@ -51,3 +58,14 @@ so reviewers and stakeholders can reason about the same artifact.
   during CI runs. / La verificación automática vive en
   `experience/scenarios/payments/systems/tests/test_contract_pact.py` para detectar desvíos
   de esquema durante las ejecuciones de CI.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

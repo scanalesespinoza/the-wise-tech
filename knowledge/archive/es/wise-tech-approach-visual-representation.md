@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Enfoque The Wise Tech: Representación visual" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre enfoque the wise tech: representación visual.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de enfoque the wise tech: representación visual.
+estado: active
+-->
+
 # Enfoque The Wise Tech: Representación visual
 
 ## Enfoque tradicional complejo: Cadenas desconectadas
@@ -64,3 +71,14 @@
 ## Resumen
 - El **enfoque tradicional** produce flujos aislados y pierde oportunidades de mejora holística.
 - El **enfoque The Wise Tech** une a desarrolladores/as, personas ingenieras de plataforma y consumidoras de tecnología mediante un sistema integrado de retroalimentación que garantiza que la tecnología sirva eficazmente a las personas.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

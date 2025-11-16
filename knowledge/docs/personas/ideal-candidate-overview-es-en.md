@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Ideal Candidate (Contributor) — Overview" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre ideal candidate (contributor) — overview.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de ideal candidate (contributor) — overview.
+estado: active
+-->
+
 # Ideal Candidate (Contributor) — Overview
 
 ## Español
@@ -46,3 +53,14 @@
 ### First Win (1–2 h)
 - Fix a broken link, example, or flaky test.
 - Add an idempotency/correlation-id snippet and document it.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

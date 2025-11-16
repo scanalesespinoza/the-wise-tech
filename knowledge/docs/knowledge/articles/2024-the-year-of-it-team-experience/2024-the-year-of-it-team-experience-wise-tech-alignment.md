@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Wise Tech Alignment — 2024: The Year of IT Team Experience" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre wise tech alignment — 2024: the year of it team experience.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de wise tech alignment — 2024: the year of it team experience.
+estado: active
+-->
+
 # Wise Tech Alignment — 2024: The Year of IT Team Experience
 
 | Topic/Claim | Insight | Wise Tech Principle(s) | Why it matters |
@@ -14,3 +21,14 @@
 **Riesgos/antipatrones**
 - Tratar la experiencia del equipo como iniciativa puntual en lugar de práctica continua.
 - Invertir solo en herramientas sin ajustar procesos ni cultura de soporte.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

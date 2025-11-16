@@ -2,6 +2,13 @@
 title: "Consumers — 30/60/90"
 tags: ["consumers", "paths", "simplicity"]
 ---
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Consumers — 30/60/90" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre consumers — 30/60/90.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de consumers — 30/60/90.
+estado: active
+-->
+
 # Consumers — 30/60/90
 
 ## 30 min (orientación)
@@ -37,3 +44,14 @@ tags: ["consumers", "paths", "simplicity"]
 - [Quickstart](../guides/quickstart.md)
 - [Payments overview](../scenarios/payments-overview.md)
 - [Developer Playbook](../playbooks/developer-playbook.md)
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

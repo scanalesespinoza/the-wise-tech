@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Runbook de Incidentes de Pagos" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre runbook de incidentes de pagos.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de runbook de incidentes de pagos.
+estado: active
+-->
+
 # Runbook de Incidentes de Pagos
 
 Este documento muestra cómo los equipos Wise Tech responden a incidentes
@@ -39,3 +46,14 @@ de cara a clientes en el escenario de pagos.
   `knowledge/docs/en/runbook.md` para mantener el conocimiento bilingüe.
 - Actualiza las pruebas de contrato si participaron nuevos campos de
   respuesta, preservando la paridad de observabilidad.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Navigation bridge" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre navigation bridge.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de navigation bridge.
+estado: active
+-->
+
 # Navigation bridge
 
 Use this page if you followed bookmarks into the legacy `/en/docs` tree.
@@ -13,3 +20,14 @@ The table below maps former topics to the reorganized one-page experience.
 
 The [README navigation map](https://github.com/scanalesespinoza/the-wise-tech/blob/main/README.md#navigation-map) now provides the
 canonical overview in a single place.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

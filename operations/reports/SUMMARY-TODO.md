@@ -45,3 +45,14 @@ than five broken internal links.
 - **knowledge/docs/es/wise-tech-approach.md**
   - Languages: en, es
   - Issues: missing usage guidance
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

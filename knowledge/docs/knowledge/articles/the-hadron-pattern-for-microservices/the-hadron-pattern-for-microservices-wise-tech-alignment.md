@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Wise Tech Alignment — The Hadron Pattern for Microservices" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre wise tech alignment — the hadron pattern for microservices.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de wise tech alignment — the hadron pattern for microservices.
+estado: active
+-->
+
 # Wise Tech Alignment — The Hadron Pattern for Microservices
 
 | Topic/Claim | Insight | Wise Tech Principle(s) | Why it matters |
@@ -14,3 +21,14 @@
 **Riesgos/antipatrones**
 - Ignorar los roles de coordinación y sobrecargar microservicios individuales.
 - Diseñar interfaces sin considerar la experiencia de quienes las consumen.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "The Wise Tech Approach: A Contrast with Traditional Complex Software Practices" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre the wise tech approach: a contrast with traditional complex software practices.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de the wise tech approach: a contrast with traditional complex software practices.
+estado: active
+-->
+
 # The Wise Tech Approach: A Contrast with Traditional Complex Software Practices
 
 ## Traditional Complex Approach: CICD + DevOps + DevSecOps as Disconnected Chains
@@ -80,3 +87,14 @@ This annex translates distributed-system guardrails into Wise Tech’s increment
 - **Idempotency by contract:** Services opting into active replication must expose idempotency keys or verifiable side effects to survive retries.
 - **Session continuity:** Support and UX flows read session vectors before responding when a user switches replicas, ensuring continuity.
 - **Knowledge capture:** Issue and PR templates prompt teams to log consistency and replication decisions alongside user lessons, reinforcing organizational memory.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

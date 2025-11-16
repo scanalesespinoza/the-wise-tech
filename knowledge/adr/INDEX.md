@@ -2,6 +2,13 @@
 title: "Architecture Decision Records"
 tags: ["architecture", "templates"]
 ---
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Architecture Decision Records" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre architecture decision records.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de architecture decision records.
+estado: active
+-->
+
 # Architecture Decision Records
 
 | ID | Título | Tags clave |
@@ -16,3 +23,14 @@ tags: ["architecture", "templates"]
 - [Platform playbook](../docs/playbooks/platform-playbook.md)
 - [Roadmap](../docs/roadmap/roadmap.md)
 - [Contribution guide](../docs/guides/contribution-guide.md)
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

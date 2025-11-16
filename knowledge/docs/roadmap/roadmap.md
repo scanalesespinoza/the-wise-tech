@@ -2,6 +2,13 @@
 title: "Roadmap"
 tags: ["consumers", "knowledge-capitalization", "principles"]
 ---
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Roadmap" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre roadmap.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de roadmap.
+estado: active
+-->
+
 # Roadmap
 
 | Milestone | Target date | Expected outcome |
@@ -27,3 +34,14 @@ tags: ["consumers", "knowledge-capitalization", "principles"]
 - [Contribution guide](../guides/contribution-guide.md)
 - [Personas hub](../personas/_index.md)
 - [Navigation map](../index.md#navigation-map)
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

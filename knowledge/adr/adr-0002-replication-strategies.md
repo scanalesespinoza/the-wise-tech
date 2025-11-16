@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "ADR-0002: Estrategias de Réplica Ejecutables" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre adr-0002: estrategias de réplica ejecutables.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de adr-0002: estrategias de réplica ejecutables.
+estado: active
+-->
+
 # ADR-0002: Estrategias de Réplica Ejecutables
 
 - Fecha: 2024-06-14
@@ -26,3 +33,14 @@ Los servicios distribuídos han adoptado diferentes patrones de réplica sin un 
 2. Definir plantillas de despliegue por estrategia con checks automáticos.
 3. Migrar servicios con baja criticidad primero para validar tooling.
 4. Documentar lecciones aprendidas en los playbooks y plantillas de PR.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

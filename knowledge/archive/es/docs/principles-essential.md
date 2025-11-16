@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Principios Esenciales para los Sistemas de The Wise Tech" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre principios esenciales para los sistemas de the wise tech.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de principios esenciales para los sistemas de the wise tech.
+estado: active
+-->
+
 # Principios Esenciales para los Sistemas de The Wise Tech
 
 Estos principios definen la identidad innegociable de cada producto y plataforma dentro del ecosistema de The Wise Tech. Trátalos como barandales arquitectónicos: infringirlos requiere una decisión deliberada y una mitigación documentada.
@@ -16,3 +23,14 @@ Estos principios definen la identidad innegociable de cada producto y plataforma
 - Actualiza el catálogo únicamente mediante revisión colaborativa (Architecture Decision Records) para preservar estable la identidad del sistema.
 
 Cada receta, checklist y recurso de onboarding en este repositorio debe apuntar a uno o más principios anteriores. Así el contexto Esencial se vuelve tangible para nuevas personas colaboradoras y permite que los asistentes de IA fundamenten sus recomendaciones en prioridades documentadas.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

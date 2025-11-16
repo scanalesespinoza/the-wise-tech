@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Guías para Changelog Narrativo" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre guías para changelog narrativo.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de guías para changelog narrativo.
+estado: active
+-->
+
 # Guías para Changelog Narrativo
 
 Una entrada de changelog debe explicar más que el diff de código. Usa esta guía para redactar actualizaciones comprensibles para personas ingenieras, stakeholders y equipos de soporte.
@@ -24,3 +31,14 @@ Una entrada de changelog debe explicar más que el diff de código. Usa esta gu�
 - [ ] Traducción reflejada en el changelog en inglés si aplica.
 
 Trata los changelogs como dispositivos de narración: enseñan a futuras lectoras y lectores por qué se tomaron decisiones y cómo el sistema continúa honrando su identidad Esencial.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

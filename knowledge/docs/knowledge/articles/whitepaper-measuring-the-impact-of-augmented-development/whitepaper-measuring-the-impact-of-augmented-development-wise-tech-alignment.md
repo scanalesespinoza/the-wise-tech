@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Wise Tech Alignment — Whitepaper: Measuring the Impact of Augmented Development (aDevelopment)" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre wise tech alignment — whitepaper: measuring the impact of augmented development (adevelopment).
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de wise tech alignment — whitepaper: measuring the impact of augmented development (adevelopment).
+estado: active
+-->
+
 # Wise Tech Alignment — Whitepaper: Measuring the Impact of Augmented Development (aDevelopment)
 
 | Topic/Claim | Insight | Wise Tech Principle(s) | Why it matters |
@@ -14,3 +21,14 @@
 **Riesgos/antipatrones**
 - Interpretar métricas sin contexto y generar presión insostenible.
 - Ignorar indicadores de calidad (defectos, deuda) al priorizar únicamente velocidad.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

@@ -19,3 +19,14 @@ Thank you for helping grow The Wise Tech knowledge base. This repository now use
 - The [`quality`](../.github/workflows/quality.yml) and [`docs-and-links`](../.github/workflows/docs-and-links.yml) workflows run the same commands defined in the Makefile (`make -f operations/Makefile ci` plus the documentation validation) to preserve parity between local and remote environments.
 - Run `make -f operations/Makefile verify-links` or `python operations/scripts/check-links.py` when you edit long-form documentation so you can catch broken internal links early.
 - Record strategic decisions in the [ADR index](../knowledge/adr/INDEX.md) whenever you change a core process.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

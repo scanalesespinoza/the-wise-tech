@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Personas for LLM audits" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre personas for llm audits.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de personas for llm audits.
+estado: active
+-->
+
 # Personas for LLM audits
 
 ## 1. Strategic maintainer
@@ -35,3 +42,14 @@
 - **Frequently asked questions**:
   - Do the paths include "First 60 minutes" guidance and clear follow-up metrics?
   - Are there gaps between historical English and Spanish versions (`en/` vs `es/`) that affect the experience?
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

@@ -2,6 +2,13 @@
 title: "Platform Engineers — 30/60/90"
 tags: ["platform-engineers", "paths", "resilience"]
 ---
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Platform Engineers — 30/60/90" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre platform engineers — 30/60/90.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de platform engineers — 30/60/90.
+estado: active
+-->
+
 # Platform Engineers — 30/60/90
 
 ## 30 min
@@ -47,3 +54,14 @@ tags: ["platform-engineers", "paths", "resilience"]
 - [Platform engineers overview](../personas/platform-engineers-overview.md)
 - [Payments overview](../scenarios/payments-overview.md)
 - [Roadmap](../roadmap/roadmap.md)
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Implementation Roadmap" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre implementation roadmap.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de implementation roadmap.
+estado: active
+-->
+
 # Implementation Roadmap
 
 ## How to use this directory
@@ -50,3 +57,14 @@ Objective: Iterate on real feedback to offer an experience ready for adoption by
 1. Prepare the Navigable MVP design (Stage 2) prioritizing the 30/60/90 flow for a single persona.
 2. Define minimal automated checks that exercise that flow.
 3. Open `release-02.md` when the MVP is complete and link any roadmap adjustments.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

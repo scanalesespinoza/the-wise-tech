@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Future-Proof Technology" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre future-proof technology.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de future-proof technology.
+estado: active
+-->
+
 # Future-Proof Technology
 **Source:** https://sergio-canales-e.medium.com/future-proof-technology-8c31dd8ae72e  
 **Author:** Sergio Canales Espinoza  
@@ -29,3 +36,14 @@ The author retraces his technology journey to show that the future hinges not on
 
 ## Practical conclusion (≤120 words)
 Future-proofing technology means designing platforms that prioritize belonging, learning, and purpose. Creating spaces where people experiment, share, and see the impact of their work yields sustainable resilience.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

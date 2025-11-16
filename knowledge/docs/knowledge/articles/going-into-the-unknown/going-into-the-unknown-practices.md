@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Practices — Going into the Unknown" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre practices — going into the unknown.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de practices — going into the unknown.
+estado: active
+-->
+
 # Practices — Going into the Unknown
 
 ## Quick checklist (≤10 ítems)
@@ -20,3 +27,14 @@
 - Cantidad de nuevas experiencias (proyectos, cursos, comunidades) por persona al semestre.
 - Encuestas de percepción sobre crecimiento profesional y conexión humana.
 - Retención de talento asociado a participación en el programa.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

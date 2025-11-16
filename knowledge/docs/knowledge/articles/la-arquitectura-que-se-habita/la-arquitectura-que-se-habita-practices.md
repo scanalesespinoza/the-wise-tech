@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Practices — La arquitectura que se habita" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre practices — la arquitectura que se habita.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de practices — la arquitectura que se habita.
+estado: active
+-->
+
 # Practices — La arquitectura que se habita
 
 ## Quick checklist (≤10 ítems)
@@ -20,3 +27,14 @@
 - Cantidad de fricciones removidas vs. detectadas en shadowing.
 - Tiempo medio para resolver feedback crítico recibido.
 - Porcentaje de decisiones tecnológicas con criterio de propósito documentado.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

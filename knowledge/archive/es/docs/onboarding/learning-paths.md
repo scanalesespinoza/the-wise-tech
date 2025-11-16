@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Rutas de Aprendizaje para Equipos de aDevelopment" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre rutas de aprendizaje para equipos de adevelopment.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de rutas de aprendizaje para equipos de adevelopment.
+estado: active
+-->
+
 # Rutas de Aprendizaje para Equipos de aDevelopment
 
 Utiliza estas rutas modulares para acelerar la maestría. Combínalas según tu rol y madurez actual.
@@ -27,3 +34,14 @@ Utiliza estas rutas modulares para acelerar la maestría. Combínalas según tu 
 - Patrocina al menos un experimento que automatice la captura de conocimiento (doc-gen, minería de recetas).
 
 Adapta los pasos conforme el equipo crece. El objetivo es que el aprendizaje sea acumulativo e inclusivo mediante recursos compartidos y práctica potenciada por IA.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

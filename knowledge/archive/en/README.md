@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "The Wise Tech" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre the wise tech.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de the wise tech.
+estado: active
+-->
+
 # The Wise Tech
 
 ## Vision
@@ -47,3 +54,14 @@ Reflect on these prompts to identify opportunities where your actions can align 
 - **Smooth Onboarding:** [Onboarding Assets](docs/onboarding/README.md) offer guided tours and learning paths for new teammates.
 - **Shared Vocabulary:** [Living Glossary](docs/glossary.md) maintains consistent terminology.
 - **Narrative Evidence:** [Changelog Guidelines](docs/changelog-guidelines.md) help translate changes into stakeholder-friendly stories.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

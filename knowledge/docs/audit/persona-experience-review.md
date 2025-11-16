@@ -2,6 +2,13 @@
 title: "Persona Experience Review"
 tags: ["personas", "ux-research", "continuous-improvement"]
 ---
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Persona Experience Review" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre persona experience review.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de persona experience review.
+estado: active
+-->
+
 # Persona Experience Review
 
 Esta revisión actualiza la evaluación del repositorio **The Wise Tech** con base en diez personas realistas (20–50 años) que representan estudiantes, profesionales y entusiastas de la tecnología. Para cada persona se describen objetivos, tareas en el repositorio, dificultades, elementos que hoy funcionan, mejoras accionables alineadas con los principios Wise Tech (Simplicity, Continuous Improvement, Resilience, Knowledge Capitalization, Human Connection) y métricas de éxito que permiten validar la mejora.
@@ -85,3 +92,14 @@ Esta revisión actualiza la evaluación del repositorio **The Wise Tech** con ba
 - [Quickstart Guide](../guides/quickstart.md)
 - [Playbooks](../playbooks/)
 - [Personas overview](../personas/_index.md)
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

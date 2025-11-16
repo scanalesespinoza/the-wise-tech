@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Pull Request Checklist (Essential + Operational)" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre pull request checklist (essential + operational).
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de pull request checklist (essential + operational).
+estado: active
+-->
+
 # Pull Request Checklist (Essential + Operational)
 
 Use this living checklist to validate every change before requesting a review. Pair it with the PR template in `.github/PULL_REQUEST_TEMPLATE.md`.
@@ -23,3 +30,14 @@ Use this living checklist to validate every change before requesting a review. P
 - [ ] Captured any new patterns or anti-patterns in the [recipe catalog](recipes/README.md).
 
 Keep the checklist short enough to remain actionable. When the team learns about new recurring issues, evolve the checklist collaboratively and document the rationale.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

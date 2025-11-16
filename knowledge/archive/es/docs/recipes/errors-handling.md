@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Receta: Manejo de Errores Intencional" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre receta: manejo de errores intencional.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de receta: manejo de errores intencional.
+estado: active
+-->
+
 # Receta: Manejo de Errores Intencional
 
 **Propósito.** Brindar rutas de recuperación consistentes y amigables para las personas usuarias mientras mantenemos telemetría accionable.
@@ -19,3 +26,14 @@
 **Ejemplo local.** Consulta `experience/scenarios/payments/service/errors.py` para ver las excepciones de dominio canónicas y cómo se mapean a respuestas de API.
 
 **Principios relacionados.** [Respeta el contrato del dominio](../principles-essential.md), [Diseña para el fallo elegante](../principles-essential.md).
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

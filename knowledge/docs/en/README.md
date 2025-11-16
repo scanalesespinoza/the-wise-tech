@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "The Wise Tech · English bridge" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre the wise tech · english bridge.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de the wise tech · english bridge.
+estado: active
+-->
+
 # The Wise Tech · English bridge
 
 The one-page [repository README](https://github.com/scanalesespinoza/the-wise-tech/blob/main/README.md) now acts as the primary navigation surface.
@@ -19,3 +26,14 @@ but the architectural principles always begin with the behaviors expected from d
 ## Translation parity
 Every Markdown file that lives here has a Spanish counterpart in `../es`.
 Use `make -f operations/Makefile parity` if you add or rename files to ensure both languages stay aligned.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

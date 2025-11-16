@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Practices — Whitepaper: Measuring the Impact of Augmented Development (aDevelopment)" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre practices — whitepaper: measuring the impact of augmented development (adevelopment).
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de practices — whitepaper: measuring the impact of augmented development (adevelopment).
+estado: active
+-->
+
 # Practices — Whitepaper: Measuring the Impact of Augmented Development (aDevelopment)
 
 ## Quick checklist (≤10 ítems)
@@ -20,3 +27,14 @@
 - Porcentaje de automatizaciones vs. intervenciones humanas.
 - Variación de throughput individual frente a benchmark base.
 - Índice de incidentes o defectos posteriores a entregas aumentadas.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

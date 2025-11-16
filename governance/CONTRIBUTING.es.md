@@ -19,3 +19,14 @@ Thanks for contributing to The Wise Tech. All documentation now lives in `knowle
 - The [`quality`](../.github/workflows/quality.yml) and [`docs-and-links`](../.github/workflows/docs-and-links.yml) workflows run exactly the Makefile commands (`make -f operations/Makefile ci` plus documentation validation) to maintain parity between local and remote runs.
 - Run `make -f operations/Makefile verify-links` or `python operations/scripts/check-links.py` whenever you edit large docs to catch broken internal links early.
 - Document strategic decisions in the [ADR index](../knowledge/adr/INDEX.md).
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

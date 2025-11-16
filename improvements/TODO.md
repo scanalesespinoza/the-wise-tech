@@ -143,3 +143,14 @@ Los siguientes archivos requieren intervención porque no especifican su propós
 | `knowledge/docs/templates/labs/evidence-lab-02.md` | Propósito/Audiencia no detectado |
 | `knowledge/docs/templates/labs/evidence-lab-03.md` | Propósito/Audiencia no detectado |
 | `knowledge/docs/templates/postmortem-light.md` | Propósito/Audiencia no detectado |
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

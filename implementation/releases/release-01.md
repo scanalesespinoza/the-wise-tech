@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Release 01 — Operational discovery" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre release 01 — operational discovery.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de release 01 — operational discovery.
+estado: active
+-->
+
 # Release 01 — Operational discovery
 
 - **Date:** 2024-07-15
@@ -20,3 +27,14 @@ Establish a repository baseline so future iterations can turn the documentation 
 1. Design the MVP flow (30/60/90 Learning Path or similar) and document the proposal in a PR.
 2. Implement minimal automations to validate that flow.
 3. Prepare `release-02.md` when the MVP is operational and reference any roadmap adjustment.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

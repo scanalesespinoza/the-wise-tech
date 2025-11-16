@@ -2,6 +2,13 @@
 title: "Resilience Policies — Cómo usarlas"
 tags: ["developers", "resilience", "playbooks"]
 ---
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Resilience Policies — Cómo usarlas" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre resilience policies — cómo usarlas.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de resilience policies — cómo usarlas.
+estado: active
+-->
+
 # Resilience Policies — Cómo usarlas
 Las políticas definen **contratos operativos** por servicio/escenario:
 - **timeouts_ms**: límites por cliente/infra (1–120000 ms)
@@ -25,3 +32,14 @@ Ver `experience/scenarios/payments/policies/resilience.yml` (payments).
 - [Telemetry (Minimum)](telemetry-minima.md)
 - [Platform playbook](../playbooks/platform-playbook.md)
 - [Platform Engineers — 30/60/90](../paths/platform-engineers-30-60-90.md)
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

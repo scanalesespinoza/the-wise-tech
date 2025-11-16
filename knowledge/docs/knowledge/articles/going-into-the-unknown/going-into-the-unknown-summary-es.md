@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Going into the Unknown" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre going into the unknown.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de going into the unknown.
+estado: active
+-->
+
 # Going into the Unknown
 **Fuente:** https://www.linkedin.com/pulse/going-unknown-sergio-canales-mfwme  
 **Autor:** Sergio Canales Espinoza  
@@ -29,3 +36,14 @@ Explorar lo desconocido es esencial para el crecimiento personal y profesional. 
 
 ## Conclusión práctica (≤120 palabras)
 Fomentar el crecimiento implica institucionalizar el mentoring, crear espacios seguros para explorar nuevas disciplinas y documentar los aprendizajes. Al mezclar experiencias diversas con diálogo constante, los equipos desarrollan resiliencia emocional y técnica.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

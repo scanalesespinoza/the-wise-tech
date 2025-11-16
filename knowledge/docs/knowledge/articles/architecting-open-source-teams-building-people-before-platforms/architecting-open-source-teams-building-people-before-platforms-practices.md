@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Practices — 🛠️ Architecting Open Source Teams: Building People Before Platforms" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre practices — 🛠️ architecting open source teams: building people before platforms.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de practices — 🛠️ architecting open source teams: building people before platforms.
+estado: active
+-->
+
 # Practices — 🛠️ Architecting Open Source Teams: Building People Before Platforms
 
 ## Quick checklist (≤10 ítems)
@@ -20,3 +27,14 @@
 - Proporción de aportes no code (docs, soporte) reconocidos públicamente.
 - Tiempo medio de respuesta a nuevas contribuciones.
 - Impacto en objetivos de negocio asociados (features entregadas, problemas resueltos).
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

@@ -24,3 +24,14 @@ Bienvenido/a 👋. Usa esta landing para elegir tu camino según rol e intenció
 - Total de archivos auditados: **143**
 - Prioriza los elementos listados en `TODO.md`.
 - Registra feedback en issues o en la futura encuesta in situ.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

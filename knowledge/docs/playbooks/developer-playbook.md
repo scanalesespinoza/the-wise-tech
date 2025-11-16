@@ -2,6 +2,13 @@
 title: "Developer Playbook — mínimos accionables"
 tags: ["developers", "playbooks", "resilience"]
 ---
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Developer Playbook — mínimos accionables" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre developer playbook — mínimos accionables.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de developer playbook — mínimos accionables.
+estado: active
+-->
+
 # Developer Playbook — mínimos accionables
 
 ## Principios operativos (≤5)
@@ -61,3 +68,14 @@ tags: ["developers", "playbooks", "resilience"]
 - [Quickstart](../guides/quickstart.md)
 - [Payments overview](../scenarios/payments-overview.md)
 - [Platform playbook](platform-playbook.md)
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

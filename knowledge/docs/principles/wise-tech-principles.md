@@ -2,6 +2,13 @@
 title: "Wise Tech Principles"
 tags: ["consumers", "principles", "knowledge-capitalization"]
 ---
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Wise Tech Principles" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre wise tech principles.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de wise tech principles.
+estado: active
+-->
+
 # Wise Tech Principles
 
 ## Simplicity
@@ -28,3 +35,14 @@ Encourage transparent collaboration and feedback rhythms across roles.
 - [Developer playbook](../playbooks/developer-playbook.md)
 - [Platform playbook](../playbooks/platform-playbook.md)
 - [Roadmap](../roadmap/roadmap.md)
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

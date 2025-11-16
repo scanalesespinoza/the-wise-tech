@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Practices — What about having Super Apps?" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre practices — what about having super apps?.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de practices — what about having super apps?.
+estado: active
+-->
+
 # Practices — What about having Super Apps?
 
 ## Quick checklist (≤10 ítems)
@@ -20,3 +27,14 @@
 - Tiempo promedio de detección y respuesta por estado.
 - Número de incidentes convertidos en acciones preventivas compartidas.
 - Satisfacción del usuario durante eventos degradados.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

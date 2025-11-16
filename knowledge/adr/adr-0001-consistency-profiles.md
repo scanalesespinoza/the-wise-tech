@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "ADR-0001: Perfiles de Consistencia Declarativos" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre adr-0001: perfiles de consistencia declarativos.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de adr-0001: perfiles de consistencia declarativos.
+estado: active
+-->
+
 # ADR-0001: Perfiles de Consistencia Declarativos
 
 - Fecha: 2024-06-14
@@ -30,3 +37,14 @@ Los servicios de Wise Tech operan sobre múltiples réplicas y entornos. Sin una
 ## Notas
 
 Las decisiones futuras deben revisar la necesidad de nuevos perfiles (p.ej., strong session) a medida que evolucione la plataforma.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

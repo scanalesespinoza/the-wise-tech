@@ -2,6 +2,13 @@
 title: "Security Minimum"
 tags: ["developers", "resilience", "playbooks"]
 ---
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Seguridad mínima — Contributors" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre seguridad mínima — contributors.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de seguridad mínima — contributors.
+estado: active
+-->
+
 # Seguridad mínima — Contributors
 Esta guía define controles prácticos y reproducibles:
 - **Secretos**: nunca en el repo. Usa variables de entorno o secretos en GitHub.
@@ -26,3 +33,14 @@ Esta guía define controles prácticos y reproducibles:
 - [Security Policy](https://github.com/scanalesespinoza/the-wise-tech/blob/main/.github/SECURITY.md)
 - [Developer playbook](../playbooks/developer-playbook.md)
 - [Contribution Guide](contribution-guide.md)
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

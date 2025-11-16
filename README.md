@@ -23,6 +23,9 @@ This site curates a taxonomic body of principles, models, and methodologies for 
 1. Read the overview in [Docs Home](knowledge/docs/index.md) to locate the principles, paths, and labs.
 2. Find your role in [Choose your path](#choose-your-path) and follow the corresponding "Learning Path 30/60/90" link.
 3. If you want to spin up the local environment, continue with [Quick start (7 steps)](#quick-start-7-steps).
+4. ¿Necesitas resultados inmediatos? Usa los Fast Track de cada perfil: [Consumers](knowledge/docs/paths/consumers/fast-track.md), [Developers](knowledge/docs/paths/developers/fast-track.md) y [Platform Engineers](knowledge/docs/paths/platform-engineers/fast-track.md).
+
+Para una vista tipo “panel con botones”, visita la [Navegación visual](docs/visual-navigation.md).
 
 ➡️ Explore the full documentation in [Docs Home](knowledge/docs/index.md) or visit the published version on GitHub Pages: https://scanalesespinoza.github.io/the-wise-tech/.
 
@@ -165,3 +168,14 @@ For detailed expectations, consult [Contributing Guide (English)](governance/CON
 ---
 
 For licensing information, see [LICENSE](LICENSE).
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---
