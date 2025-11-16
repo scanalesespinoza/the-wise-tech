@@ -2,6 +2,7 @@
 import json
 import logging
 import os
+import re
 import subprocess
 import sys
 import urllib.error
@@ -69,6 +70,136 @@ def summarize_audit_inputs():
             if sub == "impactos":
                 impacts = count
     return {"personas": personas, "scenarios": scenarios, "impacts": impacts}
+
+
+def _extract_section_lines(lines: List[str], heading_prefix: str) -> List[str]:
+    """Return the lines under a level-two heading matching the prefix."""
+
+    if not heading_prefix:
+        return []
+
+    buffer: List[str] = []
+    collecting = False
+    target = heading_prefix.strip().lower()
+
+    for line in lines:
+        if line.startswith("## "):
+            title = line[3:].strip()
+            if title.lower().startswith(target):
+                collecting = True
+                continue
+            if collecting:
+                break
+        if collecting:
+            buffer.append(line.rstrip())
+
+    return buffer
+
+
+def _extract_list_items(lines: List[str], limit: int = 10) -> List[str]:
+    """Parse ordered or unordered markdown list items."""
+
+    items: List[str] = []
+    pattern = re.compile(r"^(?:[-*]|\d+\.)\s+(.*)")
+
+    for line in lines:
+        stripped = line.strip()
+        if not stripped:
+            continue
+        match = pattern.match(stripped)
+        if match:
+            items.append(match.group(1).strip())
+        if len(items) >= limit:
+            break
+
+    return items
+
+
+def _collect_stage_blocks(lines: List[str]) -> List[Dict[str, object]]:
+    """Capture the stage headings and their descriptive text."""
+
+    stages: List[Dict[str, object]] = []
+    current_title: Optional[str] = None
+    buffer: List[str] = []
+
+    def _flush_current():
+        nonlocal buffer
+        if current_title:
+            stages.append(
+                {
+                    "title": current_title,
+                    "details": "\n".join(line.rstrip() for line in buffer).strip(),
+                }
+            )
+            buffer = []
+
+    for line in lines:
+        if line.startswith("### Stage"):
+            _flush_current()
+            current_title = line.strip("# ").strip()
+            continue
+        if line.startswith("## "):
+            _flush_current()
+            current_title = None
+            continue
+        if current_title is not None:
+            buffer.append(line)
+
+    if current_title:
+        _flush_current()
+
+    return stages
+
+
+def _summarize_block(text: str, max_lines: int = 6) -> List[str]:
+    lines = [line.strip() for line in text.splitlines() if line.strip()]
+    return lines[:max_lines]
+
+
+def extract_roadmap_context(path: Optional[str] = None) -> Dict[str, object]:
+    """Read implementation/roadmap.md and expose the key planning context."""
+
+    target_path = path or os.path.join(ROOT, "implementation", "roadmap.md")
+    try:
+        with open(target_path, "r", encoding="utf-8") as handle:
+            raw_lines = handle.read().splitlines()
+    except FileNotFoundError:
+        return {}
+
+    context: Dict[str, object] = {"source": os.path.relpath(target_path, ROOT)}
+
+    current_heading = None
+    for line in raw_lines:
+        if line.startswith("## "):
+            title = line[3:].strip()
+            if title.lower().startswith("current state"):
+                current_heading = title
+                break
+    if current_heading:
+        context["current_state_heading"] = current_heading
+
+    current_lines = _extract_section_lines(raw_lines, "Current state")
+    current_points = _extract_list_items(current_lines, limit=5)
+    if current_points:
+        context["current_state_points"] = current_points
+
+    steps_lines = _extract_section_lines(raw_lines, "Immediate next steps")
+    next_steps = _extract_list_items(steps_lines, limit=10)
+    if next_steps:
+        context["immediate_next_steps"] = next_steps
+
+    stages = _collect_stage_blocks(raw_lines)
+    for stage in stages:
+        title = stage.get("title", "")
+        if title and "✅" not in title:
+            summary = _summarize_block(stage.get("details", ""))
+            context["next_stage"] = {"title": title, "summary": summary}
+            break
+
+    if len(context) == 1:  # only the source path was captured
+        return {}
+
+    return context
 
 
 def _summarize_failures(summary):
@@ -529,6 +660,11 @@ def _render_issue_body(
         if diffstat:
             body_lines.extend(["", "```", diffstat, "```"])
 
+    roadmap_lines = _roadmap_issue_lines(summary.get("roadmap") or {})
+    if roadmap_lines:
+        body_lines.extend(["", "### Roadmap alignment context"])
+        body_lines.extend(roadmap_lines)
+
     codex_prompt = _build_codex_prompt(summary, failing_rules, rubric_rules)
     if codex_prompt.strip():
         body_lines.extend(
@@ -579,6 +715,38 @@ def _describe_rule(name: str, rule: Dict[str, object]) -> List[str]:
         details.append("- Required paths:\n" + formatted)
 
     return details or [f"- `{name}` is marked as failing but has no extra details."]
+
+
+def _roadmap_issue_lines(roadmap: Dict[str, object]) -> List[str]:
+    if not roadmap:
+        return []
+
+    lines: List[str] = []
+    source = roadmap.get("source")
+    if source:
+        lines.append(f"- Source: `{source}`")
+
+    heading = roadmap.get("current_state_heading")
+    if heading:
+        lines.append(f"- Current state: {heading}")
+
+    state_points = roadmap.get("current_state_points", [])
+    if state_points:
+        lines.append("  - Signals:")
+        lines.extend(f"    - {point}" for point in state_points)
+
+    next_stage = roadmap.get("next_stage") or {}
+    if next_stage.get("title"):
+        lines.append(f"- Upcoming stage: {next_stage['title']}")
+        for snippet in next_stage.get("summary", []):
+            lines.append(f"  {snippet}")
+
+    steps = roadmap.get("immediate_next_steps", [])
+    if steps:
+        lines.append("- Immediate next steps:")
+        lines.extend(f"  - {step}" for step in steps)
+
+    return lines
 
 
 def _build_codex_prompt(
@@ -644,6 +812,12 @@ def _build_codex_prompt(
         lines.append("Diff summary:")
         lines.extend(diffstat.splitlines())
 
+    roadmap_lines = _roadmap_prompt_lines(summary.get("roadmap") or {})
+    if roadmap_lines:
+        lines.append("")
+        lines.append("Roadmap alignment:")
+        lines.extend(roadmap_lines)
+
     lines.extend(
         [
             "",
@@ -655,6 +829,30 @@ def _build_codex_prompt(
     )
 
     return "\n".join(lines)
+
+
+def _roadmap_prompt_lines(roadmap: Dict[str, object]) -> List[str]:
+    if not roadmap:
+        return []
+
+    lines: List[str] = []
+
+    heading = roadmap.get("current_state_heading")
+    if heading:
+        lines.append(f"- Current state: {heading}")
+
+    next_stage = roadmap.get("next_stage") or {}
+    if next_stage.get("title"):
+        lines.append(f"- Upcoming stage: {next_stage['title']}")
+        for snippet in next_stage.get("summary", []):
+            lines.append(f"  {snippet}")
+
+    steps = roadmap.get("immediate_next_steps", [])
+    if steps:
+        lines.append("- Immediate next steps:")
+        lines.extend(f"  - {step}" for step in steps)
+
+    return lines
 
 
 def maybe_create_issue(
@@ -751,6 +949,7 @@ def main():
     pass_score = thresholds.get("pass_score", 30)
     inputs = summarize_audit_inputs()
     changes = collect_change_summary()
+    roadmap = extract_roadmap_context()
 
     summary = {
         "score": score,
@@ -761,6 +960,8 @@ def main():
     }
     if changes:
         summary["changes"] = changes
+    if roadmap:
+        summary["roadmap"] = roadmap
     summary["failing_rules"] = [
         item.get("rule", "unknown") for item in breakdown if not item.get("ok", False)
     ]

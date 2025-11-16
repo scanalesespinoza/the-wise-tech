@@ -2,11 +2,16 @@ import importlib.util
 import os
 import pathlib
 import sys
+import tempfile
+import textwrap
 import unittest
 from unittest import mock
 
 MODULE_PATH = (
-    pathlib.Path(__file__).resolve().parents[1] / "scripts" / "audit-evaluator.py"
+    pathlib.Path(__file__).resolve().parents[2]
+    / "operations"
+    / "scripts"
+    / "audit-evaluator.py"
 )
 SPEC = importlib.util.spec_from_file_location("audit_evaluator", MODULE_PATH)
 audit_evaluator = importlib.util.module_from_spec(SPEC)
@@ -70,6 +75,50 @@ class ExtractMessageTests(unittest.TestCase):
         payload = {"response": '{"status": "UNKNOWN"}'}
         message = audit_evaluator._extract_message(payload)
         self.assertEqual('{"status": "UNKNOWN"}', message)
+
+
+class RoadmapContextTests(unittest.TestCase):
+    def test_extracts_context_from_sample_file(self):
+        sample = textwrap.dedent(
+            """
+            # Implementation Roadmap
+
+            ## Current state (Release 01)
+            - Repository mapped.
+
+            ## Stages to reach a consumable product
+            ### Stage 1 — Discovery ✅
+            Objective: Document the current assets.
+
+            ### Stage 2 — Navigable MVP
+            Objective: Package a guided flow.
+
+            ## Immediate next steps
+            1. Prepare flow
+            2. Automate checks
+            """
+        )
+        with tempfile.NamedTemporaryFile("w", delete=False, encoding="utf-8") as handle:
+            handle.write(sample)
+            path = handle.name
+        try:
+            context = audit_evaluator.extract_roadmap_context(path)
+        finally:
+            os.unlink(path)
+
+        self.assertEqual(
+            context.get("current_state_heading"), "Current state (Release 01)"
+        )
+        self.assertIn("Prepare flow", context.get("immediate_next_steps", []))
+        next_stage = context.get("next_stage") or {}
+        self.assertEqual(next_stage.get("title"), "Stage 2 — Navigable MVP")
+        self.assertTrue(next_stage.get("summary"))
+
+    def test_missing_file_returns_empty_context(self):
+        missing = os.path.join(tempfile.gettempdir(), "roadmap-not-found.md")
+        if os.path.exists(missing):
+            os.unlink(missing)
+        self.assertEqual({}, audit_evaluator.extract_roadmap_context(missing))
 
 
 if __name__ == "__main__":

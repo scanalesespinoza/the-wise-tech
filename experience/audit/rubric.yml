@@ -48,10 +48,23 @@ rules:
     weight: 4
     path_exists:
       - "operations/scripts/validate-content-metadata.py"
+  implementation_roadmap_present:
+    weight: 6
+    file: "implementation/roadmap.md"
+    must_contain:
+      - "## Current state"
+      - "## Stages to reach a consumable product"
+      - "## Immediate next steps"
+  roadmap_docs_link_to_plan:
+    weight: 4
+    file: "knowledge/docs/roadmap/roadmap.md"
+    must_contain:
+      - "implementation/roadmap.md"
+      - "release-XX"
   workflows_present:
     weight: 6
     path_exists:
       - ".github/workflows/quality.yml"
       - ".github/workflows/docs-and-links.yml"
 thresholds:
-  pass_score: 34
+  pass_score: 40
