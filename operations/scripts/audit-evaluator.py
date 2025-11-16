@@ -583,6 +583,51 @@ def run_content_audit() -> Dict[str, object]:
     }
 
 
+def _limit_content_audit_payload(
+    content_audit: Dict[str, object], max_documents: int = 5
+) -> Dict[str, object]:
+    """Return a compact snapshot of the content audit for the LLM payload."""
+
+    if not content_audit:
+        return {}
+
+    documents = content_audit.get("documents") or []
+    trimmed: List[Dict[str, object]] = []
+    if documents:
+        sorted_docs = sorted(
+            documents,
+            key=lambda d: (
+                d.get("total_score", 0)
+                / max(d.get("max_score", 1), 1)
+                if isinstance(d, dict)
+                else 0
+            ),
+        )
+        for doc in sorted_docs[:max_documents]:
+            if not isinstance(doc, dict):
+                continue
+            trimmed.append(
+                {
+                    "path": doc.get("path"),
+                    "title": doc.get("title"),
+                    "status": doc.get("status"),
+                    "score": f"{doc.get('total_score', 0)}/{doc.get('max_score', 0)}",
+                    "missing_sections": list(doc.get("missing_sections", []))[:3],
+                    "suggestions": list(doc.get("suggestions", []))[:2],
+                    "issues": list(doc.get("issues", []))[:2],
+                }
+            )
+
+    payload: Dict[str, object] = {
+        "document_count": len(documents),
+        "generated_at": content_audit.get("generated_at"),
+        "reports": content_audit.get("reports"),
+    }
+    if trimmed:
+        payload["highlights"] = trimmed
+    return payload
+
+
 def file_contains(path, substrings):
     try:
         with open(
@@ -1522,7 +1567,7 @@ def main():
     if roadmap:
         summary["roadmap"] = roadmap
     if content_audit:
-        summary["content_audit"] = content_audit
+        summary["content_audit"] = _limit_content_audit_payload(content_audit)
     summary["failing_rules"] = [
         item.get("rule", "unknown") for item in breakdown if not item.get("ok", False)
     ]
