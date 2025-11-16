@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Wise Tech Alignment — 🛠️ Architecting Open Source Teams: Building People Before Platforms" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre wise tech alignment — 🛠️ architecting open source teams: building people before platforms.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de wise tech alignment — 🛠️ architecting open source teams: building people before platforms.
+estado: active
+-->
+
 # Wise Tech Alignment — 🛠️ Architecting Open Source Teams: Building People Before Platforms
 
 | Topic/Claim | Insight | Wise Tech Principle(s) | Why it matters |
@@ -15,3 +22,14 @@
 **Riesgos/antipatrones**
 - Tratar iniciativas open source como tareas adicionales sin respaldo de liderazgo.
 - Introducir procesos pesados que apaguen la motivación voluntaria.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

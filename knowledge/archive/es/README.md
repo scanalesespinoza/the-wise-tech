@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "The Wise Tech" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre the wise tech.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de the wise tech.
+estado: active
+-->
+
 # The Wise Tech
 
 ## Visión
@@ -56,3 +63,14 @@ La carpeta de pagos actúa como escenario de negocio canónico: las excepciones 
 La automatización mantiene ambos idiomas sincronizados. Ejecuta `python operations/scripts/check_bilingual_parity.py --check-scenarios` de forma local o apóyate en la acción de GitHub **Bilingual Parity** antes de fusionar.
 
 Para expectativas detalladas consulta la [Guía de Contribución (English)](../../../governance/CONTRIBUTING.md) y la [Guía de Contribución (Español)](../../../governance/CONTRIBUTING.es.md).
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

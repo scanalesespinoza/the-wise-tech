@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Enfoque The Wise Tech: Un contraste con las prácticas tradicionales de software complejo" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre enfoque the wise tech: un contraste con las prácticas tradicionales de software complejo.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de enfoque the wise tech: un contraste con las prácticas tradicionales de software complejo.
+estado: active
+-->
+
 # Enfoque The Wise Tech: Un contraste con las prácticas tradicionales de software complejo
 
 ## Enfoque tradicional complejo: CICD + DevOps + DevSecOps como cadenas desconectadas
@@ -80,3 +87,14 @@ Este anexo convierte las salvaguardas de sistemas distribuidos en un plan increm
 - **Idempotencia por contrato:** Los servicios que optan por réplica activa deben exponer claves de idempotencia o efectos secundarios verificables para sobrevivir a reintentos.
 - **Continuidad de sesión:** Soporte y UX consultan vectores de sesión antes de responder cuando una persona usuaria cambia de réplica, garantizando continuidad.
 - **Capitalización de conocimiento:** Las plantillas de issues y PR registran decisiones de consistencia y réplica junto con aprendizajes de usuarios, reforzando la memoria organizacional.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Architect teams before platforms" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre architect teams before platforms.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de architect teams before platforms.
+estado: active
+-->
+
 # Architect teams before platforms
 
 The talk "Architecting Open Source Teams" argues that platforms cannot thrive if the people behind them lack shared purpose, guided autonomy, and meaningful recognition. For Wise Tech, this view complements our principles by showing that continuous improvement flourishes when simple processes protect human energy and knowledge is shared systematically.
@@ -18,3 +25,14 @@ The talk "Architecting Open Source Teams" argues that platforms cannot thrive if
 
 ## Link to Wise Tech
 This approach strengthens continuous improvement and resilience by prioritizing people over tooling, promotes simplicity through lightweight structures, and accelerates knowledge capitalization with visible documentation and mentorship. Above all, it preserves human purpose and connection by sustaining an ongoing loop of feedback and recognition.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

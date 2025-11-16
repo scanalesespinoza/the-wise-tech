@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Lab 03 — aDevelopment Loop (≤ 60–90 min)" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre lab 03 — adevelopment loop (≤ 60–90 min).
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de lab 03 — adevelopment loop (≤ 60–90 min).
+estado: active
+-->
+
 # Lab 03 — aDevelopment Loop (≤ 60–90 min)
 **Objetivo:** usar IA responsable para acelerar systems/tests/docs y medir impacto.
 
@@ -23,3 +30,14 @@
 
 ## What’s next
 - Encadenar con resiliencia (timeouts/retries) o con SLO (impacto percibido).
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

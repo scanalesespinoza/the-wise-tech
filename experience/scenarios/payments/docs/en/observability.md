@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Payments Observability Guide" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre payments observability guide.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de payments observability guide.
+estado: active
+-->
+
 # Payments Observability Guide
 
 Wise Tech favors purposeful telemetry. This guide connects the payments
@@ -29,3 +36,14 @@ scenario with dashboards, alerts, and trace signals.
 
 After every incident update the dashboards or alert thresholds and record
 changes in both language versions of this document to preserve parity.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Whitepaper: Measuring the Impact of Augmented Development (aDevelopment)" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre whitepaper: measuring the impact of augmented development (adevelopment).
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de whitepaper: measuring the impact of augmented development (adevelopment).
+estado: active
+-->
+
 # Whitepaper: Measuring the Impact of Augmented Development (aDevelopment)
 **Source:** https://www.linkedin.com/pulse/whitepaper-measuring-impact-augmented-development-canales-espinoza-4kw8e  
 **Author:** Sergio Canales Espinoza  
@@ -31,3 +38,14 @@ The whitepaper quantifies the performance of the aDevelopment model using EventF
 
 ## Practical conclusion (≤120 words)
 Measuring augmented development demands capturing operational repository data, translating it into financial indicators, and contrasting it with community benchmarks. Organizations embracing aDevelopment should build dashboards that combine commits, effective hours, costs, and business outcomes, validating that AI amplifies expert human decisions. Prioritizing seasoned talent, establishing reliable automation, and monitoring quality keeps the model from degrading architecture.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

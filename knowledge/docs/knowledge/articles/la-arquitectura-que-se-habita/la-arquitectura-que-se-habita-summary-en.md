@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "The architecture we inhabit" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre the architecture we inhabit.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de the architecture we inhabit.
+estado: active
+-->
+
 # The architecture we inhabit
 **Source:** https://www.linkedin.com/pulse/la-arquitectura-que-se-habita-sergio-canales-espinoza-igiqe  
 **Author:** Sergio Canales Espinoza  
@@ -29,3 +36,14 @@ The author argues that every architecture—physical or digital—must be design
 
 ## Practical conclusion (≤120 words)
 Designing habitable systems demands a discipline of constant observation. Teams should experience their own product, gather immediate feedback, and judge every technological decision by the usefulness it delivers to people. Choosing simplicity, ensuring reliability, and making contributions visible strengthen trust and adoption.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

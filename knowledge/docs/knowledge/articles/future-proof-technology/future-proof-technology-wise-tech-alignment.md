@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Wise Tech Alignment — Future-Proof Technology" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre wise tech alignment — future-proof technology.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de wise tech alignment — future-proof technology.
+estado: active
+-->
+
 # Wise Tech Alignment — Future-Proof Technology
 
 | Topic/Claim | Insight | Wise Tech Principle(s) | Why it matters |
@@ -14,3 +21,14 @@
 **Riesgos/antipatrones**
 - Implementar plataformas sin estrategia de habilitación de talento.
 - Usar la retórica de futuro sin mostrar beneficios tangibles para las personas.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

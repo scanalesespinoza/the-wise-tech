@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Receta: Patrones de Servicio Resiliente" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre receta: patrones de servicio resiliente.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de receta: patrones de servicio resiliente.
+estado: active
+-->
+
 # Receta: Patrones de Servicio Resiliente
 
 **Propósito.** Mantener la disponibilidad y una degradación predecible bajo estrés o fallas de dependencias.
@@ -19,3 +26,14 @@
 **Ejemplo local.** Examina `systems/infra/resilience/policies.yml` para conocer las configuraciones base de timeouts y reintentos por nivel de dependencia.
 
 **Principios relacionados.** [Diseña para el fallo elegante](../principles-essential.md), [Protege los datos y la confianza humana](../principles-essential.md).
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

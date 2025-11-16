@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Practices — The Hadron Pattern for Microservices" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre practices — the hadron pattern for microservices.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de practices — the hadron pattern for microservices.
+estado: active
+-->
+
 # Practices — The Hadron Pattern for Microservices
 
 ## Quick checklist (≤10 ítems)
@@ -20,3 +27,14 @@
 - Cantidad de incidentes resueltos sin intervención humana directa.
 - Cumplimiento de contratos expuestos por baryons.
 - Número de mejoras documentadas tras revisiones del patrón.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

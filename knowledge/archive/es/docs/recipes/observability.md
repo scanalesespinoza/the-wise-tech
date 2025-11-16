@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Receta: Servicios Observables por Defecto" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre receta: servicios observables por defecto.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de receta: servicios observables por defecto.
+estado: active
+-->
+
 # Receta: Servicios Observables por Defecto
 
 **Propósito.** Asegurar que cada cambio deje rastros que aceleren la detección, el triage y el aprendizaje.
@@ -19,3 +26,14 @@
 **Ejemplo local.** Revisa `systems/infra/observability/telemetry.json` para los nombres de campos canónicos y el formato de logging.
 
 **Principios relacionados.** [Abraza los comportamientos observables](../principles-essential.md), [Automatiza el aprendizaje repetible](../principles-essential.md).
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

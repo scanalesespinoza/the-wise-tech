@@ -2,6 +2,13 @@
 title: "CI overview"
 tags: ["ci", "automation"]
 ---
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "CI overview" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre ci overview.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de ci overview.
+estado: active
+-->
+
 # CI overview
 
 Los workflows viven en `.github/workflows/`. Usa esta tabla para saber qué valida cada uno y cuándo se ejecuta.
@@ -23,3 +30,14 @@ Los workflows viven en `.github/workflows/`. Usa esta tabla para saber qué vali
 - [Dev environment — devcontainer, pre-commit y just](../guides/dev-environment.md)
 - [.github/workflows/](../../../.github/workflows)
 - [operations/scripts/](../../../operations/scripts/)
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

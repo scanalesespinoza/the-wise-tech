@@ -2,6 +2,13 @@
 title: "PR ideas"
 tags: ["developers", "knowledge-capitalization"]
 ---
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "PR ideas" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre pr ideas.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de pr ideas.
+estado: active
+-->
+
 # PR ideas
 
 Small tasks to practice the contribution flow:
@@ -21,3 +28,14 @@ Each idea must include a note in the PR explaining which guide, snippet, or metr
 ## See also
 - [Roadmap](roadmap.md)
 - [Contribution guide](../guides/contribution-guide.md)
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

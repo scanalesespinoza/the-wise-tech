@@ -2,6 +2,13 @@
 title: "Dev environment — devcontainer, pre-commit y just"
 tags: ["quickstart","developers","platform-engineers","dx"]
 ---
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Dev environment — rápido" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre dev environment — rápido.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de dev environment — rápido.
+estado: active
+-->
+
 # Dev environment — rápido
 ## Opciones
 - **Codespaces/containers**: abre en GitHub Codespaces o `Dev Containers` en VS Code.
@@ -31,3 +38,14 @@ tags: ["quickstart","developers","platform-engineers","dx"]
 - [Quickstart](./quickstart.md)
 - [Content Style Guide](./content-style-guide.md)
 - [Telemetry (Minimum)](./telemetry-minima.md)
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Practices — aDevelopment: la nueva era del desarrollo aumentado" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre practices — adevelopment: la nueva era del desarrollo aumentado.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de practices — adevelopment: la nueva era del desarrollo aumentado.
+estado: active
+-->
+
 # Practices — aDevelopment: la nueva era del desarrollo aumentado
 
 ## Quick checklist (≤10 ítems)
@@ -20,3 +27,14 @@
 - Tiempo de ciclo desde idea a producción con intervención asistida.
 - Índice de re-trabajo por decisiones automatizadas vs. humanas.
 - Satisfacción de usuarios internos y finales respecto a cadencia y calidad.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

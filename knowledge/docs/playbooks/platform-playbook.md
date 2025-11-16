@@ -2,6 +2,13 @@
 title: "Platform Playbook — mínimos operables"
 tags: ["platform-engineers", "playbooks", "resilience"]
 ---
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Platform Playbook — mínimos operables" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre platform playbook — mínimos operables.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de platform playbook — mínimos operables.
+estado: active
+-->
+
 # Platform Playbook — mínimos operables
 
 ## Contratos de operación
@@ -55,3 +62,14 @@ tags: ["platform-engineers", "playbooks", "resilience"]
 - [Payments overview](../scenarios/payments-overview.md)
 - [Platform engineers overview](../personas/platform-engineers-overview.md)
 - [Roadmap](../roadmap/roadmap.md)
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

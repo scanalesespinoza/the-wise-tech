@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Arquitectar equipos antes que plataformas" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre arquitectar equipos antes que plataformas.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de arquitectar equipos antes que plataformas.
+estado: active
+-->
+
 # Arquitectar equipos antes que plataformas
 
 La charla "Architecting Open Source Teams" plantea que ninguna plataforma prospera si las personas que la sostienen carecen de propósito compartido, autonomía guiada y reconocimiento significativo. Para Wise Tech, este enfoque complementa nuestros principios al destacar que la mejora continua nace cuando la simplicidad de los procesos protege la energía humana y cuando el conocimiento se comparte de manera sistemática.
@@ -18,3 +25,14 @@ La charla "Architecting Open Source Teams" plantea que ninguna plataforma prospe
 
 ## Relación con Wise Tech
 Este enfoque refuerza la mejora continua y la resiliencia al priorizar personas sobre herramientas, favorece la simplicidad mediante estructuras ligeras y acelera la capitalización del conocimiento con documentación y mentoría visibles. Sobre todo, preserva el propósito y la conexión humana al mantener un ciclo constante de feedback y reconocimiento.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

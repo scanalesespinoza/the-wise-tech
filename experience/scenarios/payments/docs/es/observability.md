@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Guía de Observabilidad de Pagos" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre guía de observabilidad de pagos.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de guía de observabilidad de pagos.
+estado: active
+-->
+
 # Guía de Observabilidad de Pagos
 
 Wise Tech favorece la telemetría con propósito. Esta guía conecta el
@@ -31,3 +38,14 @@ escenario de pagos con dashboards, alertas y trazas.
 Después de cada incidente actualiza los dashboards o umbrales de alertas y
 registra los cambios en ambas versiones idiomáticas de este documento para
 preservar la paridad.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

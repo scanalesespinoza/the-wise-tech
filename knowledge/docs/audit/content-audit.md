@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Content Audit" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre content audit.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de content audit.
+estado: active
+-->
+
 # Content Audit
 
 ## Repository Snapshot (pre-restructure)
@@ -48,3 +55,14 @@
 - Diagramas y configuraciones previas agrupados en `knowledge/archive/legacy-diagrams/` y `knowledge/archive/config/`.
 - Los nuevos índices dentro de `docs/` orientan la navegación y reemplazan referencias anteriores.
 - Puentes heredados viven en `docs/en/` y `docs/es/` para mantener enlaces estables durante la transición.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

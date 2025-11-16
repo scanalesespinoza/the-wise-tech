@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Recipe: Observable Services by Default" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre recipe: observable services by default.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de recipe: observable services by default.
+estado: active
+-->
+
 # Recipe: Observable Services by Default
 
 **Purpose.** Guarantee that every change leaves a trace that accelerates detection, triage, and learning.
@@ -19,3 +26,14 @@
 **Local example.** Review `systems/infra/observability/telemetry.json` for the canonical field names and logging format.
 
 **Related principles.** [Embrace observable behaviors](../principles-essential.md), [Automate repeatable learning](../principles-essential.md).
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

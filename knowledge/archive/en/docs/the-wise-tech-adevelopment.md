@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "The Wise Tech + aDevelopment" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre the wise tech + adevelopment.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de the wise tech + adevelopment.
+estado: active
+-->
+
 # The Wise Tech + aDevelopment
 
 ## Capitalize on experience in code, accelerate with AI, and revive mentorship
@@ -303,3 +310,14 @@ Track onboarding, review efficiency, recipe coverage, Essential violations, and 
 ---
 
 With **The Wise Tech + aDevelopment**, every change teaches. Knowledge stops being ephemeral and becomes a compound advantage.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

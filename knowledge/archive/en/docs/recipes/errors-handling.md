@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Recipe: Intentional Error Handling" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre recipe: intentional error handling.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de recipe: intentional error handling.
+estado: active
+-->
+
 # Recipe: Intentional Error Handling
 
 **Purpose.** Provide consistent, user-friendly recovery paths while keeping telemetry actionable.
@@ -19,3 +26,14 @@
 **Local example.** See `experience/scenarios/payments/service/errors.py` for the canonical domain exceptions and how they map to API responses.
 
 **Related principles.** [Respect the domain contract](../principles-essential.md), [Design for graceful failure](../principles-essential.md).
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

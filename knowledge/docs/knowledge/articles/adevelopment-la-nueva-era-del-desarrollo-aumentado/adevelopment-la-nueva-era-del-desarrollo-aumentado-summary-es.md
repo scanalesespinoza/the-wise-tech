@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "aDevelopment: la nueva era del desarrollo aumentado" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre adevelopment: la nueva era del desarrollo aumentado.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de adevelopment: la nueva era del desarrollo aumentado.
+estado: active
+-->
+
 # aDevelopment: la nueva era del desarrollo aumentado
 **Fuente:** https://www.linkedin.com/pulse/adevelopment-la-nueva-era-del-desarrollo-aumentado-canales-espinoza-mof8e  
 **Autor:** Sergio Canales Espinoza  
@@ -31,3 +38,14 @@ El artículo define "aDevelopment" como una práctica de desarrollo aumentada qu
 
 ## Conclusión práctica (≤120 palabras)
 Adoptar aDevelopment implica combinar la capacidad de decisión humana con herramientas inteligentes que amplifican la entrega de valor. Los equipos deben diseñar pipelines automatizados, recopilar métricas contextuales y fortalecer la gobernanza humana para que la IA complemente, no sustituya. El aprendizaje continuo y los loops de retroalimentación asegurados entre desarrollador, plataforma y usuarios permiten sostener un ritmo acelerado sin sacrificar calidad.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

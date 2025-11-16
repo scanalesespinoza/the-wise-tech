@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "What about having Super Apps?" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre what about having super apps?.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de what about having super apps?.
+estado: active
+-->
+
 # What about having Super Apps?
 **Source:** https://sergio-canales-e.medium.com/what-about-having-super-apps-c1e70255caef  
 **Author:** Sergio Canales Espinoza  
@@ -29,3 +36,14 @@ The article reinterprets “Super Apps” as applications that master resilience
 
 ## Practical conclusion (≤120 words)
 Building Super Apps means standardizing resilience capabilities in every service: monitoring, controlled degradation, and automated response. Turning incidents into institutional knowledge and sharing it strengthens the entire system.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

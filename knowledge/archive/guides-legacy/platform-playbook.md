@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Platform Playbook: Membresía, Quórums y Degradación Controlada" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre platform playbook: membresía, quórums y degradación controlada.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de platform playbook: membresía, quórums y degradación controlada.
+estado: active
+-->
+
 # Platform Playbook: Membresía, Quórums y Degradación Controlada
 
 ## Operar la gestión de membresía
@@ -27,3 +34,14 @@
 
 - Propaga el vector de sesión al equipo de soporte para reproducir estados.
 - Documenta degradaciones planificadas o incidentes en una bitácora centralizada, enlazando las ADRs relevantes.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

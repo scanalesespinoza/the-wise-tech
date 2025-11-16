@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "The Hadron Pattern for Microservices" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre the hadron pattern for microservices.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de the hadron pattern for microservices.
+estado: active
+-->
+
 # The Hadron Pattern for Microservices
 **Source:** https://sergio-canales-e.medium.com/the-hadron-pattern-for-microservices-5f03fcb890fa  
 **Author:** Sergio Canales Espinoza  
@@ -29,3 +36,14 @@ The author uses a particle-physics analogy to describe a microservices pattern o
 
 ## Practical conclusion (≤120 words)
 Adopting the pattern means distinguishing which services are building blocks, which coordinate, and which expose capabilities. Mapping responsibilities with the analogy improves resilience and operational clarity.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

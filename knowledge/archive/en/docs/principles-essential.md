@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Essential Principles for The Wise Tech Systems" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre essential principles for the wise tech systems.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de essential principles for the wise tech systems.
+estado: active
+-->
+
 # Essential Principles for The Wise Tech Systems
 
 These principles define the non-negotiable identity of every product and platform that belongs to The Wise Tech ecosystem. Treat them as architectural guardrails: violating them requires a deliberate decision and recorded mitigation.
@@ -16,3 +23,14 @@ These principles define the non-negotiable identity of every product and platfor
 - Update the catalog only through collaborative review (Architecture Decision Records) so the system identity remains stable.
 
 Each recipe, checklist, and onboarding asset in this repository should point back to one or more principles above. This makes the Essential context tangible for new contributors and enables AI assistants to ground their recommendations in documented priorities.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

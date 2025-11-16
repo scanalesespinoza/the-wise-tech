@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Learning Paths for aDevelopment Teams" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre learning paths for adevelopment teams.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de learning paths for adevelopment teams.
+estado: active
+-->
+
 # Learning Paths for aDevelopment Teams
 
 Use these modular paths to accelerate proficiency. Mix and match based on your role and current maturity.
@@ -27,3 +34,14 @@ Use these modular paths to accelerate proficiency. Mix and match based on your r
 - Sponsor at least one experiment that automates knowledge capture (doc-gen, recipe mining).
 
 Adapt the steps as your team grows. The goal is to make learning compounding and inclusive through shared resources and AI-augmented practice.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Practices — 2024: The Year of IT Team Experience" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre practices — 2024: the year of it team experience.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de practices — 2024: the year of it team experience.
+estado: active
+-->
+
 # Practices — 2024: The Year of IT Team Experience
 
 ## Quick checklist (≤10 ítems)
@@ -20,3 +27,14 @@
 - Índice de satisfacción de equipos (DevEx/Team Experience score).
 - Porcentaje de tiempo invertido en mantenimiento vs. nuevas capacidades.
 - NPS o satisfacción de usuario final tras releases clave.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

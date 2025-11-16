@@ -20,3 +20,14 @@ Elige la experiencia que mejor se adapta a tu rol y accede rápidamente a rutas,
 - **Ingenieros de plataforma**: políticas de resiliencia, observabilidad y playbooks operativos.
 
 > Consejo: añade esta página a tus favoritos para regresar rápidamente a la ruta que necesitas.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

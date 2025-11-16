@@ -2,6 +2,13 @@
 title: "Payments Overview"
 tags: ["developers", "resilience", "playbooks"]
 ---
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Payments Overview" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre payments overview.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de payments overview.
+estado: active
+-->
+
 # Payments Overview
 
 El escenario de pagos ilustra cómo Wise Tech integra descubrimiento, desarrollo y operación.
@@ -22,3 +29,14 @@ El escenario de pagos ilustra cómo Wise Tech integra descubrimiento, desarrollo
 - [Consumers overview](../personas/consumers-overview.md)
 - [Wise Tech approach](../principles/wise-tech-approach.md)
 - [FAQ](../index.md#faq)
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

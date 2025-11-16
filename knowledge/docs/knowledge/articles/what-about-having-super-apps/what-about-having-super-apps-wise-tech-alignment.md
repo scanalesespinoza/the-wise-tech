@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Wise Tech Alignment — What about having Super Apps?" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre wise tech alignment — what about having super apps?.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de wise tech alignment — what about having super apps?.
+estado: active
+-->
+
 # Wise Tech Alignment — What about having Super Apps?
 
 | Topic/Claim | Insight | Wise Tech Principle(s) | Why it matters |
@@ -14,3 +21,14 @@
 **Riesgos/antipatrones**
 - Declarar “Super App” sin capacidades verificables de resiliencia.
 - Depender solo de herramientas sin entrenamiento ni compartir lecciones.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

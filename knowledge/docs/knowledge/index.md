@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Knowledge Base" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre knowledge base.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de knowledge base.
+estado: active
+-->
+
 # Knowledge Base
 
 | Título | Rol(es) | Principios | Temas | Resumen ES | Resumen EN |
@@ -12,3 +19,14 @@
 | What about having Super Apps? | Developers, Platform Engineers | Resilience, Continuous Improvement, Knowledge Capitalization, Simplicity | super-apps, microservices, resilience | [ES](articles/what-about-having-super-apps/what-about-having-super-apps-summary-es.md) | [EN](articles/what-about-having-super-apps/what-about-having-super-apps-summary-en.md) |
 | 2024: The Year of IT Team Experience | Developers, Platform Engineers, Consumers | Human Purpose, Continuous Improvement, Simplicity, Human Connection | team-experience, devex, platform | [ES](articles/2024-the-year-of-it-team-experience/2024-the-year-of-it-team-experience-summary-es.md) | [EN](articles/2024-the-year-of-it-team-experience/2024-the-year-of-it-team-experience-summary-en.md) |
 | The Hadron Pattern for Microservices | Developers, Platform Engineers | Simplicity, Knowledge Capitalization, Resilience, Continuous Improvement | microservices, architecture | [ES](articles/the-hadron-pattern-for-microservices/the-hadron-pattern-for-microservices-summary-es.md) | [EN](articles/the-hadron-pattern-for-microservices/the-hadron-pattern-for-microservices-summary-en.md) |
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

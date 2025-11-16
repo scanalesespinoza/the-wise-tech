@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Payments Incident Runbook" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre payments incident runbook.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de payments incident runbook.
+estado: active
+-->
+
 # Payments Incident Runbook
 
 This document shows how Wise Tech teams respond to customer-facing issues
@@ -38,3 +45,14 @@ in the payments scenario.
   pair to maintain bilingual knowledge.
 - Update contract tests if new response fields were involved, preserving
   observability parity.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Architecting Open Source Teams — Extracted Content" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre architecting open source teams — extracted content.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de architecting open source teams — extracted content.
+estado: active
+-->
+
 # Architecting Open Source Teams — Extracted Content
 
 > Fuente: [slides-architecting-open-source-teams.md](https://github.com/scanalesespinoza/architecting-teams-before-platforms/blob/main/knowledge/docs/slides-architecting-open-source-teams.md)
@@ -195,3 +202,14 @@ CNCF & Platform Engineering Ambassador
 🐙 [github.com/scanalesespinoza](https://github.com/scanalesespinoza)
 
 💬 *“Architecting Teams before Platforms.”*
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

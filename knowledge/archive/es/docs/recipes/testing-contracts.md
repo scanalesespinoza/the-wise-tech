@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Receta: Pruebas de Contrato para Integraciones Estables" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre receta: pruebas de contrato para integraciones estables.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de receta: pruebas de contrato para integraciones estables.
+estado: active
+-->
+
 # Receta: Pruebas de Contrato para Integraciones Estables
 
 **Propósito.** Evitar regresiones entre servicios codificando las expectativas entre productores y consumidores.
@@ -19,3 +26,14 @@
 **Ejemplo local.** Revisa `experience/scenarios/payments/contracts/payments/v2` para ver los archivos Pact y el README que explica los comportamientos esperados.
 
 **Principios relacionados.** [Respeta el contrato del dominio](../principles-essential.md), [Inclínate por la simplicidad mantenible](../principles-essential.md).
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

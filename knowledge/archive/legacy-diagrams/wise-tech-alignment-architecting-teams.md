@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Alineación Wise Tech — Architecting Open Source Teams" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre alineación wise tech — architecting open source teams.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de alineación wise tech — architecting open source teams.
+estado: active
+-->
+
 # Alineación Wise Tech — Architecting Open Source Teams
 
 ## Tabla de mapeo tema → principio Wise Tech
@@ -30,3 +37,14 @@
 - **P1.** Añadir a CI un recordatorio automatizado para capturar feedback humano tras lanzamientos significativos; fomenta Conexión humana y Mejora continua.
 - **P2.** Establecer círculos de revisión cruzada rotativos cada sprint para decisiones arquitectónicas; fortalece Resiliencia y Capitalización del conocimiento.
 - **P2.** Medir y publicar historias de “small visible wins” en retrospectivas trimestrales; mantiene Propósito humano y Mejora continua.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---

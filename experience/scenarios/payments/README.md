@@ -1,3 +1,10 @@
+<!-- metadata
+para_quien: Equipos y contribuidores que consultan "Payments Scenario / Escenario de Pagos" en The Wise Tech.
+objetivo: Proporcionar un contexto accionable sobre payments scenario / escenario de pagos.
+cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de payments scenario / escenario de pagos.
+estado: active
+-->
+
 # Payments Scenario / Escenario de Pagos
 
 This directory groups every artifact that turns the theoretical ideas of
@@ -53,3 +60,14 @@ principios de Wise Tech
    running `python operations/scripts/check_bilingual_parity.py`. / Al modificar
    documentación asegúrate de mantener ambos idiomas en sincronía
    ejecutando `python operations/scripts/check_bilingual_parity.py`.
+
+---
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos, necesito más contexto
+- [ ] No me ayudó
+
+📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+
+---
