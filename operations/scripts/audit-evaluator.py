@@ -11,7 +11,7 @@ from collections import OrderedDict
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Dict, List, Optional, Sequence
+from typing import Dict, Iterable, List, Optional, Sequence
 from urllib.parse import quote, urljoin, urlparse
 
 import yaml
@@ -581,6 +581,77 @@ def run_content_audit() -> Dict[str, object]:
         "generated_at": _utc_timestamp(),
         "reports": outputs,
     }
+
+
+def _truncate_text(value: str, limit: int = 280) -> str:
+    """Ensure the provided text fits within the desired character budget."""
+
+    if not isinstance(value, str):
+        value = str(value)
+    if len(value) <= limit:
+        return value
+    return value[: limit - 1].rstrip() + "…"
+
+
+def _trim_text_list(
+    values: Iterable[str], limit: int, text_limit: int = 280
+) -> List[str]:
+    """Return a shortened copy of a text list suitable for the payload."""
+
+    trimmed: List[str] = []
+    for value in values:
+        if value is None:
+            continue
+        trimmed.append(_truncate_text(value, text_limit))
+        if len(trimmed) >= limit:
+            break
+    return trimmed
+
+
+def _limit_content_audit_payload(
+    content_audit: Dict[str, object], max_documents: int = 5
+) -> Dict[str, object]:
+    """Return a compact snapshot of the content audit for the LLM payload."""
+
+    if not content_audit:
+        return {}
+
+    documents = content_audit.get("documents") or []
+    trimmed: List[Dict[str, object]] = []
+    if documents:
+        sorted_docs = sorted(
+            documents,
+            key=lambda d: (
+                d.get("total_score", 0) / max(d.get("max_score", 1), 1)
+                if isinstance(d, dict)
+                else 0
+            ),
+        )
+        for doc in sorted_docs[:max_documents]:
+            if not isinstance(doc, dict):
+                continue
+            trimmed.append(
+                {
+                    "path": doc.get("path"),
+                    "title": doc.get("title"),
+                    "status": doc.get("status"),
+                    "score": f"{doc.get('total_score', 0)}/{doc.get('max_score', 0)}",
+                    "missing_sections": _trim_text_list(
+                        doc.get("missing_sections", []), limit=3
+                    ),
+                    "suggestions": _trim_text_list(doc.get("suggestions", []), limit=2),
+                    "issues": _trim_text_list(doc.get("issues", []), limit=2),
+                }
+            )
+
+    payload: Dict[str, object] = {
+        "document_count": len(documents),
+        "generated_at": content_audit.get("generated_at"),
+        "reports": content_audit.get("reports"),
+    }
+    if trimmed:
+        payload["highlights"] = trimmed
+    return payload
 
 
 def file_contains(path, substrings):
@@ -1522,7 +1593,7 @@ def main():
     if roadmap:
         summary["roadmap"] = roadmap
     if content_audit:
-        summary["content_audit"] = content_audit
+        summary["content_audit"] = _limit_content_audit_payload(content_audit)
     summary["failing_rules"] = [
         item.get("rule", "unknown") for item in breakdown if not item.get("ok", False)
     ]
