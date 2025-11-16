@@ -18,10 +18,15 @@ from markdown.extensions.meta import MetaExtension
 from xml.etree import ElementTree as ET
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-TARGET_DIRS = (REPO_ROOT / "knowledge", REPO_ROOT / "experience", REPO_ROOT / "implementation")
+TARGET_DIRS = (
+    REPO_ROOT / "knowledge",
+    REPO_ROOT / "experience",
+    REPO_ROOT / "implementation",
+)
 OUTPUT_PATH = REPO_ROOT / "audit.csv"
 HTTP_TIMEOUT = 8
 USER_AGENT = "wise-tech-md-audit/1.0"
+
 
 @dataclass
 class AuditRow:
@@ -103,10 +108,14 @@ def check_link(url: str, cache: dict[str, bool]) -> bool:
         return cache[normalized]
     headers = {"User-Agent": USER_AGENT}
     try:
-        response = requests.head(normalized, allow_redirects=True, timeout=HTTP_TIMEOUT, headers=headers)
+        response = requests.head(
+            normalized, allow_redirects=True, timeout=HTTP_TIMEOUT, headers=headers
+        )
         status = response.status_code
         if status >= 400 or status == 405:
-            response = requests.get(normalized, allow_redirects=True, timeout=HTTP_TIMEOUT, headers=headers)
+            response = requests.get(
+                normalized, allow_redirects=True, timeout=HTTP_TIMEOUT, headers=headers
+            )
             status = response.status_code
         ok = status < 400
     except requests.RequestException:
@@ -184,7 +193,9 @@ def run_audit() -> None:
         )
     with OUTPUT_PATH.open("w", encoding="utf-8", newline="") as csv_file:
         writer = csv.writer(csv_file)
-        writer.writerow(["path", "title", "last_modified", "broken_links", "metadata_ok"])
+        writer.writerow(
+            ["path", "title", "last_modified", "broken_links", "metadata_ok"]
+        )
         for row in rows:
             writer.writerow(
                 [
