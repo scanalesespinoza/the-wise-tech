@@ -11,6 +11,11 @@ former bilingual structure and want pointers to the refreshed documentation tree
 - [Contribution guide](../guides/contribution-guide.md)
 - [Platform playbook](../playbooks/platform-playbook.md)
 
+## Current focus
+Wise Tech centers the business-logic workloads where resilience and revenue intersect.
+Platform and infrastructure investments remain mature enough to operate as supporting tools,
+but the architectural principles always begin with the behaviors expected from distributed systems and microservices.
+
 ## Translation parity
 Every Markdown file that lives here has a Spanish counterpart in `../es`.
 Use `make -f operations/Makefile parity` if you add or rename files to ensure both languages stay aligned.

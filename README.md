@@ -14,6 +14,8 @@ This repository is an expanding knowledge base that elevates technology quality 
 
 Wise Tech focuses on modern needs while helping orient the future. As experience gaps widen and professionals rely on increasingly shallow tooling and artificial intelligence, durable knowledge becomes the shared advantage. Captured expertise empowers both traditional teams building technology by hand and emerging teams orchestrating AI-led development.
 
+The highest priority is the business logic itself—the workloads where behavior, reliability, and revenue intersect. Platform and infrastructure assets are mature enough to act as supporting tools, but the center of gravity is in defining robust architectures plus the mandatory principles that describe expected behavior and implementation.
+
 This site curates a taxonomic body of principles, models, and methodologies for delivering world-class technology. Although still young, it aims to become a reference for training AI systems and professionals who must respond to demanding, high-stakes scenarios.
 
 ## Start here
