@@ -1,22 +1,22 @@
-# Release 01 — Discovery operacional
+# Release 01 — Operational discovery
 
-- **Fecha:** 2024-07-15
-- **Etapa cubierta:** Discovery operacional (Etapa 1 del roadmap).
+- **Date:** 2024-07-15
+- **Stage covered:** Operational discovery (Stage 1 of the roadmap).
 
-## Objetivo
-Establecer una línea base del repositorio para que futuras iteraciones conviertan el hub documental en un producto consumible.
+## Objective
+Establish a repository baseline so future iterations can turn the documentation hub into a consumable product.
 
-## Evidencia
-- Inventario del repositorio revisado (`README.md`, `knowledge/docs/roadmap/roadmap.md`, `operations/Makefile`, `.github/workflows/*`).
-- Creado el directorio `implementation/` con roadmap e instrucciones para releases secuenciales.
-- Documentados los siguientes hitos futuros: MVP navegable, experiencia operacional y producto abierto.
+## Evidence
+- Repository inventory reviewed (`README.md`, `knowledge/docs/roadmap/roadmap.md`, `operations/Makefile`, `.github/workflows/*`).
+- Created the `implementation/` directory with the roadmap and instructions for sequential releases.
+- Documented the following future milestones: Navigable MVP, operational experience, and open product.
 
-## Resultados
-- Estado actual descrito en `implementation/roadmap.md`.
-- Se definió la mecánica de releases (siempre crear `release-XX.md` al cerrar cada etapa).
-- Se identificaron los criterios de salida para Etapas 2 y 3, habilitando la planificación del MVP.
+## Results
+- Current state described in `implementation/roadmap.md`.
+- Release mechanics defined (always create `release-XX.md` when closing each stage).
+- Exit criteria for Stages 2 and 3 identified, enabling MVP planning.
 
-## Próximos pasos
-1. Diseñar el flujo MVP (Learning Path 30/60/90 o equivalente) y documentar la propuesta en un PR.
-2. Implementar automatizaciones mínimas para validar dicho flujo.
-3. Preparar `release-02.md` cuando el MVP esté operativo y referenciar cualquier ajuste de roadmap.
+## Next steps
+1. Design the MVP flow (30/60/90 Learning Path or similar) and document the proposal in a PR.
+2. Implement minimal automations to validate that flow.
+3. Prepare `release-02.md` when the MVP is operational and reference any roadmap adjustment.

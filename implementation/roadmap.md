@@ -1,52 +1,52 @@
 # Implementation Roadmap
 
-## Cómo usar este directorio
-1. **Siempre lee este roadmap antes de escribir código.** Resume el estado actual del repositorio y la siguiente etapa priorizada para convertirlo en un producto consumible.
-2. **Revisa los archivos `implementation/releases/release-XX.md` en orden cronológico.** Cada release documenta qué parte del plan ya está completa.
-3. **Cuando termines una etapa, crea un nuevo archivo `release-XX.md`.** Describe qué cambió, cómo se validó y qué queda pendiente antes de pasar a la siguiente fase.
-4. **Si el plan necesita ajustes, edita este roadmap primero y explica el cambio en el release que lo introduce.** Esto mantiene la trazabilidad para futuras iteraciones de Codex.
+## How to use this directory
+1. **Always read this roadmap before writing code.** It summarizes the current state of the repository and the next prioritized stage to turn it into a consumable product.
+2. **Review the `implementation/releases/release-XX.md` files in chronological order.** Each release documents which part of the plan is already complete.
+3. **When you finish a stage, create a new `release-XX.md` file.** Describe what changed, how it was validated, and what remains before moving on to the next phase.
+4. **If the plan needs adjustments, edit this roadmap first and explain the change in the release that introduces it.** This keeps traceability for future Codex iterations.
 
-## Estado actual (Release 01)
-- El repositorio ya funciona como **hub documental** (ver `README.md` y `knowledge/docs/index.md`), pero aún no existe una experiencia empaquetada para consumo externo más allá de la navegación manual.
-- Las automatizaciones (`operations/Makefile`, workflows en `.github/`) cubren calidad documental y paridad bilingüe, lo cual demuestra madurez en procesos, pero no en entrega de producto.
-- No hay una **historia de releases** ni artefactos ejecutables que materialicen las guías en un servicio o demostrador.
+## Current state (Release 01)
+- The repository already functions as a **documentation hub** (see `README.md` and `knowledge/docs/index.md`), but there is still no packaged experience for external consumption beyond manual navigation.
+- The automations (`operations/Makefile`, workflows in `.github/`) cover documentation quality and bilingual parity, which shows process maturity but not product delivery.
+- There is no **release history** or executable artifacts that turn the guides into a service or demonstrator.
 
-## Etapas para llegar a un producto consumible
-### Etapa 1 — "Discovery operacional" (Release 01 ✅)
-Objetivo: Documentar el estado real del repositorio, identificar huecos entre la documentación y una experiencia de producto, y definir criterios de éxito.
-Resultados clave:
-- Inventario de activos existentes (docs, escenarios, pipelines).
-- Definición del backlog mínimo para empaquetar el contenido.
-- Instrucciones para futuras iteraciones (este roadmap + `release-01`).
+## Stages to reach a consumable product
+### Stage 1 — "Operational discovery" (Release 01 ✅)
+Objective: Document the real status of the repository, identify gaps between the documentation and a product experience, and define success criteria.
+Key results:
+- Inventory of existing assets (docs, scenarios, pipelines).
+- Definition of the minimum backlog to package the content.
+- Instructions for future iterations (this roadmap + `release-01`).
 
-### Etapa 2 — "MVP navegable"
-Objetivo: Convertir el hub en una experiencia servible que guíe al usuario paso a paso.
-Enfoque:
-- Empaquetar un flujo inicial (p. ej., Learning Path 30/60/90) como caso demostrativo dentro de `knowledge/docs/` y exponerlo desde la portada.
-- Automatizar la verificación de enlaces críticos (Quick start, Paths, Labs) en `operations/Makefile` para garantizar disponibilidad.
-- Preparar un guion de onboarding reproducible (docs + script) en `operations/`.
-Criterios de salida:
-- README y portada de docs redirigen al flujo MVP.
-- Script o comando único que instale dependencias, levante docs y valide enlaces prioritarios.
-- Documentación de la etapa en `release-02`.
+### Stage 2 — "Navigable MVP"
+Objective: Turn the hub into a serviceable experience that guides the user step by step.
+Approach:
+- Package an initial flow (e.g., 30/60/90 Learning Path) as a demonstrative case inside `knowledge/docs/` and expose it from the landing page.
+- Automate the verification of critical links (Quick start, Paths, Labs) in `operations/Makefile` to guarantee availability.
+- Prepare a reproducible onboarding script (docs + script) in `operations/`.
+Exit criteria:
+- README and docs landing page redirect to the MVP flow.
+- Single script or command that installs dependencies, serves docs, and validates priority links.
+- Stage documentation in `release-02`.
 
-### Etapa 3 — "Experiencia operacional"
-Objetivo: Pasar del MVP documental a un producto que combine documentación con automatización.
-Líneas de trabajo sugeridas:
-- Integrar un escenario práctico (p. ej., `experience/scenarios/payments/`) con scripts reproducibles.
-- Añadir telemetría mínima (referencia `knowledge/docs/guides/telemetry-minima.md`) y tableros compartidos.
-- Publicar plantillas de KPIs en `knowledge/docs/playbooks/` vinculadas al flujo ejecutable.
-Criterios de salida:
-- Release documentado (`release-03`).
-- Demostración operativa (comando o pipeline) validada en CI.
+### Stage 3 — "Operational experience"
+Objective: Move from the documentary MVP to a product that combines documentation with automation.
+Suggested workstreams:
+- Integrate a practical scenario (e.g., `experience/scenarios/payments/`) with reproducible scripts.
+- Add minimum telemetry (see `knowledge/docs/guides/telemetry-minima.md`) and shared dashboards.
+- Publish KPI templates in `knowledge/docs/playbooks/` linked to the executable flow.
+Exit criteria:
+- Documented release (`release-03`).
+- Operational demonstration (command or pipeline) validated in CI.
 
-### Etapa 4+ — "Producto abierto"
-Objetivo: Iterar sobre feedback real para ofrecer una experiencia lista para adopción de equipos.
-- Versionar el contenido con etiquetas semánticas.
-- Medir satisfacción/uso y ajustar rutas de aprendizaje.
-- Establecer ciclos de mentoring documentados en nuevos releases.
+### Stage 4+ — "Open product"
+Objective: Iterate on real feedback to offer an experience ready for adoption by teams.
+- Version the content with semantic tags.
+- Measure satisfaction/usage and adjust learning paths.
+- Establish mentoring cycles documented in new releases.
 
-## Próximos pasos inmediatos
-1. Preparar el diseño del MVP navegable (Etapa 2) priorizando el flujo 30/60/90 de una persona.
-2. Definir verificaciones automáticas mínimas que prueben ese flujo.
-3. Abrir `release-02.md` cuando se complete el MVP y enlazar cualquier ajuste a este roadmap.
+## Immediate next steps
+1. Prepare the Navigable MVP design (Stage 2) prioritizing the 30/60/90 flow for a single persona.
+2. Define minimal automated checks that exercise that flow.
+3. Open `release-02.md` when the MVP is complete and link any roadmap adjustments.
