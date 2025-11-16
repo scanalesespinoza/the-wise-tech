@@ -1,9 +1,7 @@
-<!-- metadata
-para_quien: Equipos y contribuidores que consultan "Payments — SLO spec" en The Wise Tech.
-objetivo: Proporcionar un contexto accionable sobre payments — slo spec.
-cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de payments — slo spec.
-estado: active
--->
+> **Propósito:** Dar contexto accionable sobre Payments — SLO spec dentro de The Wise Tech.
+> **Audiencia:** Equipos y perfiles interesados en los escenarios y rutas de experiencia práctica.
+> **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Payments — SLO spec.
+> **Estado:** Activo.
 
 # Payments — SLO spec
 
@@ -15,11 +13,8 @@ Define los objetivos de servicio y políticas de error budget para pagos. Valida
 
 ---
 
-🗳️ **¿Te fue útil este documento?**
-- [ ] Sí, resolvió mi duda
-- [ ] Más o menos, necesito más contexto
-- [ ] No me ayudó
-
-📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
-
+---
+¿Te fue útil este documento?
+[ ] Sí  [ ] Algo  [ ] No
+Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 ---

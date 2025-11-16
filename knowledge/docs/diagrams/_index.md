@@ -1,9 +1,7 @@
-<!-- metadata
-para_quien: Equipos y contribuidores que consultan "Diagrams Hub" en The Wise Tech.
-objetivo: Proporcionar un contexto accionable sobre diagrams hub.
-cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de diagrams hub.
-estado: active
--->
+> **Propósito:** Dar contexto accionable sobre Diagrams Hub dentro de The Wise Tech.
+> **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
+> **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Diagrams Hub.
+> **Estado:** Activo.
 
 # Diagrams Hub
 
@@ -22,11 +20,8 @@ estado: active
 
 ---
 
-🗳️ **¿Te fue útil este documento?**
-- [ ] Sí, resolvió mi duda
-- [ ] Más o menos, necesito más contexto
-- [ ] No me ayudó
-
-📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
-
+---
+¿Te fue útil este documento?
+[ ] Sí  [ ] Algo  [ ] No
+Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 ---

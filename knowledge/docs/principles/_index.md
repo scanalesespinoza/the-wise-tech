@@ -1,9 +1,7 @@
-<!-- metadata
-para_quien: Equipos y contribuidores que consultan "Principles — Index" en The Wise Tech.
-objetivo: Proporcionar un contexto accionable sobre principles — index.
-cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de principles — index.
-estado: active
--->
+> **Propósito:** Dar contexto accionable sobre Principles — Index dentro de The Wise Tech.
+> **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
+> **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Principles — Index.
+> **Estado:** Activo.
 
 # Principles — Index
 
@@ -16,11 +14,8 @@ Los principios de Wise Tech articulan los acuerdos que priorizan impacto humano,
 
 ---
 
-🗳️ **¿Te fue útil este documento?**
-- [ ] Sí, resolvió mi duda
-- [ ] Más o menos, necesito más contexto
-- [ ] No me ayudó
-
-📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
-
+---
+¿Te fue útil este documento?
+[ ] Sí  [ ] Algo  [ ] No
+Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 ---

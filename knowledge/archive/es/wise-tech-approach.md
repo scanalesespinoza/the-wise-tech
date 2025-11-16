@@ -1,9 +1,7 @@
-<!-- metadata
-para_quien: Equipos y contribuidores que consultan "Enfoque The Wise Tech: Un contraste con las prácticas tradicionales de software complejo" en The Wise Tech.
-objetivo: Proporcionar un contexto accionable sobre enfoque the wise tech: un contraste con las prácticas tradicionales de software complejo.
-cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de enfoque the wise tech: un contraste con las prácticas tradicionales de software complejo.
-estado: active
--->
+> **Propósito:** Dar contexto accionable sobre Enfoque The Wise Tech: Un contraste con las prácticas tradicionales de software complejo dentro de The Wise Tech.
+> **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
+> **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Enfoque The Wise Tech: Un contraste con las prácticas tradicionales de software complejo.
+> **Estado:** Activo.
 
 # Enfoque The Wise Tech: Un contraste con las prácticas tradicionales de software complejo
 
@@ -90,11 +88,8 @@ Este anexo convierte las salvaguardas de sistemas distribuidos en un plan increm
 
 ---
 
-🗳️ **¿Te fue útil este documento?**
-- [ ] Sí, resolvió mi duda
-- [ ] Más o menos, necesito más contexto
-- [ ] No me ayudó
-
-📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
-
+---
+¿Te fue útil este documento?
+[ ] Sí  [ ] Algo  [ ] No
+Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 ---

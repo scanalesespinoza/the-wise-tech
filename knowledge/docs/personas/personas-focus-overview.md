@@ -1,9 +1,7 @@
-<!-- metadata
-para_quien: Equipos y contribuidores que consultan "Personas — Wise Tech (Foco y Navegación)" en The Wise Tech.
-objetivo: Proporcionar un contexto accionable sobre personas — wise tech (foco y navegación).
-cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de personas — wise tech (foco y navegación).
-estado: active
--->
+> **Propósito:** Dar contexto accionable sobre Personas — Wise Tech (Foco y Navegación) dentro de The Wise Tech.
+> **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
+> **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Personas — Wise Tech (Foco y Navegación).
+> **Estado:** Activo.
 
 # Personas — Wise Tech (Foco y Navegación)
 
@@ -31,11 +29,8 @@ Este módulo orienta la experiencia del repositorio según necesidades reales. C
 
 ---
 
-🗳️ **¿Te fue útil este documento?**
-- [ ] Sí, resolvió mi duda
-- [ ] Más o menos, necesito más contexto
-- [ ] No me ayudó
-
-📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
-
+---
+¿Te fue útil este documento?
+[ ] Sí  [ ] Algo  [ ] No
+Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 ---

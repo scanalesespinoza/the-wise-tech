@@ -2,12 +2,10 @@
 title: "SLOs & Error Budget — Cómo usarlos"
 tags: ["platform-engineers", "slo", "resilience"]
 ---
-<!-- metadata
-para_quien: Equipos y contribuidores que consultan "SLOs & Error Budget — Cómo usarlos" en The Wise Tech.
-objetivo: Proporcionar un contexto accionable sobre slos & error budget — cómo usarlos.
-cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de slos & error budget — cómo usarlos.
-estado: active
--->
+> **Propósito:** Dar contexto accionable sobre SLOs & Error Budget — Cómo usarlos dentro de The Wise Tech.
+> **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
+> **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de SLOs & Error Budget — Cómo usarlos.
+> **Estado:** Activo.
 
 # SLOs & Error Budget — Cómo usarlos
 Los SLOs definen expectativas operativas medibles; el presupuesto de error marca cuánto “fallo” es tolerable en la ventana (p. ej., 30 días).
@@ -31,11 +29,8 @@ Los SLOs definen expectativas operativas medibles; el presupuesto de error marca
 
 ---
 
-🗳️ **¿Te fue útil este documento?**
-- [ ] Sí, resolvió mi duda
-- [ ] Más o menos, necesito más contexto
-- [ ] No me ayudó
-
-📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
-
+---
+¿Te fue útil este documento?
+[ ] Sí  [ ] Algo  [ ] No
+Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 ---

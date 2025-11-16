@@ -1,9 +1,7 @@
-<!-- metadata
-para_quien: Equipos y contribuidores que consultan "Learning Paths for aDevelopment Teams" en The Wise Tech.
-objetivo: Proporcionar un contexto accionable sobre learning paths for adevelopment teams.
-cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de learning paths for adevelopment teams.
-estado: active
--->
+> **Propósito:** Dar contexto accionable sobre Learning Paths for aDevelopment Teams dentro de The Wise Tech.
+> **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
+> **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Learning Paths for aDevelopment Teams.
+> **Estado:** Activo.
 
 # Learning Paths for aDevelopment Teams
 
@@ -37,11 +35,8 @@ Adapt the steps as your team grows. The goal is to make learning compounding and
 
 ---
 
-🗳️ **¿Te fue útil este documento?**
-- [ ] Sí, resolvió mi duda
-- [ ] Más o menos, necesito más contexto
-- [ ] No me ayudó
-
-📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
-
+---
+¿Te fue útil este documento?
+[ ] Sí  [ ] Algo  [ ] No
+Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 ---

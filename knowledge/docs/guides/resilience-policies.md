@@ -2,12 +2,10 @@
 title: "Resilience Policies — Cómo usarlas"
 tags: ["developers", "resilience", "playbooks"]
 ---
-<!-- metadata
-para_quien: Equipos y contribuidores que consultan "Resilience Policies — Cómo usarlas" en The Wise Tech.
-objetivo: Proporcionar un contexto accionable sobre resilience policies — cómo usarlas.
-cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de resilience policies — cómo usarlas.
-estado: active
--->
+> **Propósito:** Dar contexto accionable sobre Resilience Policies — Cómo usarlas dentro de The Wise Tech.
+> **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
+> **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Resilience Policies — Cómo usarlas.
+> **Estado:** Activo.
 
 # Resilience Policies — Cómo usarlas
 Las políticas definen **contratos operativos** por servicio/escenario:
@@ -35,11 +33,8 @@ Ver `experience/scenarios/payments/policies/resilience.yml` (payments).
 
 ---
 
-🗳️ **¿Te fue útil este documento?**
-- [ ] Sí, resolvió mi duda
-- [ ] Más o menos, necesito más contexto
-- [ ] No me ayudó
-
-📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
-
+---
+¿Te fue útil este documento?
+[ ] Sí  [ ] Algo  [ ] No
+Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 ---

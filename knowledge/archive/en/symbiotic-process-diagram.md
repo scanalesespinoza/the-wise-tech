@@ -1,9 +1,7 @@
-<!-- metadata
-para_quien: Equipos y contribuidores que consultan "The Wise Tech Approach: Symbiotic Process Diagram" en The Wise Tech.
-objetivo: Proporcionar un contexto accionable sobre the wise tech approach: symbiotic process diagram.
-cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de the wise tech approach: symbiotic process diagram.
-estado: active
--->
+> **Propósito:** Dar contexto accionable sobre The Wise Tech Approach: Symbiotic Process Diagram dentro de The Wise Tech.
+> **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
+> **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de The Wise Tech Approach: Symbiotic Process Diagram.
+> **Estado:** Activo.
 
 # The Wise Tech Approach: Symbiotic Process Diagram
 
@@ -43,11 +41,8 @@ The diagram emphasizes how developer activities, platform responsibilities, and 
 
 ---
 
-🗳️ **¿Te fue útil este documento?**
-- [ ] Sí, resolvió mi duda
-- [ ] Más o menos, necesito más contexto
-- [ ] No me ayudó
-
-📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
-
+---
+¿Te fue útil este documento?
+[ ] Sí  [ ] Algo  [ ] No
+Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 ---

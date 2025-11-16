@@ -1,9 +1,7 @@
-<!-- metadata
-para_quien: Equipos y contribuidores que consultan "Platform Playbook: Membresía, Quórums y Degradación Controlada" en The Wise Tech.
-objetivo: Proporcionar un contexto accionable sobre platform playbook: membresía, quórums y degradación controlada.
-cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de platform playbook: membresía, quórums y degradación controlada.
-estado: active
--->
+> **Propósito:** Dar contexto accionable sobre Platform Playbook: Membresía, Quórums y Degradación Controlada dentro de The Wise Tech.
+> **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
+> **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Platform Playbook: Membresía, Quórums y Degradación Controlada.
+> **Estado:** Activo.
 
 # Platform Playbook: Membresía, Quórums y Degradación Controlada
 
@@ -37,11 +35,8 @@ estado: active
 
 ---
 
-🗳️ **¿Te fue útil este documento?**
-- [ ] Sí, resolvió mi duda
-- [ ] Más o menos, necesito más contexto
-- [ ] No me ayudó
-
-📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
-
+---
+¿Te fue útil este documento?
+[ ] Sí  [ ] Algo  [ ] No
+Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 ---

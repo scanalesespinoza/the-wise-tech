@@ -1,9 +1,7 @@
-<!-- metadata
-para_quien: Equipos y contribuidores que consultan "2024: The Year of IT Team Experience" en The Wise Tech.
-objetivo: Proporcionar un contexto accionable sobre 2024: the year of it team experience.
-cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de 2024: the year of it team experience.
-estado: active
--->
+> **Propósito:** Dar contexto accionable sobre 2024: The Year of IT Team Experience dentro de The Wise Tech.
+> **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
+> **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de 2024: The Year of IT Team Experience.
+> **Estado:** Activo.
 
 # 2024: The Year of IT Team Experience
 **Fuente:** https://sergio-canales-e.medium.com/2024-the-year-of-it-team-experience-858b7fc564d7  
@@ -39,11 +37,8 @@ Impulsar la experiencia del equipo implica automatizar la operación, liberar ca
 
 ---
 
-🗳️ **¿Te fue útil este documento?**
-- [ ] Sí, resolvió mi duda
-- [ ] Más o menos, necesito más contexto
-- [ ] No me ayudó
-
-📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
-
+---
+¿Te fue útil este documento?
+[ ] Sí  [ ] Algo  [ ] No
+Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 ---

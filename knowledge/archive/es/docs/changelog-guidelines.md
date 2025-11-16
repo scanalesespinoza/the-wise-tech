@@ -1,9 +1,7 @@
-<!-- metadata
-para_quien: Equipos y contribuidores que consultan "Guías para Changelog Narrativo" en The Wise Tech.
-objetivo: Proporcionar un contexto accionable sobre guías para changelog narrativo.
-cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de guías para changelog narrativo.
-estado: active
--->
+> **Propósito:** Dar contexto accionable sobre Guías para Changelog Narrativo dentro de The Wise Tech.
+> **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
+> **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Guías para Changelog Narrativo.
+> **Estado:** Activo.
 
 # Guías para Changelog Narrativo
 
@@ -34,11 +32,8 @@ Trata los changelogs como dispositivos de narración: enseñan a futuras lectora
 
 ---
 
-🗳️ **¿Te fue útil este documento?**
-- [ ] Sí, resolvió mi duda
-- [ ] Más o menos, necesito más contexto
-- [ ] No me ayudó
-
-📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
-
+---
+¿Te fue útil este documento?
+[ ] Sí  [ ] Algo  [ ] No
+Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 ---

@@ -1,9 +1,7 @@
-<!-- metadata
-para_quien: Equipos y contribuidores que consultan "Living Glossary" en The Wise Tech.
-objetivo: Proporcionar un contexto accionable sobre living glossary.
-cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de living glossary.
-estado: active
--->
+> **Propósito:** Dar contexto accionable sobre Living Glossary dentro de The Wise Tech.
+> **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
+> **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Living Glossary.
+> **Estado:** Activo.
 
 # Living Glossary
 
@@ -26,11 +24,8 @@ Keep terminology consistent across documentation, code comments, AI prompts, and
 
 ---
 
-🗳️ **¿Te fue útil este documento?**
-- [ ] Sí, resolvió mi duda
-- [ ] Más o menos, necesito más contexto
-- [ ] No me ayudó
-
-📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
-
+---
+¿Te fue útil este documento?
+[ ] Sí  [ ] Algo  [ ] No
+Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 ---

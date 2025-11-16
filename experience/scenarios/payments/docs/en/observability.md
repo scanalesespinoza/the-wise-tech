@@ -1,9 +1,7 @@
-<!-- metadata
-para_quien: Equipos y contribuidores que consultan "Payments Observability Guide" en The Wise Tech.
-objetivo: Proporcionar un contexto accionable sobre payments observability guide.
-cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de payments observability guide.
-estado: active
--->
+> **Propósito:** Dar contexto accionable sobre Payments Observability Guide dentro de The Wise Tech.
+> **Audiencia:** Equipos y perfiles interesados en los escenarios y rutas de experiencia práctica.
+> **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Payments Observability Guide.
+> **Estado:** Activo.
 
 # Payments Observability Guide
 
@@ -39,11 +37,8 @@ changes in both language versions of this document to preserve parity.
 
 ---
 
-🗳️ **¿Te fue útil este documento?**
-- [ ] Sí, resolvió mi duda
-- [ ] Más o menos, necesito más contexto
-- [ ] No me ayudó
-
-📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
-
+---
+¿Te fue útil este documento?
+[ ] Sí  [ ] Algo  [ ] No
+Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 ---

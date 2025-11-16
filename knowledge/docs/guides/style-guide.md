@@ -2,12 +2,10 @@
 title: "Style Guide"
 tags: ["developers", "principles", "knowledge-capitalization"]
 ---
-<!-- metadata
-para_quien: Equipos y contribuidores que consultan "Style Guide" en The Wise Tech.
-objetivo: Proporcionar un contexto accionable sobre style guide.
-cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de style guide.
-estado: active
--->
+> **Propósito:** Dar contexto accionable sobre Style Guide dentro de The Wise Tech.
+> **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
+> **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Style Guide.
+> **Estado:** Activo.
 
 # Style Guide
 
@@ -26,11 +24,8 @@ estado: active
 
 ---
 
-🗳️ **¿Te fue útil este documento?**
-- [ ] Sí, resolvió mi duda
-- [ ] Más o menos, necesito más contexto
-- [ ] No me ayudó
-
-📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
-
+---
+¿Te fue útil este documento?
+[ ] Sí  [ ] Algo  [ ] No
+Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 ---

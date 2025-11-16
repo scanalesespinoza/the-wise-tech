@@ -1,9 +1,7 @@
-<!-- metadata
-para_quien: Equipos y contribuidores que consultan "Principios Esenciales para los Sistemas de The Wise Tech" en The Wise Tech.
-objetivo: Proporcionar un contexto accionable sobre principios esenciales para los sistemas de the wise tech.
-cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de principios esenciales para los sistemas de the wise tech.
-estado: active
--->
+> **Propósito:** Dar contexto accionable sobre Principios Esenciales para los Sistemas de The Wise Tech dentro de The Wise Tech.
+> **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
+> **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Principios Esenciales para los Sistemas de The Wise Tech.
+> **Estado:** Activo.
 
 # Principios Esenciales para los Sistemas de The Wise Tech
 
@@ -26,11 +24,8 @@ Cada receta, checklist y recurso de onboarding en este repositorio debe apuntar 
 
 ---
 
-🗳️ **¿Te fue útil este documento?**
-- [ ] Sí, resolvió mi duda
-- [ ] Más o menos, necesito más contexto
-- [ ] No me ayudó
-
-📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
-
+---
+¿Te fue útil este documento?
+[ ] Sí  [ ] Algo  [ ] No
+Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 ---

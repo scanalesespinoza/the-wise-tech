@@ -1,9 +1,7 @@
-<!-- metadata
-para_quien: Equipos y contribuidores que consultan "La arquitectura que se habita" en The Wise Tech.
-objetivo: Proporcionar un contexto accionable sobre la arquitectura que se habita.
-cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de la arquitectura que se habita.
-estado: active
--->
+> **Propósito:** Dar contexto accionable sobre La arquitectura que se habita dentro de The Wise Tech.
+> **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
+> **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de La arquitectura que se habita.
+> **Estado:** Activo.
 
 # La arquitectura que se habita
 **Fuente:** https://www.linkedin.com/pulse/la-arquitectura-que-se-habita-sergio-canales-espinoza-igiqe  
@@ -39,11 +37,8 @@ Diseñar sistemas habitables demanda una disciplina de observación constante. L
 
 ---
 
-🗳️ **¿Te fue útil este documento?**
-- [ ] Sí, resolvió mi duda
-- [ ] Más o menos, necesito más contexto
-- [ ] No me ayudó
-
-📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
-
+---
+¿Te fue útil este documento?
+[ ] Sí  [ ] Algo  [ ] No
+Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 ---

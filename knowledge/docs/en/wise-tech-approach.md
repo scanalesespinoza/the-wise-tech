@@ -1,9 +1,7 @@
-<!-- metadata
-para_quien: Equipos y contribuidores que consultan "Wise Tech approach (English)" en The Wise Tech.
-objetivo: Proporcionar un contexto accionable sobre wise tech approach (english).
-cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de wise tech approach (english).
-estado: active
--->
+> **Propósito:** Dar contexto accionable sobre Wise Tech approach (English) dentro de The Wise Tech.
+> **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
+> **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Wise Tech approach (English).
+> **Estado:** Activo.
 
 # Wise Tech approach (English)
 
@@ -15,11 +13,8 @@ This stub remains to keep existing URLs alive while the new documentation tree s
 
 ---
 
-🗳️ **¿Te fue útil este documento?**
-- [ ] Sí, resolvió mi duda
-- [ ] Más o menos, necesito más contexto
-- [ ] No me ayudó
-
-📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
-
+---
+¿Te fue útil este documento?
+[ ] Sí  [ ] Algo  [ ] No
+Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 ---

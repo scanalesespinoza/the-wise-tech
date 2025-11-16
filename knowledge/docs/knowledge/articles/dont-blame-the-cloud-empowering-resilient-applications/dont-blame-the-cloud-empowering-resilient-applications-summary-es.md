@@ -1,9 +1,7 @@
-<!-- metadata
-para_quien: Equipos y contribuidores que consultan "Don't Blame the Cloud: Empowering Resilient Applications" en The Wise Tech.
-objetivo: Proporcionar un contexto accionable sobre don't blame the cloud: empowering resilient applications.
-cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de don't blame the cloud: empowering resilient applications.
-estado: active
--->
+> **Propósito:** Dar contexto accionable sobre Don't Blame the Cloud: Empowering Resilient Applications dentro de The Wise Tech.
+> **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
+> **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Don't Blame the Cloud: Empowering Resilient Applications.
+> **Estado:** Activo.
 
 # Don't Blame the Cloud: Empowering Resilient Applications
 **Fuente:** https://www.linkedin.com/pulse/dont-blame-cloud-empowering-resilient-applications-canales-espinoza-jhpqe  
@@ -39,11 +37,8 @@ Tratar a la nube como aliado implica construir aplicaciones con sensores, autopr
 
 ---
 
-🗳️ **¿Te fue útil este documento?**
-- [ ] Sí, resolvió mi duda
-- [ ] Más o menos, necesito más contexto
-- [ ] No me ayudó
-
-📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
-
+---
+¿Te fue útil este documento?
+[ ] Sí  [ ] Algo  [ ] No
+Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 ---
