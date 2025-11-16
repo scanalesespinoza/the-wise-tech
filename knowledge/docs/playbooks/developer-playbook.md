@@ -2,10 +2,32 @@
 title: "Developer Playbook — mínimos accionables"
 tags: ["developers", "playbooks", "resilience"]
 ---
+## Propósito
+Enmarca cómo Developer Playbook — mínimos accionables ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Developer Playbook — mínimos accionables.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Developer Playbook — mínimos accionables o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Developer Playbook — mínimos accionables dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Developer Playbook — mínimos accionables.
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [Principios operativos (≤5)](#principios-operativos-5)
+- [Snippets rápidos](#snippets-rpidos)
+- [Checklist PR (dev)](#checklist-pr-dev)
+- [KPIs mínimos (dev)](#kpis-mnimos-dev)
+- [Operating principles (≤5)](#operating-principles-5)
+- [Quick snippets](#quick-snippets)
+- [PR checklist (dev)](#pr-checklist-dev)
+- [Minimum KPIs (dev)](#minimum-kpis-dev)
+- [See also / Ver también](#see-also--ver-tambin)
 
 # Developer Playbook — mínimos accionables
 
@@ -66,11 +88,15 @@ tags: ["developers", "playbooks", "resilience"]
 - [Quickstart](../guides/quickstart.md)
 - [Payments overview](../scenarios/payments-overview.md)
 - [Platform playbook](platform-playbook.md)
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

@@ -1,7 +1,23 @@
+## Propósito
+Enmarca cómo Expected impacts ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Expected impacts.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Expected impacts o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Expected impacts dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en los escenarios y rutas de experiencia práctica.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Expected impacts.
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [Impact on repository quality](#impact-on-repository-quality)
+- [Impact on the contribution experience](#impact-on-the-contribution-experience)
+- [Impact on organizational adoption](#impact-on-organizational-adoption)
 
 # Expected impacts
 
@@ -19,11 +35,15 @@
 - **Measurable KPIs**: Labs and playbooks document indicators (for example simulated MTTR and cycle time) that help evaluate effectiveness.
 - **Scalable best practices**: Scenarios such as `experience/scenarios/payments/` act as replicable references for other domains.
 - **Governance**: Clear roles and processes support internal or external audits focused on compliance and resilience.
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

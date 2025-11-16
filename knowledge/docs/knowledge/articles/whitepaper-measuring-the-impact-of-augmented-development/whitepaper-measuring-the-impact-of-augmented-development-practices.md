@@ -1,7 +1,23 @@
+## Propósito
+Enmarca cómo Practices — Whitepaper: Measuring the Impact of Augmented Development (aDevelopment) ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Practices — Whitepaper: Measuring the Impact of Augmented Development (aDevelopment).
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Practices — Whitepaper: Measuring the Impact of Augmented Development (aDevelopment) o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Practices — Whitepaper: Measuring the Impact of Augmented Development (aDevelopment) dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Practices — Whitepaper: Measuring the Impact of Augmented Development (aDevelopment).
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [Quick checklist (≤10 ítems)](#quick-checklist-10-tems)
+- [How-to (pasos accionables)](#how-to-pasos-accionables)
+- [KPIs / Leading indicators](#kpis--leading-indicators)
 
 # Practices — Whitepaper: Measuring the Impact of Augmented Development (aDevelopment)
 
@@ -25,11 +41,15 @@
 - Porcentaje de automatizaciones vs. intervenciones humanas.
 - Variación de throughput individual frente a benchmark base.
 - Índice de incidentes o defectos posteriores a entregas aumentadas.
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

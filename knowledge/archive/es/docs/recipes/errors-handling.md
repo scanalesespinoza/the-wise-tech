@@ -1,3 +1,12 @@
+## Propósito
+Enmarca cómo Receta: Manejo de Errores Intencional ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Receta: Manejo de Errores Intencional.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Receta: Manejo de Errores Intencional o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Receta: Manejo de Errores Intencional dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Receta: Manejo de Errores Intencional.
@@ -24,11 +33,15 @@
 **Ejemplo local.** Consulta `experience/scenarios/payments/service/errors.py` para ver las excepciones de dominio canónicas y cómo se mapean a respuestas de API.
 
 **Principios relacionados.** [Respeta el contrato del dominio](../principles-essential.md), [Diseña para el fallo elegante](../principles-essential.md).
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

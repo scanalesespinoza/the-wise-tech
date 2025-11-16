@@ -2,10 +2,26 @@
 title: "Roadmap"
 tags: ["consumers", "knowledge-capitalization", "principles"]
 ---
+## Propósito
+Enmarca cómo Roadmap ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Roadmap.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Roadmap o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Roadmap dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Roadmap.
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [Tracking](#tracking)
+- [Living implementation plan](#living-implementation-plan)
+- [See also](#see-also)
 
 # Roadmap
 
@@ -32,11 +48,15 @@ tags: ["consumers", "knowledge-capitalization", "principles"]
 - [Contribution guide](../guides/contribution-guide.md)
 - [Personas hub](../personas/_index.md)
 - [Navigation map](../index.md#navigation-map)
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

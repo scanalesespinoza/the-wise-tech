@@ -1,7 +1,23 @@
+## Propósito
+Enmarca cómo Practices — aDevelopment: la nueva era del desarrollo aumentado ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Practices — aDevelopment: la nueva era del desarrollo aumentado.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Practices — aDevelopment: la nueva era del desarrollo aumentado o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Practices — aDevelopment: la nueva era del desarrollo aumentado dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Practices — aDevelopment: la nueva era del desarrollo aumentado.
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [Quick checklist (≤10 ítems)](#quick-checklist-10-tems)
+- [How-to (pasos accionables)](#how-to-pasos-accionables)
+- [KPIs / Leading indicators](#kpis--leading-indicators)
 
 # Practices — aDevelopment: la nueva era del desarrollo aumentado
 
@@ -25,11 +41,15 @@
 - Tiempo de ciclo desde idea a producción con intervención asistida.
 - Índice de re-trabajo por decisiones automatizadas vs. humanas.
 - Satisfacción de usuarios internos y finales respecto a cadencia y calidad.
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

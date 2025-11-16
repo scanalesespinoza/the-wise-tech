@@ -2,10 +2,30 @@
 title: "Versioning-Docs — Semver básico"
 tags: ["developers", "knowledge-capitalization", "principles"]
 ---
+## Propósito
+Enmarca cómo Versioning-Docs — Semver básico ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Versioning-Docs — Semver básico.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Versioning-Docs — Semver básico o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Versioning-Docs — Semver básico dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Versioning-Docs — Semver básico.
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [Por-qué-importa](#por-qu-importa)
+- [Qué-harás](#qu-hars)
+- [Semver-liviano](#semver-liviano)
+- [Prácticas-recomendadas](#prcticas-recomendadas)
+- [Herramientas-y-checks](#herramientas-y-checks)
+- [Coordinación-con-equipo](#coordinacin-con-equipo)
+- [See-also](#see-also)
 
 # Versioning-Docs — Semver básico
 
@@ -42,11 +62,15 @@ Documentar cambios predecibles ayuda a equipos a sincronizar playbooks, rutas y 
 - [Editorial-Workflow — Propuesta→Draft→Review→Publish](editorial-workflow.md)
 - [Taxonomy — Tags permitidos](taxonomy-tags.md)
 - [Roadmap — Wise Tech](../roadmap/roadmap.md)
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

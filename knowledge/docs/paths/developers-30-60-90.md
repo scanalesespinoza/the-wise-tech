@@ -2,10 +2,32 @@
 title: "Developers — 30/60/90"
 tags: ["developers", "paths", "quickstart"]
 ---
+## Propósito
+Enmarca cómo Developers — 30/60/90 ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Developers — 30/60/90.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Developers — 30/60/90 o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Developers — 30/60/90 dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Developers — 30/60/90.
 > **Estado:** Activo.
+
+> ⚡ Fast Track disponible: [Developers Fast Track](developers/fast-track.md) resume los pasos críticos y el KPI exprés.
+
+
+## Tabla de navegación
+
+- [30 min](#30-min)
+- [60 min (first win)](#60-min-first-win)
+- [90 min (resiliencia mínima)](#90-min-resiliencia-mnima)
+- [30 min](#30-min)
+- [60 min (first win)](#60-min-first-win)
+- [90 min (minimum resilience)](#90-min-minimum-resilience)
+- [See also / Ver también](#see-also--ver-tambin)
 
 # Developers — 30/60/90
 
@@ -52,11 +74,15 @@ tags: ["developers", "paths", "quickstart"]
 - [Developer Playbook](../playbooks/developer-playbook.md)
 - [Payments overview](../scenarios/payments-overview.md)
 - [Quickstart](../guides/quickstart.md)
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

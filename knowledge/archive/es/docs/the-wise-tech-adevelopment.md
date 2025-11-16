@@ -1,7 +1,32 @@
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre The Wise Tech + aDevelopment.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para The Wise Tech + aDevelopment o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre The Wise Tech + aDevelopment dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de The Wise Tech + aDevelopment.
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [Capitalizar experiencia desde el código, acelerar con IA y recuperar la mentoría](#capitalizar-experiencia-desde-el-cdigo-acelerar-con-ia-y-recuperar-la-mentora)
+- [1. Contexto y propósito](#1-contexto-y-propsito)
+- [2. Los tres contextos de The Wise Tech](#2-los-tres-contextos-de-the-wise-tech)
+- [3. aDevelopment: del repositorio al aprendizaje activo](#3-adevelopment-del-repositorio-al-aprendizaje-activo)
+- [4. Prácticas recomendadas (aplicables hoy)](#4-prcticas-recomendadas-aplicables-hoy)
+- [5. Flujo de trabajo recomendado](#5-flujo-de-trabajo-recomendado)
+- [6. Métricas (KPIs) para maduración](#6-mtricas-kpis-para-maduracin)
+- [7. *Roadmap* de adopción (4 semanas)](#7-roadmap-de-adopcin-4-semanas)
+- [8. Ejemplos de automatización (GitHub Actions)](#8-ejemplos-de-automatizacin-github-actions)
+- [9. Estructura sugerida en `knowledge/docs/`](#9-estructura-sugerida-en-knowledgedocs)
+- [10. Roles y responsabilidades](#10-roles-y-responsabilidades)
+- [11. Antipatrones comunes](#11-antipatrones-comunes)
+- [12. FAQ](#12-faq)
+- [13. Licencia y contribución](#13-licencia-y-contribucin)
+- [14. Próximos pasos](#14-prximos-pasos)
 
 # The Wise Tech + aDevelopment
 
@@ -155,6 +180,7 @@ Usa el script `.github/scripts/generate_module_readmes.py` para mantener sincron
 
 `.github/workflows/pr-summarizer.yml`
 
+> ℹ️ Consejo: Ajusta el comando a tu entorno antes de ejecutarlo.
 ```yaml
 name: PR Summarizer
 on:
@@ -199,6 +225,7 @@ PY
 
 `.github/workflows/pr-checklist.yml`
 
+> ℹ️ Consejo: Ajusta el comando a tu entorno antes de ejecutarlo.
 ```yaml
 name: PR Checklist Enforcer
 on:
@@ -223,6 +250,7 @@ jobs:
 
 `.github/workflows/doc-gen.yml`
 
+> ℹ️ Consejo: Ajusta el comando a tu entorno antes de ejecutarlo.
 ```yaml
 name: DocGen
 on:
@@ -308,11 +336,15 @@ Con KPIs de *onboarding*, revisión, cobertura de *recipes*, violaciones esencia
 ---
 
 Con **The Wise Tech + aDevelopment**, cada cambio enseña. El conocimiento deja de ser efímero y se convierte en ventaja compuesta.
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

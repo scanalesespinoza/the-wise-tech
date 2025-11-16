@@ -1,7 +1,25 @@
+## Propósito
+Enmarca cómo ADR-0001: Perfiles de Consistencia Declarativos ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre ADR-0001: Perfiles de Consistencia Declarativos.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para ADR-0001: Perfiles de Consistencia Declarativos o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre ADR-0001: Perfiles de Consistencia Declarativos dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de ADR-0001: Perfiles de Consistencia Declarativos.
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [Contexto](#contexto)
+- [Decisión](#decisin)
+- [Consecuencias](#consecuencias)
+- [Migración](#migracin)
+- [Notas](#notas)
 
 # ADR-0001: Perfiles de Consistencia Declarativos
 
@@ -35,11 +53,15 @@ Los servicios de Wise Tech operan sobre múltiples réplicas y entornos. Sin una
 ## Notas
 
 Las decisiones futuras deben revisar la necesidad de nuevos perfiles (p.ej., strong session) a medida que evolucione la plataforma.
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

@@ -1,7 +1,24 @@
+## Propósito
+Enmarca cómo Payments API Contract v2 / Contrato API de Pagos v2 ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Payments API Contract v2 / Contrato API de Pagos v2.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Payments API Contract v2 / Contrato API de Pagos v2 o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Payments API Contract v2 / Contrato API de Pagos v2 dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en los escenarios y rutas de experiencia práctica.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Payments API Contract v2 / Contrato API de Pagos v2.
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [Overview / Descripción](#overview--descripcin)
+- [Schema (English)](#schema-english)
+- [Esquema (Español)](#esquema-espaol)
+- [Contract Test Notes / Notas de pruebas de contrato](#contract-test-notes--notas-de-pruebas-de-contrato)
 
 # Payments API Contract v2 / Contrato API de Pagos v2
 
@@ -56,11 +73,15 @@ so reviewers and stakeholders can reason about the same artifact.
   during CI runs. / La verificación automática vive en
   `experience/scenarios/payments/systems/tests/test_contract_pact.py` para detectar desvíos
   de esquema durante las ejecuciones de CI.
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

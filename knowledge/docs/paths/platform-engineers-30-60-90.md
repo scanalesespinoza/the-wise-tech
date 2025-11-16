@@ -2,10 +2,32 @@
 title: "Platform Engineers — 30/60/90"
 tags: ["platform-engineers", "paths", "resilience"]
 ---
+## Propósito
+Enmarca cómo Platform Engineers — 30/60/90 ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Platform Engineers — 30/60/90.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Platform Engineers — 30/60/90 o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Platform Engineers — 30/60/90 dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Platform Engineers — 30/60/90.
 > **Estado:** Activo.
+
+> ⚡ Fast Track disponible: [Platform Engineers Fast Track](platform-engineers/fast-track.md) resume el recorrido ultra rápido.
+
+
+## Tabla de navegación
+
+- [30 min](#30-min)
+- [60 min (first win)](#60-min-first-win)
+- [90 min (operabilidad)](#90-min-operabilidad)
+- [30 min](#30-min)
+- [60 min (first win)](#60-min-first-win)
+- [90 min (operability)](#90-min-operability)
+- [See also / Ver también](#see-also--ver-tambin)
 
 # Platform Engineers — 30/60/90
 
@@ -52,11 +74,15 @@ tags: ["platform-engineers", "paths", "resilience"]
 - [Platform engineers overview](../personas/platform-engineers-overview.md)
 - [Payments overview](../scenarios/payments-overview.md)
 - [Roadmap](../roadmap/roadmap.md)
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

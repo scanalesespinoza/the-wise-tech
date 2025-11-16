@@ -1,7 +1,28 @@
+## Propósito
+Enmarca cómo Content Audit ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Content Audit.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Content Audit o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Content Audit dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Content Audit.
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [Repository Snapshot (pre-restructure)](#repository-snapshot-pre-restructure)
+- [Duplicates and Redundancies](#duplicates-and-redundancies)
+- [Dispersed or Orphaned Content](#dispersed-or-orphaned-content)
+- [Broken or Risky Relative Links](#broken-or-risky-relative-links)
+- [Naming and Structure Gaps](#naming-and-structure-gaps)
+- [Automation and Validation](#automation-and-validation)
+- [Next Steps](#next-steps)
+- [Post-restructure Notes](#post-restructure-notes)
 
 # Content Audit
 
@@ -53,11 +74,15 @@
 - Diagramas y configuraciones previas agrupados en `knowledge/archive/legacy-diagrams/` y `knowledge/archive/config/`.
 - Los nuevos índices dentro de `docs/` orientan la navegación y reemplazan referencias anteriores.
 - Puentes heredados viven en `docs/en/` y `docs/es/` para mantener enlaces estables durante la transición.
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

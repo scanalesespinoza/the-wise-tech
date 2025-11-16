@@ -1,7 +1,26 @@
+## Propósito
+Enmarca cómo The architecture we inhabit ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre The architecture we inhabit.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para The architecture we inhabit o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre The architecture we inhabit dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de The architecture we inhabit.
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [Central idea](#central-idea)
+- [Key points (bullet list)](#key-points-bullet-list)
+- [Argument structure](#argument-structure)
+- [Relevant data/examples](#relevant-dataexamples)
+- [Limitations/scope](#limitationsscope)
+- [Practical conclusion (≤120 words)](#practical-conclusion-120-words)
 
 # The architecture we inhabit
 **Source:** https://www.linkedin.com/pulse/la-arquitectura-que-se-habita-sergio-canales-espinoza-igiqe  
@@ -34,11 +53,15 @@ The author argues that every architecture—physical or digital—must be design
 
 ## Practical conclusion (≤120 words)
 Designing habitable systems demands a discipline of constant observation. Teams should experience their own product, gather immediate feedback, and judge every technological decision by the usefulness it delivers to people. Choosing simplicity, ensuring reliability, and making contributions visible strengthen trust and adoption.
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

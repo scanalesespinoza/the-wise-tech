@@ -2,6 +2,15 @@
 title: "Developers Fast Track"
 tags: ["developers", "paths", "fast-track"]
 ---
+## Propósito
+Enmarca cómo Fast Track — Developers ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Fast Track — Developers.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Fast Track — Developers o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Developers Fast Track dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Developers Fast Track.
@@ -11,22 +20,49 @@ tags: ["developers", "paths", "fast-track"]
 
 Prototipo exprés para lanzar tu primer aporte técnico antes de seguir la ruta [Developers 30/60/90](../developers-30-60-90.md).
 
-## 🧭 3 pasos rápidos
-1. **🧰 Prepara el entorno (15 min).** Ejecuta `git clone`, entra al repositorio y corre `make -f operations/Makefile install` para alinear dependencias.
-2. **🧪 Valida el escenario (15 min).** Lanza `make -f operations/Makefile test` y revisa los resultados de `experience/scenarios/payments` para confirmar el happy path.
-3. **🚀 Entrega un cambio mínimo (20 min).** Modifica un archivo en `experience/scenarios/payments/` o `knowledge/docs/guides/`, agrega un snippet de resiliencia/observabilidad y abre un borrador de PR con evidencia.
+**KPI exprés:** En 10 min deberías haber clonado el repo, instalado dependencias y dejado listo un commit mínimo para revisión.
 
-[➡️ Ruta completa Developers — 30/60/90](../developers-30-60-90.md)
+## Tabla de navegación
 
-## See also / Ver también
+- [⚡ Paso rápido](#⚡-paso-rápido)
+- [🔗 Más información](#🔗-más-información)
+- [📌 Dependencias](#📌-dependencias)
+
+## ⚡ Paso rápido
+
+1. **🧰 Prepara el entorno (3 min).** Ejecuta `git clone https://github.com/scanalesespinoza/the-wise-tech.git` y entra en el directorio.
+> ℹ️ Consejo: Ajusta el comando a tu entorno antes de ejecutarlo.
+2. **🧪 Alinea dependencias (4 min).** Corre `make -f operations/Makefile install` para instalar hooks y utilidades compartidas.
+3. **📂 Fija el escenario (1 min).** Abre `experience/scenarios/payments/README.md` y elige un archivo pequeño para mejorar.
+4. **🚀 Entrega el cambio (2 min).** Edita el archivo elegido, agrega notas de resiliencia/observabilidad y crea un commit con `git commit -am "docs: mejora exprés"`.
+
+## 🔗 Más información
+
 - [Developers — 30/60/90](../developers-30-60-90.md)
 - [Developer Playbook](../../playbooks/developer-playbook.md)
 - [Quickstart](../../guides/quickstart.md)
 
+## 📌 Dependencias
+
+- `git`, `make` y acceso a GitHub para abrir PRs.
+- Acceso al repositorio `the-wise-tech` con permisos de lectura/escritura.
+- Tiempo de foco de 10 minutos sin interrupciones.
+
+## See also / Ver también
+
+- [Developers — 30/60/90](../developers-30-60-90.md)
+- [Developer Playbook](../../playbooks/developer-playbook.md)
+- [Quickstart](../../guides/quickstart.md)
+- [Content style guide](../../guides/content-style-guide.md)
 ---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----
+

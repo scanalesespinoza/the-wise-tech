@@ -2,10 +2,29 @@
 title: "Dev environment — devcontainer, pre-commit y just"
 tags: ["quickstart","developers","platform-engineers","dx"]
 ---
+## Propósito
+Enmarca cómo Dev environment — rápido ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Dev environment — rápido.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Dev environment — rápido o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Dev environment — devcontainer, pre-commit y just dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Dev environment — devcontainer, pre-commit y just.
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [Opciones](#opciones)
+- [Componentes del entorno](#componentes-del-entorno)
+- [Primeros 5 minutos](#primeros-5-minutos)
+- [Hooks incluidos](#hooks-incluidos)
+- [Consejos](#consejos)
+- [See also](#see-also)
 
 # Dev environment — rápido
 ## Opciones
@@ -36,11 +55,15 @@ tags: ["quickstart","developers","platform-engineers","dx"]
 - [Quickstart](./quickstart.md)
 - [Content Style Guide](./content-style-guide.md)
 - [Telemetry (Minimum)](./telemetry-minima.md)
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

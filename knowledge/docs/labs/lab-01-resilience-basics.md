@@ -1,7 +1,25 @@
+## Propósito
+Enmarca cómo Lab 01 — Resilience Basics (≤ 60–90 min) ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Lab 01 — Resilience Basics (≤ 60–90 min).
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Lab 01 — Resilience Basics (≤ 60–90 min) o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Lab 01 — Resilience Basics (≤ 60–90 min) dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Lab 01 — Resilience Basics (≤ 60–90 min).
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [Prerrequisitos](#prerrequisitos)
+- [Pasos](#pasos)
+- [KPIs (anota en la plantilla de evidencia)](#kpis-anota-en-la-plantilla-de-evidencia)
+- [Evidencia](#evidencia)
+- [What’s next](#whats-next)
 
 # Lab 01 — Resilience Basics (≤ 60–90 min)
 **Objetivo:** ejercitar políticas de resiliencia y su validación automática.
@@ -27,11 +45,15 @@
 
 ## What’s next
 - Relaciona cambios con un PR real y explica impacto en SLO (latencia p95).
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

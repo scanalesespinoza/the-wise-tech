@@ -2,10 +2,32 @@
 title: "Consumers — 30/60/90"
 tags: ["consumers", "paths", "simplicity"]
 ---
+## Propósito
+Enmarca cómo Consumers — 30/60/90 ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Consumers — 30/60/90.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Consumers — 30/60/90 o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Consumers — 30/60/90 dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Consumers — 30/60/90.
 > **Estado:** Activo.
+
+> ⚡ Fast Track disponible: [Consumers Fast Track](consumers/fast-track.md) condensa el KPI exprés en 10 minutos.
+
+
+## Tabla de navegación
+
+- [30 min (orientación)](#30-min-orientacin)
+- [60 min (primer resultado)](#60-min-primer-resultado)
+- [90 min (consolidación)](#90-min-consolidacin)
+- [30 min (orientation)](#30-min-orientation)
+- [60 min (first outcome)](#60-min-first-outcome)
+- [90 min (consolidation)](#90-min-consolidation)
+- [See also / Ver también](#see-also--ver-tambin)
 
 # Consumers — 30/60/90
 
@@ -42,11 +64,15 @@ tags: ["consumers", "paths", "simplicity"]
 - [Quickstart](../guides/quickstart.md)
 - [Payments overview](../scenarios/payments-overview.md)
 - [Developer Playbook](../playbooks/developer-playbook.md)
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

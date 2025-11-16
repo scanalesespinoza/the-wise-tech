@@ -1,7 +1,23 @@
+## Propósito
+Enmarca cómo Alineación Wise Tech — Architecting Open Source Teams ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Alineación Wise Tech — Architecting Open Source Teams.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Alineación Wise Tech — Architecting Open Source Teams o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Alineación Wise Tech — Architecting Open Source Teams dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Alineación Wise Tech — Architecting Open Source Teams.
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [Tabla de mapeo tema → principio Wise Tech](#tabla-de-mapeo-tema--principio-wise-tech)
+- [Riesgos y antipatrones observados](#riesgos-y-antipatrones-observados)
+- [Recomendaciones accionables priorizadas](#recomendaciones-accionables-priorizadas)
 
 # Alineación Wise Tech — Architecting Open Source Teams
 
@@ -35,11 +51,15 @@
 - **P1.** Añadir a CI un recordatorio automatizado para capturar feedback humano tras lanzamientos significativos; fomenta Conexión humana y Mejora continua.
 - **P2.** Establecer círculos de revisión cruzada rotativos cada sprint para decisiones arquitectónicas; fortalece Resiliencia y Capitalización del conocimiento.
 - **P2.** Medir y publicar historias de “small visible wins” en retrospectivas trimestrales; mantiene Propósito humano y Mejora continua.
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

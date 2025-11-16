@@ -1,7 +1,24 @@
+## Propósito
+Enmarca cómo Payments Incident Runbook ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Payments Incident Runbook.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Payments Incident Runbook o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Payments Incident Runbook dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en los escenarios y rutas de experiencia práctica.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Payments Incident Runbook.
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [Scope](#scope)
+- [First response checklist](#first-response-checklist)
+- [Triage by error type](#triage-by-error-type)
+- [Recovery and follow-up](#recovery-and-follow-up)
 
 # Payments Incident Runbook
 
@@ -43,11 +60,15 @@ in the payments scenario.
   pair to maintain bilingual knowledge.
 - Update contract tests if new response fields were involved, preserving
   observability parity.
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

@@ -1,7 +1,24 @@
+## Propósito
+Enmarca cómo Personas for LLM audits ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Personas for LLM audits.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Personas for LLM audits o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Personas for LLM audits dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en los escenarios y rutas de experiencia práctica.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Personas for LLM audits.
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [1. Strategic maintainer](#1-strategic-maintainer)
+- [2. External contributor](#2-external-contributor)
+- [3. Platform engineer focused on resilience](#3-platform-engineer-focused-on-resilience)
+- [4. Learning experience analyst](#4-learning-experience-analyst)
 
 # Personas for LLM audits
 
@@ -40,11 +57,15 @@
 - **Frequently asked questions**:
   - Do the paths include "First 60 minutes" guidance and clear follow-up metrics?
   - Are there gaps between historical English and Spanish versions (`en/` vs `es/`) that affect the experience?
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

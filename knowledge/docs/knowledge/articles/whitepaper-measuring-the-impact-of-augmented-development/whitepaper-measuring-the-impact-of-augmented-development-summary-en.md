@@ -1,7 +1,26 @@
+## Propósito
+Enmarca cómo Whitepaper: Measuring the Impact of Augmented Development (aDevelopment) ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Whitepaper: Measuring the Impact of Augmented Development (aDevelopment).
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Whitepaper: Measuring the Impact of Augmented Development (aDevelopment) o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Whitepaper: Measuring the Impact of Augmented Development (aDevelopment) dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Whitepaper: Measuring the Impact of Augmented Development (aDevelopment).
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [Central idea](#central-idea)
+- [Key points (bullet list)](#key-points-bullet-list)
+- [Argument structure](#argument-structure)
+- [Relevant data/examples](#relevant-dataexamples)
+- [Limitations/scope](#limitationsscope)
+- [Practical conclusion (≤120 words)](#practical-conclusion-120-words)
 
 # Whitepaper: Measuring the Impact of Augmented Development (aDevelopment)
 **Source:** https://www.linkedin.com/pulse/whitepaper-measuring-impact-augmented-development-canales-espinoza-4kw8e  
@@ -36,11 +55,15 @@ The whitepaper quantifies the performance of the aDevelopment model using EventF
 
 ## Practical conclusion (≤120 words)
 Measuring augmented development demands capturing operational repository data, translating it into financial indicators, and contrasting it with community benchmarks. Organizations embracing aDevelopment should build dashboards that combine commits, effective hours, costs, and business outcomes, validating that AI amplifies expert human decisions. Prioritizing seasoned talent, establishing reliable automation, and monitoring quality keeps the model from degrading architecture.
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

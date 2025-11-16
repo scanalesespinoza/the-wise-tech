@@ -1,7 +1,24 @@
+## Propósito
+Enmarca cómo The Wise Tech Approach: A Contrast with Traditional Complex Software Practices ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre The Wise Tech Approach: A Contrast with Traditional Complex Software Practices.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para The Wise Tech Approach: A Contrast with Traditional Complex Software Practices o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre The Wise Tech Approach: A Contrast with Traditional Complex Software Practices dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de The Wise Tech Approach: A Contrast with Traditional Complex Software Practices.
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [Traditional Complex Approach: CICD + DevOps + DevSecOps as Disconnected Chains](#traditional-complex-approach-cicd--devops--devsecops-as-disconnected-chains)
+- [The Wise Tech Approach: Integrated and End-to-End](#the-wise-tech-approach-integrated-and-end-to-end)
+- [Why It Matters](#why-it-matters)
+- [Annex: Consistency Profiles & Replication Strategies](#annex-consistency-profiles--replication-strategies)
 
 # The Wise Tech Approach: A Contrast with Traditional Complex Software Practices
 
@@ -85,11 +102,15 @@ This annex translates distributed-system guardrails into Wise Tech’s increment
 - **Idempotency by contract:** Services opting into active replication must expose idempotency keys or verifiable side effects to survive retries.
 - **Session continuity:** Support and UX flows read session vectors before responding when a user switches replicas, ensuring continuity.
 - **Knowledge capture:** Issue and PR templates prompt teams to log consistency and replication decisions alongside user lessons, reinforcing organizational memory.
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

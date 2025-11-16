@@ -1,7 +1,26 @@
+## Propósito
+Enmarca cómo Don't Blame the Cloud: Empowering Resilient Applications ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Don't Blame the Cloud: Empowering Resilient Applications.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Don't Blame the Cloud: Empowering Resilient Applications o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Don't Blame the Cloud: Empowering Resilient Applications dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Don't Blame the Cloud: Empowering Resilient Applications.
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [Idea central](#idea-central)
+- [Puntos clave (bullet list)](#puntos-clave-bullet-list)
+- [Estructura del argumento](#estructura-del-argumento)
+- [Datos/ejemplos relevantes](#datosejemplos-relevantes)
+- [Limitaciones/alcances](#limitacionesalcances)
+- [Conclusión práctica (≤120 palabras)](#conclusin-prctica-120-palabras)
 
 # Don't Blame the Cloud: Empowering Resilient Applications
 **Fuente:** https://www.linkedin.com/pulse/dont-blame-cloud-empowering-resilient-applications-canales-espinoza-jhpqe  
@@ -34,11 +53,15 @@ El artículo compara una aplicación con un vehículo sin sensores: si falla, no
 
 ## Conclusión práctica (≤120 palabras)
 Tratar a la nube como aliado implica construir aplicaciones con sensores, autoprotección y aprendizaje continuo. Equipos de plataforma y desarrollo deben acordar capacidades mínimas por servicio (monitoreo, degradación controlada, automatización de recuperación) y probarlas regularmente. Así se evita culpar al entorno y se refuerza la resiliencia desde el diseño.
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

@@ -1,3 +1,12 @@
+## Propósito
+Enmarca cómo Knowledge Base ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Knowledge Base.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Knowledge Base o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Knowledge Base dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Knowledge Base.
@@ -17,11 +26,15 @@
 | What about having Super Apps? | Developers, Platform Engineers | Resilience, Continuous Improvement, Knowledge Capitalization, Simplicity | super-apps, microservices, resilience | [ES](articles/what-about-having-super-apps/what-about-having-super-apps-summary-es.md) | [EN](articles/what-about-having-super-apps/what-about-having-super-apps-summary-en.md) |
 | 2024: The Year of IT Team Experience | Developers, Platform Engineers, Consumers | Human Purpose, Continuous Improvement, Simplicity, Human Connection | team-experience, devex, platform | [ES](articles/2024-the-year-of-it-team-experience/2024-the-year-of-it-team-experience-summary-es.md) | [EN](articles/2024-the-year-of-it-team-experience/2024-the-year-of-it-team-experience-summary-en.md) |
 | The Hadron Pattern for Microservices | Developers, Platform Engineers | Simplicity, Knowledge Capitalization, Resilience, Continuous Improvement | microservices, architecture | [ES](articles/the-hadron-pattern-for-microservices/the-hadron-pattern-for-microservices-summary-es.md) | [EN](articles/the-hadron-pattern-for-microservices/the-hadron-pattern-for-microservices-summary-en.md) |
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

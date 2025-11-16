@@ -1,3 +1,12 @@
+## Propósito
+Enmarca cómo Enfoque The Wise Tech: Diagrama del proceso simbiótico ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Enfoque The Wise Tech: Diagrama del proceso simbiótico.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Enfoque The Wise Tech: Diagrama del proceso simbiótico o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Enfoque The Wise Tech: Diagrama del proceso simbiótico dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Enfoque The Wise Tech: Diagrama del proceso simbiótico.
@@ -38,11 +47,15 @@
 ```
 
 El diagrama resalta cómo las actividades de desarrollo, las responsabilidades de la plataforma y las ideas de las personas usuarias se refuerzan mutuamente mediante canales compartidos de retroalimentación.
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----
