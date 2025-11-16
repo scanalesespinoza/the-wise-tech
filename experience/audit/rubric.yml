@@ -3,7 +3,6 @@ rules:
     weight: 8
     file: "README.md"
     must_contain:
-      - "Empieza aquí"
       - "Start here"
   labs_exist:
     weight: 8

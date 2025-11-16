@@ -63,7 +63,7 @@ plugins:
       docs_structure: folder
       languages:
         - locale: es
-          name: Español
+          name: Spanish
           default: true
           build: true
         - locale: en

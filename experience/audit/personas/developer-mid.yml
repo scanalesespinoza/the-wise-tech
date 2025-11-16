@@ -1,10 +1,10 @@
 id: developer-mid
 age: 27-35
 goals:
-  - "Comprender el flujo de contribución end-to-end"
-  - "Automatizar pruebas y linting localmente"
+  - "Understand the end-to-end contribution flow"
+  - "Automate tests and linting locally"
 must_have:
-  - "Makefile documentado con objetivos de CI"
-  - "Guía para ejecutar suites de pruebas y linters"
+  - "Makefile instructions with CI targets documented"
+  - "Guide that explains how to run the test suites and linters"
 nice_to_have:
-  - "Plantillas de PR con checklist de calidad"
+  - "PR templates with a quality checklist"

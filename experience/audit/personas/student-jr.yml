@@ -1,10 +1,10 @@
 id: student-jr
 age: 22-26
 goals:
-  - "Completar un lab en <60 min"
-  - "Abrir su primer PR pequeño"
+  - "Complete a lab in under 60 minutes"
+  - "Open a first small PR"
 must_have:
-  - "README con 'Empieza aquí (30 min)'"
-  - "Labs 01–03 enlazados desde README y MkDocs"
+  - "README with a 'Start here (30 min)' pointer"
+  - "Labs 01–03 linked from the README and MkDocs"
 nice_to_have:
-  - "Good first issues visibles"
+  - "Visible good first issues"

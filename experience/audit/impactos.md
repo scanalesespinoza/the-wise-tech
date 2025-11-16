@@ -1,16 +1,16 @@
-# Impactos esperados
+# Expected impacts
 
-## Impacto en calidad del repositorio
-- **Consistencia narrativa**: Garantiza que la filosofía Wise Tech descrita en `knowledge/docs/principles/` se mantenga alineada con los artefactos técnicos (`systems/platform/`, `experience/scenarios/`).
-- **Confiabilidad operacional**: Reforzar `make -f operations/Makefile ci` y los workflows (`.github/workflows/`) reduce sorpresas en la integración continua.
-- **Trazabilidad de decisiones**: Al vincular hallazgos con `knowledge/adr/` y `knowledge/archive/`, se facilita el seguimiento de cambios estratégicos.
+## Impact on repository quality
+- **Narrative consistency**: Ensures the Wise Tech philosophy described in `knowledge/docs/principles/` stays aligned with the technical artifacts (`systems/platform/`, `experience/scenarios/`).
+- **Operational reliability**: Reinforcing `make -f operations/Makefile ci` and the workflows (`.github/workflows/`) reduces surprises in continuous integration.
+- **Decision traceability**: Linking audit findings with `knowledge/adr/` and `knowledge/archive/` makes it easier to track strategic changes.
 
-## Impacto en experiencia de contribución
-- **Onboarding acelerado**: Personas externas tienen rutas claras a través de `knowledge/docs/personas/` y `knowledge/docs/paths/`, disminuyendo el tiempo al primer aporte.
-- **Feedback accionable**: Las plantillas de issues y PRs destacan métricas (`Ops Signals`, `Human Feedback References`), promoviendo mejora continua.
-- **Paridad bilingüe**: Mantener sincronía entre `es/` y `en/` evita exclusiones y habilita colaboración distribuida.
+## Impact on the contribution experience
+- **Faster onboarding**: External contributors get clear paths through `knowledge/docs/personas/` and `knowledge/docs/paths/`, reducing time to the first contribution.
+- **Actionable feedback**: Issue and PR templates highlight metrics (`Ops Signals`, `Human Feedback References`), encouraging continuous improvement.
+- **Language consistency**: Keeping the English documentation synchronized with any remaining legacy content avoids exclusions and enables distributed collaboration.
 
-## Impacto en adopción organizacional
-- **Medición de KPIs**: Los labs y playbooks documentan indicadores (p. ej., MTTR simulado, tiempo de ciclo) que sirven para evaluar efectividad.
-- **Escalabilidad de buenas prácticas**: Los escenarios como `experience/scenarios/payments/` actúan como referencia replicable para otros dominios.
-- **Gobernanza**: La claridad en roles y procesos respalda auditorías internas o externas sobre cumplimiento y resiliencia.
+## Impact on organizational adoption
+- **Measurable KPIs**: Labs and playbooks document indicators (for example simulated MTTR and cycle time) that help evaluate effectiveness.
+- **Scalable best practices**: Scenarios such as `experience/scenarios/payments/` act as replicable references for other domains.
+- **Governance**: Clear roles and processes support internal or external audits focused on compliance and resilience.

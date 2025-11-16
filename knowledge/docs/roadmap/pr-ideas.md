@@ -4,19 +4,19 @@ tags: ["developers", "knowledge-capitalization"]
 ---
 # PR ideas
 
-Pequeñas tareas para practicar el flujo de contribución:
+Small tasks to practice the contribution flow:
 
-1. **Documentar métricas del sitio**
-   - Actualiza `docs/metrics/site-metrics.md` con la última ejecución de CI.
-   - Añade una nota breve en el README dentro de "Learning outcomes" si cambia el indicador principal.
-2. **Mejorar enlaces de "See also"**
-   - Elige una guía en `docs/guides/` que aún no tenga sección "See also".
-   - Agrega referencias cruzadas relevantes y valida con `make content-meta`.
-3. **Traducir un snippet**
-   - Crea la versión inglesa o española faltante en `docs/snippets/`.
-   - Ejecuta `make -f operations/Makefile parity` para confirmar que las rutas entre idiomas se mantienen alineadas.
+1. **Document site metrics**
+   - Update `docs/metrics/site-metrics.md` with the latest CI run.
+   - Add a short note to the README inside "Learning outcomes" if the primary indicator changes.
+2. **Improve "See also" links**
+   - Pick a guide in `docs/guides/` that does not yet have a "See also" section.
+   - Add relevant cross-references and validate them with `make content-meta`.
+3. **Translate a snippet**
+   - Create the missing English or Spanish version in `docs/snippets/`.
+   - Run `make -f operations/Makefile parity` to confirm the routes between languages stay aligned.
 
-Cada idea debe incluir una nota en la PR explicando qué guía, snippet o métrica tocaste.
+Each idea must include a note in the PR explaining which guide, snippet, or metric you changed.
 
 ## See also
 - [Roadmap](roadmap.md)

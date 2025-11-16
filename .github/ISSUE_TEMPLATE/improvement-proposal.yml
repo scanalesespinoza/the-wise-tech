@@ -1,24 +1,24 @@
 name: "Proposal — Improvement"
-description: Proponer una mejora concreta (docs, scripts, CI, resiliencia)
+description: Propose a concrete improvement (docs, scripts, CI, resilience)
 labels: ["enhancement","proposal"]
 body:
   - type: textarea
     id: problem
-    attributes: { label: Problema a resolver, description: "Describe la fricción o brecha" }
+    attributes: { label: Problem to solve, description: "Describe the friction or gap" }
     validations: { required: true }
   - type: textarea
     id: solution
-    attributes: { label: Solución propuesta, description: "Cambios mínimos, archivos, rutas" }
+    attributes: { label: Proposed solution, description: "Minimum changes, files, paths" }
     validations: { required: true }
   - type: input
     id: scope
-    attributes: { label: Alcance, placeholder: "knowledge/docs/guides/*, operations/scripts/*, systems/platform/*" }
+    attributes: { label: Scope, placeholder: "knowledge/docs/guides/*, operations/scripts/*, systems/platform/*" }
   - type: checkboxes
     id: kpis
     attributes:
-      label: KPIs esperados
+      label: Expected KPIs
       options:
         - label: TTFC/Lead-time ↓
-        - label: p95/error-rate mejora
-        - label: Menos enlaces rotos
-        - label: Mayor tasa de PRs pequeños
+        - label: Better p95/error rate
+        - label: Fewer broken links
+        - label: Higher rate of small PRs

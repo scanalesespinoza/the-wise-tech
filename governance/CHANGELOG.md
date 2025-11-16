@@ -1,7 +1,7 @@
 # Changelog
 
 ## feat(docs): restructure IA + one-page nav
-- Creado README one-page con rutas por rol y mapa de navegación.
-- Reorganizada documentación en carpetas temáticas con `_index.md` y "See also".
-- Agregado script de validación de enlaces y pipeline `docs-validation`.
-- Actualizadas plantillas de contribución alineadas a principios Wise Tech.
+- Created a one-page README with role journeys and a navigation map.
+- Reorganized the documentation into topic folders with `_index.md` files and "See also" references.
+- Added the link-validation script and the `docs-validation` pipeline.
+- Updated contribution templates to align with Wise Tech principles.

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate catalog READMEs for recipes and onboarding assets in both languages."""
+"""Generate catalog READMEs for recipes and onboarding assets in English."""
 
 from __future__ import annotations
 
@@ -8,7 +8,7 @@ from dataclasses import dataclass
 from typing import Iterable
 
 REPO_ROOT = pathlib.Path(__file__).resolve().parents[2]
-LANGUAGES = ("en", "es")
+LANGUAGES = ("en",)
 
 
 @dataclass(frozen=True)
@@ -45,11 +45,7 @@ def build_list_items(files: Iterable[pathlib.Path], base_path: pathlib.Path) -> 
 
 def write_readme(config: SectionConfig) -> None:
     files = list(iter_markdown_files(config.folder))
-    empty_placeholder = (
-        "- _No documents available yet._"
-        if config.language == "en"
-        else "- _Aún no hay documentos disponibles._"
-    )
+    empty_placeholder = "- _No documents available yet._"
     list_items = build_list_items(files, config.folder) if files else empty_placeholder
     content_lines = [config.heading, "", config.intro.strip(), "", list_items]
     config.folder.joinpath("README.md").write_text(
@@ -67,26 +63,14 @@ def main() -> None:
                 SectionConfig(
                     language=language,
                     folder=lang_root / "recipes",
-                    heading="# Recipe Catalog"
-                    if language == "en"
-                    else "# Catálogo de Recetas",
-                    intro=(
-                        "Browse repeatable patterns grounded in real repository examples."
-                        if language == "en"
-                        else "Explora patrones repetibles basados en ejemplos reales del repositorio."
-                    ),
+                    heading="# Recipe Catalog",
+                    intro="Browse repeatable patterns grounded in real repository examples.",
                 ),
                 SectionConfig(
                     language=language,
                     folder=lang_root / "onboarding",
-                    heading="# Onboarding Assets"
-                    if language == "en"
-                    else "# Recursos de Onboarding",
-                    intro=(
-                        "Guided tours and learning paths that accelerate contributors' first deliveries."
-                        if language == "en"
-                        else "Recorridos guiados y rutas de aprendizaje que aceleran las primeras entregas."
-                    ),
+                    heading="# Onboarding Assets",
+                    intro="Guided tours and learning paths that accelerate contributors' first deliveries.",
                 ),
             ]
         )
