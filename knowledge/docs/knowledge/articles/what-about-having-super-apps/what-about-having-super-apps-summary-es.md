@@ -1,7 +1,26 @@
+## Propósito
+Enmarca cómo What about having Super Apps? ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre What about having Super Apps?.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para What about having Super Apps? o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre What about having Super Apps? dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de What about having Super Apps?.
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [Idea central](#idea-central)
+- [Puntos clave (bullet list)](#puntos-clave-bullet-list)
+- [Estructura del argumento](#estructura-del-argumento)
+- [Datos/ejemplos relevantes](#datosejemplos-relevantes)
+- [Limitaciones/alcances](#limitacionesalcances)
+- [Conclusión práctica (≤120 palabras)](#conclusin-prctica-120-palabras)
 
 # What about having Super Apps?
 **Fuente:** https://sergio-canales-e.medium.com/what-about-having-super-apps-c1e70255caef  
@@ -34,11 +53,15 @@ El texto reinterpreta el concepto de “Super App” como una aplicación que do
 
 ## Conclusión práctica (≤120 palabras)
 Construir Super Apps significa estandarizar capacidades de resiliencia en cada servicio: monitoreo, degradación controlada y respuesta automatizada. Convertir incidentes en conocimiento institucional y compartirlo hace que el sistema completo se fortalezca.
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

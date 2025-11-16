@@ -1,7 +1,23 @@
+## Propósito
+Enmarca cómo Architect teams before platforms ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Architect teams before platforms.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Architect teams before platforms o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Architect teams before platforms dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Architect teams before platforms.
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [Key ideas](#key-ideas)
+- [How to apply it](#how-to-apply-it)
+- [Link to Wise Tech](#link-to-wise-tech)
 
 # Architect teams before platforms
 
@@ -23,11 +39,15 @@ The talk "Architecting Open Source Teams" argues that platforms cannot thrive if
 
 ## Link to Wise Tech
 This approach strengthens continuous improvement and resilience by prioritizing people over tooling, promotes simplicity through lightweight structures, and accelerates knowledge capitalization with visible documentation and mentorship. Above all, it preserves human purpose and connection by sustaining an ongoing loop of feedback and recognition.
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

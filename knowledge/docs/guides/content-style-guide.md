@@ -2,10 +2,33 @@
 title: "Content-Style-Guide — Wise Tech"
 tags: ["developers", "knowledge-capitalization", "principles"]
 ---
+## Propósito
+Enmarca cómo Content-Style-Guide — Wise Tech ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Content-Style-Guide — Wise Tech.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Content-Style-Guide — Wise Tech o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Content-Style-Guide — Wise Tech dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Content-Style-Guide — Wise Tech.
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [Por-qué-importa](#por-qu-importa)
+- [Qué-harás](#qu-hars)
+- [Tono-y-lenguaje](#tono-y-lenguaje)
+- [Estructura-de-cada-página](#estructura-de-cada-pgina)
+- [Snippets-y-ejemplos](#snippets-y-ejemplos)
+- [Referencias-y-enlaces](#referencias-y-enlaces)
+- [Bilingüe-y-accesible](#bilinge-y-accesible)
+- [Control-de-cambios](#control-de-cambios)
+- [Checklist-rápido-antes-del-PR](#checklist-rpido-antes-del-pr)
+- [See-also](#see-also)
 
 # Content-Style-Guide — Wise Tech
 
@@ -58,11 +81,15 @@ Este estilo evita ruido y ayuda a publicar actualizaciones rápidas en ES/EN sin
 - [Versioning Docs — Semver básico](versioning-docs.md)
 - [Taxonomy — Tags permitidos](taxonomy-tags.md)
 - [Quickstart](quickstart.md)
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

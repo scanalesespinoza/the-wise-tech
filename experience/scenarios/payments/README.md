@@ -1,7 +1,23 @@
+## Propósito
+Enmarca cómo Payments Scenario / Escenario de Pagos ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Payments Scenario / Escenario de Pagos.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Payments Scenario / Escenario de Pagos o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Payments Scenario / Escenario de Pagos dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en los escenarios y rutas de experiencia práctica.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Payments Scenario / Escenario de Pagos.
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [Structure / Estructura](#structure--estructura)
+- [How it maps to Wise Tech principles / Cómo se alinea con los](#how-it-maps-to-wise-tech-principles--cmo-se-alinea-con-los)
+- [Getting started / Para comenzar](#getting-started--para-comenzar)
 
 # Payments Scenario / Escenario de Pagos
 
@@ -58,11 +74,15 @@ principios de Wise Tech
    running `python operations/scripts/check_bilingual_parity.py`. / Al modificar
    documentación asegúrate de mantener ambos idiomas en sincronía
    ejecutando `python operations/scripts/check_bilingual_parity.py`.
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

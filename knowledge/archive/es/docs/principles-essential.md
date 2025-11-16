@@ -1,3 +1,12 @@
+## Propósito
+Enmarca cómo Principios Esenciales para los Sistemas de The Wise Tech ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Principios Esenciales para los Sistemas de The Wise Tech.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Principios Esenciales para los Sistemas de The Wise Tech o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Principios Esenciales para los Sistemas de The Wise Tech dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Principios Esenciales para los Sistemas de The Wise Tech.
@@ -21,11 +30,15 @@ Estos principios definen la identidad innegociable de cada producto y plataforma
 - Actualiza el catálogo únicamente mediante revisión colaborativa (Architecture Decision Records) para preservar estable la identidad del sistema.
 
 Cada receta, checklist y recurso de onboarding en este repositorio debe apuntar a uno o más principios anteriores. Así el contexto Esencial se vuelve tangible para nuevas personas colaboradoras y permite que los asistentes de IA fundamenten sus recomendaciones en prioridades documentadas.
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

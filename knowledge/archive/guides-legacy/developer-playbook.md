@@ -1,7 +1,24 @@
+## Propósito
+Enmarca cómo Developer Playbook: Consistencia, Idempotencia y Clocks ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Developer Playbook: Consistencia, Idempotencia y Clocks.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Developer Playbook: Consistencia, Idempotencia y Clocks o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Developer Playbook: Consistencia, Idempotencia y Clocks dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Developer Playbook: Consistencia, Idempotencia y Clocks.
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [Elegir un perfil de consistencia](#elegir-un-perfil-de-consistencia)
+- [Diseñar idempotencia](#disear-idempotencia)
+- [Manejo de relojes lógicos/vectoriales](#manejo-de-relojes-lgicosvectoriales)
+- [Checklist antes de abrir un PR](#checklist-antes-de-abrir-un-pr)
 
 # Developer Playbook: Consistencia, Idempotencia y Clocks
 
@@ -36,11 +53,15 @@
 - [ ] Handlers críticos con claves de idempotencia documentadas.
 - [ ] Escenarios de `systems/ci/causality-test` actualizados si cambia el flujo.
 - [ ] Sección "lecciones del usuario" completada en la plantilla de PR.
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

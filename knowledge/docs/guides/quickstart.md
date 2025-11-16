@@ -2,6 +2,15 @@
 title: "Quickstart"
 tags: ["developers", "quickstart", "paths"]
 ---
+## Propósito
+Enmarca cómo Quickstart ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Quickstart.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Quickstart o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Quickstart dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Quickstart.
@@ -25,11 +34,15 @@ Notas:
 - [Editorial-Workflow — Propuesta→Draft→Review→Publish](editorial-workflow.md)
 - [Taxonomy — Tags permitidos](taxonomy-tags.md)
 - [Developers 30/60/90](../paths/developers-30-60-90.md)
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

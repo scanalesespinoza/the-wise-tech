@@ -1,7 +1,26 @@
+## Propósito
+Enmarca cómo The Wise Tech ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre The Wise Tech.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para The Wise Tech o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre The Wise Tech dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de The Wise Tech.
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [Visión](#visin)
+- [Ideas Clave](#ideas-clave)
+- [Principios Fundamentales](#principios-fundamentales)
+- [Autoconciencia y reflexión](#autoconciencia-y-reflexin)
+- [Lecturas recomendadas](#lecturas-recomendadas)
+- [Contribuir](#contribuir)
 
 # The Wise Tech
 
@@ -61,11 +80,15 @@ La carpeta de pagos actúa como escenario de negocio canónico: las excepciones 
 La automatización mantiene ambos idiomas sincronizados. Ejecuta `python operations/scripts/check_bilingual_parity.py --check-scenarios` de forma local o apóyate en la acción de GitHub **Bilingual Parity** antes de fusionar.
 
 Para expectativas detalladas consulta la [Guía de Contribución (English)](../../../governance/CONTRIBUTING.md) y la [Guía de Contribución (Español)](../../../governance/CONTRIBUTING.es.md).
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

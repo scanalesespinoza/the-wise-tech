@@ -1,7 +1,26 @@
+## Propósito
+Enmarca cómo 2024: The Year of IT Team Experience ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre 2024: The Year of IT Team Experience.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para 2024: The Year of IT Team Experience o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre 2024: The Year of IT Team Experience dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de 2024: The Year of IT Team Experience.
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [Idea central](#idea-central)
+- [Puntos clave (bullet list)](#puntos-clave-bullet-list)
+- [Estructura del argumento](#estructura-del-argumento)
+- [Datos/ejemplos relevantes](#datosejemplos-relevantes)
+- [Limitaciones/alcances](#limitacionesalcances)
+- [Conclusión práctica (≤120 palabras)](#conclusin-prctica-120-palabras)
 
 # 2024: The Year of IT Team Experience
 **Fuente:** https://sergio-canales-e.medium.com/2024-the-year-of-it-team-experience-858b7fc564d7  
@@ -34,11 +53,15 @@ El autor afirma que la experiencia de los equipos de TI será el factor decisivo
 
 ## Conclusión práctica (≤120 palabras)
 Impulsar la experiencia del equipo implica automatizar la operación, liberar capacidad para la innovación y medir satisfacción continuamente. Invertir en plataformas que reduzcan barreras y permitan entregar valor sostenido asegura relevancia competitiva.
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

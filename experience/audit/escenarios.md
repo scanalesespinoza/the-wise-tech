@@ -1,7 +1,23 @@
+## Propósito
+Enmarca cómo Evaluation scenarios ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Evaluation scenarios.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Evaluation scenarios o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Evaluation scenarios dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en los escenarios y rutas de experiencia práctica.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Evaluation scenarios.
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [Scenario A — Documentation coherence](#scenario-a--documentation-coherence)
+- [Scenario B — Payments scenario quality](#scenario-b--payments-scenario-quality)
+- [Scenario C — Contribution experience](#scenario-c--contribution-experience)
 
 # Evaluation scenarios
 
@@ -34,11 +50,15 @@
 ### Key signals
 - Previous PR documentation in `knowledge/archive/` or `knowledge/adr/` to compare standards.
 - Adoption metrics highlighted in `knowledge/docs/playbooks/developer-playbook.md`.
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

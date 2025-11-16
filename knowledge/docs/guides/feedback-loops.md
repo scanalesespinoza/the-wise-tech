@@ -2,6 +2,15 @@
 title: "Feedback Loops — Cómo institucionalizar el aprendizaje"
 tags: ["feedback", "continuous-improvement", "resilience"]
 ---
+## Propósito
+Enmarca cómo Feedback Loops — Cómo institucionalizar el aprendizaje ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Feedback Loops — Cómo institucionalizar el aprendizaje.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Feedback Loops — Cómo institucionalizar el aprendizaje o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Feedback Loops — Cómo institucionalizar el aprendizaje dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Feedback Loops — Cómo institucionalizar el aprendizaje.
@@ -17,11 +26,15 @@ tags: ["feedback", "continuous-improvement", "resilience"]
 ## See also
 - [Postmortems — Guía práctica](postmortem-guide.md)
 - [Mentoring de contribuciones — Prácticas](contribution-mentoring.md)
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

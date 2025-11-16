@@ -1,7 +1,26 @@
+## Propósito
+Enmarca cómo Future-Proof Technology ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Future-Proof Technology.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Future-Proof Technology o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Future-Proof Technology dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Future-Proof Technology.
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [Central idea](#central-idea)
+- [Key points (bullet list)](#key-points-bullet-list)
+- [Argument structure](#argument-structure)
+- [Relevant data/examples](#relevant-dataexamples)
+- [Limitations/scope](#limitationsscope)
+- [Practical conclusion (≤120 words)](#practical-conclusion-120-words)
 
 # Future-Proof Technology
 **Source:** https://sergio-canales-e.medium.com/future-proof-technology-8c31dd8ae72e  
@@ -34,11 +53,15 @@ The author retraces his technology journey to show that the future hinges not on
 
 ## Practical conclusion (≤120 words)
 Future-proofing technology means designing platforms that prioritize belonging, learning, and purpose. Creating spaces where people experiment, share, and see the impact of their work yields sustainable resilience.
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

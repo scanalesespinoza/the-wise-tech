@@ -1,7 +1,24 @@
+## Propósito
+Enmarca cómo Rutas de Aprendizaje para Equipos de aDevelopment ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Rutas de Aprendizaje para Equipos de aDevelopment.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Rutas de Aprendizaje para Equipos de aDevelopment o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Rutas de Aprendizaje para Equipos de aDevelopment dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Rutas de Aprendizaje para Equipos de aDevelopment.
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [1. Ingeniera/o de Producto Nuevo (Semana 1–2)](#1-ingenierao-de-producto-nuevo-semana-12)
+- [2. Ingeniera/o de Plataforma/DevOps (Semana 1–3)](#2-ingenierao-de-plataformadevops-semana-13)
+- [3. Reviewer Potenciado con IA (Continuo)](#3-reviewer-potenciado-con-ia-continuo)
+- [4. Mentoría/Liderazgo (Trimestral)](#4-mentoraliderazgo-trimestral)
 
 # Rutas de Aprendizaje para Equipos de aDevelopment
 
@@ -32,11 +49,15 @@ Utiliza estas rutas modulares para acelerar la maestría. Combínalas según tu 
 - Patrocina al menos un experimento que automatice la captura de conocimiento (doc-gen, minería de recetas).
 
 Adapta los pasos conforme el equipo crece. El objetivo es que el aprendizaje sea acumulativo e inclusivo mediante recursos compartidos y práctica potenciada por IA.
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

@@ -1,3 +1,12 @@
+## Propósito
+Enmarca cómo Wise Tech Readme Addendum Teams ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Wise Tech Readme Addendum Teams.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Wise Tech Readme Addendum Teams o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Wise Tech Readme Addendum Teams dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Wise Tech Readme Addendum Teams.
@@ -8,11 +17,15 @@
 
 ## English
 "Architecting Open Source Teams" strengthens our belief that people architecture must precede platform decisions. We translate its guidance on shared purpose, directed freedom, and continuous recognition into Wise Tech practices that emphasize continuous improvement, simplicity, and resilience. The repository now highlights human capabilities prior to tooling choices, makes mentoring signals visible, and celebrates contributions that compound collective knowledge. Every contributor is encouraged to rely on the new feedback and PR templates to keep the human connection behind every change alive.
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

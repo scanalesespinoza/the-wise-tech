@@ -2,10 +2,29 @@
 title: "Taxonomy — Tags permitidos"
 tags: ["developers", "knowledge-capitalization", "paths"]
 ---
+## Propósito
+Enmarca cómo Taxonomy — Tags permitidos ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Taxonomy — Tags permitidos.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Taxonomy — Tags permitidos o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Taxonomy — Tags permitidos dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Taxonomy — Tags permitidos.
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [Por-qué-importa](#por-qu-importa)
+- [Qué-harás](#qu-hars)
+- [Tags-permitidos](#tags-permitidos)
+- [Front-matter-ejemplo](#front-matter-ejemplo)
+- [Reglas-de-uso](#reglas-de-uso)
+- [See-also](#see-also)
 
 # Taxonomy — Tags permitidos
 
@@ -50,11 +69,15 @@ tags: ["developers", "resilience"]
 - [Editorial-Workflow — Propuesta→Draft→Review→Publish](editorial-workflow.md)
 - [Versioning-Docs — Semver básico](versioning-docs.md)
 - [Front-Matter Example](../snippets/front-matter-example.md)
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

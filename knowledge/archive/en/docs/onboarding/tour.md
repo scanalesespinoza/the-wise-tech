@@ -1,7 +1,27 @@
+## Propósito
+Enmarca cómo Onboarding Tour: Navigate The Wise Tech Repository ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Onboarding Tour: Navigate The Wise Tech Repository.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Onboarding Tour: Navigate The Wise Tech Repository o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Onboarding Tour: Navigate The Wise Tech Repository dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Onboarding Tour: Navigate The Wise Tech Repository.
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [1. Understand the Vision](#1-understand-the-vision)
+- [2. Learn the Delivery Model](#2-learn-the-delivery-model)
+- [3. Adopt the aDevelopment Playbook](#3-adopt-the-adevelopment-playbook)
+- [4. Apply Practical Guides](#4-apply-practical-guides)
+- [5. Prepare Operational Evidence](#5-prepare-operational-evidence)
+- [6. Connect with Mentors](#6-connect-with-mentors)
+- [7. Deliver Your First PR](#7-deliver-your-first-pr)
 
 # Onboarding Tour: Navigate The Wise Tech Repository
 
@@ -36,11 +56,15 @@ Welcome! This guided tour highlights the most relevant assets so you can contrib
 - Request feedback on clarity of documentation and how well you tied the change to Essential principles.
 
 Complete these steps and you will have the context needed to contribute code, docs, and operational improvements aligned with The Wise Tech philosophy.
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

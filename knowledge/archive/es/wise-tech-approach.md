@@ -1,7 +1,24 @@
+## Propósito
+Enmarca cómo Enfoque The Wise Tech: Un contraste con las prácticas tradicionales de software complejo ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Enfoque The Wise Tech: Un contraste con las prácticas tradicionales de software complejo.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Enfoque The Wise Tech: Un contraste con las prácticas tradicionales de software complejo o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Enfoque The Wise Tech: Un contraste con las prácticas tradicionales de software complejo dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Enfoque The Wise Tech: Un contraste con las prácticas tradicionales de software complejo.
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [Enfoque tradicional complejo: CICD + DevOps + DevSecOps como cadenas desconectadas](#enfoque-tradicional-complejo-cicd--devops--devsecops-como-cadenas-desconectadas)
+- [Enfoque The Wise Tech: Integrado y de punta a punta](#enfoque-the-wise-tech-integrado-y-de-punta-a-punta)
+- [Por qué importa](#por-qu-importa)
+- [Anexo: Perfiles de Consistencia y Estrategias de Réplica](#anexo-perfiles-de-consistencia-y-estrategias-de-rplica)
 
 # Enfoque The Wise Tech: Un contraste con las prácticas tradicionales de software complejo
 
@@ -85,11 +102,15 @@ Este anexo convierte las salvaguardas de sistemas distribuidos en un plan increm
 - **Idempotencia por contrato:** Los servicios que optan por réplica activa deben exponer claves de idempotencia o efectos secundarios verificables para sobrevivir a reintentos.
 - **Continuidad de sesión:** Soporte y UX consultan vectores de sesión antes de responder cuando una persona usuaria cambia de réplica, garantizando continuidad.
 - **Capitalización de conocimiento:** Las plantillas de issues y PR registran decisiones de consistencia y réplica junto con aprendizajes de usuarios, reforzando la memoria organizacional.
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

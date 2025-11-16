@@ -1,3 +1,12 @@
+## Propósito
+Enmarca cómo Navigation bridge ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Navigation bridge.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Navigation bridge o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Navigation bridge dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Navigation bridge.
@@ -18,11 +27,15 @@ The table below maps former topics to the reorganized one-page experience.
 
 The [README navigation map](https://github.com/scanalesespinoza/the-wise-tech/blob/main/README.md#navigation-map) now provides the
 canonical overview in a single place.
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

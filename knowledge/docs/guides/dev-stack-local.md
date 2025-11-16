@@ -2,10 +2,27 @@
 title: "Dev stack local — live docs + OTEL/Jaeger"
 tags: ["developers","platform-engineers","dx","observability"]
 ---
+## Propósito
+Enmarca cómo Dev stack local — rápido ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Dev stack local — rápido.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Dev stack local — rápido o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Dev stack local — live docs + OTEL/Jaeger dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Dev stack local — live docs + OTEL/Jaeger.
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [Qué incluye](#qu-incluye)
+- [Cómo usar](#cmo-usar)
+- [Probar trazas con el smoke](#probar-trazas-con-el-smoke)
+- [See also](#see-also)
 
 # Dev stack local — rápido
 ## Qué incluye
@@ -39,11 +56,15 @@ python operations/scripts/telemetry-smoke.py
 - [Telemetry (Minimum)](./telemetry-minima.md)
 - [SLOs & Error Budget](./slo-how-to.md)
 - [Resilience Policies](./resilience-policies.md)
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

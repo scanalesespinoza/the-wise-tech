@@ -1,7 +1,25 @@
+## Propósito
+Enmarca cómo The Wise Tech ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre The Wise Tech.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para The Wise Tech o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre The Wise Tech dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de The Wise Tech.
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [Vision](#vision)
+- [Core Ideas](#core-ideas)
+- [Foundational Principles](#foundational-principles)
+- [Self-Awareness and Reflection](#self-awareness-and-reflection)
+- [Further Reading](#further-reading)
 
 # The Wise Tech
 
@@ -52,11 +70,15 @@ Reflect on these prompts to identify opportunities where your actions can align 
 - **Smooth Onboarding:** [Onboarding Assets](docs/onboarding/README.md) offer guided tours and learning paths for new teammates.
 - **Shared Vocabulary:** [Living Glossary](docs/glossary.md) maintains consistent terminology.
 - **Narrative Evidence:** [Changelog Guidelines](docs/changelog-guidelines.md) help translate changes into stakeholder-friendly stories.
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

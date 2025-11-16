@@ -1,7 +1,26 @@
+## Propósito
+Enmarca cómo Going into the Unknown ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Going into the Unknown.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Going into the Unknown o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Going into the Unknown dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Going into the Unknown.
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [Central idea](#central-idea)
+- [Key points (bullet list)](#key-points-bullet-list)
+- [Argument structure](#argument-structure)
+- [Relevant data/examples](#relevant-dataexamples)
+- [Limitations/scope](#limitationsscope)
+- [Practical conclusion (≤120 words)](#practical-conclusion-120-words)
 
 # Going into the Unknown
 **Source:** https://www.linkedin.com/pulse/going-unknown-sergio-canales-mfwme  
@@ -34,11 +53,15 @@ Exploring the unknown is essential for personal and professional growth. The aut
 
 ## Practical conclusion (≤120 words)
 Fostering growth requires institutionalizing mentoring, creating safe spaces to explore new disciplines, and documenting takeaways. Mixing diverse experiences with continuous dialogue helps teams develop emotional and technical resilience.
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

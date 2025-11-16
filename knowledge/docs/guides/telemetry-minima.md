@@ -2,10 +2,27 @@
 title: "Telemetría mínima (Dev & Platform)"
 tags: ["developers", "observability", "quickstart"]
 ---
+## Propósito
+Enmarca cómo Telemetría mínima (Dev & Platform) ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Telemetría mínima (Dev & Platform).
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Telemetría mínima (Dev & Platform) o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Telemetría mínima (Dev & Platform) dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Telemetría mínima (Dev & Platform).
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [Cómo adoptarla (TL;DR)](#cmo-adoptarla-tldr)
+- [Señales mínimas en PR (ops-signals)](#seales-mnimas-en-pr-ops-signals)
+- [Próximos pasos](#prximos-pasos)
+- [See also](#see-also)
 
 # Telemetría mínima (Dev & Platform)
 Esta guía define la base de observabilidad reproducible:
@@ -34,11 +51,15 @@ Esta guía define la base de observabilidad reproducible:
 - [Resilience Policies — Cómo usarlas](resilience-policies.md)
 - [Python correlation-id snippet](../snippets/python-correlation-id.md)
 - [Platform playbook](../playbooks/platform-playbook.md)
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----

@@ -1,7 +1,24 @@
+## Propósito
+Enmarca cómo Implementation Roadmap ayuda a mantener decisiones alineadas con The Wise Tech.
+
+## Audiencia
+Personas y equipos que necesitan una guía rápida sobre Implementation Roadmap.
+
+## Cuándo usarlo
+Consúltalo cuando requieras referencias inmediatas para Implementation Roadmap o debas compartir el enfoque con otros equipos.
+
 > **Propósito:** Dar contexto accionable sobre Implementation Roadmap dentro de The Wise Tech.
 > **Audiencia:** Equipos y perfiles interesados en los planes y tableros de implementación.
 > **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Implementation Roadmap.
 > **Estado:** Activo.
+
+
+## Tabla de navegación
+
+- [How to use this directory](#how-to-use-this-directory)
+- [Current state (Release 01)](#current-state-release-01)
+- [Stages to reach a consumable product](#stages-to-reach-a-consumable-product)
+- [Immediate next steps](#immediate-next-steps)
 
 # Implementation Roadmap
 
@@ -55,11 +72,15 @@ Objective: Iterate on real feedback to offer an experience ready for adoption by
 1. Prepare the Navigable MVP design (Stage 2) prioritizing the 30/60/90 flow for a single persona.
 2. Define minimal automated checks that exercise that flow.
 3. Open `release-02.md` when the MVP is complete and link any roadmap adjustments.
+---
+Última modificación: 2025-11-16
+
+🗳️ **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu feedback](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 
 ---
 
----
-¿Te fue útil este documento?
-[ ] Sí  [ ] Algo  [ ] No
-Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
----
