@@ -26,3 +26,12 @@ Conecta cada perfil con la acción correcta en segundos. Usa la vista rápida pa
 - [Mapa visual de navegación](visual-navigation.md) para usar en presentaciones o workshops.
 - [Onboarding landing](onboarding-landing.md) cuando necesites guiar a equipos nuevos.
 - [Guía Quickstart](../knowledge/docs/guides/quickstart.md) para asegurar paridad entre perfiles.
+
+---
+📣 **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu comentario o sugerencia aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+---

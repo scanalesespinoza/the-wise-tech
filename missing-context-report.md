@@ -197,3 +197,12 @@ Los siguientes archivos carecían de al menos una sección de contexto (Propósi
 - knowledge/docs/templates/labs/evidence-lab-02.md
 - knowledge/docs/templates/labs/evidence-lab-03.md
 - knowledge/docs/templates/postmortem-light.md
+
+---
+📣 **¿Te fue útil este documento?**
+- [ ] Sí, resolvió mi duda
+- [ ] Más o menos
+- [ ] No me ayudó
+
+💬 [Deja tu comentario o sugerencia aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
+---

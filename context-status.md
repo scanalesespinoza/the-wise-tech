@@ -1,7 +1,9 @@
-# Feedback aplicado
+# Context Status
 
-## Documentos con feedback habilitado
+## Plantilla agregada
+- Ningún archivo necesitó plantilla nueva.
 
+## Archivos completos
 - experience/audit/escenarios.md
 - experience/audit/impactos.md
 - experience/audit/personas.md
@@ -165,12 +167,12 @@
 - knowledge/docs/labs/lab-01-resilience-basics.md
 - knowledge/docs/labs/lab-02-observability-minima.md
 - knowledge/docs/labs/lab-03-adevelopment-loop.md
-- knowledge/docs/paths/consumers-30-60-90.md
 - knowledge/docs/paths/consumers/fast-track.md
-- knowledge/docs/paths/developers-30-60-90.md
+- knowledge/docs/paths/consumers-30-60-90.md
 - knowledge/docs/paths/developers/fast-track.md
-- knowledge/docs/paths/platform-engineers-30-60-90.md
+- knowledge/docs/paths/developers-30-60-90.md
 - knowledge/docs/paths/platform-engineers/fast-track.md
+- knowledge/docs/paths/platform-engineers-30-60-90.md
 - knowledge/docs/personas/_index.md
 - knowledge/docs/personas/consumers-overview.md
 - knowledge/docs/personas/developers-overview.md
@@ -198,9 +200,6 @@
 - knowledge/docs/templates/labs/evidence-lab-02.md
 - knowledge/docs/templates/labs/evidence-lab-03.md
 - knowledge/docs/templates/postmortem-light.md
-
-## Documentos que ya lo tenían configurado
-- Ninguno, todos quedaron estandarizados en esta ejecución.
 
 ---
 📣 **¿Te fue útil este documento?**
