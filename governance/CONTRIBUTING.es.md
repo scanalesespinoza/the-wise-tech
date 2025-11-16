@@ -1,3 +1,13 @@
+## 🎯 Purpose
+
+## 👥 Audience
+
+## 🤔 When to use it
+
+## 🧠 What behavior should this enable?
+
+## 💡 Why this matters (wisdom)
+
 # Contribution Guide
 
 Thanks for contributing to The Wise Tech. All documentation now lives in `knowledge/docs/` with curated paths per role.

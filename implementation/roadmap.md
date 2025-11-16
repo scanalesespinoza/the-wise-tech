@@ -1,3 +1,13 @@
+## 🎯 Purpose
+
+## 👥 Audience
+
+## 🤔 When to use it
+
+## 🧠 What behavior should this enable?
+
+## 💡 Why this matters (wisdom)
+
 ## Propósito
 Enmarca cómo Implementation Roadmap ayuda a mantener decisiones alineadas con The Wise Tech.
 

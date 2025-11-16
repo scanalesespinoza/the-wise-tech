@@ -1,3 +1,13 @@
+## 🎯 Purpose
+
+## 👥 Audience
+
+## 🤔 When to use it
+
+## 🧠 What behavior should this enable?
+
+## 💡 Why this matters (wisdom)
+
 # Contributing Guide
 
 Thank you for helping grow The Wise Tech knowledge base. This repository now uses a single navigation tree in `knowledge/docs/` with role-based journeys.
