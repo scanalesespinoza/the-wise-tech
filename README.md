@@ -8,6 +8,20 @@
 
 This repository turns the Wise Tech philosophy into shared actions: a navigable one-page hub for learning, building, and operating technology with a human purpose.
 
+### ⚡ TL;DR — What is *The Wise Tech*?
+
+**The Wise Tech** is not just about learning technology. It is about applying it intentionally to shape behavior.
+
+This repository helps you move beyond knowing how tech works into understanding **when, why, and for whom** it should be applied to create predictable, valuable outcomes.
+
+It is based on **experience as a learning engine**, where context, action, and feedback are core.
+
+It is not only about connecting information—it is about driving results that maximize benefits and make the leap from knowledge to wisdom.
+
+> **Information → Knowledge → Behavior → Real Value**
+
+That is what *The Wise Tech* is all about.
+
 ## Vision and purpose
 
 This repository is an expanding knowledge base that elevates technology quality by prioritizing lessons learned, established patterns, and validated designs. Its mission is to break the cycle of low-cost, low-quality software that dominates the market today—software that generates collateral issues such as security gaps, unnecessary spending driven by technical debt, and economic plus environmental harm.
