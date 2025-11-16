@@ -146,21 +146,27 @@ def analyze_file(path: Path) -> AuditRow:
 def write_csv(rows: list[AuditRow], destination: Path) -> None:
     with destination.open("w", encoding="utf-8", newline="") as handle:
         writer = csv.writer(handle)
-        writer.writerow(["path", "title", "last_modified", "has_purpose", "broken_internal_links"])
+        writer.writerow(
+            ["path", "title", "last_modified", "has_purpose", "broken_internal_links"]
+        )
         for row in rows:
-            writer.writerow([
-                row.relative_path,
-                row.title,
-                row.last_modified,
-                "yes" if row.has_purpose else "no",
-                row.broken_links,
-            ])
+            writer.writerow(
+                [
+                    row.relative_path,
+                    row.title,
+                    row.last_modified,
+                    "yes" if row.has_purpose else "no",
+                    row.broken_links,
+                ]
+            )
 
 
 def write_todo(rows: list[tuple[AuditRow, list[str]]], destination: Path) -> None:
     lines = ["# TODO — Auditoría de contenido", ""]
     if not rows:
-        lines.append("Todos los archivos auditados tienen propósito y menos de 5 enlaces rotos. ✅")
+        lines.append(
+            "Todos los archivos auditados tienen propósito y menos de 5 enlaces rotos. ✅"
+        )
     else:
         lines.append("Archivos que requieren intervención inmediata:")
         lines.append("")
@@ -181,7 +187,7 @@ Bienvenido/a 👋. Usa esta landing para elegir tu camino según rol e intenció
 | Perfil | Objetivo clave | Acción inmediata |
 | --- | --- | --- |
 | Fundadores & Leadership | Entender principios y métricas de resiliencia | [Explorar visión](README.md) |
-| Engineering Managers | Planificar adopción 30/60/90 y priorizar labs | [Rutas 30/60/90](experience/routes) |
+    | Engineering Managers | Planificar adopción 30/60/90 y priorizar labs | [Rutas 30/60/90](experience/routes/README.md) |
 | Devs & SRE | Practicar mediante labs guiados y escenarios | [Labs y escenarios](knowledge/docs/labs) |
 | Product & CX | Mapear experiencias y diagnósticos | [Experience toolkit](experience) |
 | Contributors nuevos | Configurar entorno y abrir PRs | [Start Here](README.md#start-here) |
