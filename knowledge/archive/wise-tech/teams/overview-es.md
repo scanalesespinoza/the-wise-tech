@@ -1,9 +1,7 @@
-<!-- metadata
-para_quien: Equipos y contribuidores que consultan "Arquitectar equipos antes que plataformas" en The Wise Tech.
-objetivo: Proporcionar un contexto accionable sobre arquitectar equipos antes que plataformas.
-cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de arquitectar equipos antes que plataformas.
-estado: active
--->
+> **Propósito:** Dar contexto accionable sobre Arquitectar equipos antes que plataformas dentro de The Wise Tech.
+> **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
+> **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Arquitectar equipos antes que plataformas.
+> **Estado:** Activo.
 
 # Arquitectar equipos antes que plataformas
 
@@ -28,11 +26,8 @@ Este enfoque refuerza la mejora continua y la resiliencia al priorizar personas 
 
 ---
 
-🗳️ **¿Te fue útil este documento?**
-- [ ] Sí, resolvió mi duda
-- [ ] Más o menos, necesito más contexto
-- [ ] No me ayudó
-
-📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
-
+---
+¿Te fue útil este documento?
+[ ] Sí  [ ] Algo  [ ] No
+Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 ---

@@ -1,9 +1,7 @@
-<!-- metadata
-para_quien: Equipos y contribuidores que consultan "Wise Tech Alignment — aDevelopment: la nueva era del desarrollo aumentado" en The Wise Tech.
-objetivo: Proporcionar un contexto accionable sobre wise tech alignment — adevelopment: la nueva era del desarrollo aumentado.
-cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de wise tech alignment — adevelopment: la nueva era del desarrollo aumentado.
-estado: active
--->
+> **Propósito:** Dar contexto accionable sobre Wise Tech Alignment — aDevelopment: la nueva era del desarrollo aumentado dentro de The Wise Tech.
+> **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
+> **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Wise Tech Alignment — aDevelopment: la nueva era del desarrollo aumentado.
+> **Estado:** Activo.
 
 # Wise Tech Alignment — aDevelopment: la nueva era del desarrollo aumentado
 
@@ -24,11 +22,8 @@ estado: active
 
 ---
 
-🗳️ **¿Te fue útil este documento?**
-- [ ] Sí, resolvió mi duda
-- [ ] Más o menos, necesito más contexto
-- [ ] No me ayudó
-
-📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
-
+---
+¿Te fue útil este documento?
+[ ] Sí  [ ] Algo  [ ] No
+Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 ---

@@ -1,9 +1,7 @@
-<!-- metadata
-para_quien: Equipos y contribuidores que consultan "Assets" en The Wise Tech.
-objetivo: Proporcionar un contexto accionable sobre assets.
-cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de assets.
-estado: active
--->
+> **Propósito:** Dar contexto accionable sobre Assets dentro de The Wise Tech.
+> **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
+> **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Assets.
+> **Estado:** Activo.
 
 # Assets
 
@@ -22,11 +20,8 @@ Repositorio de imágenes, íconos y diagramas exportables.
 
 ---
 
-🗳️ **¿Te fue útil este documento?**
-- [ ] Sí, resolvió mi duda
-- [ ] Más o menos, necesito más contexto
-- [ ] No me ayudó
-
-📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
-
+---
+¿Te fue útil este documento?
+[ ] Sí  [ ] Algo  [ ] No
+Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 ---

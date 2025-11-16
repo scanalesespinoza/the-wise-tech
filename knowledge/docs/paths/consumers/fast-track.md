@@ -2,22 +2,21 @@
 title: "Consumers Fast Track"
 tags: ["consumers", "paths", "fast-track"]
 ---
-<!-- metadata
-para_quien: Equipos y contribuidores que consultan "Fast Track — Consumers" en The Wise Tech.
-objetivo: Proporcionar un contexto accionable sobre fast track — consumers.
-cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de fast track — consumers.
-estado: active
--->
+> **Propósito:** Dar contexto accionable sobre Consumers Fast Track dentro de The Wise Tech.
+> **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
+> **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Consumers Fast Track.
+> **Estado:** Activo.
 
 # Fast Track — Consumers
 
 Este atajo es para usuarios que quieren un resultado visible en menos de una hora antes de sumergirse en la ruta completa [Consumers 30/60/90](../consumers-30-60-90.md).
 
-1. **Explora el mapa visual (10 min).** Abre el [README](https://github.com/scanalesespinoza/the-wise-tech/blob/main/README.md#choose-your-path) y localiza las secciones recomendadas para consumidores.
-2. **Ejecuta el primer checklist (15 min).** Desde la guía [Quickstart](../../guides/quickstart.md), aplica solo la acción "Observa 1 métrica" o "Simplifica 1 decisión" y documenta un resultado.
-3. **Comparte feedback accionable (15 min).** Abre un issue con la plantilla *user-experience*, adjunta tu evidencia y enlaza los siguientes pasos que te gustaría seguir.
+## 🧭 3 pasos rápidos
+1. **🗺️ Explora el mapa (10 min).** Abre el [README](https://github.com/scanalesespinoza/the-wise-tech/blob/main/README.md#choose-your-path) y marca las secciones de consumidores para compartirlas con tu equipo.
+2. **✅ Ejecuta el primer checklist (15 min).** Usa la guía [Quickstart](../../guides/quickstart.md) para aplicar una sola acción ("Observa 1 métrica" o "Simplifica 1 decisión") y captura la evidencia.
+3. **📣 Comparte feedback accionable (15 min).** Abre un issue con la plantilla *user-experience*, adjunta capturas/resultados y propone el siguiente paso.
 
-➡️ ¿Te funcionó? Continúa con la ruta completa en [Consumers — 30/60/90](../consumers-30-60-90.md).
+[➡️ Ruta completa Consumers — 30/60/90](../consumers-30-60-90.md)
 
 ## See also / Ver también
 - [Consumers — 30/60/90](../consumers-30-60-90.md)
@@ -26,11 +25,8 @@ Este atajo es para usuarios que quieren un resultado visible en menos de una hor
 
 ---
 
-🗳️ **¿Te fue útil este documento?**
-- [ ] Sí, resolvió mi duda
-- [ ] Más o menos, necesito más contexto
-- [ ] No me ayudó
-
-📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
-
+---
+¿Te fue útil este documento?
+[ ] Sí  [ ] Algo  [ ] No
+Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 ---

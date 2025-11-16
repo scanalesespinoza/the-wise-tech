@@ -1,9 +1,7 @@
-<!-- metadata
-para_quien: Equipos y contribuidores que consultan "Whitepaper: Measuring the Impact of Augmented Development (aDevelopment)" en The Wise Tech.
-objetivo: Proporcionar un contexto accionable sobre whitepaper: measuring the impact of augmented development (adevelopment).
-cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de whitepaper: measuring the impact of augmented development (adevelopment).
-estado: active
--->
+> **Propósito:** Dar contexto accionable sobre Whitepaper: Measuring the Impact of Augmented Development (aDevelopment) dentro de The Wise Tech.
+> **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
+> **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Whitepaper: Measuring the Impact of Augmented Development (aDevelopment).
+> **Estado:** Activo.
 
 # Whitepaper: Measuring the Impact of Augmented Development (aDevelopment)
 **Source:** https://www.linkedin.com/pulse/whitepaper-measuring-impact-augmented-development-canales-espinoza-4kw8e  
@@ -41,11 +39,8 @@ Measuring augmented development demands capturing operational repository data, t
 
 ---
 
-🗳️ **¿Te fue útil este documento?**
-- [ ] Sí, resolvió mi duda
-- [ ] Más o menos, necesito más contexto
-- [ ] No me ayudó
-
-📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
-
+---
+¿Te fue útil este documento?
+[ ] Sí  [ ] Algo  [ ] No
+Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 ---

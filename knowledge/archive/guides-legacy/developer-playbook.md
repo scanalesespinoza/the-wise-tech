@@ -1,9 +1,7 @@
-<!-- metadata
-para_quien: Equipos y contribuidores que consultan "Developer Playbook: Consistencia, Idempotencia y Clocks" en The Wise Tech.
-objetivo: Proporcionar un contexto accionable sobre developer playbook: consistencia, idempotencia y clocks.
-cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de developer playbook: consistencia, idempotencia y clocks.
-estado: active
--->
+> **Propósito:** Dar contexto accionable sobre Developer Playbook: Consistencia, Idempotencia y Clocks dentro de The Wise Tech.
+> **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
+> **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Developer Playbook: Consistencia, Idempotencia y Clocks.
+> **Estado:** Activo.
 
 # Developer Playbook: Consistencia, Idempotencia y Clocks
 
@@ -41,11 +39,8 @@ estado: active
 
 ---
 
-🗳️ **¿Te fue útil este documento?**
-- [ ] Sí, resolvió mi duda
-- [ ] Más o menos, necesito más contexto
-- [ ] No me ayudó
-
-📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
-
+---
+¿Te fue útil este documento?
+[ ] Sí  [ ] Algo  [ ] No
+Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 ---

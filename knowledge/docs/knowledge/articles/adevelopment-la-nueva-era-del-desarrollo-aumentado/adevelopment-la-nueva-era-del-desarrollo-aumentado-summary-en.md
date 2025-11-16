@@ -1,9 +1,7 @@
-<!-- metadata
-para_quien: Equipos y contribuidores que consultan "aDevelopment: the new era of augmented development" en The Wise Tech.
-objetivo: Proporcionar un contexto accionable sobre adevelopment: the new era of augmented development.
-cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de adevelopment: the new era of augmented development.
-estado: active
--->
+> **Propósito:** Dar contexto accionable sobre aDevelopment: the new era of augmented development dentro de The Wise Tech.
+> **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
+> **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de aDevelopment: the new era of augmented development.
+> **Estado:** Activo.
 
 # aDevelopment: the new era of augmented development
 **Source:** https://www.linkedin.com/pulse/adevelopment-la-nueva-era-del-desarrollo-aumentado-canales-espinoza-mof8e  
@@ -41,11 +39,8 @@ Adopting aDevelopment means combining human decision power with intelligent tool
 
 ---
 
-🗳️ **¿Te fue útil este documento?**
-- [ ] Sí, resolvió mi duda
-- [ ] Más o menos, necesito más contexto
-- [ ] No me ayudó
-
-📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
-
+---
+¿Te fue útil este documento?
+[ ] Sí  [ ] Algo  [ ] No
+Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 ---

@@ -1,9 +1,7 @@
-<!-- metadata
-para_quien: Equipos y contribuidores que consultan "Personas for LLM audits" en The Wise Tech.
-objetivo: Proporcionar un contexto accionable sobre personas for llm audits.
-cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de personas for llm audits.
-estado: active
--->
+> **Propósito:** Dar contexto accionable sobre Personas for LLM audits dentro de The Wise Tech.
+> **Audiencia:** Equipos y perfiles interesados en los escenarios y rutas de experiencia práctica.
+> **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Personas for LLM audits.
+> **Estado:** Activo.
 
 # Personas for LLM audits
 
@@ -45,11 +43,8 @@ estado: active
 
 ---
 
-🗳️ **¿Te fue útil este documento?**
-- [ ] Sí, resolvió mi duda
-- [ ] Más o menos, necesito más contexto
-- [ ] No me ayudó
-
-📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
-
+---
+¿Te fue útil este documento?
+[ ] Sí  [ ] Algo  [ ] No
+Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 ---

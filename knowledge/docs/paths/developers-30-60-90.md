@@ -2,12 +2,10 @@
 title: "Developers — 30/60/90"
 tags: ["developers", "paths", "quickstart"]
 ---
-<!-- metadata
-para_quien: Equipos y contribuidores que consultan "Developers — 30/60/90" en The Wise Tech.
-objetivo: Proporcionar un contexto accionable sobre developers — 30/60/90.
-cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de developers — 30/60/90.
-estado: active
--->
+> **Propósito:** Dar contexto accionable sobre Developers — 30/60/90 dentro de The Wise Tech.
+> **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
+> **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Developers — 30/60/90.
+> **Estado:** Activo.
 
 # Developers — 30/60/90
 
@@ -57,11 +55,8 @@ estado: active
 
 ---
 
-🗳️ **¿Te fue útil este documento?**
-- [ ] Sí, resolvió mi duda
-- [ ] Más o menos, necesito más contexto
-- [ ] No me ayudó
-
-📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
-
+---
+¿Te fue útil este documento?
+[ ] Sí  [ ] Algo  [ ] No
+Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 ---

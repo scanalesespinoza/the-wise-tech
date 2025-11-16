@@ -2,12 +2,10 @@
 title: "Telemetría mínima (Dev & Platform)"
 tags: ["developers", "observability", "quickstart"]
 ---
-<!-- metadata
-para_quien: Equipos y contribuidores que consultan "Telemetría mínima (Dev & Platform)" en The Wise Tech.
-objetivo: Proporcionar un contexto accionable sobre telemetría mínima (dev & platform).
-cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de telemetría mínima (dev & platform).
-estado: active
--->
+> **Propósito:** Dar contexto accionable sobre Telemetría mínima (Dev & Platform) dentro de The Wise Tech.
+> **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
+> **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Telemetría mínima (Dev & Platform).
+> **Estado:** Activo.
 
 # Telemetría mínima (Dev & Platform)
 Esta guía define la base de observabilidad reproducible:
@@ -39,11 +37,8 @@ Esta guía define la base de observabilidad reproducible:
 
 ---
 
-🗳️ **¿Te fue útil este documento?**
-- [ ] Sí, resolvió mi duda
-- [ ] Más o menos, necesito más contexto
-- [ ] No me ayudó
-
-📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
-
+---
+¿Te fue útil este documento?
+[ ] Sí  [ ] Algo  [ ] No
+Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 ---

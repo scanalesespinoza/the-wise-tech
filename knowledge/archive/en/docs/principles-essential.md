@@ -1,9 +1,7 @@
-<!-- metadata
-para_quien: Equipos y contribuidores que consultan "Essential Principles for The Wise Tech Systems" en The Wise Tech.
-objetivo: Proporcionar un contexto accionable sobre essential principles for the wise tech systems.
-cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de essential principles for the wise tech systems.
-estado: active
--->
+> **Propósito:** Dar contexto accionable sobre Essential Principles for The Wise Tech Systems dentro de The Wise Tech.
+> **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
+> **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Essential Principles for The Wise Tech Systems.
+> **Estado:** Activo.
 
 # Essential Principles for The Wise Tech Systems
 
@@ -26,11 +24,8 @@ Each recipe, checklist, and onboarding asset in this repository should point bac
 
 ---
 
-🗳️ **¿Te fue útil este documento?**
-- [ ] Sí, resolvió mi duda
-- [ ] Más o menos, necesito más contexto
-- [ ] No me ayudó
-
-📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
-
+---
+¿Te fue útil este documento?
+[ ] Sí  [ ] Algo  [ ] No
+Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 ---

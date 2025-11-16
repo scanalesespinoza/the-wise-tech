@@ -1,9 +1,7 @@
-<!-- metadata
-para_quien: Equipos y contribuidores que consultan "Wise Tech Alignment — What about having Super Apps?" en The Wise Tech.
-objetivo: Proporcionar un contexto accionable sobre wise tech alignment — what about having super apps?.
-cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de wise tech alignment — what about having super apps?.
-estado: active
--->
+> **Propósito:** Dar contexto accionable sobre Wise Tech Alignment — What about having Super Apps? dentro de The Wise Tech.
+> **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
+> **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Wise Tech Alignment — What about having Super Apps?.
+> **Estado:** Activo.
 
 # Wise Tech Alignment — What about having Super Apps?
 
@@ -24,11 +22,8 @@ estado: active
 
 ---
 
-🗳️ **¿Te fue útil este documento?**
-- [ ] Sí, resolvió mi duda
-- [ ] Más o menos, necesito más contexto
-- [ ] No me ayudó
-
-📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
-
+---
+¿Te fue útil este documento?
+[ ] Sí  [ ] Algo  [ ] No
+Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 ---

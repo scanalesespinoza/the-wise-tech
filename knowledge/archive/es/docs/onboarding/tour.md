@@ -1,9 +1,7 @@
-<!-- metadata
-para_quien: Equipos y contribuidores que consultan "Tour de Onboarding: Navega el Repositorio de The Wise Tech" en The Wise Tech.
-objetivo: Proporcionar un contexto accionable sobre tour de onboarding: navega el repositorio de the wise tech.
-cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de tour de onboarding: navega el repositorio de the wise tech.
-estado: active
--->
+> **Propósito:** Dar contexto accionable sobre Tour de Onboarding: Navega el Repositorio de The Wise Tech dentro de The Wise Tech.
+> **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
+> **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Tour de Onboarding: Navega el Repositorio de The Wise Tech.
+> **Estado:** Activo.
 
 # Tour de Onboarding: Navega el Repositorio de The Wise Tech
 
@@ -41,11 +39,8 @@ Completa estos pasos y tendrás el contexto necesario para contribuir en código
 
 ---
 
-🗳️ **¿Te fue útil este documento?**
-- [ ] Sí, resolvió mi duda
-- [ ] Más o menos, necesito más contexto
-- [ ] No me ayudó
-
-📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
-
+---
+¿Te fue útil este documento?
+[ ] Sí  [ ] Algo  [ ] No
+Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 ---

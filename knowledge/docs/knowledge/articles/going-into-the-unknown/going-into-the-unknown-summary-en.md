@@ -1,9 +1,7 @@
-<!-- metadata
-para_quien: Equipos y contribuidores que consultan "Going into the Unknown" en The Wise Tech.
-objetivo: Proporcionar un contexto accionable sobre going into the unknown.
-cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de going into the unknown.
-estado: active
--->
+> **Propósito:** Dar contexto accionable sobre Going into the Unknown dentro de The Wise Tech.
+> **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
+> **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Going into the Unknown.
+> **Estado:** Activo.
 
 # Going into the Unknown
 **Source:** https://www.linkedin.com/pulse/going-unknown-sergio-canales-mfwme  
@@ -39,11 +37,8 @@ Fostering growth requires institutionalizing mentoring, creating safe spaces to 
 
 ---
 
-🗳️ **¿Te fue útil este documento?**
-- [ ] Sí, resolvió mi duda
-- [ ] Más o menos, necesito más contexto
-- [ ] No me ayudó
-
-📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
-
+---
+¿Te fue útil este documento?
+[ ] Sí  [ ] Algo  [ ] No
+Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 ---

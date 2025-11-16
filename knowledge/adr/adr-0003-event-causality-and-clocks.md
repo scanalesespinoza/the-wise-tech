@@ -1,9 +1,7 @@
-<!-- metadata
-para_quien: Equipos y contribuidores que consultan "ADR-0003: Instrumentación de Causalidad con Relojes Lógicos" en The Wise Tech.
-objetivo: Proporcionar un contexto accionable sobre adr-0003: instrumentación de causalidad con relojes lógicos.
-cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de adr-0003: instrumentación de causalidad con relojes lógicos.
-estado: active
--->
+> **Propósito:** Dar contexto accionable sobre ADR-0003: Instrumentación de Causalidad con Relojes Lógicos dentro de The Wise Tech.
+> **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
+> **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de ADR-0003: Instrumentación de Causalidad con Relojes Lógicos.
+> **Estado:** Activo.
 
 # ADR-0003: Instrumentación de Causalidad con Relojes Lógicos
 
@@ -36,11 +34,8 @@ La plataforma enfrenta incidentes donde eventos llegan fuera de orden, generando
 
 ---
 
-🗳️ **¿Te fue útil este documento?**
-- [ ] Sí, resolvió mi duda
-- [ ] Más o menos, necesito más contexto
-- [ ] No me ayudó
-
-📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
-
+---
+¿Te fue útil este documento?
+[ ] Sí  [ ] Algo  [ ] No
+Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 ---

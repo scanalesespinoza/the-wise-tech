@@ -2,12 +2,10 @@
 title: "Quickstart"
 tags: ["developers", "quickstart", "paths"]
 ---
-<!-- metadata
-para_quien: Equipos y contribuidores que consultan "Quickstart" en The Wise Tech.
-objetivo: Proporcionar un contexto accionable sobre quickstart.
-cuando_usar: Recurre a este documento cuando necesites aplicar o compartir detalles de quickstart.
-estado: active
--->
+> **Propósito:** Dar contexto accionable sobre Quickstart dentro de The Wise Tech.
+> **Audiencia:** Equipos y perfiles interesados en las bases de conocimiento y lineamientos del programa.
+> **Uso recomendado:** Consulta este documento cuando necesites aplicar o compartir detalles de Quickstart.
+> **Estado:** Activo.
 
 # Quickstart
 1) git clone https://github.com/scanalesespinoza/the-wise-tech.git
@@ -30,11 +28,8 @@ Notas:
 
 ---
 
-🗳️ **¿Te fue útil este documento?**
-- [ ] Sí, resolvió mi duda
-- [ ] Más o menos, necesito más contexto
-- [ ] No me ayudó
-
-📢 [Abre un feedback aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
-
+---
+¿Te fue útil este documento?
+[ ] Sí  [ ] Algo  [ ] No
+Deja feedback [aquí](https://github.com/scanalesespinoza/the-wise-tech/issues/new?template=feedback.yml)
 ---
