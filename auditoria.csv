@@ -1,0 +1,144 @@
+path,title,last_modified,has_purpose,broken_internal_links
+knowledge/docs/_index.md,Docs Hub,2025-11-15,no,0
+knowledge/docs/audit/_index.md,Audit Hub,2025-11-15,no,0
+knowledge/docs/audit/content-audit.md,Content Audit,2025-11-15,no,0
+knowledge/docs/audit/persona-experience-review.md,Persona Experience Review,2025-11-15,no,0
+knowledge/docs/continuous-integration/index.md,CI overview,2025-11-15,no,0
+knowledge/docs/diagrams/_index.md,Diagrams Hub,2025-11-15,no,0
+knowledge/docs/diagrams/wise-tech-approach-ascii.md,Wise Tech Approach ASCII,2025-11-15,no,0
+knowledge/docs/en/README.md,The Wise Tech · English bridge,2025-11-15,no,0
+knowledge/docs/en/docs/navigation-bridge.md,Navigation bridge,2025-11-15,no,0
+knowledge/docs/en/symbiotic-process-diagram.md,Symbiotic process diagram (English),2025-11-15,no,0
+knowledge/docs/en/wise-tech-approach-visual-representation.md,Wise Tech approach · visual representation,2025-11-15,no,0
+knowledge/docs/en/wise-tech-approach.md,Wise Tech approach (English),2025-11-15,no,0
+knowledge/docs/es/README.md,The Wise Tech · Puente en español,2025-11-15,no,0
+knowledge/docs/es/docs/navigation-bridge.md,Puente de navegación,2025-11-15,no,0
+knowledge/docs/es/symbiotic-process-diagram.md,Diagrama de proceso simbiótico (Español),2025-11-15,no,0
+knowledge/docs/es/wise-tech-approach-visual-representation.md,Enfoque Wise Tech · representación visual,2025-11-15,no,0
+knowledge/docs/es/wise-tech-approach.md,Enfoque Wise Tech (Español),2025-11-15,no,0
+knowledge/docs/guides/_index.md,Guides — Index,2025-11-15,no,0
+knowledge/docs/guides/content-style-guide.md,Content-Style-Guide — Wise Tech,2025-11-15,no,0
+knowledge/docs/guides/contribution-guide.md,Contribution Guide,2025-11-15,no,0
+knowledge/docs/guides/contribution-mentoring.md,Mentoring de contribuciones — Prácticas,2025-11-15,no,0
+knowledge/docs/guides/dev-environment.md,Dev environment — rápido,2025-11-15,no,0
+knowledge/docs/guides/dev-stack-local.md,Dev stack local — rápido,2025-11-15,no,0
+knowledge/docs/guides/editorial-workflow.md,Editorial-Workflow — Propuesta→Draft→Review→Publish,2025-11-15,no,0
+knowledge/docs/guides/feedback-loops.md,Feedback Loops — Cómo institucionalizar el aprendizaje,2025-11-15,no,0
+knowledge/docs/guides/postmortem-guide.md,Postmortems — Guía práctica,2025-11-15,no,0
+knowledge/docs/guides/quickstart.md,Quickstart,2025-11-15,no,0
+knowledge/docs/guides/resilience-policies.md,Resilience Policies — Cómo usarlas,2025-11-15,no,0
+knowledge/docs/guides/security-minima.md,Seguridad mínima — Contributors,2025-11-15,no,0
+knowledge/docs/guides/slo-how-to.md,SLOs & Error Budget — Cómo usarlos,2025-11-15,no,0
+knowledge/docs/guides/style-guide.md,Style Guide,2025-11-15,no,0
+knowledge/docs/guides/taxonomy-tags.md,Taxonomy — Tags permitidos,2025-11-15,no,0
+knowledge/docs/guides/telemetry-minima.md,Telemetría mínima (Dev & Platform),2025-11-15,no,0
+knowledge/docs/guides/versioning-docs.md,Versioning-Docs — Semver básico,2025-11-15,no,0
+knowledge/docs/index.md,The Wise Tech — Docs,2025-11-15,no,0
+knowledge/docs/knowledge/articles/2024-the-year-of-it-team-experience/2024-the-year-of-it-team-experience-links.md,Enlaces,2025-11-15,no,0
+knowledge/docs/knowledge/articles/2024-the-year-of-it-team-experience/2024-the-year-of-it-team-experience-practices.md,Practices — 2024: The Year of IT Team Experience,2025-11-15,no,0
+knowledge/docs/knowledge/articles/2024-the-year-of-it-team-experience/2024-the-year-of-it-team-experience-quotes.md,2024-the-year-of-it-team-experience-quotes,2025-11-15,no,0
+knowledge/docs/knowledge/articles/2024-the-year-of-it-team-experience/2024-the-year-of-it-team-experience-summary-en.md,2024: The Year of IT Team Experience,2025-11-15,no,0
+knowledge/docs/knowledge/articles/2024-the-year-of-it-team-experience/2024-the-year-of-it-team-experience-summary-es.md,2024: The Year of IT Team Experience,2025-11-15,no,0
+knowledge/docs/knowledge/articles/2024-the-year-of-it-team-experience/2024-the-year-of-it-team-experience-wise-tech-alignment.md,Wise Tech Alignment — 2024: The Year of IT Team Experience,2025-11-15,no,0
+knowledge/docs/knowledge/articles/adevelopment-la-nueva-era-del-desarrollo-aumentado/adevelopment-la-nueva-era-del-desarrollo-aumentado-links.md,Enlaces,2025-11-15,no,0
+knowledge/docs/knowledge/articles/adevelopment-la-nueva-era-del-desarrollo-aumentado/adevelopment-la-nueva-era-del-desarrollo-aumentado-practices.md,Practices — aDevelopment: la nueva era del desarrollo aumentado,2025-11-15,no,0
+knowledge/docs/knowledge/articles/adevelopment-la-nueva-era-del-desarrollo-aumentado/adevelopment-la-nueva-era-del-desarrollo-aumentado-quotes.md,adevelopment-la-nueva-era-del-desarrollo-aumentado-quotes,2025-11-15,no,0
+knowledge/docs/knowledge/articles/adevelopment-la-nueva-era-del-desarrollo-aumentado/adevelopment-la-nueva-era-del-desarrollo-aumentado-summary-en.md,aDevelopment: the new era of augmented development,2025-11-15,no,0
+knowledge/docs/knowledge/articles/adevelopment-la-nueva-era-del-desarrollo-aumentado/adevelopment-la-nueva-era-del-desarrollo-aumentado-summary-es.md,aDevelopment: la nueva era del desarrollo aumentado,2025-11-15,no,0
+knowledge/docs/knowledge/articles/adevelopment-la-nueva-era-del-desarrollo-aumentado/adevelopment-la-nueva-era-del-desarrollo-aumentado-wise-tech-alignment.md,Wise Tech Alignment — aDevelopment: la nueva era del desarrollo aumentado,2025-11-15,no,0
+knowledge/docs/knowledge/articles/architecting-open-source-teams-building-people-before-platforms/architecting-open-source-teams-building-people-before-platforms-links.md,Enlaces,2025-11-15,no,0
+knowledge/docs/knowledge/articles/architecting-open-source-teams-building-people-before-platforms/architecting-open-source-teams-building-people-before-platforms-practices.md,Practices — 🛠️ Architecting Open Source Teams: Building People Before Platforms,2025-11-15,no,0
+knowledge/docs/knowledge/articles/architecting-open-source-teams-building-people-before-platforms/architecting-open-source-teams-building-people-before-platforms-quotes.md,architecting-open-source-teams-building-people-before-platforms-quotes,2025-11-15,no,0
+knowledge/docs/knowledge/articles/architecting-open-source-teams-building-people-before-platforms/architecting-open-source-teams-building-people-before-platforms-summary-en.md,🛠️ Architecting Open Source Teams: Building People Before Platforms,2025-11-15,no,0
+knowledge/docs/knowledge/articles/architecting-open-source-teams-building-people-before-platforms/architecting-open-source-teams-building-people-before-platforms-summary-es.md,🛠️ Architecting Open Source Teams: Building People Before Platforms,2025-11-15,no,0
+knowledge/docs/knowledge/articles/architecting-open-source-teams-building-people-before-platforms/architecting-open-source-teams-building-people-before-platforms-wise-tech-alignment.md,Wise Tech Alignment — 🛠️ Architecting Open Source Teams: Building People Before Platforms,2025-11-15,no,0
+knowledge/docs/knowledge/articles/dont-blame-the-cloud-empowering-resilient-applications/dont-blame-the-cloud-empowering-resilient-applications-links.md,Enlaces,2025-11-15,no,0
+knowledge/docs/knowledge/articles/dont-blame-the-cloud-empowering-resilient-applications/dont-blame-the-cloud-empowering-resilient-applications-practices.md,Practices — Don't Blame the Cloud: Empowering Resilient Applications,2025-11-15,no,0
+knowledge/docs/knowledge/articles/dont-blame-the-cloud-empowering-resilient-applications/dont-blame-the-cloud-empowering-resilient-applications-quotes.md,dont-blame-the-cloud-empowering-resilient-applications-quotes,2025-11-15,no,0
+knowledge/docs/knowledge/articles/dont-blame-the-cloud-empowering-resilient-applications/dont-blame-the-cloud-empowering-resilient-applications-summary-en.md,Don't Blame the Cloud: Empowering Resilient Applications,2025-11-15,no,0
+knowledge/docs/knowledge/articles/dont-blame-the-cloud-empowering-resilient-applications/dont-blame-the-cloud-empowering-resilient-applications-summary-es.md,Don't Blame the Cloud: Empowering Resilient Applications,2025-11-15,no,0
+knowledge/docs/knowledge/articles/dont-blame-the-cloud-empowering-resilient-applications/dont-blame-the-cloud-empowering-resilient-applications-wise-tech-alignment.md,Wise Tech Alignment — Don't Blame the Cloud: Empowering Resilient Applications,2025-11-15,no,0
+knowledge/docs/knowledge/articles/future-proof-technology/future-proof-technology-links.md,Enlaces,2025-11-15,no,0
+knowledge/docs/knowledge/articles/future-proof-technology/future-proof-technology-practices.md,Practices — Future-Proof Technology,2025-11-15,no,0
+knowledge/docs/knowledge/articles/future-proof-technology/future-proof-technology-quotes.md,future-proof-technology-quotes,2025-11-15,no,0
+knowledge/docs/knowledge/articles/future-proof-technology/future-proof-technology-summary-en.md,Future-Proof Technology,2025-11-15,no,0
+knowledge/docs/knowledge/articles/future-proof-technology/future-proof-technology-summary-es.md,Future-Proof Technology,2025-11-15,no,0
+knowledge/docs/knowledge/articles/future-proof-technology/future-proof-technology-wise-tech-alignment.md,Wise Tech Alignment — Future-Proof Technology,2025-11-15,no,0
+knowledge/docs/knowledge/articles/going-into-the-unknown/going-into-the-unknown-links.md,Enlaces,2025-11-15,no,0
+knowledge/docs/knowledge/articles/going-into-the-unknown/going-into-the-unknown-practices.md,Practices — Going into the Unknown,2025-11-15,no,0
+knowledge/docs/knowledge/articles/going-into-the-unknown/going-into-the-unknown-quotes.md,going-into-the-unknown-quotes,2025-11-15,no,0
+knowledge/docs/knowledge/articles/going-into-the-unknown/going-into-the-unknown-summary-en.md,Going into the Unknown,2025-11-15,no,0
+knowledge/docs/knowledge/articles/going-into-the-unknown/going-into-the-unknown-summary-es.md,Going into the Unknown,2025-11-15,no,0
+knowledge/docs/knowledge/articles/going-into-the-unknown/going-into-the-unknown-wise-tech-alignment.md,Wise Tech Alignment — Going into the Unknown,2025-11-15,no,0
+knowledge/docs/knowledge/articles/la-arquitectura-que-se-habita/la-arquitectura-que-se-habita-links.md,Enlaces,2025-11-15,no,0
+knowledge/docs/knowledge/articles/la-arquitectura-que-se-habita/la-arquitectura-que-se-habita-practices.md,Practices — La arquitectura que se habita,2025-11-15,no,0
+knowledge/docs/knowledge/articles/la-arquitectura-que-se-habita/la-arquitectura-que-se-habita-quotes.md,la-arquitectura-que-se-habita-quotes,2025-11-15,no,0
+knowledge/docs/knowledge/articles/la-arquitectura-que-se-habita/la-arquitectura-que-se-habita-summary-en.md,The architecture we inhabit,2025-11-15,no,0
+knowledge/docs/knowledge/articles/la-arquitectura-que-se-habita/la-arquitectura-que-se-habita-summary-es.md,La arquitectura que se habita,2025-11-15,no,0
+knowledge/docs/knowledge/articles/la-arquitectura-que-se-habita/la-arquitectura-que-se-habita-wise-tech-alignment.md,Wise Tech Alignment — La arquitectura que se habita,2025-11-15,no,0
+knowledge/docs/knowledge/articles/the-hadron-pattern-for-microservices/the-hadron-pattern-for-microservices-links.md,Enlaces,2025-11-15,no,0
+knowledge/docs/knowledge/articles/the-hadron-pattern-for-microservices/the-hadron-pattern-for-microservices-practices.md,Practices — The Hadron Pattern for Microservices,2025-11-15,no,0
+knowledge/docs/knowledge/articles/the-hadron-pattern-for-microservices/the-hadron-pattern-for-microservices-quotes.md,the-hadron-pattern-for-microservices-quotes,2025-11-15,no,0
+knowledge/docs/knowledge/articles/the-hadron-pattern-for-microservices/the-hadron-pattern-for-microservices-summary-en.md,The Hadron Pattern for Microservices,2025-11-15,no,0
+knowledge/docs/knowledge/articles/the-hadron-pattern-for-microservices/the-hadron-pattern-for-microservices-summary-es.md,The Hadron Pattern for Microservices,2025-11-15,no,0
+knowledge/docs/knowledge/articles/the-hadron-pattern-for-microservices/the-hadron-pattern-for-microservices-wise-tech-alignment.md,Wise Tech Alignment — The Hadron Pattern for Microservices,2025-11-15,no,0
+knowledge/docs/knowledge/articles/what-about-having-super-apps/what-about-having-super-apps-links.md,Enlaces,2025-11-15,no,0
+knowledge/docs/knowledge/articles/what-about-having-super-apps/what-about-having-super-apps-practices.md,Practices — What about having Super Apps?,2025-11-15,no,0
+knowledge/docs/knowledge/articles/what-about-having-super-apps/what-about-having-super-apps-quotes.md,what-about-having-super-apps-quotes,2025-11-15,no,0
+knowledge/docs/knowledge/articles/what-about-having-super-apps/what-about-having-super-apps-summary-en.md,What about having Super Apps?,2025-11-15,no,0
+knowledge/docs/knowledge/articles/what-about-having-super-apps/what-about-having-super-apps-summary-es.md,What about having Super Apps?,2025-11-15,no,0
+knowledge/docs/knowledge/articles/what-about-having-super-apps/what-about-having-super-apps-wise-tech-alignment.md,Wise Tech Alignment — What about having Super Apps?,2025-11-15,no,0
+knowledge/docs/knowledge/articles/whitepaper-measuring-the-impact-of-augmented-development/whitepaper-measuring-the-impact-of-augmented-development-links.md,Enlaces,2025-11-15,no,0
+knowledge/docs/knowledge/articles/whitepaper-measuring-the-impact-of-augmented-development/whitepaper-measuring-the-impact-of-augmented-development-practices.md,Practices — Whitepaper: Measuring the Impact of Augmented Development (aDevelopment),2025-11-15,no,0
+knowledge/docs/knowledge/articles/whitepaper-measuring-the-impact-of-augmented-development/whitepaper-measuring-the-impact-of-augmented-development-quotes.md,whitepaper-measuring-the-impact-of-augmented-development-quotes,2025-11-15,no,0
+knowledge/docs/knowledge/articles/whitepaper-measuring-the-impact-of-augmented-development/whitepaper-measuring-the-impact-of-augmented-development-summary-en.md,Whitepaper: Measuring the Impact of Augmented Development (aDevelopment),2025-11-15,no,0
+knowledge/docs/knowledge/articles/whitepaper-measuring-the-impact-of-augmented-development/whitepaper-measuring-the-impact-of-augmented-development-summary-es.md,Whitepaper: Measuring the Impact of Augmented Development (aDevelopment),2025-11-15,no,0
+knowledge/docs/knowledge/articles/whitepaper-measuring-the-impact-of-augmented-development/whitepaper-measuring-the-impact-of-augmented-development-wise-tech-alignment.md,Wise Tech Alignment — Whitepaper: Measuring the Impact of Augmented Development (aDevelopment),2025-11-15,no,0
+knowledge/docs/knowledge/index.md,Knowledge Base,2025-11-15,no,0
+knowledge/docs/labs/lab-01-resilience-basics.md,Lab 01 — Resilience Basics (≤ 60–90 min),2025-11-15,no,0
+knowledge/docs/labs/lab-02-observability-minima.md,Lab 02 — Observability Minimum (≤ 60–90 min),2025-11-15,no,0
+knowledge/docs/labs/lab-03-adevelopment-loop.md,Lab 03 — aDevelopment Loop (≤ 60–90 min),2025-11-15,no,0
+knowledge/docs/paths/consumers-30-60-90.md,Consumers — 30/60/90,2025-11-15,no,0
+knowledge/docs/paths/developers-30-60-90.md,Developers — 30/60/90,2025-11-15,no,0
+knowledge/docs/paths/platform-engineers-30-60-90.md,Platform Engineers — 30/60/90,2025-11-15,no,0
+knowledge/docs/personas/_index.md,Personas — Index,2025-11-15,no,0
+knowledge/docs/personas/consumers-overview.md,Technology Consumers — Overview,2025-11-15,no,0
+knowledge/docs/personas/developers-overview.md,Software Developers — Overview,2025-11-15,no,0
+knowledge/docs/personas/ideal-candidate-extended-profile-es-en.md,Ideal Candidate — Extended Profile (ES/EN),2025-11-15,no,0
+knowledge/docs/personas/ideal-candidate-overview-es-en.md,Ideal Candidate (Contributor) — Overview,2025-11-15,yes,0
+knowledge/docs/personas/personas-focus-overview.md,Personas — Wise Tech (Foco y Navegación),2025-11-15,no,0
+knowledge/docs/personas/platform-engineers-overview.md,Platform Engineers — Overview,2025-11-15,no,0
+knowledge/docs/playbooks/_index.md,Playbooks — Index,2025-11-15,no,0
+knowledge/docs/playbooks/developer-playbook.md,Developer Playbook — mínimos accionables,2025-11-15,no,0
+knowledge/docs/playbooks/platform-playbook.md,Platform Playbook — mínimos operables,2025-11-15,no,0
+knowledge/docs/principles/_index.md,Principles — Index,2025-11-15,no,0
+knowledge/docs/principles/wise-tech-approach.md,Wise Tech Approach,2025-11-15,no,0
+knowledge/docs/principles/wise-tech-principles.md,Wise Tech Principles,2025-11-15,yes,0
+knowledge/docs/roadmap/_index.md,Roadmap — Index,2025-11-16,no,0
+knowledge/docs/roadmap/pr-ideas.md,PR ideas,2025-11-16,no,0
+knowledge/docs/roadmap/roadmap.md,Roadmap,2025-11-16,no,0
+knowledge/docs/scenarios/_index.md,Scenarios — Index,2025-11-15,no,0
+knowledge/docs/scenarios/payments-overview.md,Payments Overview,2025-11-15,no,0
+knowledge/docs/snippets/front-matter-example.md,Front-Matter-Example,2025-11-15,no,0
+knowledge/docs/snippets/python-correlation-id.md,Python Correlation-ID Snippet,2025-11-15,no,0
+knowledge/docs/templates/README.md,Templates catalog,2025-11-15,no,0
+knowledge/docs/templates/adr-short.md,ADR — short form,2025-11-15,no,0
+knowledge/docs/templates/labs/README.md,Lab evidence templates,2025-11-15,no,0
+knowledge/docs/templates/labs/evidence-lab-01.md,Evidencia — Lab 01,2025-11-15,no,0
+knowledge/docs/templates/labs/evidence-lab-02.md,Evidencia — Lab 02,2025-11-15,no,0
+knowledge/docs/templates/labs/evidence-lab-03.md,Evidencia — Lab 03,2025-11-15,no,0
+knowledge/docs/templates/postmortem-light.md,Postmortem — quick capture,2025-11-15,no,0
+experience/audit/escenarios.md,Evaluation scenarios,2025-11-16,no,0
+experience/audit/impactos.md,Expected impacts,2025-11-16,no,0
+experience/audit/personas.md,Personas for LLM audits,2025-11-16,no,0
+experience/scenarios/payments/README.md,Payments Scenario / Escenario de Pagos,2025-11-15,no,0
+experience/scenarios/payments/contracts/payments/v2/README.md,Payments API Contract v2 / Contrato API de Pagos v2,2025-11-15,no,0
+experience/scenarios/payments/docs/en/observability.md,Payments Observability Guide,2025-11-15,no,0
+experience/scenarios/payments/docs/en/runbook.md,Payments Incident Runbook,2025-11-15,no,0
+experience/scenarios/payments/docs/es/observability.md,Guía de Observabilidad de Pagos,2025-11-15,no,0
+experience/scenarios/payments/docs/es/runbook.md,Runbook de Incidentes de Pagos,2025-11-15,no,0
+experience/scenarios/payments/policies/README.md,Payments — Resilience policies,2025-11-15,no,0
+experience/scenarios/payments/slo/README.md,Payments — SLO spec,2025-11-15,no,0
+experience/scenarios/payments/tests/fixtures/README.md,Fixtures de pagos,2025-11-15,no,0
+implementation/releases/release-01.md,Release 01 — Operational discovery,2025-11-15,no,0
+implementation/roadmap.md,Implementation Roadmap,2025-11-15,no,0
