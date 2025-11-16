@@ -300,9 +300,7 @@ def _parse_markdown_structure(path: str, text: str) -> Dict[str, object]:
                 continue
             resolved = os.path.normpath(os.path.join(base_dir, local_target))
             if not os.path.exists(resolved):
-                broken_links.append(
-                    f"Enlace roto: {match.group('label')} -> {target}"
-                )
+                broken_links.append(f"Enlace roto: {match.group('label')} -> {target}")
 
     for line in lines:
         stripped = line.strip()
