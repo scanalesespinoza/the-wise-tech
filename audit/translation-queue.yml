@@ -1,64 +1,177 @@
+meta:
+  owner: docs-bilingual
+  instructions: >-
+    Traduce primero en inglés, luego crea o actualiza el archivo en knowledge/docs/es/ siguiendo la misma estructura.
+    Usa `make -f operations/Makefile translate-batch BATCH=<id>` para procesar entradas pendientes.
+  last_update: 2024-06-02
 waves:
   - id: wave-1
-    description: Núcleo de entrada (onboarding)
+    description: Fundamentos y narrativa base
     batches:
       - id: w1-b1
+        description: Narrativa + principios
         priority: P0
         char_budget: 60000
         reviewers: ["rev-tecnico", "rev-estilo"]
-        targets:
-          - README.md
-          - docs/es/index.md
-          - docs/es/guides/quickstart.md
-          - docs/es/personas/overview.md
-          - docs/es/labs/lab-01-resilience-basics.md
+        entries:
+          - path_en: README.md
+            path_es: README.es.md
+            priority: P0
+            status: pending
+            notes: Traducción completa del README principal.
+          - path_en: knowledge/docs/principles/wise-tech-principles.md
+            path_es: knowledge/docs/es/principles/wise-tech-principles.md
+            priority: P0
+            status: pending
+          - path_en: knowledge/docs/principles/wise-tech-approach.md
+            path_es: knowledge/docs/es/principles/wise-tech-approach.md
+            priority: P0
+            status: pending
+          - path_en: knowledge/docs/en/wise-tech-approach-visual-representation.md
+            path_es: knowledge/docs/es/wise-tech-approach-visual-representation.md
+            priority: P0
+            status: pending
       - id: w1-b2
+        description: Onboarding y navegación
         priority: P0
         char_budget: 30000
         reviewers: ["rev-tecnico", "rev-estilo"]
-        targets:
-          - docs/es/guides/navigation-map.md
-          - docs/es/guides/choose-your-path.md
+        entries:
+          - path_en: docs/index.md
+            path_es: docs/es/index.md
+            priority: P0
+            status: done
+            notes: Mantener alineado con la navegación en español.
+          - path_en: docs/guides/navigation-map.md
+            path_es: docs/es/guides/navigation-map.md
+            priority: P0
+            status: pending
+          - path_en: docs/guides/choose-your-path.md
+            path_es: docs/es/guides/choose-your-path.md
+            priority: P0
+            status: done
+          - path_en: docs/guides/quickstart.md
+            path_es: docs/es/guides/quickstart.md
+            priority: P0
+            status: done
+          - path_en: docs/personas/overview.md
+            path_es: docs/es/personas/overview.md
+            priority: P1
+            status: done
   - id: wave-2
-    description: Guías esenciales (operabilidad mínima)
+    description: Learning paths 30/60/90
     batches:
       - id: w2-b1
+        description: Consumers + Developers
+        priority: P1
+        char_budget: 45000
+        reviewers: ["rev-tecnico", "rev-estilo"]
+        entries:
+          - path_en: knowledge/docs/paths/consumers-30-60-90.md
+            path_es: knowledge/docs/es/paths/consumers-30-60-90.md
+            priority: P1
+            status: pending
+          - path_en: knowledge/docs/paths/developers-30-60-90.md
+            path_es: knowledge/docs/es/paths/developers-30-60-90.md
+            priority: P1
+            status: pending
+      - id: w2-b2
+        description: Platform engineers
+        priority: P1
+        char_budget: 30000
+        reviewers: ["rev-tecnico", "rev-estilo"]
+        entries:
+          - path_en: knowledge/docs/paths/platform-engineers-30-60-90.md
+            path_es: knowledge/docs/es/paths/platform-engineers-30-60-90.md
+            priority: P1
+            status: pending
+  - id: wave-3
+    description: Guías operativas esenciales
+    batches:
+      - id: w3-b1
+        description: Resiliencia y telemetría
         priority: P1
         char_budget: 70000
         reviewers: ["rev-tecnico", "rev-estilo"]
-        targets:
-          - docs/es/guides/telemetry-minima.md
-          - docs/es/guides/resilience-policies.md
-          - docs/es/guides/slo-how-to.md
-          - docs/es/guides/feedback-loops.md
-  - id: wave-3
-    description: Playbooks críticos
+        entries:
+          - path_en: knowledge/docs/guides/resilience-policies.md
+            path_es: knowledge/docs/es/guides/resilience-policies.md
+            priority: P1
+            status: pending
+          - path_en: knowledge/docs/guides/telemetry-minima.md
+            path_es: knowledge/docs/es/guides/telemetry-minima.md
+            priority: P1
+            status: pending
+          - path_en: knowledge/docs/guides/feedback-loops.md
+            path_es: knowledge/docs/es/guides/feedback-loops.md
+            priority: P1
+            status: pending
+          - path_en: knowledge/docs/guides/slo-how-to.md
+            path_es: knowledge/docs/es/guides/slo-how-to.md
+            priority: P1
+            status: pending
+          - path_en: knowledge/docs/guides/security-minima.md
+            path_es: knowledge/docs/es/guides/security-minima.md
+            priority: P1
+            status: pending
+  - id: wave-4
+    description: Playbooks y labs
     batches:
-      - id: w3-b1
+      - id: w4-b1
+        description: Playbooks críticos
         priority: P1
         char_budget: 50000
         reviewers: ["rev-tecnico", "rev-estilo"]
-        targets:
-          - docs/es/playbooks/developer-playbook.md
-          - docs/es/playbooks/platform-playbook.md
-  - id: wave-4
-    description: Escenarios y plantillas
-    batches:
-      - id: w4-b1
+        entries:
+          - path_en: knowledge/docs/playbooks/developer-playbook.md
+            path_es: knowledge/docs/es/playbooks/developer-playbook.md
+            priority: P1
+            status: pending
+          - path_en: knowledge/docs/playbooks/platform-playbook.md
+            path_es: knowledge/docs/es/playbooks/platform-playbook.md
+            priority: P1
+            status: pending
+      - id: w4-b2
+        description: Labs
         priority: P2
         char_budget: 45000
         reviewers: ["rev-tecnico", "rev-estilo"]
-        targets:
-          - docs/es/scenarios/payments-overview.md
-          - docs/es/templates/postmortem-template.md
+        entries:
+          - path_en: knowledge/docs/labs/lab-01-resilience-basics.md
+            path_es: knowledge/docs/es/labs/lab-01-resilience-basics.md
+            priority: P2
+            status: pending
+          - path_en: knowledge/docs/labs/lab-02-observability-minima.md
+            path_es: knowledge/docs/es/labs/lab-02-observability-minima.md
+            priority: P2
+            status: pending
+          - path_en: knowledge/docs/labs/lab-03-adevelopment-loop.md
+            path_es: knowledge/docs/es/labs/lab-03-adevelopment-loop.md
+            priority: P2
+            status: pending
   - id: wave-5
-    description: Métricas y aDevelopment labs
+    description: Escenarios y plantillas
     batches:
       - id: w5-b1
+        description: Escenario de pagos + plantillas
         priority: P2
         char_budget: 40000
         reviewers: ["rev-tecnico", "rev-estilo"]
-        targets:
-          - docs/es/labs/lab-02-observability-minima.md
-          - docs/es/labs/lab-03-adevelopment-loop.md
-          - docs/es/guides/metrics-dashboard.md
+        entries:
+          - path_en: experience/scenarios/payments/docs/en/runbook.md
+            path_es: experience/scenarios/payments/docs/es/runbook.md
+            priority: P2
+            status: done
+            notes: Mantener actualizado con políticas y métricas.
+          - path_en: experience/scenarios/payments/docs/en/observability.md
+            path_es: experience/scenarios/payments/docs/es/observability.md
+            priority: P2
+            status: done
+          - path_en: knowledge/docs/templates/postmortem-light.md
+            path_es: knowledge/docs/es/templates/postmortem-light.md
+            priority: P2
+            status: pending
+          - path_en: knowledge/docs/templates/adr-short.md
+            path_es: knowledge/docs/es/templates/adr-short.md
+            priority: P2
+            status: pending

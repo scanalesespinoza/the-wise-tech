@@ -1,4 +1,4 @@
-.PHONY: install fmt lint test parity docs verify-links content-meta ci resilience-check resilience-sample slos check-error-budget telemetry-smoke lab-01 lab-02 lab-03 lab-run-all security-scan docs-live dev-up dev-down dev-logs dev-status audit language-audit
+.PHONY: install fmt lint test parity docs verify-links content-meta ci resilience-check resilience-sample slos check-error-budget telemetry-smoke lab-01 lab-02 lab-03 lab-run-all security-scan docs-live dev-up dev-down dev-logs dev-status audit language-audit translate-status translate-status-check translate-batch translate-verify
 
 THIS_MAKEFILE := $(lastword $(MAKEFILE_LIST))
 MAKE_CMD := $(MAKE) -f $(THIS_MAKEFILE)
@@ -34,6 +34,23 @@ test:
 parity:
 	@echo "Checking bilingual parity"
 	python $(SCRIPTS_DIR)/check_bilingual_parity.py --check-scenarios
+
+translate-status:
+	@echo "Generating translation status report"
+	python $(SCRIPTS_DIR)/translation_status.py --output audit/translation-status.md
+
+translate-status-check:
+	@python $(SCRIPTS_DIR)/translation_status.py --skip-write --fail-on MISSING_ES OUTDATED_ES
+
+translate-batch:
+	@if [ -z "$(BATCH)" ]; then \
+	echo "Usage: make -f operations/Makefile translate-batch BATCH=<batch-id> [DRY_RUN=1]"; \
+	exit 1; \
+	fi
+	@echo "Processing translation batch $(BATCH)"
+	python $(SCRIPTS_DIR)/translate_batch.py --batch $(BATCH) $(if $(DRY_RUN),--dry-run,)
+
+translate-verify: parity translate-status-check
 
 docs:
 	@echo "Building docs"

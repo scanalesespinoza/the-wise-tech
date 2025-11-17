@@ -30,6 +30,11 @@ Thank you for helping grow The Wise Tech knowledge base. This repository now use
 - Run `make -f operations/Makefile verify-links` or `python operations/scripts/check-links.py` when you edit long-form documentation so you can catch broken internal links early.
 - Record strategic decisions in the [ADR index](../knowledge/adr/INDEX.md) whenever you change a core process.
 
+## Bilingual workflow (EN ➜ ES)
+- Track the work in [`audit/translation-queue.yml`](../audit/translation-queue.yml). Each entry maps the canonical English file to its destination under `knowledge/docs/es/` and lists the reviewers per batch.
+- Generate the Spanish file with `make -f operations/Makefile translate-batch BATCH=<id>`. Pass `DRY_RUN=1` the first time so you can inspect the output without touching the repo; the command uses [`operations/scripts/translate_batch.py`](../operations/scripts/translate_batch.py) to keep code blocks intact.
+- Refresh the parity report with `make -f operations/Makefile translate-status` and include the updated [`audit/translation-status.md`](../audit/translation-status.md) in your PR. The docs workflow runs `translate-status-check`, so mismatches surface in CI alongside the usual parity check.
+
 ---
 
 🗳️ **¿Te fue útil este documento?**
