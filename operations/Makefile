@@ -1,4 +1,4 @@
-.PHONY: install fmt lint test parity docs verify-links content-meta ci resilience-check resilience-sample slos check-error-budget telemetry-smoke lab-01 lab-02 lab-03 lab-run-all security-scan docs-live dev-up dev-down dev-logs dev-status audit
+.PHONY: install fmt lint test parity docs verify-links content-meta ci resilience-check resilience-sample slos check-error-budget telemetry-smoke lab-01 lab-02 lab-03 lab-run-all security-scan docs-live dev-up dev-down dev-logs dev-status audit language-audit
 
 THIS_MAKEFILE := $(lastword $(MAKEFILE_LIST))
 MAKE_CMD := $(MAKE) -f $(THIS_MAKEFILE)
@@ -62,11 +62,15 @@ content-meta:
 	python $(SCRIPTS_DIR)/validate-content-metadata.py
 
 verify-links:
-	@echo "Checking internal Markdown links"
-	python $(SCRIPTS_DIR)/check-links.py
+        @echo "Checking internal Markdown links"
+        python $(SCRIPTS_DIR)/check-links.py
+
+language-audit:
+        @echo "Checking that content is written in English"
+        python $(SCRIPTS_DIR)/language_audit.py
 
 ci: install fmt lint test parity docs verify-links content-meta slos
-	@echo "CI (local) complete ✅"
+        @echo "CI (local) complete ✅"
 
 audit:
 	@python $(SCRIPTS_DIR)/audit-evaluator.py
