@@ -1,0 +1,2 @@
+# Paths (relative to the repo root) that intentionally stay in a single language.
+skip_paths: []

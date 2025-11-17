@@ -34,3 +34,7 @@ jobs:
         run: python operations/scripts/check-links.py
       - name: Validate content metadata (front-matter + See also)
         run: python operations/scripts/validate-content-metadata.py
+      - name: Check bilingual parity
+        run: make -f operations/Makefile parity
+      - name: Translation status (summary)
+        run: make -f operations/Makefile translate-status-check

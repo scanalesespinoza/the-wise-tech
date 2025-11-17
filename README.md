@@ -75,6 +75,17 @@ Optional (dev stack):
 
 Check the [general quickstart](knowledge/docs/guides/quickstart.md) when you need the ultra-short version to share with your team.
 
+## Bilingual workflow (English ➜ Español)
+
+1. **Prioritize the English source.** Edit the canonical file (for example `knowledge/docs/guides/resilience-policies.md`).
+2. **Queue the translation.** Add or update the corresponding entry in [`audit/translation-queue.yml`](audit/translation-queue.yml) so it points to the target path under `knowledge/docs/es/`.
+3. **Preview the batch.** Run `make -f operations/Makefile translate-batch BATCH=<id> DRY_RUN=1` to simulate the translation for the selected batch without writing files. The command uses [`operations/scripts/translate_batch.py`](operations/scripts/translate_batch.py), which keeps code blocks intact and applies the glossary automatically.
+4. **Generate/update the Spanish file.** Re-run the same command without `DRY_RUN=1` (and after configuring your translation provider) to create or refresh the `.es` file. Each run updates the queue with the new status.
+5. **Publish the status.** Execute `make -f operations/Makefile translate-status` to rewrite [`audit/translation-status.md`](audit/translation-status.md) and capture the new parity snapshot.
+6. **Validate before the PR.** Run `make -f operations/Makefile translate-verify` (which chains `parity` + `translate-status-check`) to ensure the pipeline will not regress the bilingual coverage.
+
+The documentation-only workflows now invoke the same checks, so every PR exposes the current parity state without requiring access to external translation APIs.
+
 ## Repository layout by focus area
 
 - `knowledge/` — **Knowledge Capitalization.** Documentation, ADRs, historical archives, and shared assets.

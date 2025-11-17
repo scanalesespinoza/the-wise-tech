@@ -5,48 +5,48 @@ repo_url: https://github.com/scanalesespinoza/the-wise-tech
 docs_dir: ../knowledge/docs
 
 nav:
-  - Home: index.md
-  - Principles:
-      - Overview: principles/wise-tech-principles.md
-  - Personas:
-      - Consumers: personas/consumers-overview.md
-      - Developers: personas/developers-overview.md
-      - Platform Engineers: personas/platform-engineers-overview.md
-  - Guides:
-      - Content Style Guide: guides/content-style-guide.md
-      - Editorial Workflow: guides/editorial-workflow.md
-      - Versioning Docs: guides/versioning-docs.md
-      - Taxonomy & Tags: guides/taxonomy-tags.md
-      - Dev Environment: guides/dev-environment.md
-      - Quickstart: guides/quickstart.md
-      - Feedback Loops: guides/feedback-loops.md
-      - Postmortems: guides/postmortem-guide.md
-      - Contribution Mentoring: guides/contribution-mentoring.md
-      - Resilience Policies: guides/resilience-policies.md
-      - SLOs & Error Budget: guides/slo-how-to.md
-      - Security (Minimum): guides/security-minima.md
-      - Dev stack (local): guides/dev-stack-local.md
-      - Telemetry (Minimum): guides/telemetry-minima.md
-  - Labs:
-      - Lab 01 — Resilience Basics: labs/lab-01-resilience-basics.md
-      - Lab 02 — Observability Minimum: labs/lab-02-observability-minima.md
-      - Lab 03 — aDevelopment Loop: labs/lab-03-adevelopment-loop.md
-  - Snippets:
-      - Python — Correlation ID: snippets/python-correlation-id.md
-  - CI:
-      - Overview: continuous-integration/index.md
-  - Playbooks:
-      - Developer: playbooks/developer-playbook.md
-      - Platform: playbooks/platform-playbook.md
-  - Paths:
-      - Consumers 30/60/90: paths/consumers-30-60-90.md
-      - Developers 30/60/90: paths/developers-30-60-90.md
-      - Platform 30/60/90: paths/platform-engineers-30-60-90.md
-  - Scenarios:
-      - Payments: scenarios/payments-overview.md
-  - Roadmap:
-      - Overview: roadmap/roadmap.md
-      - PR ideas: roadmap/pr-ideas.md
+  - "Home / Inicio": index.md
+  - "Principles / Principios":
+      - "Overview / Resumen": principles/wise-tech-principles.md
+  - "Personas / Roles":
+      - "Consumers / Consumidores": personas/consumers-overview.md
+      - "Developers / Desarrolladores": personas/developers-overview.md
+      - "Platform Engineers / Plataformistas": personas/platform-engineers-overview.md
+  - "Guides / Guías":
+      - "Content Style Guide / Guía de estilo": guides/content-style-guide.md
+      - "Editorial Workflow / Flujo editorial": guides/editorial-workflow.md
+      - "Versioning Docs / Versionado": guides/versioning-docs.md
+      - "Taxonomy & Tags / Taxonomía": guides/taxonomy-tags.md
+      - "Dev Environment / Entorno": guides/dev-environment.md
+      - "Quickstart / Inicio rápido": guides/quickstart.md
+      - "Feedback Loops / Bucles de feedback": guides/feedback-loops.md
+      - "Postmortems / Postmortems": guides/postmortem-guide.md
+      - "Contribution Mentoring / Mentoría": guides/contribution-mentoring.md
+      - "Resilience Policies / Políticas de resiliencia": guides/resilience-policies.md
+      - "SLOs & Error Budget / SLOs y presupuesto": guides/slo-how-to.md
+      - "Security (Minimum) / Seguridad mínima": guides/security-minima.md
+      - "Dev stack (local) / Stack local": guides/dev-stack-local.md
+      - "Telemetry (Minimum) / Telemetría mínima": guides/telemetry-minima.md
+  - "Labs / Laboratorios":
+      - "Lab 01 — Resilience Basics": labs/lab-01-resilience-basics.md
+      - "Lab 02 — Observability Minimum": labs/lab-02-observability-minima.md
+      - "Lab 03 — aDevelopment Loop": labs/lab-03-adevelopment-loop.md
+  - "Snippets / Fragmentos":
+      - "Python — Correlation ID": snippets/python-correlation-id.md
+  - "CI / Integración continua":
+      - "Overview / Resumen": continuous-integration/index.md
+  - "Playbooks / Guías de acción":
+      - "Developer / Desarrollo": playbooks/developer-playbook.md
+      - "Platform / Plataforma": playbooks/platform-playbook.md
+  - "Paths / Rutas":
+      - "Consumers 30/60/90 / Consumidores 30/60/90": paths/consumers-30-60-90.md
+      - "Developers 30/60/90 / Desarrolladores 30/60/90": paths/developers-30-60-90.md
+      - "Platform 30/60/90 / Plataforma 30/60/90": paths/platform-engineers-30-60-90.md
+  - "Scenarios / Escenarios":
+      - "Payments / Pagos": scenarios/payments-overview.md
+  - "Roadmap / Hoja de ruta":
+      - "Overview / Resumen": roadmap/roadmap.md
+      - "PR ideas / Ideas de PR": roadmap/pr-ideas.md
 
 theme:
   name: material
