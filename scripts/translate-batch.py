@@ -119,8 +119,14 @@ def main():
     print(f"Batch {batch_id} no encontrado.")
     sys.exit(2)
 
-  remaining = MAX_CHARS
-  report = {"batch": batch_id, "char_budget": MAX_CHARS, "targets": []}
+  batch_budget = target_batch.get("char_budget")
+  try:
+    batch_budget = int(batch_budget) if batch_budget is not None else MAX_CHARS
+  except (TypeError, ValueError):
+    batch_budget = MAX_CHARS
+
+  remaining = batch_budget
+  report = {"batch": batch_id, "char_budget": batch_budget, "targets": []}
   for path in target_batch.get("targets", []):
     remaining, info = process_file(path, remaining)
     report["targets"].append(info)
