@@ -5,6 +5,9 @@
 [![docs-and-links](https://github.com/scanalesespinoza/the-wise-tech/actions/workflows/docs-and-links.yml/badge.svg)](https://github.com/scanalesespinoza/the-wise-tech/actions/workflows/docs-and-links.yml)
 [![gitleaks](https://github.com/scanalesespinoza/the-wise-tech/actions/workflows/gitleaks.yml/badge.svg)](https://github.com/scanalesespinoza/the-wise-tech/actions/workflows/gitleaks.yml)
 [![pre-commit](https://github.com/scanalesespinoza/the-wise-tech/actions/workflows/pre-commit.yml/badge.svg)](https://github.com/scanalesespinoza/the-wise-tech/actions/workflows/pre-commit.yml)
+[![Based on The Wise Tech – Last sync: 2024-06-01 (manually updated)](https://img.shields.io/badge/%F0%9F%94%84%20Based%20on%20The%20Wise%20Tech-Last%20sync%3A%202024--06--01%20(manually%20updated)-6f42c1)](UPSTREAM_CHANGES.md)
+
+> 🔄 This repository is based on **The Wise Tech** template. Check for upstream updates [here](UPSTREAM_CHANGES.md).
 
 This repository turns the Wise Tech philosophy into shared actions: a navigable one-page hub for learning, building, and operating technology with a human purpose.
 
