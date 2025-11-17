@@ -19,7 +19,7 @@
       Claridad sobre qué leer y cómo dar feedback útil en minutos.
     </td>
     <td align="center">
-      <a href="../knowledge/docs/paths/consumers-30-60-90.md" style="display:inline-block;padding:1rem 1.5rem;background:#e0f5f1;border-radius:12px;text-decoration:none;font-weight:600;">🍃 Ir a Consumers 30/60/90</a>
+      <a href="es/guides/choose-your-path.md" style="display:inline-block;padding:1rem 1.5rem;background:#e0f5f1;border-radius:12px;text-decoration:none;font-weight:600;">🍃 Explorar rutas</a>
     </td>
   </tr>
 </table>
@@ -28,7 +28,7 @@
 - Minuto 60 → Aplica 1 práctica de simplicidad.
 - Minuto 90 → Envía feedback con evidencia.
 
-📚 ¿Prefieres algo más corto? Abre el [Fast Track para consumidores](../knowledge/docs/paths/consumers/fast-track.md).
+📚 ¿Prefieres algo más corto? Abre la [guía Elige tu ruta](es/guides/choose-your-path.md).
 
 ---
 
@@ -41,7 +41,7 @@
       Primer test del escenario de pagos y una mejora documentada.
     </td>
     <td align="center">
-      <a href="../knowledge/docs/paths/developers-30-60-90.md" style="display:inline-block;padding:1rem 1.5rem;background:#eaf2ff;border-radius:12px;text-decoration:none;font-weight:600;">💡 Ir a Developers 30/60/90</a>
+      <a href="es/guides/choose-your-path.md" style="display:inline-block;padding:1rem 1.5rem;background:#eaf2ff;border-radius:12px;text-decoration:none;font-weight:600;">💡 Explorar rutas</a>
     </td>
   </tr>
 </table>
@@ -50,7 +50,7 @@
 - Minuto 60 → Corre `make test` y captura resultados.
 - Minuto 90 → Sugiere un ajuste en docs o pruebas.
 
-⚡ Sigue la versión resumida en el [Fast Track para developers](../knowledge/docs/paths/developers/fast-track.md).
+⚡ Sigue la versión resumida en la [guía Elige tu ruta](es/guides/choose-your-path.md).
 
 ---
 
@@ -63,7 +63,7 @@
       Ajuste de políticas resilientes y validación con herramientas del repo.
     </td>
     <td align="center">
-      <a href="../knowledge/docs/paths/platform-engineers-30-60-90.md" style="display:inline-block;padding:1rem 1.5rem;background:#fff2de;border-radius:12px;text-decoration:none;font-weight:600;">🧱 Ir a Platform 30/60/90</a>
+      <a href="es/guides/choose-your-path.md" style="display:inline-block;padding:1rem 1.5rem;background:#fff2de;border-radius:12px;text-decoration:none;font-weight:600;">🧱 Explorar rutas</a>
     </td>
   </tr>
 </table>
@@ -72,13 +72,13 @@
 - Minuto 60 → Ejecuta `make resilience-check`.
 - Minuto 90 → Comparte el runbook actualizado.
 
-🚀 ¿Necesitas solo el arranque? Usa el [Fast Track para platform engineers](../knowledge/docs/paths/platform-engineers/fast-track.md).
+🚀 ¿Necesitas solo el arranque? Usa la [guía Elige tu ruta](es/guides/choose-your-path.md).
 
 ---
 
 ## ¿No sabes dónde empezar?
 
-Comienza siempre con la guía [Start Here](../README.md#start-here). Resume cómo leer el repositorio, instalar dependencias y elegir ruta.
+Comienza siempre con la página [Inicio](index.md). Resume cómo leer el repositorio, instalar dependencias y elegir ruta.
 
 ---
 

@@ -26,6 +26,16 @@
 - [ ] Docs updated / links verified
 - [ ] Resilience/SLOs reviewed if impacta (`make resilience-check` / `make slos`)
 
+## QA de traducción (obligatorio en i18n)
+- Batch ID: w?-b?
+- Archivos cubiertos: …
+- Términos clave (glosario): …
+- `mkdocs build --strict`: ☐ OK
+- Links verificados (`scripts/check-links.py --strict`): ☐ OK
+- Front-matter / See also / tags (EN): ☐ OK
+- Revisión técnica: ☐ OK (by …)
+- Revisión de estilo: ☐ OK (by …)
+
 ---
 
 🗳️ **¿Te fue útil este documento?**
