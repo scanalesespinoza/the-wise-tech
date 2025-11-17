@@ -62,15 +62,15 @@ content-meta:
 	python $(SCRIPTS_DIR)/validate-content-metadata.py
 
 verify-links:
-        @echo "Checking internal Markdown links"
-        python $(SCRIPTS_DIR)/check-links.py
+	@echo "Checking internal Markdown links"
+	python $(SCRIPTS_DIR)/check-links.py
 
 language-audit:
-        @echo "Checking that content is written in English"
-        python $(SCRIPTS_DIR)/language_audit.py
+	@echo "Checking that content is written in English"
+	python $(SCRIPTS_DIR)/language_audit.py
 
 ci: install fmt lint test parity docs verify-links content-meta slos
-        @echo "CI (local) complete ✅"
+	@echo "CI (local) complete ✅"
 
 audit:
 	@python $(SCRIPTS_DIR)/audit-evaluator.py
