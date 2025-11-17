@@ -1,0 +1,40 @@
+site_name: The Wise Tech
+site_description: Conocimiento e implementación para tecnología resiliente y centrada en las personas
+site_url: https://scanalesespinoza.github.io/the-wise-tech
+theme:
+  name: material
+  features:
+    - search.suggest
+    - search.highlight
+    - navigation.top
+    - navigation.indexes
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/scanalesespinoza/the-wise-tech
+plugins:
+  - search
+  - i18n:
+      languages:
+        - locale: es
+          name: Español
+          default: true
+        - locale: en
+          name: English
+  - minify:
+      minify_html: true
+  - git-revision-date-localized:
+      fallback_to_build_date: true
+      strict: false
+nav:
+  - Inicio: index.md
+  - Guías:
+      - Quickstart: es/guides/quickstart.md
+      - Migración a ES: es/guides/migracion-es.md
+      - Glosario: es/guides/glosario-terminologia.md
+      - Content Style Guide: guides/content-style-guide.md
+      - Taxonomy & Tags: guides/taxonomy-tags.md
+  - Personas:
+      - Personas: es/personas/overview.md
+  - Labs:
+      - Lab 01 — Resilience Basics: es/labs/lab-01-resilience-basics.md

@@ -56,9 +56,9 @@ Día 30: Card "Plan 60-90" con flecha ➡️.
 
 | Ruta | Visual principal | Fast Track |
 | --- | --- | --- |
-| Consumers 30/60/90 | Hero con testimonios y contador de historias activas. | [🍃 Versión rápida](../knowledge/docs/paths/consumers/fast-track.md) |
-| Developers 30/60/90 | Tablero tipo Kanban (Docs, Código, Feedback). | [⚡ Versión rápida](../knowledge/docs/paths/developers/fast-track.md) |
-| Platform Engineers 30/60/90 | Matriz de controles (Políticas, SLOs, Runbooks). | [🛡️ Versión rápida](../knowledge/docs/paths/platform-engineers/fast-track.md) |
+| Consumers 30/60/90 | Hero con testimonios y contador de historias activas. | [🍃 Explora rutas](es/guides/choose-your-path.md) |
+| Developers 30/60/90 | Tablero tipo Kanban (Docs, Código, Feedback). | [⚡ Explora rutas](es/guides/choose-your-path.md) |
+| Platform Engineers 30/60/90 | Matriz de controles (Políticas, SLOs, Runbooks). | [🛡️ Explora rutas](es/guides/choose-your-path.md) |
 
 ## Próximos pasos visuales
 

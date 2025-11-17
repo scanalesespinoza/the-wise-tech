@@ -1,0 +1,64 @@
+waves:
+  - id: wave-1
+    description: Núcleo de entrada (onboarding)
+    batches:
+      - id: w1-b1
+        priority: P0
+        char_budget: 60000
+        reviewers: ["rev-tecnico", "rev-estilo"]
+        targets:
+          - README.md
+          - docs/es/index.md
+          - docs/es/guides/quickstart.md
+          - docs/es/personas/overview.md
+          - docs/es/labs/lab-01-resilience-basics.md
+      - id: w1-b2
+        priority: P0
+        char_budget: 30000
+        reviewers: ["rev-tecnico", "rev-estilo"]
+        targets:
+          - docs/es/guides/navigation-map.md
+          - docs/es/guides/choose-your-path.md
+  - id: wave-2
+    description: Guías esenciales (operabilidad mínima)
+    batches:
+      - id: w2-b1
+        priority: P1
+        char_budget: 70000
+        reviewers: ["rev-tecnico", "rev-estilo"]
+        targets:
+          - docs/es/guides/telemetry-minima.md
+          - docs/es/guides/resilience-policies.md
+          - docs/es/guides/slo-how-to.md
+          - docs/es/guides/feedback-loops.md
+  - id: wave-3
+    description: Playbooks críticos
+    batches:
+      - id: w3-b1
+        priority: P1
+        char_budget: 50000
+        reviewers: ["rev-tecnico", "rev-estilo"]
+        targets:
+          - docs/es/playbooks/developer-playbook.md
+          - docs/es/playbooks/platform-playbook.md
+  - id: wave-4
+    description: Escenarios y plantillas
+    batches:
+      - id: w4-b1
+        priority: P2
+        char_budget: 45000
+        reviewers: ["rev-tecnico", "rev-estilo"]
+        targets:
+          - docs/es/scenarios/payments-overview.md
+          - docs/es/templates/postmortem-template.md
+  - id: wave-5
+    description: Métricas y aDevelopment labs
+    batches:
+      - id: w5-b1
+        priority: P2
+        char_budget: 40000
+        reviewers: ["rev-tecnico", "rev-estilo"]
+        targets:
+          - docs/es/labs/lab-02-observability-minima.md
+          - docs/es/labs/lab-03-adevelopment-loop.md
+          - docs/es/guides/metrics-dashboard.md

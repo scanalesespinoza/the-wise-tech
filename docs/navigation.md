@@ -11,9 +11,9 @@ Conecta cada perfil con la acción correcta en segundos. Usa la vista rápida pa
 
 | Perfil | Primer impacto | Botones clave |
 | --- | --- | --- |
-| 👥 **Consumidores** | Activa aprendizajes visibles antes de profundizar en governance o feedback loops. | [⚡ Fast Track](../knowledge/docs/paths/consumers/fast-track.md) · [📘 Ruta 30/60/90](../knowledge/docs/paths/consumers-30-60-90.md) · [🧭 Perfil](../knowledge/docs/personas/consumers-overview.md) |
-| 👩‍💻 **Developers** | Sincroniza entorno local, ejecuta pagos y entrega un cambio resiliente. | [⚡ Fast Track](../knowledge/docs/paths/developers/fast-track.md) · [📘 Ruta 30/60/90](../knowledge/docs/paths/developers-30-60-90.md) · [🧭 Perfil](../knowledge/docs/personas/developers-overview.md) |
-| 🛠️ **Platform Engineers** | Ajusta políticas, valida resiliencia y documenta runbooks compartidos. | [⚡ Fast Track](../knowledge/docs/paths/platform-engineers/fast-track.md) · [📘 Ruta 30/60/90](../knowledge/docs/paths/platform-engineers-30-60-90.md) · [🧭 Perfil](../knowledge/docs/personas/platform-engineers-overview.md) |
+| 👥 **Consumidores** | Activa aprendizajes visibles antes de profundizar en governance o feedback loops. | [🌐 Mapa de navegación](es/guides/navigation-map.md) · [🧭 Perfil](es/personas/overview.md) · [🚀 Quickstart](es/guides/quickstart.md) |
+| 👩‍💻 **Developers** | Sincroniza entorno local, ejecuta pagos y entrega un cambio resiliente. | [🌐 Mapa de navegación](es/guides/navigation-map.md) · [🧭 Perfil](es/personas/overview.md) · [🚀 Quickstart](es/guides/quickstart.md) |
+| 🛠️ **Platform Engineers** | Ajusta políticas, valida resiliencia y documenta runbooks compartidos. | [🌐 Mapa de navegación](es/guides/navigation-map.md) · [🧭 Perfil](es/personas/overview.md) · [🚀 Quickstart](es/guides/quickstart.md) |
 
 ## 🎯 Cómo usar la landing
 
@@ -25,7 +25,7 @@ Conecta cada perfil con la acción correcta en segundos. Usa la vista rápida pa
 
 - [Mapa visual de navegación](visual-navigation.md) para usar en presentaciones o workshops.
 - [Onboarding landing](onboarding-landing.md) cuando necesites guiar a equipos nuevos.
-- [Guía Quickstart](../knowledge/docs/guides/quickstart.md) para asegurar paridad entre perfiles.
+- [Guía Quickstart](es/guides/quickstart.md) para asegurar paridad entre perfiles.
 
 ---
 📣 **¿Te fue útil este documento?**
