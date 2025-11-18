@@ -1,6 +1,11 @@
+---
+title: "Pilar: Performance"
+tags: ["developers", "performance", "principles"]
+---
+
 # Pilar: Performance
 
-> El rendimiento se alinea con la visión de priorizar la lógica de negocio descrita en [Vision and purpose](../../README.md#vision-and-purpose) y aplica los principios de Simplicity y Mejora continua para sostener experiencias confiables.
+> El rendimiento se alinea con la visión de priorizar la lógica de negocio descrita en [Vision and purpose](https://github.com/scanalesespinoza/the-wise-tech/blob/main/README.md#vision-and-purpose) y aplica los principios de Simplicity y Mejora continua para sostener experiencias confiables.
 
 ## Contexto estratégico
 Optimizar performance significa asegurar que cada interacción sea rápida, predecible y medible. No busca micro-optimizar cada componente sino garantizar que los flujos que entregan valor tengan capacidad y latencia suficientes para cumplir la promesa al usuario y al negocio.
@@ -30,3 +35,8 @@ Optimizar performance significa asegurar que cada interacción sea rápida, pred
 - **MUST** garantizar que las optimizaciones no deshabilitan controles de autenticación o autorización bajo ninguna circunstancia.
 - **SHOULD** monitorear que los mecanismos de caching respetan el aislamiento de datos por identidad y región.
 - **MAY** usar señales de riesgo para adaptar límites por cliente o dispositivo sin exponer la plataforma a abuso.
+
+## See also
+- [Vision and purpose](https://github.com/scanalesespinoza/the-wise-tech/blob/main/README.md#vision-and-purpose)
+- [Wise Tech Principles](https://github.com/scanalesespinoza/the-wise-tech/blob/main/knowledge/docs/principles/wise-tech-principles.md)
+- [Feedback loops](https://github.com/scanalesespinoza/the-wise-tech/blob/main/knowledge/docs/guides/feedback-loops.md)

@@ -1,6 +1,11 @@
+---
+title: "Pilar: Resiliencia"
+tags: ["developers", "resilience", "principles"]
+---
+
 # Pilar: Resiliencia
 
-> Conecta la visión de resultados confiables descrita en [Vision and purpose](../../README.md#vision-and-purpose) con los [Wise Tech Principles](../../knowledge/docs/principles/wise-tech-principles.md#resiliencia) para asegurar que cada sistema se degrade de forma controlada.
+> Conecta la visión de resultados confiables descrita en [Vision and purpose](https://github.com/scanalesespinoza/the-wise-tech/blob/main/README.md#vision-and-purpose) con los [Wise Tech Principles](https://github.com/scanalesespinoza/the-wise-tech/blob/main/knowledge/docs/principles/wise-tech-principles.md#resiliencia) para asegurar que cada sistema se degrade de forma controlada.
 
 ## Contexto estratégico
 La resiliencia articula la capacidad de cumplir promesas de negocio incluso en presencia de fallas. Sustenta el principio de Resiliencia del marco Wise Tech y sirve como mecanismo de ejecución para Simplicity y Mejora continua: se diseña para fallar con gracia y se mejora observando señales reales.
@@ -28,10 +33,14 @@ La resiliencia articula la capacidad de cumplir promesas de negocio incluso en p
 
 ### Operaciones y revisión
 - **MUST** ensayar los runbooks críticos con la cadencia propuesta en los laboratorios de resiliencia.
-- **SHOULD** usar retrospectivas post-incidente para reforzar la captura de conocimiento (ver [Knowledge Capitalization](../../knowledge/docs/principles/wise-tech-principles.md#capitalizacin-del-conocimiento)).
+- **SHOULD** usar retrospectivas post-incidente para reforzar la captura de conocimiento (ver [Knowledge Capitalization](https://github.com/scanalesespinoza/the-wise-tech/blob/main/knowledge/docs/principles/wise-tech-principles.md#capitalizacin-del-conocimiento)).
 - **MAY** compartir hallazgos como cápsulas reutilizables en la base de conocimiento para que otros equipos aceleren su alineación con la visión.
 
 ## Transversal — Zero Trust
 - **MUST** validar identidades y permisos antes de ejecutar cualquier flujo de recuperación o bypass, evitando que el modo degradado se convierta en un vector de escalamiento.
 - **SHOULD** registrar en telemetría quién habilita o deshabilita protecciones para facilitar trazabilidad y auditoría.
 - **MAY** integrar señales de postura (por ejemplo, nivel de riesgo del dispositivo) como entrada para activar contención automática.
+
+## See also
+- [Wise Tech Principles](https://github.com/scanalesespinoza/the-wise-tech/blob/main/knowledge/docs/principles/wise-tech-principles.md)
+- [Resilience policies](https://github.com/scanalesespinoza/the-wise-tech/blob/main/knowledge/docs/guides/resilience-policies.md)
