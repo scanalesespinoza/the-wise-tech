@@ -1,0 +1,88 @@
+# Plantilla de contrato de componente consumida por wise-tech-linter
+# Ajuste los valores según corresponda. Todos los campos marcados como obligatorios
+# deben tener contenido para que la verificación sea exitosa.
+
+version: "1"
+component:
+  name: "component-example"
+  description: "Servicio que sincroniza catálogos con proveedores externos."
+  owner:
+    team: "Equipo Catálogo Dinámico"
+    slack_channel: "#cat-dynamic-support"
+    escalation: "PagerDuty -> Manager -> Director de Ingeniería"
+  lifecycle:
+    tier: "Tier-1"
+    data_classification: "Confidencial"
+  dependencies:
+    runtime:
+      - name: "Inventory API"
+        owner: "Equipo de Inventario"
+        contract: "https://intranet/contracts/inventory-api"
+    supporting:
+      - name: "S3 Data Lake"
+        owner: "Plataforma de Datos"
+        contract: "https://intranet/contracts/data-lake"
+resilience:
+  availability_slo: "99.5%"
+  failure_modes:
+    - scenario: "Caída de Inventory API"
+      impact: "No se procesan órdenes de actualización"
+      mitigation: "Se utiliza caché local de 1 hora"
+  recovery_runbooks:
+    - name: "Reinicio seguro del sincronizador"
+      url: "https://runbooks/123"
+  chaos_validation:
+    frequency: "Mensual"
+    scope: "Dependencias críticas y manejo de colas"
+  fallbacks:
+    - dependency: "Inventory API"
+      strategy: "Reintentos exponenciales y degradación"
+  backup_and_restore:
+    medium: "Snapshots diarios en S3"
+    last_successful_test: "2024-04-01"
+performance:
+  latency_slo_ms: 250
+  error_budget_policy: "Alerta al 50%, congelar despliegues al 80%"
+  load_profile:
+    expected_qps: 120
+    peak_duration: "2 horas durante cierres de inventario"
+  capacity_plan:
+    current_utilization: "CPU 55%, memoria 60%, storage 40%"
+    scale_strategy: "Autoescalado horizontal (HPA)"
+  benchmark_evidence:
+    - name: "k6-abril-2024"
+      url: "https://benchmarks/k6-apr-2024"
+  regression_tests:
+    - name: "test-latency"
+      trigger: "pipeline principal"
+observability:
+  metrics:
+    - name: "sync_latency_p99"
+      owner: "Equipo Catálogo Dinámico"
+      retention_days: 30
+      sli_relation: "latency"
+  logs:
+    structured: true
+    retention_days: 45
+  traces:
+    coverage: "80% de las llamadas críticas"
+  alerts:
+    - name: "sync-latency-high"
+      condition: "p99 > 250ms durante 5m"
+      channel: "#cat-dynamic-alerts"
+      runbook: "https://runbooks/123"
+  data_quality:
+    validations:
+      - name: "pipeline-alert-parity"
+        frequency: "Diario"
+  access_controls: "Solo Observability Guild puede editar dashboards"
+compliance:
+  threat_model: "https://threatmodels/component-example"
+  data_retention: "Logs 45 días, métricas 90 días"
+  regulatory_notes:
+    - "Cumple PCI-DSS sección 10"
+evidence:
+  resilience_checklist: "https://tickets/RES-2024-01"
+  performance_checklist: "https://tickets/PERF-2024-02"
+  observability_checklist: "https://tickets/OBS-2024-03"
+  last_reviewed: "2024-04-15"
