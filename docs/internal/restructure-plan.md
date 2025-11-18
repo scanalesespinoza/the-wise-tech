@@ -85,3 +85,23 @@ This approach guarantees that Zero Trust remains visible in executive reviews wh
 2. Update navigation artifacts (e.g., `docs/navigation.md`) to reflect the PCC taxonomy once sign-off occurs.
 3. Apply the MUST/SHOULD/MAY language when rewriting individual control documents.
 4. Schedule quarterly retrospectives to ensure the restructure continues to embody Wise Tech's philosophy of transparent, iterative governance.
+
+## Execution Checklist
+Use this living checklist to confirm the restructure is complete before requesting final approval:
+
+- [ ] **Pilares documentados.** Cada principio, capacidad y control cuenta con una página actualizada en `docs/pillars/` enlazando al resto del árbol.
+- [ ] **Guía del contrato.** Existe una guía explícita que describe acuerdos de entrega y expectativas entre equipos en `docs/guides/`.
+- [ ] **Especificación formal.** Los requisitos de gobernanza migran a `docs/specs/` con numeración PCC y lenguaje MUST/SHOULD/MAY.
+- [ ] **Ejemplos vivos.** Se publican casos prácticos en `docs/examples/` y se integran con las guías correspondientes.
+- [ ] **Navegación actualizada.** `docs/navigation.md`, `mkdocs.yml` y cualquier índice relacionado reflejan la nueva arquitectura.
+- [ ] **Experiencia legacy intacta.** Se mantienen alias/redirecciones y verificaciones manuales para garantizar que los flujos existentes de usuarios o integraciones no se rompan.
+
+## Joint Review Before Merge
+- Convocar una revisión conjunta entre responsables de producto, seguridad, cumplimiento y operaciones **antes del merge**.
+- Usar la checklist anterior como agenda, marcando cada ítem solo cuando exista evidencia vinculada (enlaces o capturas de navegación).
+- Registrar hallazgos o deudas en `docs/internal/restructure-plan.md` para que sirvan como insumo de la siguiente iteración.
+
+## Próxima Iteración
+1. **Automatizar validaciones.** Instrumentar scripts o jobs que verifiquen la checklist (p. ej., lint de enlaces, verificación de alias y presencia de PCC IDs) dentro de `scripts/` o `tools/`.
+2. **Integrar en CI.** Conectar las validaciones anteriores al pipeline principal para bloquear merges que no cumplan con los criterios mínimos.
+3. **Monitoreo continuo.** Añadir reportes recurrentes (mensuales) en `audit/` que muestren el estado del cumplimiento y cualquier desviación detectada automáticamente.
