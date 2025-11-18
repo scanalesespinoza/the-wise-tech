@@ -85,7 +85,7 @@ def load_contract(path: Path) -> Dict[str, Any]:
 
 def get_nested(data: Dict[str, Any], dotted_path: str) -> Any:
     node: Any = data
-    for segment in dotted_path.split('.'):
+    for segment in dotted_path.split("."):
         if not isinstance(node, dict) or segment not in node:
             return None
         node = node[segment]
@@ -118,14 +118,20 @@ def validate_list_items(contract: Dict[str, Any]) -> List[str]:
             # La ausencia ya será reportada si aplica en REQUIRED_PATHS
             continue
         if not isinstance(value, Iterable):
-            errors.append(f"`{dotted}` debe ser una lista de elementos con {required_keys}")
+            errors.append(
+                f"`{dotted}` debe ser una lista de elementos con {required_keys}"
+            )
             continue
         for index, item in enumerate(value):
             if not isinstance(item, dict):
-                errors.append(f"`{dotted}[{index}]` debe ser un objeto con campos {required_keys}")
+                errors.append(
+                    f"`{dotted}[{index}]` debe ser un objeto con campos {required_keys}"
+                )
                 continue
             for key in required_keys:
-                if key not in item or (isinstance(item[key], str) and not item[key].strip()):
+                if key not in item or (
+                    isinstance(item[key], str) and not item[key].strip()
+                ):
                     errors.append(
                         f"`{dotted}[{index}].{key}` es obligatorio y debe tener contenido"
                     )
@@ -156,7 +162,9 @@ def main(argv: Iterable[str] | None = None) -> int:
     errors.extend(validate_list_items(contract))
 
     if errors:
-        print("Contrato inválido:\n- " + "\n- ".join(sorted(set(errors))), file=sys.stderr)
+        print(
+            "Contrato inválido:\n- " + "\n- ".join(sorted(set(errors))), file=sys.stderr
+        )
         return 2
 
     print(f"Contrato válido: {path}")
