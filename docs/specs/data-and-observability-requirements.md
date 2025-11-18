@@ -29,8 +29,8 @@ Dar trazabilidad total sobre el estado de carga, la comunicación de sobredemand
 - Automatizar el análisis (por ejemplo, detección de anomalías) siempre que existan alertas manuales como respaldo.
 
 ## Validación y evidencia
-- Checklist [`audit/checklists/component-observability.md`](../../audit/checklists/component-observability.md).
-- Ejemplo [`examples/service-observability`](../../examples/service-observability/README.md).
+- Checklist [`audit/checklists/component-observability.md`](https://github.com/scanalesespinoza/the-wise-tech/blob/main/audit/checklists/component-observability.md).
+- Ejemplo [`examples/service-observability`](https://github.com/scanalesespinoza/the-wise-tech/tree/main/examples/service-observability#readme).
 - Scripts: `make -f operations/Makefile telemetry-smoke` para generar señales mínimas.
 
 ## Referencias cruzadas

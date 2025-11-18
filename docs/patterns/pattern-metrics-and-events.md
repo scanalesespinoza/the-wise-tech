@@ -25,8 +25,8 @@ Este patrón operacionaliza el pilar de Datos y Observabilidad. Describe cómo i
 - Registra acciones correctivas como eventos separados (`action_taken`).
 
 ## Evidencia
-- Ejemplo: [`examples/service-observability`](../../examples/service-observability/README.md).
-- Contrato PCC y checklist [`audit/checklists/component-observability.md`](../../audit/checklists/component-observability.md).
+- Ejemplo: [`examples/service-observability`](https://github.com/scanalesespinoza/the-wise-tech/tree/main/examples/service-observability#readme).
+- Contrato PCC y checklist [`audit/checklists/component-observability.md`](https://github.com/scanalesespinoza/the-wise-tech/blob/main/audit/checklists/component-observability.md).
 - Scripts de validación: `make -f operations/Makefile telemetry-smoke`.
 
 ## Validación

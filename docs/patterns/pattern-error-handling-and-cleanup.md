@@ -26,8 +26,8 @@ Este patrón aterriza el pilar de Resiliencia en actividades concretas para capt
 
 ## Evidencia en el repositorio
 - `behavior-contract.yaml` actualizado (usa `tools/wise-tech-linter`).
-- Ejemplo práctico: [`examples/service-resilience-basic`](../../examples/service-resilience-basic/README.md).
-- Checklist [`audit/checklists/component-resilience.md`](../../audit/checklists/component-resilience.md) firmada.
+- Ejemplo práctico: [`examples/service-resilience-basic`](https://github.com/scanalesespinoza/the-wise-tech/tree/main/examples/service-resilience-basic#readme).
+- Checklist [`audit/checklists/component-resilience.md`](https://github.com/scanalesespinoza/the-wise-tech/blob/main/audit/checklists/component-resilience.md) firmada.
 
 ## Cómo validar
 1. Ejecuta `python tools/wise-tech-linter/wise_tech_linter.py examples/service-resilience-basic/behavior-contract.yaml`.

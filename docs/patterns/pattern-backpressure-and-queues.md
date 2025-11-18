@@ -23,8 +23,8 @@ Sin límites explícitos, los componentes consumen recursos hasta saturar depend
 - Uso del presupuesto de CPU/memoria mientras la contención está activa.
 
 ## Evidencia
-- Ejemplo: [`examples/service-performance-limits`](../../examples/service-performance-limits/README.md).
-- Checklist [`audit/checklists/component-performance.md`](../../audit/checklists/component-performance.md).
+- Ejemplo: [`examples/service-performance-limits`](https://github.com/scanalesespinoza/the-wise-tech/tree/main/examples/service-performance-limits#readme).
+- Checklist [`audit/checklists/component-performance.md`](https://github.com/scanalesespinoza/the-wise-tech/blob/main/audit/checklists/component-performance.md).
 - Señales descritas en `observability.overload_signal`.
 
 ## Validación

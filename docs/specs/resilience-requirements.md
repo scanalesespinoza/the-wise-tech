@@ -31,8 +31,8 @@ Garantizar que toda componente documente cómo previene, detecta y se recupera d
 
 ## Validación y evidencia
 - `tools/wise-tech-linter` verifica campos y valores esperados.
-- Checklist [`audit/checklists/component-resilience.md`](../../audit/checklists/component-resilience.md).
-- Ejemplos vivos en [`examples/service-resilience-basic`](../../examples/service-resilience-basic/README.md).
+- Checklist [`audit/checklists/component-resilience.md`](https://github.com/scanalesespinoza/the-wise-tech/blob/main/audit/checklists/component-resilience.md).
+- Ejemplos vivos en [`examples/service-resilience-basic`](https://github.com/scanalesespinoza/the-wise-tech/tree/main/examples/service-resilience-basic#readme).
 
 ## Relación con otros artefactos
 - Patrones: [error handling & cleanup](../patterns/pattern-error-handling-and-cleanup.md) y [modos degradados](../patterns/pattern-degraded-mode.md).

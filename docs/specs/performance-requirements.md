@@ -29,8 +29,8 @@ Transformar el pilar de rendimiento en límites verificables y evidencia cuantit
 - Automatizar ajustes siempre que se documenten guardrails.
 
 ## Validación y evidencia
-- Checklist [`audit/checklists/component-performance.md`](../../audit/checklists/component-performance.md).
-- Ejemplo [`examples/service-performance-limits`](../../examples/service-performance-limits/README.md).
+- Checklist [`audit/checklists/component-performance.md`](https://github.com/scanalesespinoza/the-wise-tech/blob/main/audit/checklists/component-performance.md).
+- Ejemplo [`examples/service-performance-limits`](https://github.com/scanalesespinoza/the-wise-tech/tree/main/examples/service-performance-limits#readme).
 - `make -f operations/Makefile telemetry-smoke` para validar señales básicas.
 
 ## Referencias cruzadas

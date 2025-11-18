@@ -20,7 +20,7 @@ Asegurar que siempre exista un estado conocido (`in-service`, `degraded`, `out-o
 ## Herramientas y evidencias
 - Contrato PCC actualizado (`resilience.states_implemented`, `resilience.recovery.*`).
 - Eventos en `observability.events_emitted` que describen la transición.
-- Ejemplo: [`examples/service-resilience-basic`](../../examples/service-resilience-basic/README.md) y [`examples/service-performance-limits`](../../examples/service-performance-limits/README.md).
+- Ejemplo: [`examples/service-resilience-basic`](https://github.com/scanalesespinoza/the-wise-tech/tree/main/examples/service-resilience-basic#readme) y [`examples/service-performance-limits`](https://github.com/scanalesespinoza/the-wise-tech/tree/main/examples/service-performance-limits#readme).
 
 ## Checklist rápido
 - [ ] Los tres modos obligatorios aparecen en `states_implemented` y están respaldados por métricas.
@@ -28,4 +28,4 @@ Asegurar que siempre exista un estado conocido (`in-service`, `degraded`, `out-o
 - [ ] Se describen límites máximos antes de pasar a `out-of-service-controlled`.
 
 ## Validación automática
-Ejecuta `python tools/wise-tech-linter/wise_tech_linter.py <ruta del contrato>` para garantizar que los modos y mensajes estén presentes. Complementa con la checklist [`audit/checklists/component-resilience.md`](../../audit/checklists/component-resilience.md) y la de performance.
+Ejecuta `python tools/wise-tech-linter/wise_tech_linter.py <ruta del contrato>` para garantizar que los modos y mensajes estén presentes. Complementa con la checklist [`audit/checklists/component-resilience.md`](https://github.com/scanalesespinoza/the-wise-tech/blob/main/audit/checklists/component-resilience.md) y la de performance.
