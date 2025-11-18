@@ -1,0 +1,67 @@
+version: 1.0.0
+component:
+  name: service-resilience-basic
+  domain: checkout-labs
+  description: Sample checkout dependency that demonstrates resilience controls.
+ownership:
+  team: reliability-enablement
+  service_slack: "#reliability-labs"
+  oncall_schedule: "https://pagerduty.example.com/schedules/RES-LAB"
+environment:
+  tier: tier-2
+  runtime: python-3.12
+  regions:
+    - us-east-1
+  entrypoints:
+    - internal://labs/resilience-basic
+behavior:
+  resilience:
+    objectives:
+      - type: availability
+        target: ">= 99.5%"
+        rationale: Supports tier-1 checkout flows with automated fallbacks.
+    controls:
+      - name: dependency-timeout
+        description: Timeouts after 800 ms and triggers retries with jitter.
+        automated: true
+      - name: graceful-fallback
+        description: Degrades to an async queue for payment confirmation.
+        automated: true
+    validation:
+      cadence: weekly
+      last_run: 2024-05-09
+      artifacts:
+        - https://status.example.com/playbooks/resilience-basic
+  performance:
+    objectives:
+      - type: latency-p95
+        target: "< 500 ms"
+        rationale: Keeps retries hidden from the caller.
+    controls:
+      - name: response-cache
+        description: Short-lived cache on idempotent requests.
+        automated: true
+    validation:
+      cadence: weekly
+      last_run: 2024-05-08
+      artifacts:
+        - https://grafana.example.com/d/res-basic-latency
+  observability:
+    objectives:
+      - type: telemetry-coverage
+        target: structured logs + retry counters per request.
+        rationale: Needed for chaos validation.
+    controls:
+      - name: structured-logging
+        description: JSON log entries with attempt, latency, fallback flag.
+        automated: true
+    validation:
+      cadence: per-release
+      last_run: 2024-05-03
+      artifacts:
+        - https://github.com/example/reliability-labs/actions/runs/12345
+dependencies:
+  - name: payment-gateway
+    dependency_type: synchronous
+    criticality: high
+    contract: https://github.com/example/contracts/payment-gateway
