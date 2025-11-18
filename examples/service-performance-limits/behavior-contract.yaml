@@ -1,0 +1,70 @@
+version: 1.0.0
+component:
+  name: service-performance-limits
+  domain: reporting-labs
+  description: Demonstrates throughput controls using a rate limiter.
+ownership:
+  team: perf-engineering
+  service_slack: "#perf-labs"
+  oncall_schedule: "https://pagerduty.example.com/schedules/PERF-LABS"
+environment:
+  tier: tier-3
+  runtime: python-3.12
+  regions:
+    - us-west-2
+  entrypoints:
+    - internal://labs/performance-limits
+behavior:
+  resilience:
+    objectives:
+      - type: dependency-budget
+        target: "<= 5% shed traffic"
+        rationale: Rate limits keep downstream caches healthy.
+    controls:
+      - name: shed-non-critical-traffic
+        description: Low-priority requests are dropped before the dependency is saturated.
+        automated: true
+    validation:
+      cadence: per-release
+      last_run: 2024-05-10
+      artifacts:
+        - https://grafana.example.com/d/perf-labs-deps
+  performance:
+    objectives:
+      - type: throughput
+        target: "<= 120 requests per second"
+        rationale: Matches cache write capacity with 20% safety margin.
+      - type: latency-p95
+        target: "< 250 ms"
+        rationale: Upstream reports finish within product SLA.
+    controls:
+      - name: sliding-window-rate-limiter
+        description: 60-second window with adaptive refill.
+        automated: true
+      - name: adaptive-batching
+        description: Batches heavy write requests when queue depth increases.
+        automated: true
+    validation:
+      cadence: weekly
+      last_run: 2024-05-08
+      artifacts:
+        - https://github.com/example/perf-labs/actions/runs/999
+  observability:
+    objectives:
+      - type: saturation-alerts
+        target: alerts fire when >80% tokens consumed for 3 minutes.
+        rationale: SREs get early warning before hard shedding begins.
+    controls:
+      - name: limiter-metrics
+        description: Emits `tokens_available` and `requests_shed` counters.
+        automated: true
+    validation:
+      cadence: per-release
+      last_run: 2024-05-07
+      artifacts:
+        - https://status.example.com/dashboards/perf-labs
+dependencies:
+  - name: analytics-writer
+    dependency_type: asynchronous
+    criticality: medium
+    contract: https://github.com/example/contracts/analytics-writer

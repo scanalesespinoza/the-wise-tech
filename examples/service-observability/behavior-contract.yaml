@@ -1,0 +1,72 @@
+version: 1.0.0
+component:
+  name: service-observability
+  domain: platform-labs
+  description: Shows how structured logs and traces satisfy the observability pillar.
+ownership:
+  team: telemetry-platform
+  service_slack: "#telemetry"
+  oncall_schedule: "https://pagerduty.example.com/schedules/OBS-LABS"
+environment:
+  tier: tier-2
+  runtime: python-3.12
+  regions:
+    - eu-central-1
+  entrypoints:
+    - internal://labs/observability
+behavior:
+  resilience:
+    objectives:
+      - type: incident-detection
+        target: "MTTD < 5 minutes"
+        rationale: Depend on alerts from structured logs.
+    controls:
+      - name: heartbeat-alert
+        description: Watchdog job ensures logs arrive every minute.
+        automated: true
+    validation:
+      cadence: weekly
+      last_run: 2024-05-08
+      artifacts:
+        - https://status.example.com/checks/heartbeat
+  performance:
+    objectives:
+      - type: telemetry-cost
+        target: "< $50/day"
+        rationale: Keep ingestion under budget via sampling.
+    controls:
+      - name: adaptive-sampling
+        description: Down-samples debug traces outside incidents.
+        automated: true
+    validation:
+      cadence: monthly
+      last_run: 2024-05-01
+      artifacts:
+        - https://grafana.example.com/d/obs-cost
+  observability:
+    objectives:
+      - type: log-coverage
+        target: 100% of write operations emit structured logs.
+        rationale: Enables auditing and anomaly detection.
+      - type: tracing
+        target: propagate W3C trace context through 3 downstream hops.
+        rationale: Allows cross-service correlation.
+    controls:
+      - name: structured-logging-middleware
+        description: JSON logs include trace_id, span_id, and request metadata.
+        automated: true
+      - name: metrics-forwarder
+        description: Emits `write.success` and `write.failure` counters.
+        automated: true
+    validation:
+      cadence: weekly
+      last_run: 2024-05-09
+      artifacts:
+        - https://github.com/example/telemetry-labs/actions/runs/111
+        - https://grafana.example.com/d/obs-labs
+        - https://oncall.example.com/runbooks/obs-alerts
+dependencies:
+  - name: audit-writer
+    dependency_type: asynchronous
+    criticality: medium
+    contract: https://github.com/example/contracts/audit-writer
