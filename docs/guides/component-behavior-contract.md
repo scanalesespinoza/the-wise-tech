@@ -1,6 +1,6 @@
 # Component Behavior Contract Guide
 
-El contrato PCC describe cómo una componente cumple los pilares de Resiliencia, Performance y Datos/Observabilidad con lenguaje tipo RFC (MUST/SHOULD/MAY). Este documento acompaña a `specs/component-behavior-contract.schema.md` y a los ejemplos en `examples/`.
+El contrato PCC describe cómo una componente cumple los pilares de Resiliencia, Performance y Datos/Observabilidad con lenguaje tipo RFC (MUST/SHOULD/MAY). Este documento acompaña a `docs/specs/component-behavior-contract.schema.md` y a los ejemplos en `examples/`.
 
 ## Cuándo crear o actualizar un contrato
 1. Nuevo servicio o cambio mayor de arquitectura.

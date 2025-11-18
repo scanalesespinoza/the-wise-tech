@@ -1,6 +1,6 @@
 # Lista de verificación de resiliencia de componentes
 
-Alineada con `specs/component-behavior-contract.schema.md`.
+ Alineada con `docs/specs/component-behavior-contract.schema.md`.
 
 1. **Errores conocidos y detección.**
    - `resilience.error_handling_strategy.expected_errors` y `boundary_cases` están poblados con ejemplos reales.

@@ -21,7 +21,7 @@ Los PCC son el puente entre la filosofía de The Wise Tech y la ejecución diari
 - Los equipos **MAY** añadir campos adicionales siempre que no eliminen los obligatorios, facilitando extensiones sin fragmentar la validación automática.
 
 ## Próximos pasos
-1. **Contratos consistentes.** Adoptar el esquema `specs/component-behavior-contract.schema.md` en cada componente, incluyendo los estados operativos y la estrategia de sobredemanda.
+1. **Contratos consistentes.** Adoptar el esquema `docs/specs/component-behavior-contract.schema.md` en cada componente, incluyendo los estados operativos y la estrategia de sobredemanda.
 2. **Guías y ejemplos.** Ligar cada guía y ejemplo a los PCC para que cualquier lector entienda qué requisito satisface.
 3. **Validación automática.** Evolucionar `tools/wise-tech-linter` para detectar incumplimientos temprano y habilitar reportes “OK/nOK” en `audit/`.
 4. **Revisión ejecutiva.** Compartir esta síntesis con liderazgo para asegurar que el lenguaje, los campos obligatorios y las expectativas de Zero Trust están alineados antes de publicar cambios visibles.
