@@ -5,42 +5,39 @@ tags: ["developers", "resilience", "principles"]
 
 # Pilar: Resiliencia
 
-> Conecta la visión de resultados confiables descrita en [Vision and purpose](https://github.com/scanalesespinoza/the-wise-tech/blob/main/README.md#vision-and-purpose) con los [Wise Tech Principles](https://github.com/scanalesespinoza/the-wise-tech/blob/main/knowledge/docs/principles/wise-tech-principles.md#resiliencia) para asegurar que cada sistema se degrade de forma controlada.
+> Este pilar responde a la visión de Wise Tech de "usar la tecnología correctamente" y se conecta con los principios de Simplicidad, Mejora continua y Responsabilidad. Resiliencia significa que cada componente se recupera con gracia, expone su estado y nunca deja al negocio sin información accionable.
 
-## Contexto estratégico
-La resiliencia articula la capacidad de cumplir promesas de negocio incluso en presencia de fallas. Sustenta el principio de Resiliencia del marco Wise Tech y sirve como mecanismo de ejecución para Simplicity y Mejora continua: se diseña para fallar con gracia y se mejora observando señales reales.
+## ¿Qué exige este pilar?
+Cada componente **MUST** describir cómo captura errores, limpia su estado y cambia de modo operativo. La evidencia vive en el contrato de comportamiento y en la telemetría adjunta.
 
-## Requisitos esenciales
-### Manejo de errores
-- **MUST** capturar errores técnicos y de negocio con mensajes accionables y trazabilidad (ID de correlación, usuario afectado, carga enviada) sin exponer datos sensibles.
-- **SHOULD** diferenciar errores transitorios y permanentes para activar el runbook correcto (reintentos versus revisión manual).
-- **MAY** automatizar la clasificación con IA siempre que exista supervisión humana y registro auditable.
+### Captura y manejo sistemático de errores
+- **MUST** existir bloques funcionales que capturen errores esperados y casos de borde; cada bloque documenta el tipo de error, la salida esperada y el identificador de correlación.
+- **MUST** disparar procesos de *clean up* y restauración de estado para evitar fugas de recursos, proteger datos y dejar el sistema en un estado conocido.
+- **SHOULD** diferenciar entre errores transitorios y permanentes para activar runbooks distintos (reintentos versus escalamiento manual).
+- **MAY** automatizar la clasificación con ML/heurísticas siempre que haya supervisión y registros auditables.
 
-### Modos degradados
-- **MUST** definir modos degradados explícitos (por ejemplo, cola manual, capacidad reducida, *read-only*) antes de desplegar cambios que toquen la lógica crítica.
-- **SHOULD** incluir indicadores de entrada y salida de cada modo en los tableros operativos para validar que el comportamiento reduce daño.
-- **MAY** permitir saltos controlados a un modo "manual assist" cuando los equipos de experiencia necesiten preservar la conexión humana descrita en los principios.
+### Visibilidad para negocio y experiencia
+- **MUST** registrarse qué actividades de negocio se ejecutaron, cuáles fallaron y cuáles fueron restauradas, usando eventos o logs estructurados.
+- **MUST** exponer mensajes claros hacia UX/negocio que expliquen qué sucedió y qué acción se tomó (p. ej., "orden reintentada en modo manual").
+- **SHOULD** publicar métricas y eventos que permitan reconstruir el customer journey sin revisar código.
 
-### Límites y contención
-- **MUST** implementar *circuit breakers* o colas de aislamiento cuando una dependencia exceda el presupuesto de error definido en los SLOs.
-- **SHOULD** documentar límites de throughput y almacenamiento junto con las decisiones en ADR visibles desde Knowledge Capitalization.
-- **MAY** usar políticas basadas en riesgo para ajustar límites dinámicamente cuando la visión exija proteger una métrica prioritaria (por ejemplo, ingresos de pagos).
+### Modos de operación y degradación controlada
+- **MUST** implementarse al menos los modos `in-service`, `degraded` y `out-of-service-controlled`, con criterios de entrada/salida documentados.
+- **MUST** intentar recuperar funciones específicas cuando la inicialización falle y, si no es posible, operar en modo degradado pero seguro.
+- **SHOULD** exponer tableros o flags que indiquen en qué modo se encuentra la componente y qué restricciones aplican.
+- **MAY** añadir modos adicionales (por ejemplo, "manual assist") cuando exista una justificación de negocio.
 
-### Señales de observabilidad
-- **MUST** exponer métricas de éxito funcional (transacciones comprometidas, órdenes compensadas) además de CPU o memoria.
-- **SHOULD** mapear alertas directamente a runbooks del escenario correspondiente (p. ej., `experience/scenarios/payments/docs`).
-- **MAY** registrar *feature flags* activos para facilitar auditorías de resiliencia retroactivas.
+### Zero Trust transversal
+- **MUST** aplicar principios de confianza cero en interacciones y validaciones de entrada. Ningún flujo degradado puede omitir controles de identidad o autorización.
+- **SHOULD** registrar qué actor (humano o sistema) habilitó/deshabilitó protecciones para facilitar auditorías.
+- **MAY** incorporar señales de postura (riesgo de dispositivo, reputación de cliente) para endurecer o relajar límites dinámicamente.
 
-### Operaciones y revisión
-- **MUST** ensayar los runbooks críticos con la cadencia propuesta en los laboratorios de resiliencia.
-- **SHOULD** usar retrospectivas post-incidente para reforzar la captura de conocimiento (ver [Knowledge Capitalization](https://github.com/scanalesespinoza/the-wise-tech/blob/main/knowledge/docs/principles/wise-tech-principles.md#capitalizacin-del-conocimiento)).
-- **MAY** compartir hallazgos como cápsulas reutilizables en la base de conocimiento para que otros equipos aceleren su alineación con la visión.
+## Evidencia mínima
+1. Contrato de comportamiento actualizado con estrategias de manejo de errores, limpieza y estados declarados.
+2. Ejemplos o pruebas (por ejemplo, `examples/service-resilience-basic`) que muestren degradaciones controladas.
+3. Checklist de resiliencia en `audit/checklists/component-resilience.md` con evidencias adjuntas.
 
-## Transversal — Zero Trust
-- **MUST** validar identidades y permisos antes de ejecutar cualquier flujo de recuperación o bypass, evitando que el modo degradado se convierta en un vector de escalamiento.
-- **SHOULD** registrar en telemetría quién habilita o deshabilita protecciones para facilitar trazabilidad y auditoría.
-- **MAY** integrar señales de postura (por ejemplo, nivel de riesgo del dispositivo) como entrada para activar contención automática.
-
-## See also
-- [Wise Tech Principles](https://github.com/scanalesespinoza/the-wise-tech/blob/main/knowledge/docs/principles/wise-tech-principles.md)
-- [Resilience policies](https://github.com/scanalesespinoza/the-wise-tech/blob/main/knowledge/docs/guides/resilience-policies.md)
+## Referencias
+- [Guía del contrato de comportamiento](../guides/component-behavior-contract.md)
+- [Patrón: error handling & cleanup](../patterns/pattern-error-handling-and-cleanup.md)
+- [Patrón: modos degradados](../patterns/pattern-degraded-mode.md)

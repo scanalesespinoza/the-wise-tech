@@ -1,36 +1,19 @@
 # Lista de verificación de resiliencia de componentes
 
-Esta lista vincula los campos del contrato del componente con los criterios utilizados
-por el equipo de auditoría. Cada punto debe ser respaldado con evidencia documentada
-y valores actualizados dentro de `component-contract.yaml`.
+Alineada con `specs/component-behavior-contract.schema.md`.
 
-## 1. SLO de disponibilidad y criticidad
-- `resilience.availability_slo` define el objetivo porcentual vigente para el
-  componente y coincide con la severidad descrita en `component.lifecycle.tier`.
-- `component.lifecycle.data_classification` justifica cualquier excepción o
-  endurecimiento del objetivo.
-
-## 2. Análisis de modos de falla y mitigación
-- `resilience.failure_modes` describe los escenarios de caída por dependencias,
-  saturación y errores de configuración, cada uno con impacto cuantificado.
-- `resilience.recovery_runbooks` incluye vínculos a runbooks probados para cada
-  modo de falla crítico.
-- `resilience.chaos_validation.frequency` indica la cadencia con la que se
-  ejecutan pruebas de caos u otros ejercicios de resiliencia.
-
-## 3. Dependencias protegidas
-- `component.dependencies.runtime` enumera las dependencias en tiempo de
-  ejecución con responsables y contratos acordados.
-- Cada dependencia crítica documenta la estrategia de "fallback" o degradación
-  controlada dentro de `resilience.fallbacks`.
-
-## 4. Preparación operativa
-- `component.owner.escalation` define horarios y canales de contacto 24/7.
-- `resilience.backup_and_restore` especifica medios, ventanas y resultados de la
-  última restauración probada.
-
-## 5. Evidencias de revisión
-- `evidence.resilience_checklist` referencia la ubicación de las últimas
-  evidencias adjuntas (por ejemplo, tickets, capturas o reportes de ejercicios).
-- `evidence.last_reviewed` indica la fecha en que el equipo firmó la revisión de
-  resiliencia.
+1. **Errores conocidos y detección.**
+   - `resilience.error_handling_strategy.expected_errors` y `boundary_cases` están poblados con ejemplos reales.
+   - `resilience.error_handling_strategy.detection_channels` incluye al menos un log, métrica o evento por error crítico.
+2. **Limpieza y restauración.**
+   - Cada elemento en `resilience.cleanup_strategy.steps` describe el objetivo y marca si está automatizado.
+   - Los pasos cubren liberación de recursos, reversión de datos y comunicación a dependencias.
+3. **Modos operativos.**
+   - `resilience.states_implemented` declara `in-service`, `degraded` y `out-of-service-controlled`.
+   - `resilience.recovery.degraded_mode_playbook` enlaza un runbook actualizado (< 90 días).
+4. **Fallbacks y degradaciones.**
+   - Cada `resilience.recovery.fallback_paths` detalla `trigger` e `impact` cuantificado.
+   - Los fallbacks explican cómo se evita contagiar la falla al resto del sistema.
+5. **Capa Zero Trust.**
+   - `zero_trust.input_validation` cubre las interfaces de recuperación.
+   - `zero_trust.dependency_assumptions` explica cómo se verifica cada dependencia crítica antes de activarla durante la recuperación.

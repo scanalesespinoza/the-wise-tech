@@ -1,70 +1,88 @@
-version: 1.0.0
+---
+version: 1.1.0
 component:
   name: service-performance-limits
-  domain: reporting-labs
-  description: Demonstrates throughput controls using a rate limiter.
+  domain: account-limits
+  description: >-
+    Servicio que muestra límites explícitos de RPS y clientes.
 ownership:
-  team: perf-engineering
-  service_slack: "#perf-labs"
-  oncall_schedule: "https://pagerduty.example.com/schedules/PERF-LABS"
-environment:
-  tier: tier-3
-  runtime: python-3.12
-  regions:
-    - us-west-2
-  entrypoints:
-    - internal://labs/performance-limits
-behavior:
-  resilience:
-    objectives:
-      - type: dependency-budget
-        target: "<= 5% shed traffic"
-        rationale: Rate limits keep downstream caches healthy.
-    controls:
-      - name: shed-non-critical-traffic
-        description: Low-priority requests are dropped before the dependency is saturated.
-        automated: true
-    validation:
-      cadence: per-release
-      last_run: 2024-05-10
-      artifacts:
-        - https://grafana.example.com/d/perf-labs-deps
-  performance:
-    objectives:
-      - type: throughput
-        target: "<= 120 requests per second"
-        rationale: Matches cache write capacity with 20% safety margin.
-      - type: latency-p95
-        target: "< 250 ms"
-        rationale: Upstream reports finish within product SLA.
-    controls:
-      - name: sliding-window-rate-limiter
-        description: 60-second window with adaptive refill.
-        automated: true
-      - name: adaptive-batching
-        description: Batches heavy write requests when queue depth increases.
-        automated: true
-    validation:
-      cadence: weekly
-      last_run: 2024-05-08
-      artifacts:
-        - https://github.com/example/perf-labs/actions/runs/999
-  observability:
-    objectives:
-      - type: saturation-alerts
-        target: alerts fire when >80% tokens consumed for 3 minutes.
-        rationale: SREs get early warning before hard shedding begins.
-    controls:
-      - name: limiter-metrics
-        description: Emits `tokens_available` and `requests_shed` counters.
-        automated: true
-    validation:
-      cadence: per-release
-      last_run: 2024-05-07
-      artifacts:
-        - https://status.example.com/dashboards/perf-labs
-dependencies:
-  - name: analytics-writer
-    dependency_type: asynchronous
-    criticality: medium
-    contract: https://github.com/example/contracts/analytics-writer
+  team: platform-experience
+  service_slack: "#platform-experience"
+  escalation: "https://pagerduty.example.com/schedules/PERF-LAB"
+runtime:
+  tier: tier-2
+  language: python-3.11
+  deployment: container
+resilience:
+  error_handling_strategy:
+    expected_errors:
+      - burst de peticiones >200 rps
+      - dependencia `profiles` responde 429
+    boundary_cases:
+      - degradación prolongada con clientes VIP
+    detection_channels:
+      - metric:perf_limits_overload_total
+      - event:perf.limits.reject
+  cleanup_strategy:
+    steps:
+      - description: purgar colas internas cuando superan 5k mensajes
+        automation: true
+      - description: liberar conexiones persistentes con dependencias
+        automation: true
+  states_implemented:
+    - in-service
+    - degraded
+    - out-of-service-controlled
+  recovery:
+    fallback_paths:
+      - name: readonly-mode
+        trigger: saturación >95% de CPU
+        impact: solo lectura de límites existentes
+    degraded_mode_playbook: >-
+      https://status.example.com/playbooks/perf-limits
+performance:
+  max_threads: 6
+  max_requests_per_second: 120
+  max_clients_per_minute: 70
+  resource_budgets:
+    cpu_percent: 65
+    memory_percent: 60
+  overflow_strategy: reject
+  overflow_messaging:
+    code: PERF-LIM-429
+    business_message: >-
+      Hemos alcanzado nuestra capacidad segura. Intenta en unos segundos.
+observability:
+  metrics_exposed:
+    - name: perf_limits_rps
+      type: gauge
+      description: RPS actual por shard.
+    - name: perf_limits_queue_depth
+      type: gauge
+      description: Profundidad de la cola de espera.
+  events_emitted:
+    - name: perf.limits.reject
+      when: overflow_strategy rechaza peticiones
+      payload_contract: client_id, code, request_rate
+    - name: perf.limits.degraded
+      when: se activa modo degradado
+      payload_contract: reason, expected_recovery
+  overload_signal:
+    channel: metrics
+    description: >-
+      `perf_limits_rps` > 110 dispara alerta y recomienda throttling global.
+  degradation_signal:
+    channel: event
+    description: >-
+      `perf.limits.degraded` informa alcance de modo readonly.
+zero_trust:
+  input_validation:
+    - interface: https api/perf-limits
+      rules: JWT + schema + rate-limit per token
+  dependency_assumptions:
+    - dependency: profiles
+      verification: mTLS + budgets documentados
+audit:
+  last_review: 2024-05-08
+  reviewers:
+    - name: Platform SRE

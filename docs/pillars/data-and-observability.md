@@ -5,38 +5,40 @@ tags: ["developers", "observability", "data"]
 
 # Pilar: Datos y Observabilidad
 
-> Este pilar materializa la visión de "Information → Knowledge → Behavior → Real Value" descrita en [Vision and purpose](https://github.com/scanalesespinoza/the-wise-tech/blob/main/README.md#vision-and-purpose) y refuerza los principios de Capitalización del conocimiento y Resiliencia.
+> La visión de Wise Tech establece que la información debe transformarse en conocimiento y, finalmente, en comportamiento responsable. Este pilar asegura que cada componente conoce su estado de carga, comunica la sobredemanda y deja evidencia reutilizable para aprender.
 
-## Contexto estratégico
-Los datos son el puente entre experiencia y acción. Sin telemetría confiable no hay aprendizaje ni automatización segura. La observabilidad debe exponer cómo cada decisión afecta a las personas y a los sistemas, habilitando ajustes guiados por evidencia.
+## Reglas base
+Cada componente **MUST** instrumentar señales que permitan distinguir demanda normal vs. sobredemanda, documentar degradaciones y alimentar ciclos de aprendizaje.
 
-## Requisitos esenciales
-### Modelado y gobierno de datos
-- **MUST** definir propietarios funcionales para cada dominio de datos y registrar sus contratos en el catálogo de conocimiento.
-- **SHOULD** mapear los datos críticos a los principios relevantes (por ejemplo, resiliencia para métricas de disponibilidad, human connection para feedback cualitativo).
-- **MAY** usar ontologías o *schemas* compartidos para que los equipos consuman datos sin reinterpretaciones ad hoc.
+### Conocimiento del estado de carga
+- **MUST** medirse métricas de uso alineadas a performance (latencia, throughput, clientes conectados) y declararse los valores normales/esperados.
+- **MUST** comparar continuamente el estado actual con esos valores para identificar `normal-load` y `overload`.
+- **SHOULD** exponer dashboards compartidos donde se vean ambos estados con claridad.
+- **MAY** almacenar historiales para correlacionar picos con eventos de negocio.
 
-### Calidad y manejo de errores
-- **MUST** establecer validaciones en origen y destino para detectar datos fuera de rango antes de que lleguen a consumidores sensibles.
-- **SHOULD** etiquetar los eventos con la versión del esquema y la fuente de verdad para facilitar depuración.
-- **MAY** habilitar colas de cuarentena o *dead-letter* con runbooks que especifiquen cómo limpiar o reprocesar la información.
+### Comunicación de sobredemanda y degradación
+- **MUST** emitirse señales (logs estructurados, eventos o métricas) cuando una componente detecte sobredemanda o cambie de modo operativo.
+- **MUST** incluir en cada señal: estado actual, impacto estimado y acción recomendada (escalar, fallback, degradar).
+- **SHOULD** integrar estos eventos en canales visibles para negocio/UX, no solo para SRE.
+- **MAY** automatizar la comunicación hacia clientes internos mediante webhooks o colas.
 
-### Señales de observabilidad
-- **MUST** capturar métricas, logs y trazas con la granularidad mínima para reconstruir cada flujo crítico de negocio.
-- **SHOULD** publicar paneles compartidos que conecten señales técnicas con indicadores de valor (ingresos, satisfacción, reducción de retrabajo).
-- **MAY** enriquecer la telemetría con contexto humano (feedback, etiquetas de usabilidad) siempre que se cumplan las políticas de privacidad.
+### Datos para aprendizaje y evolución
+- **MUST** estandarizar los campos de eventos y métricas (nombres, unidades, niveles) para que el análisis cruzado sea posible.
+- **MUST** conservar la data necesaria para reconstruir qué acciones se tomaron durante incidentes y qué resultados tuvieron.
+- **SHOULD** usar la data registrada para ajustar límites, redefinir umbrales o priorizar mejoras.
+- **MAY** etiquetar los eventos con hipótesis o experimentos activos para acelerar los ciclos de aprendizaje.
 
-### Operación y mejora continua
-- **MUST** versionar dashboards y alertas igual que el código para preservar la trazabilidad de decisiones.
-- **SHOULD** alinear revisiones de telemetría con las cadencias de retrospectives para reforzar el aprendizaje colectivo.
-- **MAY** automatizar experimentos de hipótesis (por ejemplo, cambios de UX) conectando métricas de experiencia con los principios.
+### Zero Trust transversal
+- **MUST** aplicarse controles de acceso y cifrado sobre pipelines de observabilidad e información de negocio.
+- **SHOULD** validarse la procedencia de cada evento antes de aceptarlo (firmas, autenticación mutua) para evitar contaminación de datos.
+- **MAY** incorporar verificaciones de postura antes de permitir acceso a paneles sensibles.
 
-## Transversal — Zero Trust
-- **MUST** aplicar control de acceso basado en roles a cada flujo de datos y mantener evidencia de quién consultó qué información.
-- **SHOULD** cifrar datos en tránsito y reposo incluidos los pipelines de observabilidad para evitar filtraciones durante incidentes.
-- **MAY** integrar verificaciones de postura (estado del agente, integridad del host) antes de permitir acceso a paneles sensibles.
+## Evidencia mínima
+1. Sección `observability` del contrato con métricas, eventos y señales de overload/degradación.
+2. Ejemplo funcional (`examples/service-observability`) que documente cómo se emiten y consumen las señales.
+3. Checklist `audit/checklists/component-observability.md` completada con enlaces a tableros y catálogos de eventos.
 
-## See also
-- [Vision and purpose](https://github.com/scanalesespinoza/the-wise-tech/blob/main/README.md#vision-and-purpose)
-- [Knowledge capitalization](https://github.com/scanalesespinoza/the-wise-tech/blob/main/knowledge/docs/principles/wise-tech-principles.md#capitalizacin-del-conocimiento)
-- [Telemetry minima](https://github.com/scanalesespinoza/the-wise-tech/blob/main/knowledge/docs/guides/telemetry-minima.md)
+## Referencias
+- [Guía del contrato de comportamiento](../guides/component-behavior-contract.md)
+- [Patrón: métricas y eventos](../patterns/pattern-metrics-and-events.md)
+- [Specs: data-and-observability](../specs/data-and-observability-requirements.md)
