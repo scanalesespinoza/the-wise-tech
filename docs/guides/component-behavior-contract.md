@@ -95,8 +95,8 @@ audit:
 
 ## Ejemplos
 Cada carpeta en `examples/` incluye un `behavior-contract.yaml` ya validado:
-- `service-resilience-basic`: estados operativos y limpieza.
-- `service-performance-limits`: límites explícitos y mensajes de rechazo.
-- `service-observability`: métricas/eventos que señalan sobredemanda.
+- [`service-resilience-basic`](https://github.com/scanalesespinoza/the-wise-tech/tree/main/examples/service-resilience-basic#readme): estados operativos y limpieza.
+- [`service-performance-limits`](https://github.com/scanalesespinoza/the-wise-tech/tree/main/examples/service-performance-limits#readme): límites explícitos y mensajes de rechazo.
+- [`service-observability`](https://github.com/scanalesespinoza/the-wise-tech/tree/main/examples/service-observability#readme): métricas/eventos que señalan sobredemanda.
 
 Úsalo como punto de partida y adapta los valores a tu contexto.

@@ -35,8 +35,8 @@ Cada componente **MUST** instrumentar señales que permitan distinguir demanda n
 
 ## Evidencia mínima
 1. Sección `observability` del contrato con métricas, eventos y señales de overload/degradación.
-2. Ejemplo funcional (`examples/service-observability`) que documente cómo se emiten y consumen las señales.
-3. Checklist `audit/checklists/component-observability.md` completada con enlaces a tableros y catálogos de eventos.
+2. Ejemplo funcional como [`service-observability`](https://github.com/scanalesespinoza/the-wise-tech/tree/main/examples/service-observability#readme) que documente cómo se emiten y consumen las señales.
+3. Checklist [`audit/checklists/component-observability.md`](https://github.com/scanalesespinoza/the-wise-tech/blob/main/audit/checklists/component-observability.md) completada con enlaces a tableros y catálogos de eventos.
 
 ## Referencias
 - [Guía del contrato de comportamiento](../guides/component-behavior-contract.md)

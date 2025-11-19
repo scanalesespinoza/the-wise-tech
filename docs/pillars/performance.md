@@ -35,8 +35,8 @@ Cada componente **MUST** declarar qué recursos usa, cuáles son sus límites y 
 
 ## Evidencia mínima
 1. Sección `performance` del contrato con límites máximos, estrategia de overflow y mensajes para negocio.
-2. Ejemplo funcional (`examples/service-performance-limits`) que muestre el rechazo controlado.
-3. Checklist `audit/checklists/component-performance.md` completado con vínculos a paneles o scripts de carga.
+2. Ejemplo funcional como [`service-performance-limits`](https://github.com/scanalesespinoza/the-wise-tech/tree/main/examples/service-performance-limits#readme) que muestre el rechazo controlado.
+3. Checklist [`audit/checklists/component-performance.md`](https://github.com/scanalesespinoza/the-wise-tech/blob/main/audit/checklists/component-performance.md) completado con vínculos a paneles o scripts de carga.
 
 ## Referencias
 - [Guía del contrato de comportamiento](../guides/component-behavior-contract.md)

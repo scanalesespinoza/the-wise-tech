@@ -34,8 +34,8 @@ Cada componente **MUST** describir cómo captura errores, limpia su estado y cam
 
 ## Evidencia mínima
 1. Contrato de comportamiento actualizado con estrategias de manejo de errores, limpieza y estados declarados.
-2. Ejemplos o pruebas (por ejemplo, `examples/service-resilience-basic`) que muestren degradaciones controladas.
-3. Checklist de resiliencia en `audit/checklists/component-resilience.md` con evidencias adjuntas.
+2. Ejemplos o pruebas como [`service-resilience-basic`](https://github.com/scanalesespinoza/the-wise-tech/tree/main/examples/service-resilience-basic#readme) que muestren degradaciones controladas.
+3. Checklist de resiliencia [`audit/checklists/component-resilience.md`](https://github.com/scanalesespinoza/the-wise-tech/blob/main/audit/checklists/component-resilience.md) con evidencias adjuntas.
 
 ## Referencias
 - [Guía del contrato de comportamiento](../guides/component-behavior-contract.md)
