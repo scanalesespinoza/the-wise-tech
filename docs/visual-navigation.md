@@ -19,7 +19,7 @@
       Claridad sobre qué leer y cómo dar feedback útil en minutos.
     </td>
     <td align="center">
-      <a href="es/guides/choose-your-path.md" style="display:inline-block;padding:1rem 1.5rem;background:#e0f5f1;border-radius:12px;text-decoration:none;font-weight:600;">🍃 Explorar rutas</a>
+      <a href="es/guides/choose-your-path.md" style="display:inline-block;padding:1rem 1.5rem;background:#e0f5f1;border-radius:12px;text-decoration:none;font-weight:600;">🍃 Ver índice de valor</a>
     </td>
   </tr>
 </table>
@@ -28,7 +28,7 @@
 - Minuto 60 → Aplica 1 práctica de simplicidad.
 - Minuto 90 → Envía feedback con evidencia.
 
-📚 ¿Prefieres algo más corto? Abre la [guía Elige tu ruta](es/guides/choose-your-path.md).
+📚 ¿Prefieres algo más corto? Abre el [Índice de contenido de valor](es/guides/choose-your-path.md).
 
 ---
 
@@ -41,7 +41,7 @@
       Primer test del escenario de pagos y una mejora documentada.
     </td>
     <td align="center">
-      <a href="es/guides/choose-your-path.md" style="display:inline-block;padding:1rem 1.5rem;background:#eaf2ff;border-radius:12px;text-decoration:none;font-weight:600;">💡 Explorar rutas</a>
+      <a href="es/guides/choose-your-path.md" style="display:inline-block;padding:1rem 1.5rem;background:#eaf2ff;border-radius:12px;text-decoration:none;font-weight:600;">💡 Ver índice de valor</a>
     </td>
   </tr>
 </table>
@@ -50,7 +50,7 @@
 - Minuto 60 → Corre `make test` y captura resultados.
 - Minuto 90 → Sugiere un ajuste en docs o pruebas.
 
-⚡ Sigue la versión resumida en la [guía Elige tu ruta](es/guides/choose-your-path.md).
+⚡ Sigue la versión resumida en el [Índice de contenido de valor](es/guides/choose-your-path.md).
 
 ---
 
@@ -63,7 +63,7 @@
       Ajuste de políticas resilientes y validación con herramientas del repo.
     </td>
     <td align="center">
-      <a href="es/guides/choose-your-path.md" style="display:inline-block;padding:1rem 1.5rem;background:#fff2de;border-radius:12px;text-decoration:none;font-weight:600;">🧱 Explorar rutas</a>
+      <a href="es/guides/choose-your-path.md" style="display:inline-block;padding:1rem 1.5rem;background:#fff2de;border-radius:12px;text-decoration:none;font-weight:600;">🧱 Ver índice de valor</a>
     </td>
   </tr>
 </table>
@@ -72,7 +72,7 @@
 - Minuto 60 → Ejecuta `make resilience-check`.
 - Minuto 90 → Comparte el runbook actualizado.
 
-🚀 ¿Necesitas solo el arranque? Usa la [guía Elige tu ruta](es/guides/choose-your-path.md).
+🚀 ¿Necesitas solo el arranque? Usa el [Índice de contenido de valor](es/guides/choose-your-path.md).
 
 ---
 

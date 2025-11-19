@@ -23,7 +23,7 @@ Consúltalo cuando requieras referencias inmediatas para Quickstart o debas comp
 4) make -f operations/Makefile test
 5) make -f operations/Makefile parity
 6) make -f operations/Makefile docs
-7) abre http://127.0.0.1:8000 y sigue “Choose your path”
+7) abre http://127.0.0.1:8000 y usa el Índice de contenido de valor del README
 
 Notas:
 - Mantén PRs pequeños y enlaza la doc que actualizas.
