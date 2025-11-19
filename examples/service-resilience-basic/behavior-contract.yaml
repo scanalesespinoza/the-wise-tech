@@ -1,67 +1,93 @@
-version: 1.0.0
+---
+version: 1.1.0
 component:
   name: service-resilience-basic
   domain: checkout-labs
-  description: Sample checkout dependency that demonstrates resilience controls.
+  description: >-
+    Dependencia de checkout que muestra controles de resiliencia básicos.
 ownership:
   team: reliability-enablement
   service_slack: "#reliability-labs"
-  oncall_schedule: "https://pagerduty.example.com/schedules/RES-LAB"
-environment:
+  escalation: "https://pagerduty.example.com/schedules/RES-LAB"
+runtime:
   tier: tier-2
-  runtime: python-3.12
-  regions:
-    - us-east-1
-  entrypoints:
-    - internal://labs/resilience-basic
-behavior:
-  resilience:
-    objectives:
-      - type: availability
-        target: ">= 99.5%"
-        rationale: Supports tier-1 checkout flows with automated fallbacks.
-    controls:
-      - name: dependency-timeout
-        description: Timeouts after 800 ms and triggers retries with jitter.
-        automated: true
-      - name: graceful-fallback
-        description: Degrades to an async queue for payment confirmation.
-        automated: true
-    validation:
-      cadence: weekly
-      last_run: 2024-05-09
-      artifacts:
-        - https://status.example.com/playbooks/resilience-basic
-  performance:
-    objectives:
-      - type: latency-p95
-        target: "< 500 ms"
-        rationale: Keeps retries hidden from the caller.
-    controls:
-      - name: response-cache
-        description: Short-lived cache on idempotent requests.
-        automated: true
-    validation:
-      cadence: weekly
-      last_run: 2024-05-08
-      artifacts:
-        - https://grafana.example.com/d/res-basic-latency
-  observability:
-    objectives:
-      - type: telemetry-coverage
-        target: structured logs + retry counters per request.
-        rationale: Needed for chaos validation.
-    controls:
-      - name: structured-logging
-        description: JSON log entries with attempt, latency, fallback flag.
-        automated: true
-    validation:
-      cadence: per-release
-      last_run: 2024-05-03
-      artifacts:
-        - https://github.com/example/reliability-labs/actions/runs/12345
-dependencies:
-  - name: payment-gateway
-    dependency_type: synchronous
-    criticality: high
-    contract: https://github.com/example/contracts/payment-gateway
+  language: python-3.12
+  deployment: container
+resilience:
+  error_handling_strategy:
+    expected_errors:
+      - dependency timeout (>800 ms)
+      - upstream returns 5xx
+    boundary_cases:
+      - retry storm al reiniciar
+      - respuesta con payload parcial
+    detection_channels:
+      - metric:res_basic_retry_total
+      - log:res_basic.error
+  cleanup_strategy:
+    steps:
+      - description: limpiar cola local y liberar file descriptors
+        automation: true
+      - description: restablecer contadores de idempotencia
+        automation: true
+  states_implemented:
+    - in-service
+    - degraded
+    - out-of-service-controlled
+  recovery:
+    fallback_paths:
+      - name: async-queue
+        trigger: dependency timeout consecutivo
+        impact: confirmación diferida en <5 min
+      - name: manual-confirmation
+        trigger: payload parcial detectado
+        impact: agente valida en consola, notificación a UX
+    degraded_mode_playbook: >-
+      https://status.example.com/playbooks/resilience-basic
+performance:
+  max_threads: 4
+  max_requests_per_second: 80
+  max_clients_per_minute: 40
+  resource_budgets:
+    cpu_percent: 50
+    memory_percent: 55
+  overflow_strategy: queue
+  overflow_messaging:
+    code: RES-BASIC-429
+    business_message: >-
+      Estamos procesando más solicitudes de lo normal, mantendremos tu orden en
+      cola segura.
+observability:
+  metrics_exposed:
+    - name: res_basic_state
+      type: gauge
+      description: 1=in-service, 0=degraded.
+    - name: res_basic_retry_total
+      type: counter
+      description: Reintentos por dependencia.
+  events_emitted:
+    - name: res.basic.degraded
+      when: estado cambia a degradado
+      payload_contract: state, reason, fallback
+    - name: res.basic.recovered
+      when: vuelve a in-service
+      payload_contract: state, recovered_at
+  overload_signal:
+    channel: metrics
+    description: >-
+      `res_basic_queue_depth > 200` envía alerta a Reliability Guild.
+  degradation_signal:
+    channel: event
+    description: >-
+      `res.basic.degraded` informa impacto y fallback activo.
+zero_trust:
+  input_validation:
+    - interface: grpc checkout->res-basic
+      rules: schema validation + token de servicio obligatorio
+  dependency_assumptions:
+    - dependency: payment-gateway
+      verification: mTLS + límite de tiempo 800 ms
+audit:
+  last_review: 2024-05-09
+  reviewers:
+    - name: Reliability Guild

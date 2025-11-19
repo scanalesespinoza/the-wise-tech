@@ -5,38 +5,40 @@ tags: ["developers", "performance", "principles"]
 
 # Pilar: Performance
 
-> El rendimiento se alinea con la visión de priorizar la lógica de negocio descrita en [Vision and purpose](https://github.com/scanalesespinoza/the-wise-tech/blob/main/README.md#vision-and-purpose) y aplica los principios de Simplicity y Mejora continua para sostener experiencias confiables.
+> Mantener el rendimiento significa garantizar que las promesas de negocio se cumplen dentro de límites conocidos y auditablemente justificados. Este pilar traduce la visión de Wise Tech (responsabilidad + calidad) en presupuestos explícitos y respuestas claras cuando se exceden.
 
-## Contexto estratégico
-Optimizar performance significa asegurar que cada interacción sea rápida, predecible y medible. No busca micro-optimizar cada componente sino garantizar que los flujos que entregan valor tengan capacidad y latencia suficientes para cumplir la promesa al usuario y al negocio.
+## Expectativas clave
+Cada componente **MUST** declarar qué recursos usa, cuáles son sus límites y cómo se comporta cuando la demanda excede esos límites.
 
-## Requisitos esenciales
-### Límites y presupuestos
-- **MUST** definir objetivos de latencia, throughput y costo por operación ligados a SLOs revisados con las áreas de producto.
-- **SHOULD** documentar los límites junto a su racional en ADRs o en la taxonomía de principios para que nuevos equipos hereden el contexto.
-- **MAY** usar escalado automático siempre que exista una política de guardrails que evite gastos inesperados.
+### Límites predefinidos
+- **MUST** definirse máximos de hilos o *workers*, consumo de CPU/memoria y conexiones activas.
+- **MUST** declararse máximos de peticiones entrantes por unidad de tiempo y máximos de clientes conectados.
+- **SHOULD** relacionar cada límite con el objetivo de negocio (por ejemplo, "checkout completo en < 2 s").
+- **MAY** publicarse límites diferenciados por región o tipo de cliente cuando existan acuerdos específicos.
 
-### Manejo de carga y degradación
-- **MUST** implementar *rate limits* y *backpressure* en cada punto de entrada público.
-- **SHOULD** reservar capacidad para operaciones críticas (pagos, registro) antes que para flujos secundarios.
-- **MAY** activar rutas alternativas más simples (por ejemplo, solo lectura o colas batch) cuando la demanda supere el presupuesto.
+### Mecanismos de contención
+- **MUST** existir estrategias documentadas de cola, rechazo controlado o *throttling* para cada punto de entrada.
+- **MUST** emitir códigos de error claros y mensajes de negocio cuando se rechace una petición por sobredemanda.
+- **SHOULD** incluir backpressure hacia dependencias para no propagar la saturación.
+- **MAY** activar rutas alternativas más simples (por ejemplo, modo *read-only*) cuando el negocio prefiera degradarse antes que fallar.
 
-### Observabilidad de performance
-- **MUST** recolectar métricas P50/P90/P99, tasa de errores y consumo de recursos por dominio funcional.
-- **SHOULD** correlacionar métricas de experiencia (conversiones, órdenes completadas) con la telemetría técnica usando paneles compartidos.
-- **MAY** generar experimentos controlados (feature flags + mediciones) para validar mejoras sin afectar la línea base.
+### Señales de capacidad
+- **MUST** monitorearse los límites declarados (hilos, peticiones, clientes, recursos) y exponerlos como métricas.
+- **MUST** etiquetar las métricas con el modo operativo (`in-service`, `degraded`, etc.) para correlacionar saturación con experiencia.
+- **SHOULD** definir umbrales de alerta que anticipen la sobredemanda (por ejemplo, 80% del límite) y publiquen recomendaciones de acción.
+- **MAY** alimentar experimentos de *auto-tuning* siempre que existan guardrails documentados.
 
-### Experimentos y mejora continua
-- **MUST** medir impacto antes y después de cada optimización para comprobar que la Simplicity no se sacrificó.
-- **SHOULD** mantener *playbooks* que expliquen cómo interpretar resultados para acelerar el aprendizaje colectivo.
-- **MAY** automatizar pruebas de carga en la cadena CI/CD cuando el riesgo operacional lo justifique.
+### Zero Trust transversal
+- **MUST** garantizar que la contención no deshabilita controles de autenticación/autorización ni mezcla sesiones de clientes.
+- **SHOULD** validar entradas aún cuando provengan de servicios "internos" para evitar abuso en escenarios de sobredemanda.
+- **MAY** usar señales de riesgo para adaptar límites dinámicamente (cliente confiable vs. desconocido) sin sacrificar trazabilidad.
 
-## Transversal — Zero Trust
-- **MUST** garantizar que las optimizaciones no deshabilitan controles de autenticación o autorización bajo ninguna circunstancia.
-- **SHOULD** monitorear que los mecanismos de caching respetan el aislamiento de datos por identidad y región.
-- **MAY** usar señales de riesgo para adaptar límites por cliente o dispositivo sin exponer la plataforma a abuso.
+## Evidencia mínima
+1. Sección `performance` del contrato con límites máximos, estrategia de overflow y mensajes para negocio.
+2. Ejemplo funcional como [`service-performance-limits`](https://github.com/scanalesespinoza/the-wise-tech/tree/main/examples/service-performance-limits#readme) que muestre el rechazo controlado.
+3. Checklist [`audit/checklists/component-performance.md`](https://github.com/scanalesespinoza/the-wise-tech/blob/main/audit/checklists/component-performance.md) completado con vínculos a paneles o scripts de carga.
 
-## See also
-- [Vision and purpose](https://github.com/scanalesespinoza/the-wise-tech/blob/main/README.md#vision-and-purpose)
-- [Wise Tech Principles](https://github.com/scanalesespinoza/the-wise-tech/blob/main/knowledge/docs/principles/wise-tech-principles.md)
-- [Feedback loops](https://github.com/scanalesespinoza/the-wise-tech/blob/main/knowledge/docs/guides/feedback-loops.md)
+## Referencias
+- [Guía del contrato de comportamiento](../guides/component-behavior-contract.md)
+- [Patrón: backpressure y colas](../patterns/pattern-backpressure-and-queues.md)
+- [Patrón: modos degradados](../patterns/pattern-degraded-mode.md)

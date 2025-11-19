@@ -1,88 +1,94 @@
-# Plantilla de contrato de componente consumida por wise-tech-linter
-# Ajuste los valores según corresponda. Todos los campos marcados como obligatorios
-# deben tener contenido para que la verificación sea exitosa.
-
-version: "1"
+# Plantilla alineada con docs/specs/component-behavior-contract.schema.md
+---
+version: 1.1.0
 component:
-  name: "component-example"
-  description: "Servicio que sincroniza catálogos con proveedores externos."
-  owner:
-    team: "Equipo Catálogo Dinámico"
-    slack_channel: "#cat-dynamic-support"
-    escalation: "PagerDuty -> Manager -> Director de Ingeniería"
-  lifecycle:
-    tier: "Tier-1"
-    data_classification: "Confidencial"
-  dependencies:
-    runtime:
-      - name: "Inventory API"
-        owner: "Equipo de Inventario"
-        contract: "https://intranet/contracts/inventory-api"
-    supporting:
-      - name: "S3 Data Lake"
-        owner: "Plataforma de Datos"
-        contract: "https://intranet/contracts/data-lake"
+  name: component-example
+  domain: catalog-sync
+  description: Servicio que sincroniza catálogos con proveedores externos.
+ownership:
+  team: Equipo Catálogo Dinámico
+  service_slack: "#cat-dynamic-support"
+  escalation: "PagerDuty -> Manager -> Director de Ingeniería"
+runtime:
+  tier: tier-1
+  language: python-3.11
+  deployment: kubernetes
 resilience:
-  availability_slo: "99.5%"
-  failure_modes:
-    - scenario: "Caída de Inventory API"
-      impact: "No se procesan órdenes de actualización"
-      mitigation: "Se utiliza caché local de 1 hora"
-  recovery_runbooks:
-    - name: "Reinicio seguro del sincronizador"
-      url: "https://runbooks/123"
-  chaos_validation:
-    frequency: "Mensual"
-    scope: "Dependencias críticas y manejo de colas"
-  fallbacks:
-    - dependency: "Inventory API"
-      strategy: "Reintentos exponenciales y degradación"
-  backup_and_restore:
-    medium: "Snapshots diarios en S3"
-    last_successful_test: "2024-04-01"
+  error_handling_strategy:
+    expected_errors:
+      - inventory-api timeout
+      - proveedor responde payload inválido
+    boundary_cases:
+      - catálogos con >10k SKU simultáneos
+    detection_channels:
+      - structured-log:catalog-sync
+      - metric:catalog_sync_retry_total
+  cleanup_strategy:
+    steps:
+      - description: revertir transacciones parciales y liberar locks
+        automation: true
+      - description: notificar a proveedor para regenerar feed
+        automation: false
+  states_implemented:
+    - in-service
+    - degraded
+    - out-of-service-controlled
+  recovery:
+    fallback_paths:
+      - name: local-cache
+        trigger: dependency timeout > 800ms
+        impact: confirma pedidos con stock del último snapshot (riesgo bajo)
+      - name: manual-review-queue
+        trigger: payload inválido
+        impact: analista valida en <30 min
+    degraded_mode_playbook: https://runbooks.example.com/catalog-sync/degraded
 performance:
-  latency_slo_ms: 250
-  error_budget_policy: "Alerta al 50%, congelar despliegues al 80%"
-  load_profile:
-    expected_qps: 120
-    peak_duration: "2 horas durante cierres de inventario"
-  capacity_plan:
-    current_utilization: "CPU 55%, memoria 60%, storage 40%"
-    scale_strategy: "Autoescalado horizontal (HPA)"
-  benchmark_evidence:
-    - name: "k6-abril-2024"
-      url: "https://benchmarks/k6-apr-2024"
-  regression_tests:
-    - name: "test-latency"
-      trigger: "pipeline principal"
+  max_threads: 12
+  max_requests_per_second: 150
+  max_clients_per_minute: 90
+  resource_budgets:
+    cpu_percent: 60
+    memory_percent: 65
+  overflow_strategy: queue
+  overflow_messaging:
+    code: CAT-SYNC-429
+    business_message: >-
+      Estamos procesando alta demanda; tu catálogo se sincronizará en cuanto
+      libremos capacidad.
 observability:
-  metrics:
-    - name: "sync_latency_p99"
-      owner: "Equipo Catálogo Dinámico"
-      retention_days: 30
-      sli_relation: "latency"
-  logs:
-    structured: true
-    retention_days: 45
-  traces:
-    coverage: "80% de las llamadas críticas"
-  alerts:
-    - name: "sync-latency-high"
-      condition: "p99 > 250ms durante 5m"
-      channel: "#cat-dynamic-alerts"
-      runbook: "https://runbooks/123"
-  data_quality:
-    validations:
-      - name: "pipeline-alert-parity"
-        frequency: "Diario"
-  access_controls: "Solo Observability Guild puede editar dashboards"
-compliance:
-  threat_model: "https://threatmodels/component-example"
-  data_retention: "Logs 45 días, métricas 90 días"
-  regulatory_notes:
-    - "Cumple PCI-DSS sección 10"
-evidence:
-  resilience_checklist: "https://tickets/RES-2024-01"
-  performance_checklist: "https://tickets/PERF-2024-02"
-  observability_checklist: "https://tickets/OBS-2024-03"
-  last_reviewed: "2024-04-15"
+  metrics_exposed:
+    - name: catalog_sync_latency_p95
+      type: histogram
+      description: Latencia por lote en milisegundos.
+    - name: catalog_sync_state
+      type: gauge
+      description: Modo operativo actual (1 in-service, 0 degradado).
+  events_emitted:
+    - name: catalog.sync.degraded
+      when: state cambia a degraded
+      payload_contract: state, reason, expected_recovery_min
+    - name: catalog.sync.recovered
+      when: vuelve a in-service
+      payload_contract: state, recovered_at
+  overload_signal:
+    channel: metrics
+    description: >-
+      `catalog_sync_queue_depth` > 500 activa alerta y recomendación de escalar
+      workers.
+  degradation_signal:
+    channel: event
+    description: >-
+      `catalog.sync.degraded` informa impacto, ETA y fallback activo.
+zero_trust:
+  input_validation:
+    - interface: https api/catalog-sync
+      rules: schema validation + firma HMAC del proveedor
+  dependency_assumptions:
+    - dependency: inventory-api
+      verification: mutual TLS + timeouts a 800 ms
+    - dependency: vendor-feeds
+      verification: checksum + control de versionamiento
+audit:
+  last_review: 2024-05-10
+  reviewers:
+    - name: Reliability Guild

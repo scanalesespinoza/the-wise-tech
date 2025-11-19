@@ -6,47 +6,66 @@ The current documentation and governance layout has grown organically, which mak
 ## Target Information Architecture
 ```
 docs/
-├── pillars/               # Principle, Capability, Control explainers and PCC taxonomy map
-│   ├── index.md
-│   ├── principles/
-│   ├── capabilities/
-│   └── controls/
-├── guides/                # End-to-end playbooks (delivery, audits, onboarding, communications)
-│   └── *.md
-├── patterns/              # Repeatable architecture, process, and tooling patterns
-│   └── *.md
-├── specs/                 # Formal specifications, requirements, and RFCs tied to PCC controls
-│   └── *.md
-├── examples/              # Canonical examples, walkthroughs, and worked scenarios
-│   └── *.md
-├── tools/                 # Automation references, CLI docs, and integration how-tos
-│   └── *.md
-└── audit/                 # Evidence templates, checklists, and regulator-facing briefs
-    └── *.md
+├── overview/
+│   ├── vision.md            # Versión publicada del manifiesto
+│   └── principles.md        # Referencia rápida a Wise Tech Principles
+├── pillars/
+│   ├── resilience.md
+│   ├── performance.md
+│   ├── data-and-observability.md
+│   └── zero-trust.md        # Pilar transversal
+├── guides/
+│   ├── component-behavior-contract.md
+│   ├── designing-resilient-components.md
+│   ├── designing-for-performance.md
+│   └── instrumenting-components.md
+├── patterns/
+│   ├── pattern-error-handling-and-cleanup.md
+│   ├── pattern-degraded-mode.md
+│   ├── pattern-backpressure-and-queues.md
+│   └── pattern-metrics-and-events.md
+├── specs/
+│   ├── component-behavior-contract.schema.md
+│   ├── resilience-requirements.md
+│   ├── performance-requirements.md
+│   └── data-and-observability-requirements.md
+├── examples/
+│   ├── service-resilience-basic/
+│   ├── service-performance-limits/
+│   └── service-observability/
+├── tools/
+│   └── wise-tech-linter/
+└── audit/
+    ├── checklists/
+    ├── personas/
+    ├── scenarios/
+    ├── impacts/
+    └── component-contract.yaml
 ```
-- `docs/pillars/index.md` acts as the canonical PCC landing page and should include deep links to principles, capabilities, and control catalogs.
-- `docs/guides` consolidates current onboarding, operations, and governance guides under a single navigation entry, organized by lifecycle stage.
-- `docs/patterns`, `docs/specs`, and `docs/examples` isolate reusable knowledge artifacts so they can evolve at different cadences without creating navigation noise.
-- `docs/tools` houses references to scripts, CLIs, dashboards, and integration instructions, clarifying how automation supports PCC controls.
-- `docs/audit` remains the authoritative home for regulator-facing evidence, reports, and quarterly assurance packages.
+- `docs/overview` conserva la experiencia de aterrizaje y enlaza a la visión sin romper URLs existentes.
+- `docs/pillars` se transforma en la referencia oficial de PCC, incluyendo Zero Trust como principio transversal.
+- `docs/guides` y `docs/patterns` sirven para bajar los pilares a pasos accionables y plantillas reutilizables.
+- `docs/specs` concentra requisitos formales y contratos; será la fuente para linters y automatizaciones.
+- `examples/` y `tools/` muestran cómo se implementan y validan los pilares en código.
+- `audit/` mantiene checklists, contratos y reportes necesarios para revisiones regulatorias.
 
 ## Archivo actual → destino futuro → comentarios
 | Archivo/directorio actual | Destino futuro | Comentarios |
 | --- | --- | --- |
-| `docs/index.md` | `docs/pillars/index.md` (symlink or include) | Mantiene la narrativa de aterrizaje, pero resalta la taxonomía PCC; se preserva la URL raíz. |
-| `docs/navigation.md` | `docs/guides/navigation.md` + referencias en `mkdocs.yml` | Se migra el contenido a guías; `mkdocs.yml` debe apuntar a la nueva ruta. |
-| `docs/onboarding-landing.md` | `docs/guides/onboarding.md` | Se reescribe como guía integral vinculada a ejemplos y herramientas. |
-| `docs/visual-navigation.md` | `docs/pillars/principles/visual-navigation.md` | Pasa a ser un principio con visualizaciones; debe enlazar a patrones relacionados. |
-| `docs/ux-redesign-preview.md` | `docs/examples/ux-redesign.md` | Queda como caso de estudio dentro de ejemplos. |
-| `docs/es/` | `docs/guides/es/` + `docs/examples/es/` | Se redistribuye el contenido traducido manteniendo la jerarquía local. |
-| `operations/` y `governance/` notas clave | `docs/specs/` | Las especificaciones formales se centralizan aquí con numeración PCC. |
-| `audit/` (fuera de `docs/`) | `docs/audit/` | Mover reportes públicos relevantes para alinearse con MkDocs y facilitar publicación. |
+| `docs/index.md` | `docs/overview/vision.md` (include desde la raíz) | Mantiene la URL pública y apunta al manifiesto actualizado. |
+| `README.md#vision-and-purpose` | `docs/overview/vision.md` | El README referencia la nueva ubicación, manteniendo anclas existentes. |
+| `docs/navigation.md` | `docs/guides/component-behavior-contract.md` + `docs/pillars/*.md` | El contenido conceptual migra a pilares/guías; `navigation.md` queda como redirección. |
+| `docs/onboarding-landing.md` | `docs/guides/designing-resilient-components.md` | La experiencia de onboarding arranca desde la guía PCC enlazando patrones y ejemplos. |
+| `docs/ux-redesign-preview.md` | `docs/examples/ux-redesign.md` | Caso de estudio conectado desde `docs/patterns/pattern-metrics-and-events.md`. |
+| `operations/` y `governance/` notas clave | `docs/specs/*.md` | Los requisitos se reescriben con lenguaje MUST/SHOULD/MAY y alimentan linters/auditorías. |
+| `audit-report.*` | `audit/` (rutas estables) | Se mantiene fuera de `docs/` para preservar integraciones automáticas. |
+
 
 ## Rutas estables y redirecciones
-- `docs/index.md` y `docs/es/index.md` **deben** permanecer como páginas raíz publicadas en GitHub Pages para evitar enlaces rotos externos. Usaremos includes o front matter para apuntar a `docs/pillars/index.md` y `docs/guides/es/index.md` sin cambiar las rutas públicas.
-- `docs/navigation.md` recibe una redirección permanente hacia `docs/pillars/index.md` (para navegación conceptual) y una segunda redirección contextual desde `mkdocs.yml` hacia `docs/guides/navigation.md` para menús laterales.
-- `docs/onboarding-landing.md` redirige a `docs/guides/onboarding.md` y conservará un alias especificado en `mkdocs.yml` (`onboarding/landing/`).
-- `docs/visual-navigation.md` necesita alias `visual-nav/` porque existen referencias en comunicaciones externas.
+- `docs/index.md` y `docs/es/index.md` **deben** permanecer como páginas raíz publicadas en GitHub Pages para evitar enlaces rotos. El contenido se incluirá desde `docs/overview/vision.md` y `docs/overview/principles.md` sin cambiar las rutas públicas.
+- `docs/navigation.md` se convierte en un alias hacia `docs/pillars/resilience.md` y `docs/guides/component-behavior-contract.md`; `mkdocs.yml` deberá exponer ambas rutas para que el menú legacy no se rompa.
+- `docs/onboarding-landing.md` redirigirá a `docs/guides/designing-resilient-components.md` y mantendrá alias `onboarding/landing/` en `mkdocs.yml`.
+- Los casos de estudio como `docs/ux-redesign-preview.md` mantendrán alias (`visual-nav/`, `ux-preview/`) cuando migren a `docs/examples/`.
 - `audit-report.md` y `audit-report.json` seguirán publicándose bajo `/audit/` usando rutas estables `audit/report.md` y `audit/report.json` para asegurar compatibilidad con integraciones automáticas.
 
 ## Why Restructure

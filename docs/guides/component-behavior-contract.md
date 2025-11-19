@@ -1,65 +1,102 @@
 # Component Behavior Contract Guide
 
-The component behavior contract captures how a service upholds the resilience,
-performance, and observability pillars. This guide explains when to create a
-contract, how to keep it updated, and how to use the example projects.
+El contrato PCC describe cómo una componente cumple los pilares de Resiliencia, Performance y Datos/Observabilidad con lenguaje tipo RFC (MUST/SHOULD/MAY). Este documento acompaña a `docs/specs/component-behavior-contract.schema.md` y a los ejemplos en `examples/`.
 
-## When to create a contract
+## Cuándo crear o actualizar un contrato
+1. Nuevo servicio o cambio mayor de arquitectura.
+2. Ajuste de límites (hilos, peticiones, clientes) o estrategias de degradación.
+3. Incidentes que revelan brechas en manejo de errores, limpieza o telemetría.
 
-Create (or update) a contract when:
+## Estructura del contrato
+```
+version: 1.1.0
+component:            # Identidad básica
+  name:
+  domain:
+  description:
+ownership:
+  team:
+  service_slack:
+  escalation:
+runtime:
+  tier:
+  language:
+  deployment:
+resilience:
+  error_handling_strategy:
+    expected_errors:
+    boundary_cases:
+    detection_channels:
+  cleanup_strategy:
+    steps:
+      - description:
+        automation:
+  states_implemented:
+    - in-service
+    - degraded
+    - out-of-service-controlled
+  recovery:
+    fallback_paths:
+      - name:
+        trigger:
+        impact:
+    degraded_mode_playbook:
+performance:
+  max_threads:
+  max_requests_per_second:
+  max_clients_per_minute:
+  resource_budgets:
+    cpu_percent:
+    memory_percent:
+  overflow_strategy: queue|reject|throttle
+  overflow_messaging:
+    code:
+    business_message:
+observability:
+  metrics_exposed:
+    - name:
+      type:
+      description:
+  events_emitted:
+    - name:
+      when:
+      payload_contract:
+  overload_signal:
+    channel:
+    description:
+  degradation_signal:
+    channel:
+    description:
+zero_trust:
+  input_validation:
+    - interface:
+      rules:
+  dependency_assumptions:
+    - dependency:
+      verification:
+audit:
+  last_review:
+  reviewers:
+    - name:
+```
 
-1. Designing a new service or major capability.
-2. Changing service-level objectives (SLOs) or revising a dependency strategy.
-3. Responding to an incident where documentation gaps were discovered.
+### Cómo rellenar cada sección
+- **component / ownership / runtime.** Identidad, dominio, tier y dónde contactar al equipo. Se usa para enrutar auditorías y escalamientos.
+- **resilience.** Detalla qué errores se esperan, cómo se detectan y qué pasos de limpieza se ejecutan antes de volver al modo seguro. `states_implemented` **MUST** enumerar al menos los tres modos obligatorios.
+- **performance.** Define los límites máximos y la estrategia `overflow_strategy` (cola, rechazo o throttling). `overflow_messaging` describe el código y el mensaje visible para negocio.
+- **observability.** Lista métricas y eventos disponibles, especificando cómo se señalan la sobredemanda y la degradación.
+- **zero_trust.** Documenta validaciones de entrada y suposiciones sobre dependencias; sirve para revisar que los modos degradados no omiten controles.
+- **audit.** Fecha y responsables de la última revisión para cruzar con `audit/checklists/`.
 
-Contracts live next to the service code so owners can iterate on them during
-normal development. The `specs/component-behavior-contract.schema.md` file
-documents every required field.
+## Buenas prácticas
+- Versionar el contrato junto al código. Los linters comparan los campos con las listas de verificación.
+- Enlazar evidencia (dashboards, runbooks, scripts) desde cada arreglo (`steps`, `fallback_paths`, `events`).
+- Reutilizar el template de `audit/component-contract.yaml` para mantener consistencia.
 
-## Drafting the YAML
+## Ejemplos
+Cada carpeta en `examples/` incluye un `behavior-contract.yaml` ya validado:
+- [`service-resilience-basic`](https://github.com/scanalesespinoza/the-wise-tech/tree/main/examples/service-resilience-basic#readme): estados operativos y limpieza.
+- [`service-performance-limits`](https://github.com/scanalesespinoza/the-wise-tech/tree/main/examples/service-performance-limits#readme): límites explícitos y mensajes de rechazo.
+- [`service-observability`](https://github.com/scanalesespinoza/the-wise-tech/tree/main/examples/service-observability#readme): métricas/eventos que señalan sobredemanda.
 
-1. Copy the template from the schema file.
-2. Fill the `component`, `ownership`, and `environment` sections so stakeholders
-   can contact the team quickly.
-3. Define the three pillar blocks in `behavior`:
-   - **Resilience** — availability targets, automated safeguards (circuit
-     breakers, retries, graceful degradation), and validation cadence.
-   - **Performance** — throughput limits, latency targets, and controls such as
-     load-shedding or rate limiting.
-   - **Observability** — telemetry coverage, alert routing, and validation steps
-     (dashboards or runbooks).
-4. Link evidence (dashboards, playbooks, chaos run reports) inside the
-   `validation.artifacts` arrays.
-5. Describe upstream dependencies and the integration contract for each entry.
-
-## Keeping the contract useful
-
-- Review the contract during every architecture/design review and release
-  retrospective.
-- Automate validation by referencing scheduled jobs (for example, `validation:
-  cadence: weekly`).
-- Store links to dashboards that highlight each objective; this ensures SREs can
-  verify controls without digging through multiple systems.
-
-## Example projects
-
-The `examples/` directory contains minimal services that show how to tie real
-controls to the contract:
-
-- `service-resilience-basic` demonstrates dependency timeouts, retries, and a
-  graceful fallback for a Tier-2 API.
-- `service-performance-limits` showcases a sliding-window rate limiter and the
-  contract entries that describe throughput guarantees.
-- `service-observability` focuses on structured logging, tracing contexts, and
-  alert routing metadata.
-
-Each example ships with:
-
-1. A `README.md` explaining the scenario, how to run the sample script, and what
-   to look for in the console output.
-2. A `behavior-contract.yaml` file that satisfies the schema.
-3. A small Python module showing how the controls are implemented.
-
-Use these directories as starting points when drafting a contract for your own
-service. Copy the relevant sections, update the contact information, and tweak
-objectives to match the new SLOs.
+Úsalo como punto de partida y adapta los valores a tu contexto.
