@@ -16,4 +16,4 @@ Actualiza este mapa cada vez que agregues una sección nueva a `mkdocs.yml`.
 
 ## See also
 - [Quickstart](quickstart.md)
-- [Índice de contenido de valor](../../README.md#value-index)
+- [Índice de contenido de valor](../../../README.md#value-index)
