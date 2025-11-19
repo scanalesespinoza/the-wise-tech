@@ -18,6 +18,7 @@ Los principios de Wise Tech articulan los acuerdos que priorizan impacto humano,
 
 ## See also
 - [Wise Tech Principles](./wise-tech-principles.md)
+- [Three Context Framework](./three-context-framework.md)
 - [Playbooks](../playbooks/)
 - [Personas](../personas/)
 ---

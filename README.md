@@ -145,6 +145,7 @@ Use just as a shortcut to Make:
 
 - **Productivity & simplicity** → [knowledge/docs/guides/quickstart.md](knowledge/docs/guides/quickstart.md), [knowledge/docs/principles/](knowledge/docs/principles/), [Learning Path 30/60/90 — Consumers](knowledge/docs/paths/consumers-30-60-90.md)
 - **Resilience & operations** → [knowledge/docs/playbooks/](knowledge/docs/playbooks/), [knowledge/docs/scenarios/](knowledge/docs/scenarios/), [knowledge/docs/guides/resilience-policies.md](knowledge/docs/guides/resilience-policies.md), [knowledge/docs/guides/slo-how-to.md](knowledge/docs/guides/slo-how-to.md), [Policies YAML (payments)](experience/scenarios/payments/policies/resilience.yml), [SLO Spec (payments)](experience/scenarios/payments/slo/slo-spec.yml), [Learning Path 30/60/90 — Platform](knowledge/docs/paths/platform-engineers-30-60-90.md)
+  - Three Context Framework → [knowledge/docs/principles/three-context-framework.md](knowledge/docs/principles/three-context-framework.md)
 - **Mentorship & continuous improvement** → [knowledge/docs/roadmap/roadmap.md](knowledge/docs/roadmap/roadmap.md), [knowledge/docs/roadmap/pr-ideas.md](knowledge/docs/roadmap/pr-ideas.md), [.github/](.github/), [Learning Path 30/60/90 — Developers](knowledge/docs/paths/developers-30-60-90.md)
 - **Feedback loops** → [knowledge/docs/guides/feedback-loops.md](knowledge/docs/guides/feedback-loops.md)
 - **Postmortems** → [knowledge/docs/guides/postmortem-guide.md](knowledge/docs/guides/postmortem-guide.md)
