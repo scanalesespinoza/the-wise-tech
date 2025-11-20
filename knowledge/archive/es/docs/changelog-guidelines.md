@@ -17,6 +17,7 @@ Consúltalo cuando requieras referencias inmediatas para Guías para Changelog N
 
 - [Estructura](#estructura)
 - [Prácticas](#prcticas)
+- [Orquestación por fases](#orquestacin-por-fases)
 - [Checklist antes de publicar](#checklist-antes-de-publicar)
 
 # Guías para Changelog Narrativo
@@ -38,15 +39,23 @@ Una entrada de changelog debe explicar más que el diff de código. Usa esta gu�
 - Pide a asistentes de IA que redacten el borrador inicial y luego refínalo por precisión y tono.
 - Guarda el changelog junto a los artefactos del release para que sea parte de la evidencia operativa.
 
+## Orquestación por fases
+- Publica el changelog en inglés y español por cada fase (alpha, beta, GA) para que el mensaje sea consistente en todos los puntos de contacto.
+- Coordina con soporte y customer success la actualización de FAQs y macros; registra responsables y fecha de despliegue para cada ajuste.
+- Recoge feedback de personas beta en español (encuestas, sesiones guiadas) y usa los hallazgos para ajustar el glosario y el tono editorial.
+
 ## Checklist antes de publicar
 - [ ] Revisado por al menos una persona de producto o soporte.
 - [ ] Enlazado en el pull request o ticket de release.
 - [ ] Menciona tareas de seguimiento o métricas que se monitorearán post-release.
 - [ ] Traducción reflejada en el changelog en inglés si aplica.
+- [ ] Changelog bilingüe publicado por fase (alpha/beta/GA) con equivalencias revisadas.
+- [ ] FAQs y macros de soporte/CS actualizadas según el mensaje del release.
+- [ ] Feedback beta en español incorporado y ajustes documentados en glosario/estilo.
 
 Trata los changelogs como dispositivos de narración: enseñan a futuras lectoras y lectores por qué se tomaron decisiones y cómo el sistema continúa honrando su identidad Esencial.
 ---
-Última modificación: 2025-11-16
+Última modificación: 2025-11-17
 
 🗳️ **¿Te fue útil este documento?**
 - [ ] Sí, resolvió mi duda

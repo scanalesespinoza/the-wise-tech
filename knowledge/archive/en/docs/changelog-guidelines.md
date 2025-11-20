@@ -17,6 +17,7 @@ Consúltalo cuando requieras referencias inmediatas para Narrative Changelog Gui
 
 - [Structure](#structure)
 - [Practices](#practices)
+- [Phase orchestration](#phase-orchestration)
 - [Checklist before publishing](#checklist-before-publishing)
 
 # Narrative Changelog Guidelines
@@ -38,15 +39,23 @@ A changelog entry should explain more than the code diff. Use this guide to craf
 - Encourage AI assistants to draft the initial summary, then refine for accuracy and tone.
 - Store the changelog alongside release artifacts so it becomes part of operational evidence.
 
+## Phase orchestration
+- Publish the changelog in English and Spanish for each phase (alpha, beta, GA) so every touchpoint shares the same message.
+- Coordinate with Support and Customer Success to refresh FAQs and macros; note the owner and rollout date for each update.
+- Collect Spanish feedback from beta users (surveys, guided sessions) and use the findings to tune the glossary and editorial voice.
+
 ## Checklist before publishing
 - [ ] Reviewed by at least one product or support stakeholder.
 - [ ] Linked in the pull request or release ticket.
 - [ ] Mentions follow-up tasks or metrics that will be tracked post-release.
 - [ ] Translation mirrored in the Spanish changelog if applicable.
+- [ ] Bilingual changelog published per phase (alpha/beta/GA) with parity confirmed.
+- [ ] Support/CS FAQs and macros updated to match the release messaging.
+- [ ] Beta feedback in Spanish captured and reflected in glossary/style updates.
 
 Treat changelogs as storytelling devices: they teach future readers why decisions were made and how the system continues to honor its Essential identity.
 ---
-Última modificación: 2025-11-16
+Última modificación: 2025-11-17
 
 🗳️ **¿Te fue útil este documento?**
 - [ ] Sí, resolvió mi duda
