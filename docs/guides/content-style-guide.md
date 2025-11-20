@@ -29,7 +29,7 @@ Mantener una narrativa coherente, accesible y alineada con la estructura técnic
 ## Checklist rápido
 - Front-matter válido (title, tags).
 - Sección “See also” con enlaces relativos.
-- QA ejecutada con `make translation-qa` antes del PR.
+- QA ejecutada con `make docs-qa` antes del PR.
 
 ## See also
 - [Taxonomy & Tags](taxonomy-tags.md)

@@ -14,7 +14,7 @@ Sigue estos pasos para levantar el entorno de documentación y validar que todo 
 ## Pasos
 1. Clona el repo y crea una rama `i18n-es/wave-<n>`.
 2. Ejecuta `make translate-batch BATCH=w1-b1` para preparar los archivos del lote.
-3. Corre `make translation-qa` y corrige cualquier enlace roto o metadata faltante.
+3. Corre `make docs-qa` y corrige cualquier enlace roto o metadata faltante.
 4. Abre un PR con la plantilla de “QA de traducción”.
 
 ## See also

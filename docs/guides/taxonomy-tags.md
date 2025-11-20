@@ -15,7 +15,7 @@ Define una lista única de tags para roles y temas. Estos metadatos permiten fil
 ## Uso recomendado
 1. Incluye al menos un tag de rol o tema en cada documento.
 2. Repite exactamente los mismos tags en traducciones espejo (`es/`, `en/`).
-3. Valida la metadata con `make translation-qa` antes del PR.
+3. Valida la metadata con `make docs-qa` antes del PR.
 
 ## Ejemplo de front-matter
 ```yaml

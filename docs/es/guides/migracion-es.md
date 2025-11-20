@@ -21,7 +21,7 @@ tags: ["docs", "i18n", "editorial"]
 
 ## Flujo por batch
 1. Ejecuta el script de traducción con `--batch-id`.
-2. Ejecuta `make translation-qa`.
+2. Ejecuta `make docs-qa`.
 3. Realiza revisión técnica + de estilo.
 4. Abre un PR pequeño con la sección “QA de traducción” completada.
 
