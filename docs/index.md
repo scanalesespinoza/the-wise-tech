@@ -9,7 +9,7 @@ The Wise Tech documenta prácticas resilientes, centradas en las personas y acci
 ## Cómo navegar
 - Usa el menú principal para abrir guías base como el Quickstart y el glosario.
 - Consulta la cola de traducción para saber qué lotes vienen en camino.
-- Ejecuta `make translation-qa` antes de abrir un PR para validar metadatos y enlaces.
+- Ejecuta `make docs-qa` antes de abrir un PR para validar metadatos y enlaces.
 
 ## Próximos pasos
 1. Revisa la [Migración a español](es/guides/migracion-es.md).
