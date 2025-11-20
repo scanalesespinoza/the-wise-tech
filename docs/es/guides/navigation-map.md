@@ -16,4 +16,4 @@ Actualiza este mapa cada vez que agregues una sección nueva a `mkdocs.yml`.
 
 ## See also
 - [Quickstart](quickstart.md)
-- [Choose your path](choose-your-path.md)
+- [Índice de contenido de valor](https://github.com/scanalesespinoza/the-wise-tech#value-index)

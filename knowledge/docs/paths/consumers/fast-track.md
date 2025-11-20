@@ -30,7 +30,7 @@ Este atajo es para usuarios que quieren un resultado visible en menos de una hor
 
 ## ⚡ Paso rápido
 
-1. **🗺️ Explora el mapa (3 min).** Abre el [README](https://github.com/scanalesespinoza/the-wise-tech/blob/main/README.md#choose-your-path) y toma nota de los recursos de consumidores.
+1. **🗺️ Explora el mapa (3 min).** Abre el [README](https://github.com/scanalesespinoza/the-wise-tech/blob/main/README.md#value-index) y toma nota de los recursos de consumidores.
 2. **✅ Ejecuta el primer checklist (4 min).** Usa [Quickstart](../../guides/quickstart.md) para seleccionar una sola acción y describe el impacto esperado.
 3. **📣 Comparte feedback accionable (3 min).** Abre un issue con la plantilla *user-experience*, adjunta capturas/resultados y sugiere el siguiente paso.
 

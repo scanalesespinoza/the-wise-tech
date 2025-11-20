@@ -30,7 +30,7 @@ Consúltalo cuando requieras referencias inmediatas para Ideal Candidate (Contri
 ### Primeros pasos (10 min)
 1. Leer `README` y el **Navigation Map**.
 2. Ejecutar: `make -f operations/Makefile install && make -f operations/Makefile test && make -f operations/Makefile parity`.
-3. Levantar docs: `make -f operations/Makefile docs` y seguir “Choose your path”.
+3. Levantar docs: `make -f operations/Makefile docs` y usar el Índice de contenido de valor del README.
 
 <a id="first-win-1-2-h"></a>
 ### First Win (1–2 h)
@@ -55,7 +55,7 @@ Consúltalo cuando requieras referencias inmediatas para Ideal Candidate (Contri
 ### First 10 minutes
 1. Read `README` and the **Navigation Map**.
 2. Run: `make -f operations/Makefile install && make -f operations/Makefile test && make -f operations/Makefile parity`.
-3. Serve docs: `make -f operations/Makefile docs` and follow “Choose your path”.
+3. Serve docs: `make -f operations/Makefile docs` and use the README Value index.
 
 ### First Win (1–2 h)
 - Fix a broken link, example, or flaky test.

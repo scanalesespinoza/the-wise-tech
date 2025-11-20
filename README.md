@@ -38,7 +38,7 @@ This site curates a taxonomic body of principles, models, and methodologies for 
 ## Start here
 
 1. Read the overview in [Docs Home](knowledge/docs/index.md) to locate the principles, paths, and labs.
-2. Find your role in [Choose your path](#choose-your-path) and follow the corresponding "Learning Path 30/60/90" link.
+2. Use the [Value index](#value-index) to jump directly to the most relevant docs for your goal.
 3. If you want to spin up the local environment, continue with [Quick start (7 steps)](#quick-start-7-steps).
 4. ¿Necesitas resultados inmediatos? Usa los Fast Track de cada perfil: [Consumers](knowledge/docs/paths/consumers/fast-track.md), [Developers](knowledge/docs/paths/developers/fast-track.md) y [Platform Engineers](knowledge/docs/paths/platform-engineers/fast-track.md).
 
@@ -46,17 +46,30 @@ Para una vista tipo “panel con botones”, visita la [Navegación visual](docs
 
 ➡️ Explore the full documentation in [Docs Home](knowledge/docs/index.md) or visit the published version on GitHub Pages: https://scanalesespinoza.github.io/the-wise-tech/.
 
-## Choose your path
+## Value index
 
-- **Technology Consumers** → [consumers overview](knowledge/docs/personas/consumers-overview.md)
-  - Learning Path 30/60/90 → [knowledge/docs/paths/consumers-30-60-90.md](knowledge/docs/paths/consumers-30-60-90.md)
-- **Software Developers** → [developers overview](knowledge/docs/personas/developers-overview.md)
-  - Learning Path 30/60/90 → [knowledge/docs/paths/developers-30-60-90.md](knowledge/docs/paths/developers-30-60-90.md)
-- **Platform Engineers** → [platform engineers overview](knowledge/docs/personas/platform-engineers-overview.md)
-  - Learning Path 30/60/90 → [knowledge/docs/paths/platform-engineers-30-60-90.md](knowledge/docs/paths/platform-engineers-30-60-90.md)
-- **Labs** → [Lab 01 — Resilience Basics](knowledge/docs/labs/lab-01-resilience-basics.md)
-  - Observability Minimum → [knowledge/docs/labs/lab-02-observability-minima.md](knowledge/docs/labs/lab-02-observability-minima.md)
-  - aDevelopment Loop → [knowledge/docs/labs/lab-03-adevelopment-loop.md](knowledge/docs/labs/lab-03-adevelopment-loop.md)
+Use this lightweight index as a shortcut to the highest-signal docs:
+
+- **Orientation**
+  - [Docs Home](knowledge/docs/index.md) — one-page map of principles, guides, and personas.
+  - [Quickstart](knowledge/docs/guides/quickstart.md) — 7 commands to install, test, and preview docs locally.
+  - [Navigation map](docs/visual-navigation.md) — visual “button panel” that pairs roles with expected outcomes.
+- **Role essentials**
+  - **Technology Consumers** → [overview](knowledge/docs/personas/consumers-overview.md), [Fast Track](knowledge/docs/paths/consumers/fast-track.md), [Learning Path 30/60/90](knowledge/docs/paths/consumers-30-60-90.md).
+  - **Software Developers** → [overview](knowledge/docs/personas/developers-overview.md), [Fast Track](knowledge/docs/paths/developers/fast-track.md), [Learning Path 30/60/90](knowledge/docs/paths/developers-30-60-90.md).
+  - **Platform Engineers** → [overview](knowledge/docs/personas/platform-engineers-overview.md), [Fast Track](knowledge/docs/paths/platform-engineers/fast-track.md), [Learning Path 30/60/90](knowledge/docs/paths/platform-engineers-30-60-90.md).
+- **Hands-on labs**
+  - [Lab 01 — Resilience Basics](knowledge/docs/labs/lab-01-resilience-basics.md) — build the baseline service guardrails.
+  - [Lab 02 — Observability Minima](knowledge/docs/labs/lab-02-observability-minima.md) — apply telemetry and tracing standards.
+  - [Lab 03 — aDevelopment Loop](knowledge/docs/labs/lab-03-adevelopment-loop.md) — connect dev/test feedback loops.
+- **Operational references**
+  - [Developer playbook](knowledge/docs/playbooks/developer-playbook.md) & [Platform playbook](knowledge/docs/playbooks/platform-playbook.md) — KPIs, runbooks, and role-specific wins.
+  - [Resilience policies guide](knowledge/docs/guides/resilience-policies.md) — narrative + YAML controls ready to reuse.
+  - [Telemetry minimum guide](knowledge/docs/guides/telemetry-minima.md) — the “good enough” instrumentation checklist.
+- **Feedback & contributions**
+  - [Contribution guide](knowledge/docs/guides/contribution-guide.md) — expectations, templates, and bilingual workflow.
+  - [Feedback loops guide](knowledge/docs/guides/feedback-loops.md) — playbook for closing the action/learning gap.
+  - [Roadmap](knowledge/docs/roadmap/roadmap.md) — backlog of proposed improvements you can pick up.
 
 ## Quick start (7 steps)
 
@@ -66,7 +79,7 @@ Para una vista tipo “panel con botones”, visita la [Navegación visual](docs
 4) make -f operations/Makefile test
 5) make -f operations/Makefile parity
 6) make -f operations/Makefile docs
-7) open http://127.0.0.1:8000 and follow “Choose your path”
+7) open http://127.0.0.1:8000 and use the Value index to jump to the resources you need
 
 Optional (dev stack):
 
@@ -105,7 +118,7 @@ Use just as a shortcut to Make:
 
 ## Do I only want to read or contribute?
 
-- 🧭 **I only want to read** → open the published version on [GitHub Pages](https://scanalesespinoza.github.io/the-wise-tech/) and follow [Choose your path](#choose-your-path) to navigate by role.
+- 🧭 **I only want to read** → open the published version on [GitHub Pages](https://scanalesespinoza.github.io/the-wise-tech/) and follow the [Value index](#value-index) to navigate by outcome.
 - 🛠️ **I want to contribute** → prepare your environment with [Dev environment — devcontainer, pre-commit, and just](knowledge/docs/guides/dev-environment.md) and pick a small task from [PR ideas](knowledge/docs/roadmap/pr-ideas.md).
 
 ### How to give feedback
