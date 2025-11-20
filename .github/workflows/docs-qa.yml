@@ -1,16 +1,17 @@
-name: translation-qa
+name: docs-qa
 on:
   pull_request:
     branches: [ main ]
     paths:
       - "docs/**"
       - "mkdocs.yml"
-      - "audit/translation-queue.yml"
-      - "scripts/translate-batch.py"
+      - "Makefile"
+      - "justfile"
+      - "scripts/**"
   push:
     branches: [ main ]
 jobs:
-  qa:
+  docs-qa:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -22,11 +23,5 @@ jobs:
           python -m pip install --upgrade pip
           pip install mkdocs mkdocs-material mkdocs-static-i18n mkdocs-minify-plugin \
             mkdocs-git-revision-date-localized-plugin pyyaml
-      - name: Build strict
-        run: mkdocs build --strict
-      - name: Verify links
-        run: |
-          if [ -f scripts/check-links.py ]; then python scripts/check-links.py --strict; else echo "skip links"; fi
-      - name: Validate content metadata
-        run: |
-          if [ -f scripts/validate-content-metadata.py ]; then python scripts/validate-content-metadata.py; else echo "skip meta"; fi
+      - name: Run docs QA
+        run: make docs-qa
