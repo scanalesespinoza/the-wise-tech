@@ -13,9 +13,7 @@ MD_LINK = re.compile(r"\[[^\]]+\]\((?P<url>[^\s)]+)\)")
 
 def is_internal(url: str) -> bool:
     return not (
-        url.startswith("http://")
-        or url.startswith("https://")
-        or url.startswith("#")
+        url.startswith("http://") or url.startswith("https://") or url.startswith("#")
     )
 
 
