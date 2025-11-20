@@ -11,10 +11,11 @@ tags: ["docs", "i18n", "editorial"]
   - Tags de front-matter (mantenerlos en inglés).
 - **Sí traducir**:
   - Títulos, párrafos, listas, “See also”, alt text, texto de navegación.
-- **QA automática**:
+- **QA automática** (usa `make docs-qa`):
   - `mkdocs build --strict`
-  - `make verify-links`
-  - `make content-meta`
+  - `python scripts/check-links.py --root docs --strict`
+  - `python scripts/validate-content-metadata.py`
+  - `python scripts/validate-spanish-quality.py`
 - **QA humana**:
   - 1 revisor técnico (significado correcto).
   - 1 revisor de estilo (tono y claridad).
@@ -24,6 +25,12 @@ tags: ["docs", "i18n", "editorial"]
 2. Ejecuta `make docs-qa`.
 3. Realiza revisión técnica + de estilo.
 4. Abre un PR pequeño con la sección “QA de traducción” completada.
+
+## Checklist de PR (migración a español)
+- [ ] Plantilla de “QA de traducción” completada con evidencias.
+- [ ] Ortografía, gramática básica y glosario validados.
+- [ ] Links internos y front-matter revisados.
+- [ ] Revisión técnica y de estilo asignadas a personas distintas.
 
 ## Cuotas
 - `GT_MAX_CHARS_PER_BATCH` (por ejemplo, 80000).

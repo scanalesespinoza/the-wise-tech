@@ -31,8 +31,9 @@
 - Archivos cubiertos: …
 - Términos clave (glosario): …
 - `mkdocs build --strict`: ☐ OK
-- Links verificados (`scripts/check-links.py --strict`): ☐ OK
-- Front-matter / See also / tags (EN): ☐ OK
+- Ortografía/gramática + glosario (`python scripts/validate-spanish-quality.py`): ☐ OK
+- Links verificados (`scripts/check-links.py --root docs --strict`): ☐ OK
+- Front-matter / See also / tags (ES): ☐ OK (`python scripts/validate-content-metadata.py`)
 - Revisión técnica: ☐ OK (by …)
 - Revisión de estilo: ☐ OK (by …)
 

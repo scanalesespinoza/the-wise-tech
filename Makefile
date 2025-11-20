@@ -5,8 +5,9 @@ translate-batch:
 
 docs-qa:
 	@mkdocs build --strict
-	@if [ -f scripts/check-links.py ]; then python scripts/check-links.py --strict; fi
-	@if [ -f scripts/validate-content-metadata.py ]; then python scripts/validate-content-metadata.py; fi
+	@python scripts/check-links.py --root docs --strict
+	@python scripts/validate-content-metadata.py
+	@python scripts/validate-spanish-quality.py
 
 # Uso local:
 #  make translate-batch BATCH=w1-b1
