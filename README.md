@@ -1,5 +1,7 @@
 # The Wise Tech
 
+> 📑 ¿Buscas la versión en español? Visita [README.es.md](README.es.md). Keep bilingual sections below for historical and legal context.
+
 ## Status
 [![quality](https://github.com/scanalesespinoza/the-wise-tech/actions/workflows/quality.yml/badge.svg)](https://github.com/scanalesespinoza/the-wise-tech/actions/workflows/quality.yml)
 [![docs-and-links](https://github.com/scanalesespinoza/the-wise-tech/actions/workflows/docs-and-links.yml/badge.svg)](https://github.com/scanalesespinoza/the-wise-tech/actions/workflows/docs-and-links.yml)
