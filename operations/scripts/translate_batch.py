@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 #!/usr/bin/env python3
-"""Translate Markdown batches listed in audit/translation-queue.yml."""
+"""Traduce lotes de Markdown listados en audit/translation-queue.yml."""
 
 from __future__ import annotations
 
@@ -20,18 +20,19 @@ CODE_BLOCK_PATTERN = re.compile(r"(```[\s\S]*?```)", re.MULTILINE)
 
 
 class TranslationClient:
-    """Very small abstraction that can be replaced with a real API call."""
+    """Abstracción mínima que puede reemplazarse por una llamada real a API."""
 
     def __init__(self) -> None:
         self.api_key = os.getenv("TRANSLATE_API_KEY")
         self.endpoint = os.getenv("TRANSLATE_API_URL")
 
     def translate(self, text: str) -> str:
-        """Return translated text.
+        """Devuelve el texto traducido.
 
-        This default implementation intentionally performs a no-op so the
-        repository never attempts to call an external API. Plug your provider
-        by replacing this method with the HTTP call that best fits your stack.
+        Esta implementación por defecto es un no-op para evitar que el
+        repositorio intente llamar a un API externo. Conecta tu proveedor
+        reemplazando este método con la llamada HTTP que mejor se adapte a tu
+        stack.
         """
 
         if not self.api_key or not self.endpoint:
@@ -62,7 +63,7 @@ def split_front_matter(markdown: str) -> tuple[str, str]:
     if closing == -1:
         return "", markdown
     closing += len("\n---")
-    # include trailing newline if present
+    # incluir la nueva línea final si está presente
     if len(markdown) > closing and markdown[closing] == "\n":
         closing += 1
     return markdown[:closing], markdown[closing:]
