@@ -29,4 +29,6 @@ def get_translator(
     """Return a gettext translator for the requested language."""
 
     languages: Iterable[str] = _language_candidates(language)
-    return gettext.translation(domain, localedir=str(locale_dir), languages=languages, fallback=fallback)
+    return gettext.translation(
+        domain, localedir=str(locale_dir), languages=languages, fallback=fallback
+    )

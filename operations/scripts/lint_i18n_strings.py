@@ -17,7 +17,9 @@ class I18NVisitor(ast.NodeVisitor):
         self._stack: list[ast.AST] = []
         self._source_lines = source_lines
 
-    def visit_Constant(self, node: ast.Constant) -> None:  # pragma: no cover - small utility
+    def visit_Constant(
+        self, node: ast.Constant
+    ) -> None:  # pragma: no cover - small utility
         if not isinstance(node.value, str):
             return
         if self._is_docstring(node):
@@ -30,7 +32,9 @@ class I18NVisitor(ast.NodeVisitor):
             return
         self.errors.append((node.lineno, node.value.strip()))
 
-    def generic_visit(self, node: ast.AST) -> None:  # pragma: no cover - traversal support
+    def generic_visit(
+        self, node: ast.AST
+    ) -> None:  # pragma: no cover - traversal support
         self._stack.append(node)
         super().generic_visit(node)
         self._stack.pop()
@@ -44,11 +48,13 @@ class I18NVisitor(ast.NodeVisitor):
     def _is_docstring(self, node: ast.Constant) -> bool:
         parent = self._parent()
         grandparent = self._grandparent()
-        if isinstance(parent, (ast.Module, ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)):
+        if isinstance(
+            parent, (ast.Module, ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)
+        ):
             return bool(parent.body and parent.body[0] is node)
-        if (
-            isinstance(parent, ast.Expr)
-            and isinstance(grandparent, (ast.Module, ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef))
+        if isinstance(parent, ast.Expr) and isinstance(
+            grandparent,
+            (ast.Module, ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef),
         ):
             return bool(grandparent.body and grandparent.body[0] is parent)
         return False
