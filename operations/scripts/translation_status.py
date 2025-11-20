@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate a bilingual parity report for documentation trees."""
+"""Genera un reporte de paridad bilingüe para árboles de documentación."""
 
 from __future__ import annotations
 
@@ -33,7 +33,9 @@ _TRANSLATOR = get_translator(
 )
 _ = _TRANSLATOR.gettext
 
-DESCRIPTION_FALLBACK = _("Generate a bilingual parity report for documentation trees.")
+DESCRIPTION_FALLBACK = _(
+    "Genera un reporte de paridad bilingüe para árboles de documentación."
+)
 
 
 @dataclass
@@ -58,7 +60,7 @@ class ScopeReport:
 
 
 def activate_language(language: str | None) -> None:
-    """Update the active gettext translator."""
+    """Actualiza el traductor gettext activo."""
 
     global _TRANSLATOR, _
     _TRANSLATOR = get_translator(

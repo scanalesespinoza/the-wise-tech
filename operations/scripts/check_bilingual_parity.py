@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Ensure documentation pairs stay in sync across languages."""
+"""Asegura que los pares de documentación sigan en sincronía entre idiomas."""
 
 from __future__ import annotations
 

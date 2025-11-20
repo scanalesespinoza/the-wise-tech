@@ -1,4 +1,4 @@
-"""Helpers for loading gettext translations."""
+"""Utilidades para cargar traducciones con gettext."""
 
 from __future__ import annotations
 
@@ -26,7 +26,7 @@ def get_translator(
     locale_dir: Path | str = DEFAULT_LOCALE_DIR,
     fallback: bool = True,
 ) -> gettext.NullTranslations:
-    """Return a gettext translator for the requested language."""
+    """Devuelve un traductor gettext para el idioma solicitado."""
 
     languages: Iterable[str] = _language_candidates(language)
     return gettext.translation(
