@@ -223,12 +223,19 @@ def _utc_timestamp() -> str:
 
 def _try_load_repo():
     if Repo is None:
-        logging.warning("GitPython no disponible; se utilizará git CLI para fechas.")
+        logging.warning(
+            "GitPython no disponible; se utilizará git CLI para fechas. / "
+            "GitPython unavailable; falling back to git CLI for timestamps."
+        )
         return None
     try:
         return Repo(ROOT)
     except InvalidGitRepositoryError:
-        logging.warning("No se pudo inicializar Repo desde %s", ROOT)
+        logging.warning(
+            "No se pudo inicializar Repo desde %s / Unable to initialize Repo from %s",
+            ROOT,
+            ROOT,
+        )
         return None
 
 
@@ -417,11 +424,19 @@ def _evaluate_document(path: str, repo) -> Optional[DocumentAudit]:
         with open(abs_path, "r", encoding="utf-8") as handle:
             content = handle.read()
     except FileNotFoundError:
-        logging.warning("No se pudo leer %s", abs_path)
+        logging.warning(
+            "No se pudo leer %s / Unable to read %s",
+            abs_path,
+            abs_path,
+        )
         return None
 
     if not content.strip():
-        logging.info("%s está vacío, se omite en el resumen", path)
+        logging.info(
+            "%s está vacío, se omite en el resumen / %s is empty; skipping from summary",
+            path,
+            path,
+        )
         return None
 
     structure = _parse_markdown_structure(path, content)
@@ -463,7 +478,10 @@ def _evaluate_document(path: str, repo) -> Optional[DocumentAudit]:
 
 def _render_audit_report(reports: List[DocumentAudit]) -> str:
     if not reports:
-        return "# Content Audit Report\n\nNo se encontraron documentos para auditar."
+        return (
+            "# Content Audit Report\n\nNo se encontraron documentos para auditar / "
+            "No documents found to audit."
+        )
 
     generated = _utcnow().strftime("%Y-%m-%d %H:%M UTC")
     headers = [
@@ -565,7 +583,10 @@ def _write_content_audit_reports(reports: List[DocumentAudit]) -> Dict[str, str]
 def run_content_audit() -> Dict[str, object]:
     documents = _collect_markdown_documents()
     if not documents:
-        logging.info("No hay documentos markdown bajo las carpetas objetivo.")
+        logging.info(
+            "No hay documentos markdown bajo las carpetas objetivo. / "
+            "No markdown documents found under target folders."
+        )
         return {}
     repo = _try_load_repo()
     reports: List[DocumentAudit] = []
@@ -1606,10 +1627,13 @@ def main():
     print(json.dumps({"improvement_issue": issue}, ensure_ascii=False))
 
     if score < pass_score:
-        print("Audit NOK: score below threshold.")
+        print(
+            "Audit NOK: score below threshold. / "
+            "Auditoría NOK: puntuación por debajo del umbral."
+        )
         sys.exit(2)
 
-    print("Audit OK.")
+    print("Audit OK. / Auditoría OK.")
     sys.exit(0)
 
 
