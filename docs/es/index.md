@@ -10,6 +10,7 @@ Este índice resume las rutas esenciales disponibles actualmente en español.
 - [Quickstart](guides/quickstart.md)
 - [Migración a español](guides/migracion-es.md)
 - [Glosario de terminología](guides/glosario-terminologia.md)
+- [Métricas y auditorías de localización](guides/metricas-auditorias-i18n.md)
 
 ## Estado de traducción
 Consulta `audit/translation-queue.yml` para saber qué lotes están asignados y quién revisa cada entrega.
