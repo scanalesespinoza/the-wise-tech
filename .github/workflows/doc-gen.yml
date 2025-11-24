@@ -27,7 +27,7 @@ jobs:
           fi
       - name: Commit documentation updates
         if: steps.git-diff.outputs.has_changes == 'true'
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "docs: update generated catalogs"
           file_pattern: "knowledge/docs/en/docs/** knowledge/docs/es/docs/**"
