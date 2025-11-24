@@ -31,7 +31,7 @@ jobs:
       LLM_API_URL: ${{ vars.LLM_API_URL }}
       LLM_MODEL: DeepSeek-R1-Distill-Qwen-14B-W4A16
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 0
       - name: Setup Python
