@@ -12,7 +12,7 @@ jobs:
       GT_MAX_CHARS_PER_BATCH: "80000"
       GT_MAX_QPS: "10"
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: actions/setup-python@v5
         with:
           python-version: "3.x"

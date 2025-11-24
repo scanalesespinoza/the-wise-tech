@@ -6,7 +6,7 @@ jobs:
   label:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Auto label by title/labels (no-op if already set)
         run: |
           echo "Relying on template default labels (feedback/user-experience, ops/postmortem, enhancement/proposal)."
