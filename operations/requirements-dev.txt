@@ -5,5 +5,5 @@ mkdocs-minify-plugin>=0.7
 mkdocs-git-revision-date-localized-plugin>=1.2
 Babel>=2.14
 pyyaml>=6.0
-ruff==0.14.5
+ruff==0.14.10
 pyspellchecker>=0.8
